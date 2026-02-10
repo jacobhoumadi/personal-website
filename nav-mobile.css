@@ -1,0 +1,199 @@
+        /* ========================================
+           MENU MOBILE
+        ======================================== */
+        
+        /* Bouton Hamburger - caché par défaut */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            z-index: 3001;
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu-toggle span {
+            width: 24px;
+            height: 2px;
+            background: var(--dark);
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .mobile-menu-toggle:hover {
+            transform: scale(1.05);
+        }
+
+        /* Menu mobile - caché par défaut */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 85%;
+            max-width: 400px;
+            height: 100vh;
+            background: var(--white);
+            z-index: 4000;
+            padding: var(--space-2xl) var(--space-xl);
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-2xl);
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: -4px 0 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-nav.active {
+            right: 0;
+        }
+
+        /* Overlay pour fermer le menu */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 3500;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(4px);
+        }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Header du menu mobile */
+        .mobile-nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: var(--space-lg);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-menu-close {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            color: var(--dark);
+            transition: all 0.3s ease;
+            border-radius: 50%;
+        }
+
+        .mobile-menu-close:hover {
+            background: rgba(0, 0, 0, 0.05);
+            transform: rotate(90deg);
+        }
+
+        /* Liens du menu mobile */
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            list-style: none;
+            flex: 1;
+        }
+
+        .mobile-nav-links li {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .mobile-nav-links a {
+            display: block;
+            padding: var(--space-md) 0;
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: var(--font-lg);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .mobile-nav-links a:hover {
+            color: var(--primary);
+            padding-left: var(--space-sm);
+        }
+
+        .mobile-nav-links a::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .mobile-nav-links a:hover::before {
+            width: 20px;
+        }
+
+        /* Footer du menu mobile */
+        .mobile-nav-footer {
+            padding-top: var(--space-lg);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-nav-footer p {
+            font-size: var(--font-sm);
+            color: rgba(0, 0, 0, 0.6);
+            margin-bottom: var(--space-md);
+            line-height: 1.5;
+        }
+
+        .mobile-cta {
+            display: block;
+            width: 100%;
+            padding: var(--space-md);
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            text-decoration: none;
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            font-size: var(--font-md);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-cta:hover {
+            background: #0052CC;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(53, 67, 255, 0.3);
+        }
+
+        /* Cacher le menu desktop sur mobile, afficher hamburger */
+        @media (max-width: 768px) {
+            .desktop-nav {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            header {
+                padding: var(--space-sm) var(--space-lg);
+                gap: var(--space-lg);
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+
+        /* Garder le menu desktop visible sur tablette et desktop */
+        @media (min-width: 769px) {
+            .mobile-nav,
+            .mobile-menu-overlay,
+            .mobile-menu-toggle {
+                display: none !important;
+            }
+        }
