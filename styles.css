@@ -1391,6 +1391,14 @@
                 display: none;
             }
 
+             .portfolio-section.active .portfolio-close {
+                display: flex;
+                width: 44px;
+                font-size: var(--font-lg);
+                height: 45px;
+        }
+
+
             .container{
                 padding-top:0;
             }
@@ -1438,6 +1446,12 @@
             .form-row{
                 display: grid; 
                 grid-template-columns: 1fr; 
+            }
+
+            .social-links {
+                display: flex;
+                gap: var(--space-2xl);
+                justify-content: space-between;
             }
 
             
