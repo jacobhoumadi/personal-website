@@ -55,10 +55,13 @@
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="nav-mobile.css">
-    
+    <link rel="stylesheet" href="nav-mobile.css">    
     <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- Calendly -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -355,8 +358,21 @@
                             </label>
                         </div>
 
-                        <button type="submit" class="btn-primary">Démarrer la conversation</button>
+                        <button type="submit" id="submitBtn" class="btn-primary">Démarrer la conversation →</button>
                     </form>
+
+                    <!-- Bloc Calendly — visible après envoi du message -->
+                    <div id="calendlyBlock" style="display:none;">
+                        <div class="calendly-success-header">
+                            <div class="calendly-checkmark">✅</div>
+                            <h3>Message envoyé !</h3>
+                            <p>Parfait, je reviens vers vous sous 24h. En attendant, <strong>réservez directement un créneau</strong> pour qu'on parle de votre projet.</p>
+                        </div>
+                        <div class="calendly-inline-widget"
+                             data-url="https://calendly.com/jacob-radonirina/30min?hide_gdpr_banner=1&primary_color=0066ff"
+                             style="min-width:280px; height:660px;">
+                        </div>
+                    </div>
                 </div>
             </div>
     </div>
@@ -900,8 +916,8 @@ Jacob est un atout précieux que je recommande chaleureusement."</p>
             console.log('EmailJS initialized');
         }
         
-        // Vérifier au chargement de la page
-        document.addEventListener('DOMContentLoaded', checkCookieConsent);
+        // Vérifier au chargement — appel direct car script en fin de body (DOM déjà prêt)
+        checkCookieConsent();
 
         // Parallax Effect et Snap Scroll
         window.addEventListener('scroll', function() {
@@ -1262,7 +1278,7 @@ function goToSlide(index) {
             // Initialize
             updateNavigationButtons();
 
-            emailjs.init("69fgSb-btkXkWSBtI");  // 
+            // EmailJS initialisé via checkCookieConsent() → initializeEmailJS()
 
             document.getElementById('contactForm').addEventListener('submit', function(e) {
                 e.preventDefault();
@@ -1278,12 +1294,26 @@ function goToSlide(index) {
                 };
                 
                 // Envoi vers ton email
+                const btn = document.getElementById('submitBtn');
+                btn.classList.add('loading');
+                btn.textContent = 'Envoi en cours';
+
                 emailjs.send("service_xl8mfv4", "template_4gwxouq", templateParams)
                     .then(() => {
-                        alert('✅ Merci pour votre message - Je reviens vers vous sous 24h');
-                        document.getElementById('contactForm').reset();
+                        // Cacher le formulaire et afficher Calendly
+                        document.getElementById('contactForm').style.display = 'none';
+                        const calendlyBlock = document.getElementById('calendlyBlock');
+                        calendlyBlock.style.display = 'block';
+                        // Initialiser le widget Calendly inline
+                        if (window.Calendly) {
+                            Calendly.initInlineWidgets();
+                        }
+                        // Scroll doux vers le widget
+                        calendlyBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }, (error) => {
-                        alert('❌ Erreur. Veuillez réessayer ou écrivez-moi directement sur mon mail jacob.radorina@gmail.com');
+                        btn.classList.remove('loading');
+                        btn.textContent = 'Démarrer la conversation →';
+                        alert('❌ Erreur d\'envoi. Écrivez-moi directement : jacob.radonirina@gmail.com');
                     });
             });
         

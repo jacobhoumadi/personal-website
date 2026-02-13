@@ -498,10 +498,10 @@
             cursor: pointer;
             border-radius: 4px;
         }
-        .checkmark { display: none; } /* fallback si custom checkbox plus tard */
+        .checkmark { display: none; } 
         .checkbox-text {
-            font-size: 0.8rem;
-            color: #6b7280;
+            font-size: var(--font-sm);
+            color: var(--text-gray);
             line-height: 1.5;
         }
         .checkbox-text a {
@@ -509,6 +509,49 @@
             text-decoration: underline;
         }
         .checkbox-text a:hover { opacity: 0.8; }
+
+         /* === BLOC CALENDLY POST-ENVOI === */
+                #calendlyBlock {
+                    animation: fadeInUp 0.5s ease forwards;
+                }
+                @keyframes fadeInUp {
+                    from { opacity: 0; transform: translateY(20px); }
+                    to   { opacity: 1; transform: translateY(0); }
+                }
+                .calendly-success-header {
+                    text-align: center;
+                    padding: 24px 16px 8px;
+                    border-radius: 12px 12px 0 0;
+                }
+                .calendly-checkmark {
+                    font-size: 2rem;
+                    margin-bottom: 8px;
+                }
+                .calendly-success-header h3 {
+                    font-size: 1.25rem;
+                    font-weight: 700;
+                    margin: 0 0 8px;
+                    color: #111;
+                }
+                .calendly-success-header p {
+                    font-size: 0.9rem;
+                    color: #555;
+                    line-height: 1.5;
+                    margin: 0 0 16px;
+                }
+                .calendly-inline-widget {
+                    border-radius: 0 0 12px 12px;
+                    overflow: hidden;
+                }
+                /* Bouton loading state */
+                #submitBtn.loading {
+                    opacity: 0.7;
+                    pointer-events: none;
+                    cursor: not-allowed;
+                }
+                #submitBtn.loading::after {
+                    content: ' ⏳';
+                }
 
         /* RIGHT SIDE - Texte en blanc */
         .right-side {
@@ -813,9 +856,10 @@
 
         .portfolio-section.active .portfolio-close {
                 display: flex;
-                width: 44px;
+                width: 40px;
                 font-size: var(--font-lg);
-                height: 45px;
+                height: 40px;
+                top: 42px;
         }
 
         .portfolio-close:hover {
@@ -1131,7 +1175,7 @@
             z-index: 50;
         }
 
-        .footer-nav-legals{
+        .footer-nav-legals a{
             color:var(--text-gray);
         }
 
