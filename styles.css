@@ -907,6 +907,12 @@
             justify-content: space-between;
         }
 
+        .offer-card p{
+            color: var(--text-gray); */
+            font-size: var(--font-md);
+            margin-top: 1rem;
+        }
+
         .offer-card .price {
             font-size: var(--font-3xl);
             margin-bottom: var(--space-xs);
@@ -915,7 +921,7 @@
         }
 
         .offer-card h3 {
-            font-size: var(--font-xl);
+            font-size: calc(var(--font-md)*1.2);
             margin-bottom: var(--space-xs);
             color: var(--dark);
         }
@@ -976,11 +982,11 @@
 
         .additional-offer ul li{
             color: var(--text-gray);
-                display: grid;
-    grid-template-columns: var(--space-xs) 0.4fr 0.6fr;
+            display: grid;
+            grid-template-columns: var(--space-sm) 0.4fr 0.6fr;
             gap: calc(var(--space-sm) * 0.75);
             align-items: flex-end;
-            font-size: var(--font-sm);
+            font-size: var(--font-md);
         }
 
         /* Testimonials */
@@ -998,7 +1004,7 @@
 
         .testimonial-text {
             font-size: var(--font-md);
-            line-height: 1.7;
+            line-height: 1.6;
             color: var(--dark);
             margin-bottom: var(--space-xs);
             font-style: italic;
@@ -1041,7 +1047,7 @@
         
 
         .faq-question {
-            font-size: var(--font-sm);
+            font-size: var(--font-md);
             font-weight: 500;
             color: var(--dark);
             padding: var(--space-sm) 0;
@@ -1068,7 +1074,8 @@
 
         .faq-answer {
             color: var(--text-gray);
-            font-size: var(--font-sm);
+            font-size: var(--font-md);
+            line-height: 1.6;
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease, padding 0.3s ease;
@@ -1128,7 +1135,6 @@
                 gap: var(--space-2xl);
             }   
             
-            
         }
 
 
@@ -1142,7 +1148,7 @@
             }
             
             .faq-question{
-                padding-right: var(--space-sm);
+                padding-right: inherit;
             }
 
             .portfolio-container{
@@ -1160,7 +1166,7 @@
 
             .portfolio-left p{
                 font-size: var(--font-sm);
-                line-height: 1.7;
+                line-height: 1.6;
                 margin-bottom: var(--space-md);
             }
 
@@ -1246,8 +1252,8 @@
 
             
 
-            .portfolio-left p {
-                line-height: 1.2;
+            .portfolio-left .mobile-hidden {
+                display: none;
             }
 
             .portfolio-card {
@@ -1380,6 +1386,10 @@
                 header {
                     width: 100vw;
                 }
+
+            .portfolio-nav.next, .portfolio-nav.prev[
+                display: none;
+            ]
 
             .container{
                 padding-top:0;
