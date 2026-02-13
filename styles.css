@@ -1387,9 +1387,9 @@
                     width: 100vw;
                 }
 
-            .portfolio-nav.next, .portfolio-nav.prev[
+            .portfolio-nav.next, .portfolio-nav.prev{
                 display: none;
-            ]
+            }
 
             .container{
                 padding-top:0;
