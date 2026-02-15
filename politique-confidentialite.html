@@ -1,435 +1,356 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politique de Confidentialité - Jacob Houmadi Product Designer</title>
-    <meta name="description" content="Politique de confidentialité et protection des données personnelles - jacob-houmadi.com">
-    <meta name="robots" content="noindex, follow">
-    <link rel="canonical" href="https://jacob-houmadi.com/politique-confidentialite.html">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .legal-page {
-            max-width: 900px;
-            margin: 100px auto 60px;
-            padding: 0 20px;
-            font-family: var(--font-family-base);
-        }
-        
-        .legal-page h1 {
-            font-size: 2.5rem;
-            color: var(--dark);
-            margin-bottom: 20px;
-        }
-        
-        .legal-page .last-updated {
-            color: var(--text-gray);
-            font-size: 0.9rem;
-            margin-bottom: 40px;
-        }
-        
-        .legal-page h2 {
-            font-size: 1.5rem;
-            color: var(--dark);
-            margin-top: 40px;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--primary);
-        }
-        
-        .legal-page h3 {
-            font-size: 1.2rem;
-            color: var(--dark);
-            margin-top: 25px;
-            margin-bottom: 10px;
-        }
-        
-        .legal-page p, .legal-page li {
-            line-height: 1.8;
-            color: #333;
-            margin-bottom: 15px;
-        }
-        
-        .legal-page ul {
-            margin-left: 20px;
-        }
-        
-        .legal-page a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-        
-        .legal-page a:hover {
-            text-decoration: underline;
-        }
-        
-        .back-link {
-            display: inline-block;
-            margin-bottom: 30px;
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .back-link:hover {
-            text-decoration: underline;
-        }
-        
-        .info-box {
-            background: var(--light-gray);
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-        
-        .warning-box {
-            background: #FFF3CD;
-            border-left: 4px solid #FFC107;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-        
-        .table-container {
-            overflow-x: auto;
-            margin: 20px 0;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-        
-        th {
-            background-color: var(--light-gray);
-            font-weight: 600;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Politique de Confidentialité - Jacob Houmadi Product Designer</title>
+  <meta name="description" content="Politique de confidentialité et protection des données personnelles - jacob-houmadi.com" />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://jacob-houmadi.com/politique-confidentialite.html" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .legal-page { max-width: 900px; margin: 100px auto 60px; padding: 0 20px; font-family: var(--font-family-base); }
+    .legal-page h1 { font-size: 2.5rem; color: var(--dark); margin-bottom: 20px; }
+    .legal-page .last-updated { color: var(--text-gray); font-size: 0.9rem; margin-bottom: 40px; }
+    .legal-page h2 { font-size: 1.5rem; color: var(--dark); margin-top: 40px; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid var(--primary); }
+    .legal-page h3 { font-size: 1.2rem; color: var(--dark); margin-top: 25px; margin-bottom: 10px; }
+    .legal-page p, .legal-page li { line-height: 1.8; color: #333; margin-bottom: 15px; }
+    .legal-page ul { margin-left: 20px; }
+    .legal-page a { color: var(--primary); text-decoration: none; }
+    .legal-page a:hover { text-decoration: underline; }
+    .back-link { display: inline-block; margin-bottom: 30px; color: var(--primary); text-decoration: none; font-weight: 500; }
+    .back-link:hover { text-decoration: underline; }
+    .info-box { background: var(--light-gray); padding: 20px; border-radius: 8px; margin: 20px 0; }
+    .warning-box { background: #FFF3CD; border-left: 4px solid #FFC107; padding: 20px; border-radius: 8px; margin: 20px 0; }
+    .table-container { overflow-x: auto; margin: 20px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { padding: 12px; text-align: left; border: 1px solid #ddd; }
+    th { background-color: var(--light-gray); font-weight: 600; }
+  </style>
+
+  <script src="translations.js" defer></script>
 </head>
+
 <body>
-    <div class="legal-page">
-        <a href="index.html" class="back-link">← Retour à l'accueil</a>
-        
-        <h1>Politique de Confidentialité</h1>
-        <p class="last-updated">Dernière mise à jour : Février 2026</p>
-        
-        <div class="info-box">
-            <p><strong>En résumé :</strong> Ce site collecte uniquement les données que vous fournissez via le formulaire de contact. Aucune donnée n'est vendue ou partagée avec des tiers (sauf EmailJS pour l'envoi d'emails). Vous pouvez à tout moment demander la suppression de vos données.</p>
-        </div>
-        
-        <h2>1. Introduction</h2>
-        
-        <p>La présente Politique de Confidentialité décrit comment Jacob Radonirina ("nous", "notre") collecte, utilise, stocke et protège vos données personnelles lorsque vous utilisez le site jacobdesign.com (le "Site").</p>
-        
-        <p>Cette politique est conforme au Règlement Général sur la Protection des Données (RGPD) de l'Union Européenne (UE 2016/679) et à la législation Française en matière de protection des données.</p>
-        
-        <h2>2. Responsable du traitement des données</h2>
-        
-        <div class="info-box">
-            <p>
-                <strong>Responsable du traitement :</strong> Jacob Houmadi<br>
-                <strong>Email :</strong> jacob.radonirina@gmail.com<br>
-                <strong>Adresse :</strong> Hayange, France
-            </p>
-        </div>
-        
-        <h2>3. Données collectées</h2>
-        
-        <h3>3.1 Données collectées via le formulaire de contact</h3>
-        
-        <p>Lorsque vous remplissez le formulaire de contact sur notre site, nous collectons les informations suivantes :</p>
-        
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Donnée</th>
-                        <th>Obligatoire</th>
-                        <th>Finalité</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Nom complet</td>
-                        <td>Oui</td>
-                        <td>Vous identifier et personnaliser la réponse</td>
-                    </tr>
-                    <tr>
-                        <td>Email professionnel</td>
-                        <td>Oui</td>
-                        <td>Vous répondre et échanger sur votre projet</td>
-                    </tr>
-                    <tr>
-                        <td>Nom de l'entreprise</td>
-                        <td>Non</td>
-                        <td>Comprendre votre contexte professionnel</td>
-                    </tr>
-                    <tr>
-                        <td>Site web</td>
-                        <td>Non</td>
-                        <td>Mieux comprendre votre projet</td>
-                    </tr>
-                    <tr>
-                        <td>Type de projet</td>
-                        <td>Oui</td>
-                        <td>Qualifier votre demande et proposer une offre adaptée</td>
-                    </tr>
-                    <tr>
-                        <td>Message</td>
-                        <td>Non</td>
-                        <td>Comprendre vos besoins spécifiques</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
-        <h3>3.2 Données collectées automatiquement</h3>
-        
-        <p>Nous ne collectons <strong>AUCUNE</strong> donnée de navigation automatique (pas de Google Analytics, pas de trackers publicitaires, pas de cookies de suivi).</p>
-        
-        <h2>4. Base légale du traitement</h2>
-        
-        <p>Le traitement de vos données personnelles repose sur les bases légales suivantes :</p>
-        
-        <ul>
-            <li><strong>Consentement</strong> : En remplissant le formulaire de contact, vous consentez explicitement au traitement de vos données pour les finalités décrites.</li>
-            <li><strong>Intérêt légitime</strong> : Traiter votre demande de contact et vous proposer des services adaptés constitue notre intérêt légitime.</li>
-        </ul>
-        
-        <h2>5. Utilisation des données</h2>
-        
-        <p>Nous utilisons vos données personnelles uniquement pour les finalités suivantes :</p>
-        
-        <ul>
-            <li>Répondre à votre demande de contact dans un délai de 24 heures</li>
-            <li>Vous envoyer un email de confirmation automatique via EmailJS</li>
-            <li>Qualifier votre projet et vous proposer une offre personnalisée</li>
-            <li>Échanger avec vous sur votre projet (si vous le souhaitez)</li>
-            <li>Conserver un historique des demandes reçues (archivage légal)</li>
-        </ul>
-        
-        <p><strong>Nous ne :</strong></p>
-        <ul>
-            <li>❌ Vendons jamais vos données à des tiers</li>
-            <li>❌ N'utilisons pas vos données à des fins publicitaires</li>
-            <li>❌ N'envoyons pas de newsletter sans votre consentement explicite</li>
-            <li>❌ Ne partageons pas vos données avec d'autres entreprises (sauf EmailJS, voir ci-dessous)</li>
-        </ul>
-        
-        <h2>6. Partage des données avec des tiers</h2>
-        
-        <h3>6.1 EmailJS (service d'envoi d'emails)</h3>
-        
-        <p>Pour l'envoi de l'email de confirmation automatique, nous utilisons le service <strong>EmailJS</strong>.</p>
-        
-        <div class="info-box">
-            <p>
-                <strong>Service :</strong> EmailJS<br>
-                <strong>Finalité :</strong> Envoi automatique d'emails de confirmation<br>
-                <strong>Données partagées :</strong> Nom, email, type de projet, message<br>
-                <strong>Localisation :</strong> États-Unis (EmailJS est conforme GDPR)<br>
-                <strong>Politique de confidentialité :</strong> <a href="https://www.emailjs.com/legal/privacy-policy/" target="_blank" rel="noopener">https://www.emailjs.com/legal/privacy-policy/</a>
-            </p>
-        </div>
-        
-        <p>EmailJS est conforme RGPD et ne partage pas vos données avec d'autres tiers.</p>
-        
-        <h3>6.2 Hébergement</h3>
-        
-        <p>Le site est hébergé par <strong>[Nom de votre hébergeur]</strong>, qui peut avoir accès aux données techniques (logs serveur) conformément à sa propre politique de confidentialité.</p>
-        
-        <h2>7. Durée de conservation des données</h2>
-        
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Type de données</th>
-                        <th>Durée de conservation</th>
-                        <th>Justification</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Données du formulaire de contact</td>
-                        <td>3 ans à compter de la demande</td>
-                        <td>Prescription légale et gestion commerciale</td>
-                    </tr>
-                    <tr>
-                        <td>Emails échangés</td>
-                        <td>Durée de la relation commerciale + 5 ans</td>
-                        <td>Obligation légale (comptabilité, fiscalité)</td>
-                    </tr>
-                    <tr>
-                        <td>Cookies (localStorage)</td>
-                        <td>13 mois maximum</td>
-                        <td>Durée maximale autorisée par le RGPD</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
-        <p>À l'expiration de ces délais, vos données sont automatiquement supprimées ou anonymisées.</p>
-        
-        <h2>8. Vos droits (RGPD)</h2>
-        
-        <p>Conformément au RGPD, vous disposez des droits suivants concernant vos données personnelles :</p>
-        
-        <h3>8.1 Droit d'accès</h3>
-        <p>Vous pouvez demander une copie de toutes les données personnelles que nous détenons sur vous.</p>
-        
-        <h3>8.2 Droit de rectification</h3>
-        <p>Vous pouvez demander la correction de données inexactes ou incomplètes.</p>
-        
-        <h3>8.3 Droit à l'effacement ("droit à l'oubli")</h3>
-        <p>Vous pouvez demander la suppression de vos données personnelles, sauf si nous avons une obligation légale de les conserver.</p>
-        
-        <h3>8.4 Droit à la limitation du traitement</h3>
-        <p>Vous pouvez demander la suspension temporaire du traitement de vos données dans certains cas.</p>
-        
-        <h3>8.5 Droit à la portabilité</h3>
-        <p>Vous pouvez demander à recevoir vos données dans un format structuré et couramment utilisé (CSV, JSON).</p>
-        
-        <h3>8.6 Droit d'opposition</h3>
-        <p>Vous pouvez vous opposer au traitement de vos données pour des raisons légitimes.</p>
-        
-        <h3>8.7 Droit de retirer votre consentement</h3>
-        <p>Vous pouvez retirer votre consentement à tout moment (ex: refuser les cookies).</p>
-        
-        <h3>8.8 Exercer vos droits</h3>
-        
-        <div class="info-box">
-            <p>Pour exercer l'un de ces droits, contactez-mois :</p>
-            <p>
-                <strong>Email :</strong> jacob.radonirina@gmail.com<br>
-                <strong>Objet :</strong> "Exercice de mes droits RGPD - [préciser le droit]"
-            </p>
-            <p>Nous vous répondrons sous <strong>30 jours maximum</strong> (délai légal RGPD).</p>
-        </div>
-        
-        <h3>8.9 Droit de réclamation</h3>
+  <div class="legal-page">
+    <a class="back-link" data-i18n="privacy.001" href="index.html">← Retour à l'accueil</a>
 
-        <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez déposer une réclamation auprès de l'autorité de contrôle française :</p>
+    <h1 data-i18n="privacy.002">Politique de Confidentialité</h1>
+    <p class="last-updated" data-i18n="privacy.003">Dernière mise à jour : Février 2026</p>
 
-        <div class="info-box">
-            <p>
-                <strong>Commission Nationale de l'Informatique et des Libertés (CNIL)</strong><br>
-                3 Place de Fontenoy<br>
-                TSA 80715<br>
-                75334 Paris Cedex 07<br>
-                France<br>
-                <strong>Téléphone :</strong> +33 (0)1 53 73 22 22<br>
-                <strong>Site web :</strong> <a href="https://www.cnil.fr" target="_blank" rel="noopener">https://www.cnil.fr</a>
-            </p>
-        </div>
-        
-        <h2>9. Cookies et technologies similaires</h2>
-        
-        <h3>9.1 Types de cookies utilisés</h3>
-        
-        <p>Notre site utilise uniquement des <strong>cookies essentiels</strong> nécessaires au fonctionnement du formulaire de contact :</p>
-        
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Cookie</th>
-                        <th>Finalité</th>
-                        <th>Durée</th>
-                        <th>Type</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>cookieConsent</td>
-                        <td>Mémoriser votre choix sur les cookies</td>
-                        <td>13 mois</td>
-                        <td>localStorage (essentiel)</td>
-                    </tr>
-                    <tr>
-                        <td>EmailJS</td>
-                        <td>Fonctionnement du formulaire de contact</td>
-                        <td>Session</td>
-                        <td>Cookie fonctionnel</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
-        <p><strong>Nous n'utilisons AUCUN :</strong></p>
-        <ul>
-            <li>❌ Cookie publicitaire (Google Ads, Facebook Pixel, etc.)</li>
-            <li>❌ Cookie de tracking (Google Analytics, Hotjar, etc.)</li>
-            <li>❌ Cookie de réseaux sociaux (sauf si vous cliquez sur les liens LinkedIn/Malt)</li>
-        </ul>
-        
-        <h3>9.2 Gérer vos cookies</h3>
-        
-        <p>Vous pouvez à tout moment :</p>
-        <ul>
-            <li>Accepter ou refuser les cookies via la bannière affichée lors de votre première visite</li>
-            <li>Supprimer les cookies dans les paramètres de votre navigateur</li>
-            <li>Configurer votre navigateur pour bloquer tous les cookies (mais cela peut affecter le fonctionnement du site)</li>
-        </ul>
-        
-        <h2>10. Sécurité des données</h2>
-        
-        <p>Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles :</p>
-        
-        <ul>
-            <li>✅ Connexion HTTPS (chiffrement SSL/TLS)</li>
-            <li>✅ Formulaires sécurisés</li>
-            <li>✅ Accès limité aux données (uniquement Jacob Radonirina)</li>
-            <li>✅ Hébergement sécurisé conforme aux normes européennes</li>
-            <li>✅ Sauvegardes régulières</li>
-            <li>✅ Pas de stockage de données sensibles (pas de carte bancaire, pas de mot de passe)</li>
-        </ul>
-        
-        <h2>11. Transferts internationaux de données</h2>
-        
-        <p>Vos données sont principalement stockées et traitées au sein de l'Union Européenne (France).</p>
-        
-        <p><strong>Exception :</strong> EmailJS (États-Unis) pour l'envoi d'emails. EmailJS est conforme GDPR et garantit un niveau de protection adéquat via les clauses contractuelles types (SCC) approuvées par la Commission Européenne.</p>
-        
-        <h2>12. Données des mineurs</h2>
-        
-        <p>Ce site est destiné à un public professionnel. Nous ne collectons pas sciemment de données personnelles de personnes de moins de 16 ans.</p>
-        
-        <p>Si vous êtes parent et que vous découvrez que votre enfant nous a fourni des données personnelles, contactez-nous immédiatement à jacob.radonirina@gmail.com pour que nous puissions les supprimer.</p>
-        
-        <h2>13. Modifications de cette politique</h2>
-        
-        <p>Nous nous réservons le droit de modifier cette Politique de Confidentialité à tout moment pour refléter les changements dans nos pratiques ou pour d'autres raisons opérationnelles, légales ou réglementaires.</p>
-        
-        <p>Toute modification sera publiée sur cette page avec une mise à jour de la date "Dernière mise à jour" en haut de cette page.</p>
-        
-        <p>Nous vous encourageons à consulter régulièrement cette page pour rester informé de nos pratiques en matière de confidentialité.</p>
-        
-        <h2>14. Contact</h2>
-        
-        <p>Pour toute question concernant cette Politique de Confidentialité ou le traitement de vos données personnelles, contactez-nous :</p>
-        
-        <div class="info-box">
-            <p>
-                <strong>Email :</strong> jacob.radonirina@gmail.com<br>
-                <strong>Délai de réponse :</strong> 30 jours maximum (conformément au RGPD)<br>
-                <strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/jacob-radonirina-houmadi-120841b0" target="_blank" rel="noopener">Jacob Houmadi</a>
-            </p>
-        </div>
-        
-        <hr style="margin: 40px 0; border: none; border-top: 1px solid #ddd;">
-        
-        <p style="text-align: center; color: var(--text-gray); font-size: 0.9rem;">
-            <a href="index.html">← Retour à l'accueil</a> | 
-            <a href="mentions-legales.html">Mentions légales</a>
-        </p>
+    <div class="info-box">
+      <p data-i18n-html="privacy.004">
+        <strong>En résumé :</strong> Ce site collecte uniquement les données que vous fournissez via le formulaire de contact.
+        Aucune donnée n'est vendue ou partagée avec des tiers (sauf EmailJS pour l'envoi d'emails). Vous pouvez à tout moment
+        demander la suppression de vos données.
+      </p>
     </div>
+
+    <h2 data-i18n="privacy.005">1. Introduction</h2>
+    <p data-i18n="privacy.006">
+      La présente Politique de Confidentialité décrit comment Jacob Radonirina Houmadi("nous", "notre") collecte, utilise, stocke et protège
+      vos données personnelles lorsque vous utilisez le site jacob-houmadi.com (le "Site").
+    </p>
+    <p data-i18n="privacy.007">
+      Cette politique est conforme au Règlement Général sur la Protection des Données (RGPD) de l'Union Européenne (UE 2016/679) et à la
+      législation Française en matière de protection des données.
+    </p>
+
+    <h2 data-i18n="privacy.008-html">2. Responsable du traitement des données</h2>
+    <div class="info-box">
+      <p data-i18n-html="privacy.009">
+        <strong>Responsable du traitement :</strong> Jacob Radonirina Houmadi<br />
+        <strong>Email :</strong> <a href="mailto:jacob.radonirina@gmail.com">jacob.radonirina@gmail.com</a><br />
+        <strong>Adresse :</strong> Hayange, France
+      </p>
+    </div>
+
+    <h2 data-i18n="privacy.010">3. Données collectées</h2>
+    <h3 data-i18n="privacy.011">3.1 Données collectées via le formulaire de contact</h3>
+    <p data-i18n="privacy.012">
+      Lorsque vous remplissez le formulaire de contact sur notre site, nous collectons les informations suivantes :
+    </p>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="privacy.013">Donnée</th>
+            <th data-i18n="privacy.014">Obligatoire</th>
+            <th data-i18n="privacy.015">Finalité</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-i18n="privacy.016">Nom complet</td>
+            <td data-i18n="privacy.017">Oui</td>
+            <td data-i18n="privacy.018">Vous identifier et personnaliser la réponse</td>
+          </tr>
+          <tr>
+            <td data-i18n="privacy.019">Email professionnel</td>
+            <td data-i18n="privacy.020">Oui</td>
+            <td data-i18n="privacy.021">Vous répondre et échanger sur votre projet</td>
+          </tr>
+          <tr>
+            <td data-i18n="privacy.022">Nom de l'entreprise</td>
+            <td data-i18n="privacy.023">Non</td>
+            <td data-i18n="privacy.024">Comprendre votre contexte professionnel</td>
+          </tr>
+          <tr>
+            <td data-i18n="privacy.025">Site web</td>
+            <td data-i18n="privacy.026">Non</td>
+            <td data-i18n="privacy.027">Mieux comprendre votre projet</td>
+          </tr>
+          <tr>
+            <td data-i18n="privacy.028">Type de projet</td>
+            <td data-i18n="privacy.029">Oui</td>
+            <td data-i18n="privacy.030">Qualifier votre demande et proposer une offre adaptée</td>
+          </tr>
+          <tr>
+            <td data-i18n="privacy.031">Message</td>
+            <td data-i18n="privacy.032">Non</td>
+            <td data-i18n="privacy.033">Comprendre vos besoins spécifiques</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 data-i18n="privacy.034">3.2 Données collectées automatiquement</h3>
+    <p data-i18n-html="privacy.035">
+      Nous ne collectons <strong>AUCUNE</strong> donnée de navigation automatique (pas de Google Analytics, pas de trackers publicitaires, pas
+      de cookies de suivi).
+    </p>
+
+    <h2 data-i18n="privacy.036">4. Base légale du traitement</h2>
+    <p data-i18n="privacy.037">Le traitement de vos données personnelles repose sur les bases légales suivantes :</p>
+    <ul>
+      <li data-i18n-html="privacy.038"><strong>Consentement :</strong> En remplissant le formulaire de contact, vous consentez explicitement au traitement de vos données pour les finalités décrites.</li>
+      <li data-i18n-html="privacy.039"><strong>Intérêt légitime :</strong> Traiter votre demande de contact et vous proposer des services adaptés constitue notre intérêt légitime.</li>
+    </ul>
+
+    <h2 data-i18n="privacy.040">5. Utilisation des données</h2>
+    <p data-i18n="privacy.041">Nous utilisons vos données personnelles uniquement pour les finalités suivantes :</p>
+    <ul>
+      <li data-i18n="privacy.042">Répondre à votre demande de contact dans un délai de 24 heures</li>
+      <li data-i18n="privacy.043">Vous envoyer un email de confirmation automatique via EmailJS</li>
+      <li data-i18n="privacy.044">Qualifier votre projet et vous proposer une offre personnalisée</li>
+      <li data-i18n="privacy.045">Échanger avec vous sur votre projet (si vous le souhaitez)</li>
+      <li data-i18n="privacy.046">Conserver un historique des demandes reçues (archivage légal)</li>
+    </ul>
+
+    <p data-i18n-html="privacy.047"><strong>Nous ne :</strong></p>
+    <ul>
+      <li data-i18n="privacy.048">❌ Vendons jamais vos données à des tiers</li>
+      <li data-i18n="privacy.049">❌ N'utilisons pas vos données à des fins publicitaires</li>
+      <li data-i18n="privacy.050">❌ N'envoyons pas de newsletter sans votre consentement explicite</li>
+      <li data-i18n="privacy.051">❌ Ne partageons pas vos données avec d'autres entreprises (sauf EmailJS, voir ci-dessous)</li>
+    </ul>
+
+    <h2 data-i18n="privacy.052">6. Partage des données avec des tiers</h2>
+
+    <h3 data-i18n="privacy.053">6.1 EmailJS (service d'envoi d'emails)</h3>
+    <p data-i18n="privacy.054">
+      Pour l'envoi de l'email de confirmation automatique, nous utilisons le service <strong>EmailJS</strong>.
+    </p>
+
+    <div class="info-box">
+      <p data-i18n-html="privacy.055">
+        <strong>Service :</strong> EmailJS<br />
+        <strong>Finalité :</strong> Envoi automatique d’emails de confirmation<br />
+        <strong>Données partagées :</strong> Nom, email, type de projet, message<br />
+        <strong>Localisation :</strong> États-Unis (EmailJS est conforme GDPR)<br />
+        <strong>Politique de confidentialité :</strong>
+        <a data-i18n="privacy.056" href="https://www.emailjs.com/legal/privacy-policy/" rel="noopener" target="_blank">
+          https://www.emailjs.com/legal/privacy-policy/
+        </a>
+      </p>
+    </div>
+
+    <p data-i18n="privacy.057">EmailJS est conforme RGPD et ne partage pas vos données avec d'autres tiers.</p>
+
+    <h3 data-i18n="privacy.058">6.2 Hébergement</h3>
+    <p data-i18n-html="privacy.059">
+      Le site est hébergé par <strong>Nom de votre hébergeur</strong>, qui peut avoir accès aux données techniques (logs serveur)
+      conformément à sa propre politique de confidentialité.
+    </p>
+
+    <h2 data-i18n="privacy.060">7. Durée de conservation des données</h2>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="privacy.061">Type de données</th>
+            <th data-i18n="privacy.062">Durée de conservation</th>
+            <th data-i18n="privacy.063">Justification</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-i18n="privacy.064">Données du formulaire de contact</td>
+            <td data-i18n="privacy.065">3 ans à compter de la demande</td>
+            <td data-i18n="privacy.066">Prescription légale et gestion commerciale</td>
+          </tr>
+          <tr>
+            <td data-i18n="privacy.067">Emails échangés</td>
+            <td data-i18n="privacy.068">Durée de la relation commerciale + 5 ans</td>
+            <td data-i18n="privacy.069">Obligation légale (comptabilité, fiscalité)</td>
+          </tr>
+          <tr>
+            <td data-i18n="privacy.070">Cookies (localStorage)</td>
+            <td data-i18n="privacy.071">13 mois maximum</td>
+            <td data-i18n="privacy.072">Durée maximale autorisée par le RGPD</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p data-i18n="privacy.073">À l'expiration de ces délais, vos données sont automatiquement supprimées ou anonymisées.</p>
+
+    <h2 data-i18n="privacy.074">8. Vos droits (RGPD)</h2>
+    <p data-i18n="privacy.075">Conformément au RGPD, vous disposez des droits suivants concernant vos données personnelles :</p>
+
+    <h3 data-i18n="privacy.076">8.1 Droit d'accès</h3>
+    <p data-i18n="privacy.077">Vous pouvez demander une copie de toutes les données personnelles que nous détenons sur vous.</p>
+
+    <h3 data-i18n="privacy.078">8.2 Droit de rectification</h3>
+    <p data-i18n="privacy.079">Vous pouvez demander la correction de données inexactes ou incomplètes.</p>
+
+    <h3 data-i18n="privacy.080">8.3 Droit à l'effacement ("droit à l'oubli")</h3>
+    <p data-i18n="privacy.081">Vous pouvez demander la suppression de vos données personnelles, sauf si nous avons une obligation légale de les conserver.</p>
+
+    <h3 data-i18n="privacy.082">8.4 Droit à la limitation du traitement</h3>
+    <p data-i18n="privacy.083">Vous pouvez demander la suspension temporaire du traitement de vos données dans certains cas.</p>
+
+    <h3 data-i18n="privacy.084">8.5 Droit à la portabilité</h3>
+    <p data-i18n="privacy.085">Vous pouvez demander à recevoir vos données dans un format structuré et couramment utilisé (CSV, JSON).</p>
+
+    <h3 data-i18n="privacy.086">8.6 Droit d'opposition</h3>
+    <p data-i18n="privacy.087">Vous pouvez vous opposer au traitement de vos données pour des raisons légitimes.</p>
+
+    <h3 data-i18n="privacy.088">8.7 Droit de retirer votre consentement</h3>
+    <p data-i18n="privacy.089">Vous pouvez retirer votre consentement à tout moment (ex: refuser les cookies).</p>
+
+    <h3 data-i18n="privacy.090">8.8 Exercer vos droits</h3>
+    <div class="info-box">
+      <p data-i18n-html="privacy.091">
+        <strong>Email :</strong> <a href="mailto:jacob.radonirina@gmail.com">jacob.radonirina@gmail.com</a><br />
+        <strong>Objet :</strong> "Exercice de mes droits RGPD - [préciser le droit]"
+      </p>
+      <p data-i18n-html="privacy.092">Nous vous répondrons sous <strong>30 jours maximum</strong> (délai légal RGPD).</p>
+    </div>
+
+    <h3 data-i18n="privacy.093">8.9 Droit de réclamation</h3>
+    <p data-i18n="privacy.094">
+      Si vous estimez que vos droits ne sont pas respectés, vous pouvez déposer une réclamation auprès de l'autorité de contrôle française :
+    </p>
+    <div class="info-box">
+      <p data-i18n-html="privacy.095">
+        <strong>Commission Nationale de l'Informatique et des Libertés (CNIL)</strong><br />
+        3 Place de Fontenoy<br />
+        TSA 80715<br />
+        75334 Paris Cedex 07<br />
+        France<br />
+        <strong>Téléphone :</strong> +33 (0)1 53 73 22 22<br />
+        <strong>Site web :</strong>
+        <a data-i18n="privacy.096" href="https://www.cnil.fr" rel="noopener" target="_blank">https://www.cnil.fr</a>
+      </p>
+    </div>
+
+    <h2 data-i18n="privacy.097">9. Cookies et technologies similaires</h2>
+
+    <h3 data-i18n="privacy.098">9.1 Types de cookies utilisés</h3>
+    <p data-i18n-html="privacy.099">
+      Notre site utilise uniquement des <strong>cookies essentiels</strong> nécessaires au fonctionnement du formulaire de contact :
+    </p>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="privacy.100">Cookie</th>
+            <th data-i18n="privacy.101">Finalité</th>
+            <th data-i18n="privacy.102">Durée</th>
+            <th data-i18n="privacy.103">Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-i18n="privacy.104">cookieConsent</td>
+            <td data-i18n="privacy.105">Mémoriser votre choix sur les cookies</td>
+            <td data-i18n="privacy.106">13 mois</td>
+            <td data-i18n="privacy.107">localStorage (essentiel)</td>
+          </tr>
+          <tr>
+            <td data-i18n="privacy.108">EmailJS</td>
+            <td data-i18n="privacy.109">Fonctionnement du formulaire de contact</td>
+            <td data-i18n="privacy.110">Session</td>
+            <td data-i18n="privacy.111">Cookie fonctionnel</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p data-i18n-html="privacy.112"><strong>Nous n'utilisons AUCUN :</strong></p>
+    <ul>
+      <li data-i18n="privacy.113">❌ Cookie publicitaire (Google Ads, Facebook Pixel, etc.)</li>
+      <li data-i18n="privacy.114">❌ Cookie de tracking (Google Analytics, Hotjar, etc.)</li>
+      <li data-i18n="privacy.115">❌ Cookie de réseaux sociaux (sauf si vous cliquez sur les liens LinkedIn/Malt)</li>
+    </ul>
+
+    <h3 data-i18n="privacy.116">9.2 Gérer vos cookies</h3>
+    <p data-i18n="privacy.117">Vous pouvez à tout moment :</p>
+    <ul>
+      <li data-i18n="privacy.118">Accepter ou refuser les cookies via la bannière affichée lors de votre première visite</li>
+      <li data-i18n="privacy.119">Supprimer les cookies dans les paramètres de votre navigateur</li>
+      <li data-i18n="privacy.120">Configurer votre navigateur pour bloquer tous les cookies (mais cela peut affecter le fonctionnement du site)</li>
+    </ul>
+
+    <h2 data-i18n="privacy.121">10. Sécurité des données</h2>
+    <p data-i18n="privacy.122">Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles :</p>
+    <ul>
+      <li data-i18n="privacy.123">✅ Connexion HTTPS (chiffrement SSL/TLS)</li>
+      <li data-i18n="privacy.124">✅ Formulaires sécurisés</li>
+      <li data-i18n="privacy.125">✅ Accès limité aux données (uniquement Jacob Radonirina)</li>
+      <li data-i18n="privacy.126">✅ Hébergement sécurisé conforme aux normes européennes</li>
+      <li data-i18n="privacy.127">✅ Sauvegardes régulières</li>
+      <li data-i18n="privacy.128">✅ Pas de stockage de données sensibles (pas de carte bancaire, pas de mot de passe)</li>
+    </ul>
+
+    <h2 data-i18n="privacy.129">11. Transferts internationaux de données</h2>
+    <p data-i18n="privacy.130">Vos données sont principalement stockées et traitées au sein de l'Union Européenne (France).</p>
+    <p data-i18n-html="privacy.131"><strong>Exception :</strong> EmailJS (États-Unis) pour l'envoi d'emails. EmailJS est conforme GDPR et garantit un niveau de protection adéquat via les clauses contractuelles types (SCC) approuvées par la Commission Européenne.</p>
+
+    <h2 data-i18n="privacy.132">12. Données des mineurs</h2>
+    <p data-i18n="privacy.133">Ce site est destiné à un public professionnel. Nous ne collectons pas sciemment de données personnelles de personnes de moins de 16 ans.</p>
+    <p data-i18n-html="privacy.134">
+      Si vous êtes parent et que vous découvrez que votre enfant nous a fourni des données personnelles, contactez-nous immédiatement à
+      <a href="mailto:jacob.radonirina@gmail.com">jacob.radonirina@gmail.com</a>
+      pour que nous puissions les supprimer.
+    </p>
+
+    <h2 data-i18n="privacy.135">13. Modifications de cette politique</h2>
+    <p data-i18n="privacy.136">Nous nous réservons le droit de modifier cette Politique de Confidentialité à tout moment pour refléter les changements dans nos pratiques ou pour d'autres raisons opérationnelles, légales ou réglementaires.</p>
+    <p data-i18n="privacy.137">Toute modification sera publiée sur cette page avec une mise à jour de la date "Dernière mise à jour" en haut de cette page.</p>
+    <p data-i18n="privacy.138">Nous vous encourageons à consulter régulièrement cette page pour rester informé de nos pratiques en matière de confidentialité.</p>
+
+    <h2 data-i18n="privacy.139">14. Contact</h2>
+    <p data-i18n="privacy.140">Pour toute question concernant cette Politique de Confidentialité ou le traitement de vos données personnelles, contactez-nous :</p>
+    <div class="info-box">
+      <p data-i18n-html="privacy.141">
+        <strong>Email :</strong> <a href="mailto:jacob.radonirina@gmail.com">jacob.radonirina@gmail.com</a><br />
+        <strong>Délai de réponse :</strong> 30 jours maximum (conformément au RGPD)<br />
+        <strong>LinkedIn : </strong>
+        <a href="https://www.linkedin.com/in/jacob-radonirina-houmadi-120841b0" rel="noopener" target="_blank">Jacob Houmadi</a>
+      </p>
+    </div>
+
+    <hr style="margin: 40px 0; border: none; border-top: 1px solid #ddd" />
+
+    <p data-i18n-html="privacy.142" style="text-align: center; color: var(--text-gray); font-size: 0.9rem;">
+      <a data-i18n="privacy.143" href="index.html">← Retour à l'accueil</a> |
+      <a data-i18n="privacy.144" href="mentions-legales.html">Mentions légales</a>
+    </p>
+  </div>
 </body>
 </html>

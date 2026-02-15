@@ -40,13 +40,14 @@
             padding: var(--space-2xl) var(--space-xl);
             display: flex;
             flex-direction: column;
-            gap: var(--space-2xl);
             transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: -4px 0 40px rgba(0, 0, 0, 0.1);
+            visibility: hidden;
         }
 
         .mobile-nav.active {
             right: 0;
+            visibility: visible;
         }
 
         /* Overlay pour fermer le menu */
@@ -106,7 +107,12 @@
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
-        .mobile-nav-links a {
+        .mobile-nav-links button{
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            color: inherit;
             display: block;
             padding: var(--space-md) 0;
             color: var(--dark);
@@ -117,41 +123,27 @@
             position: relative;
         }
 
-        .mobile-nav-links a:hover {
+
+        .mobile-nav-links button:hover {
             color: var(--primary);
-            padding-left: var(--space-sm);
         }
 
-        .mobile-nav-links a::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: width 0.3s ease;
-        }
-
-        .mobile-nav-links a:hover::before {
-            width: 20px;
-        }
 
         /* Footer du menu mobile */
         .mobile-nav-footer {
-            padding-top: var(--space-lg);
+            padding: var(--space-lg) 0;
             border-top: 1px solid rgba(0, 0, 0, 0.1);
         }
 
         .mobile-nav-footer p {
-            font-size: var(--font-sm);
             color: rgba(0, 0, 0, 0.6);
             margin-bottom: var(--space-md);
             line-height: 1.5;
         }
 
         .mobile-cta {
+            border: none;
+            cursor: pointer;
             display: block;
             width: 100%;
             padding: var(--space-md);
