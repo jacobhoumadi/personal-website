@@ -520,27 +520,26 @@
                 }
                 .calendly-success-header {
                     text-align: center;
-                    padding: 24px 16px 8px;
-                    border-radius: 12px 12px 0 0;
+                    border-radius: var(--radius-md) var(--radius-md) 0 0;
                 }
                 .calendly-checkmark {
-                    font-size: 2rem;
-                    margin-bottom: 8px;
+                    font-size: var(--font-md);
+                    margin-bottom: var(--space-sm);
                 }
                 .calendly-success-header h3 {
-                    font-size: 1.25rem;
+                    font-size: var(--font-lg);
                     font-weight: 700;
-                    margin: 0 0 8px;
-                    color: #111;
+                    margin: 0 0 var(--space-sm);
+                    color: var(--dark);
                 }
                 .calendly-success-header p {
-                    font-size: 0.9rem;
-                    color: #555;
+                    font-size: var(--font-sm);
+                    color: var(--text-gray);
                     line-height: 1.5;
-                    margin: 0 0 16px;
+                    margin: 0 0 var(--space-md);
                 }
                 .calendly-inline-widget {
-                    border-radius: 0 0 12px 12px;
+                    border-radius: 0 0 var(--radius-md) var(--radius-md);
                     overflow: hidden;
                 }
                 /* Bouton loading state */
@@ -1019,7 +1018,7 @@
             gap: calc(var(--space-sm) * 0.75);
             padding: var(--space-xs);
             color: var(--text-gray);
-            font-size: var(--font-sm);
+            font-size: var(--font-md);
         }
 
         .offer-card li:before {
