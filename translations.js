@@ -48,10 +48,12 @@ const translations = {
     // ── Formulaire ────────────────────────────────
     'form.name':    'Nom complet',
     'form.email':   'Email professionnel',
-    'form.company': 'Nom de l\'entreprise',
+    'form.company' : '<label for="company">Votre entreprise</label>' + 
+                      '<input type="text" id="company" name="company" placeholder="Votre entreprise" required>',
     'form.website': 'Site web',
     'form.project': 'Type de projet',
-    'form.message': 'Message',
+    'form.message': ' <label for="message">Message</label>' +
+                      '<textarea id="message" name="message" rows="4" placeholder="Votre message ..."></textarea>',
     'form.submit':  'Démarrer la conversation →',
     'form.consent': 'J\'accepte que mes données soient utilisées pour traiter ma demande, conformément à la <a href="politique-confidentialite.html" target="_blank">politique de confidentialité</a>.',
 
@@ -619,10 +621,12 @@ const translations = {
     // ── Formulaire ────────────────────────────────
     'form.name':    'Full name',
     'form.email':   'Professional email',
-    'form.company': 'Company name',
+    'form.company' : '<label for="company">Your company</label>' + 
+                     '<input type="text" id="company" name="company" placeholder="Your company" required>',
     'form.website': 'Website',
     'form.project': 'Project type',
-    'form.message': 'Message',
+    'form.message': ' <label for="message">Message</label>' +
+                      '<textarea id="message" name="message" rows="4" placeholder="Your message..."></textarea>',
     'form.submit':  'Start the conversation →',
     'form.consent': 'I agree that my data may be used to process my request, in accordance with the <a href="politique-confidentialite.html" target="_blank">privacy policy</a>.',
 
@@ -1146,7 +1150,8 @@ const translations = {
     "privacy.142": "",
     "privacy.143": "← Back to home",
     "privacy.144": "Legal notice",
-  }
+  },
+  
 };
 
 
