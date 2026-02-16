@@ -578,6 +578,22 @@ const translations = {
     "privacy.142": "",
     "privacy.143": "← Retour à l'accueil",
     "privacy.144": "Mentions légales",
+    
+      "404.label":     "Page / 404-error",
+      "404.h1":        "Cette page n'a pas été designée.",
+      "404.sub":       "L'URL que vous cherchez n'existe pas — ou a été déplacée. Pas d'inquiétude, même les meilleurs wireframes ont des écrans manquants.",
+      "404.btn1":      "Retour à l'accueil",
+      "404.btn2":      "Voir le portfolio",
+      "404.btn3":      "Me contacter",
+      "404.toast":     "Page non trouvée — erreur 404",
+      "404.prop-title":"Page",
+      "404.prop-key1": "Status",
+      "404.prop-key2": "Type",
+      "404.prop-val2": "Error",
+      "404.prop-key3": "Auteur",
+      "404.prop-key4": "Exp.",
+      "404.prop-val4": "10 ans",
+
   },
 
   
@@ -1157,7 +1173,22 @@ const translations = {
     "privacy.142": "",
     "privacy.143": "← Back to home",
     "privacy.144": "Legal notice",
-  },
+
+    "404.label":     "Page / 404-error",
+    "404.h1":        "This page was never designed.",
+    "404.sub":       "The URL you're looking for doesn't exist — or has been moved. Don't worry, even the best wireframes have missing screens.",
+    "404.btn1":      "Back to home",
+    "404.btn2":      "View portfolio",
+    "404.btn3":      "Contact me",
+    "404.toast":     "Page not found — error 404",
+    "404.prop-title":"Page",
+    "404.prop-key1": "Status",
+    "404.prop-key2": "Type",
+    "404.prop-val2": "Error",
+    "404.prop-key3": "Author",
+    "404.prop-key4": "Exp.",
+    "404.prop-val4": "10 years",
+  }, 
   
 };
 

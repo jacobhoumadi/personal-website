@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Page introuvable · Jacob Houmadi</title>
+    <meta name="description" content="Cette page n'existe pas. Revenez au portfolio de Jacob Houmadi, Product Designer freelance.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://jacob-houmadi.com/404.html">
+    <meta name="theme-color" content="#0A0E1A">
+
+    <!-- Fonts (same as main site) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ── RESET & TOKENS ── */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html, body {
+            height: 100%;
+            background: var(--navy);
+            color: var(--white);
+            font-family: var(--font-family-base);
+            overflow: hidden;
+        }
+
+        /* ── BACKGROUND GRID ── */
+        .bg {
+            position: fixed;
+            inset: 0;
+            background:
+                linear-gradient(rgba(0,102,255,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,102,255,0.04) 1px, transparent 1px);
+            background-size: 48px 48px;
+            animation: gridDrift 20s linear infinite;
+        }
+        @keyframes gridDrift {
+            from { transform: translate(0,0); }
+            to   { transform: translate(48px, 48px); }
+        }
+
+        /* Radial vignette over grid */
+        .bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 80% 60% at 50% 50%, transparent 30%, var(--navy) 100%);
+        }
+
+        /* ── FLOATING ARTBOARD ── */
+        .artboard {
+            position: fixed;
+            inset: 0;
+            display: grid;
+            place-items: center;
+        }
+
+        /* Figma-style frame lines */
+        .frame {
+            position: relative;
+            width: min(760px, 92vw);
+            padding: 56px 48px 48px;
+            background: var(--primary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            animation: floatIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+            
+        }
+
+        @keyframes floatIn {
+            from { opacity: 0; transform: translateY(32px) scale(0.97); }
+            to   { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* Corner handles (Figma selection style) */
+        .handle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border: 1.5px solid var(--white);
+            border-radius: 1px;
+        }
+        .handle.tl { top: -4px; left: -4px; }
+        .handle.tr { top: -4px; right: -4px; }
+        .handle.bl { bottom: -4px; left: -4px; }
+        .handle.br { bottom: -4px; right: -4px; }
+
+        /* Frame label (like Figma layer name) */
+        .frame-label {
+            position: absolute;
+            top: -26px;
+            left: 0;
+            font-family: var(--font-family-base);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: var(--primary);
+            text-transform: uppercase;
+        }
+
+        /* ── 404 GIANT NUMBER ── */
+        .code {
+            font-family: var(--font-family-base);
+            font-size: calc(var(--font-4xl) * 3);
+            font-weight: 800;
+            line-height: 0.9;
+            letter-spacing: -0.04em;
+            background: var(--white);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            display: inline-block;
+            animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+        }
+
+        /* Blue pixel glitch accent on the 0 */
+        .code .glitch {
+            position: relative;
+            display: inline-block;
+        }
+        .code .glitch::before {
+            content: '0';
+            position: absolute;
+            inset: 0;
+            -webkit-text-fill-color: var(--dark);
+            clip-path: polygon(0 38%, 100% 38%, 100% 52%, 0 52%);
+            transform: translateX(-4px);
+            opacity: 0.8;
+            animation: glitchX 4s ease-in-out infinite;
+        }
+        @keyframes glitchX {
+            0%, 90%, 100% { transform: translateX(-4px); opacity: 0.8; clip-path: polygon(0 38%, 100% 38%, 100% 52%, 0 52%); }
+            92%  { transform: translateX(6px); opacity: 1;   clip-path: polygon(0 20%, 100% 20%, 100% 35%, 0 35%); }
+            95%  { transform: translateX(-2px); opacity: 0.6; clip-path: polygon(0 60%, 100% 60%, 100% 72%, 0 72%); }
+            97%  { transform: translateX(4px); opacity: 1;   clip-path: polygon(0 38%, 100% 38%, 100% 52%, 0 52%); }
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ── CONTENT ── */
+        .content {
+            margin-top: 24px;
+            animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+        }
+
+        h1 {
+            font-family: var(--font-family-base);
+            font-size: clamp(20px, 3.5vw, 28px);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            font-family: var(--font-family-base);
+            font-size: clamp(14px, 2vw, 16px);
+            font-weight: 400;
+            color: var(--white) !important;
+            line-height: 1.6;
+            max-width: 480px;
+        }
+
+        /* ── DIVIDER ── */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: var(--border);
+            margin: 32px 0;
+            animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+        }
+
+        /* ── ACTIONS ── */
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 24px;
+            border-radius: 6px;
+            font-family: var(--font-family-base);
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: var(--radius-full);
+            letter-spacing: -0.01em;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+        }
+
+        .btn-primary {
+            width: inherit;
+            background: var(--white);
+            color: var(--dark);
+            box-shadow: 0 0 0 0 var(--primary-glow);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            background: #ffffff96;
+        }
+        .btn-primary:active { transform: translateY(0); }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 1px solid var(--white);
+        }
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.06);
+            border-color: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Arrow icon */
+        .btn svg { flex-shrink: 0; transition: transform 0.2s; }
+        .btn-primary:hover svg { transform: translateX(3px); }
+
+        /* ── PROPERTY PANEL (right side, Figma vibes) ── */
+        .properties {
+            position: absolute;
+            right: -180px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 168px;
+            background: rgba(21, 29, 66, 0.75);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            backdrop-filter: blur(16px);
+            padding: 12px;
+            font-size: 11px;
+            animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+        }
+
+        .prop-section {
+            margin-bottom: 12px;
+        }
+        .prop-section:last-child { margin-bottom: 0; }
+
+        .prop-title {
+            color: var(--muted);
+            font-family: var(--font-family-base);
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            font-size: 10px;
+            margin-bottom: 6px;
+        }
+
+        .prop-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+
+        .prop-key  { color: var(--muted); font-family: var(--font-family-base); }
+        .prop-val  {
+            font-family: var(--font-family-base);
+            font-weight: 600;
+            color: var(--white);
+        }
+        .prop-val.blue { color: var(--primary); }
+        .prop-val.red  { color: #FF4D4D; }
+
+        .prop-divider { width: 100%; height: 1px; background: var(--border); margin: 8px 0; }
+
+        /* ── CURSOR (animated Figma cursor floating) ── */
+        .cursor-float {
+            position: fixed;
+            pointer-events: none;
+            z-index: 100;
+            animation: cursorDrift 8s ease-in-out infinite;
+        }
+
+        @keyframes cursorDrift {
+            0%   { top: 42%; left: 22%; }
+            25%  { top: 35%; left: 68%; }
+            50%  { top: 60%; left: 55%; }
+            75%  { top: 48%; left: 30%; }
+            100% { top: 42%; left: 22%; }
+        }
+
+        .cursor-label {
+           position: absolute;
+            top: 22px;
+            left: 10px;
+            background: #00ffe3;
+            color: var(--navy);
+            font-family: var(--font-family-base);
+            font-size: var(--font-md);
+            font-weight: 700;
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: 2px;
+            white-space: nowrap;
+            letter-spacing: 0.02em;
+            border-radius: var(--radius-full);
+        }
+
+        /* ── TOAST NOTIFICATION ── */
+        .toast {
+            position: fixed;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%) translateY(80px);
+            background: rgba(21, 29, 66, 0.95);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 14px 20px;
+            font-family: var(--font-family-base);
+            font-size: 13px;
+            color: var(--muted);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            backdrop-filter: blur(16px);
+            animation: toastIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards;
+            white-space: nowrap;
+        }
+        @keyframes toastIn {
+            to { transform: translateX(-50%) translateY(0); }
+        }
+        .toast-dot {
+            width: 7px; height: 7px;
+            background: #FF4D4D;
+            border-radius: 50%;
+            flex-shrink: 0;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 900px) {
+            .properties { display: none; }
+        }
+
+        @media (max-width: 560px) {
+            .frame { padding: 40px 28px 36px; }
+            .actions { flex-direction: column; }
+            .btn { justify-content: center; }
+            .cursor-float { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background grid -->
+    <div class="bg" aria-hidden="true"></div>
+
+    <!-- Floating Figma cursor -->
+    <div class="cursor-float" aria-hidden="true">
+        <svg width="20" height="26" viewBox="0 0 20 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.5 1.5L1.5 21.5L6.5 16.5L10.5 24.5L13 23.5L9 15.5L15.5 15.5L1.5 1.5Z" fill="white" stroke="#00ffe3" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+        <span class="cursor-label">Jacob H.</span>
+    </div>
+
+    <!-- Main frame -->
+    <div class="artboard">
+        <div class="frame">
+
+            <!-- Frame label -->
+            <div data-i18n="404.label" class="frame-label" aria-hidden="true">Page / 404-error</div>
+
+            <!-- 404 number -->
+            <div class="code" aria-label="Erreur 404">4<span class="glitch">0</span>4</div>
+
+            <!-- Content -->
+            <div class="content">
+                <h1 data-i18n="404.h1">Cette page n'a pas été designée.</h1>
+                <p data-i18n="404.sub"class="subtitle">
+                    L'URL que vous cherchez n'existe pas — ou a été déplacée.
+                    Pas d'inquiétude, même les meilleurs wireframes ont des écrans manquants.
+                </p>
+            </div>
+
+            <div class="divider" aria-hidden="true"></div>
+
+            <!-- Actions -->
+            <div class="actions">
+                <button data-i18n="404.btn1" href="/" class="btn btn-primary">
+                    Retour à l'accueil
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <button data-i18n="404.btn2" href="/#portfolioSection" onclick="window.location='/'; setTimeout(()=>showPortfolio?.(),400); return false;" class="btn btn-secondary">
+                    Voir le portfolio
+                </button>
+                <button data-i18n="404.btn3" href="mailto:jacob.radonirina@gmail.com" class="btn btn-secondary">
+                    Me contacter
+                </button>
+            </div>
+
+            <!-- Figma-style property panel -->
+            <aside class="properties" aria-label="Informations page">
+                <!-- Figma-style corner handles -->
+                    <div class="handle tl" aria-hidden="true"></div>
+                    <div class="handle tr" aria-hidden="true"></div>
+                    <div class="handle bl" aria-hidden="true"></div>
+                    <div class="handle br" aria-hidden="true"></div>
+
+                <div class="prop-section">
+                    <div data-i18n="404.prop-title" class="prop-title">Page</div>
+                    <div class="prop-row">
+                        <span data-i18n="404.prop-key1" class="prop-key">Status</span>
+                        <span class="prop-val red">404</span>
+                    </div>
+                    <div class="prop-row">
+                        <span data-i18n="404.prop-key2" class="prop-key">Type</span>
+                        <span data-i18n="404.prop-val2" class="prop-val">Error</span>
+                    </div>
+                </div>
+                <div class="prop-divider"></div>
+                <div class="prop-section">
+                    <div class="prop-title">Designer</div>
+                    <div class="prop-row">
+                        <span data-i18n="404.prop-key3" class="prop-key">Auteur</span>
+                        <span class="prop-val blue">Jacob H.</span>
+                    </div>
+                    <div class="prop-row">
+                        <span data-i18n="404.prop-key4" class="prop-key">Exp.</span>
+                        <span data-i18n="404.prop-val4" class="prop-val">10 ans</span>
+                    </div>
+                </div>
+                <div class="prop-divider"></div>
+                <div class="prop-section">
+                    <div class="prop-title">Fill</div>
+                    <div class="prop-row">
+                        <span class="prop-key">Primary</span>
+                        <span class="prop-val blue">#0066FF</span>
+                    </div>
+                    <div class="prop-row">
+                        <span class="prop-key">BG</span>
+                        <span class="prop-val">#0A0E1A</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Toast notification -->
+    <div data-i18n="404.toast" class="toast" role="alert" aria-live="polite">
+        <span class="toast-dot" aria-hidden="true"></span>
+        Page non trouvée — erreur 404
+    </div>
+
+</body>
+</html>
