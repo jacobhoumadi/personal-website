@@ -456,282 +456,238 @@
 
         <!-- ── PORTFOLIO SECTION ──────────────────────────────────── -->
         <div class="portfolio-section" id="portfolioSection" tabindex="-1">
-            <button class="portfolio-close"  id="portfolioClose" onclick="hidePortfolio()" aria-label="Fermer le portfolio">×</button>
+                <button class="portfolio-close"  id="portfolioClose" onclick="hidePortfolio()" aria-label="Fermer le portfolio">×</button>
 
+                <div class="portfolio-container" id="portfolioContainer">
 
-            <div class="portfolio-container" id="portfolioContainer">
-
-
-                <!-- Card 0 · MyTango Mobile App -->
-                <div class="portfolio-card" data-index="0">
-                    <div class="portfolio-right">
-                    <div class="portfolio-image" id="mytango-1">
-                        <img src="Captures/Tango-refonte-dashboard-fr.webp"
-                        data-lang-en="Captures/Tango-refonte-dashboard-en.webp" 
-                        data-lang-fr="Captures/Tango-refonte-dashboard-fr.webp" 
-                        alt="comparaison avant/après refonte interface : 
-                        multiples swipes et boutons flous remplacés par switch interface clair et détails visibles 
-                        (écrans data de l'offre Tango smart M 16.7GB/20GB à gauche et offre Go mobile M 18GB/35GB à droite)" loading="lazy"/>
-                    </div>
-                    <div class="portfolio-image hidden" id="mytango-2" style="background: linear-gradient(135deg, #667eea, #764ba2);">
-                        <img src="Captures/MyTango-note-hausse-fr.webp"
-                        data-lang-en="Captures/MyTango-note-hausse-en.webp"
-                        data-lang-fr="Captures/MyTango-note-hausse-fr.webp"
-                        alt="Infographie promotionnelle de l'application Tango : captures d'écran app mobile (accueil avec data 18GB, solde, La Roue),
-                         notes App Store 4.5 et Google Play 3.5 avec mentions 'Améliorée - Notes positives majoritaires'." loading="lazy"/>
-                    </div>
-                    <div class="portfolio-image hidden" id="mytango-3" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
-                        <img src="Captures/Tango-enjoy-optimisation-fr.webp" 
-                        data-lang-en="Captures/Tango-enjoy-optimisation-en.webp"
-                        data-lang-fr="Captures/Tango-enjoy-optimisation-fr.webp"
-                        alt="Capture d'écran de l'application mobile Tango montrant l'écran d'optimisation du 
-                        jeu La Roue, avec trois étapes : 1. Simplification du parcours et clarification des messages d'onboarding, 
-                        2. Correction de la consistance visuelle, 3. Redirection vers le quiz La Roue après le parcours, 
-                        incluant des boutons comme Support, Opérations, Bills et Enjoy." loading="lazy"/>
-                    </div>
-                    <div class="portfolio-image hidden" id="mytango-4" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
-                        <img src="Captures/Tango-parcours-simplifie-fr.webp"
-                        data-lang-en="Captures/Tango-parcours-simplifie-en.webp"
-                        data-lang-fr="Captures/Tango-parcours-simplifie-fr.webp"    
-                        alt="Infographie du processus de conception de l'application Tango : cartographie des contraintes (icônes de users, graphs, code) 
-                        menant à une conception incrémentale (calendrier mensuel), avec impact validé sur la solution (gestion simplifiée des dysfonctionnements 
-                        pour les équipes et utilisateurs finaux, complexité non ressentie)" loading="lazy"/>
-                    </div>
-                </div>
-
-                    <div class="portfolio-left">
-                        <div>
-                            <h3 data-i18n="portfolio.tango_app.title">MyTango Mobile App</h3>
-                            <h4 class="role" data-i18n="portfolio.tango_app.role">UX/UI Designer · Opérateur télécom Luxembourg</h4>
-                            <!-- data-i18n-html car contient <span class="mobile-hidden"> -->
-                            <p data-i18n-html="portfolio.tango_app.desc">Tango est un opérateur télécom luxembourgeois avec une app mobile permettant la gestion des offres, des paiements, et des services additionnels.<span class="mobile-hidden"><br/> Mission : refondre l'expérience de l'app mobile pour résoudre des frictions critiques.</span></p>
+                    <!-- Card 0 · MyTango Mobile App -->
+                    <div class="portfolio-card" data-index="0">
+                        <div class="portfolio-right">
+                            <div class="portfolio-image" id="mytango-1">
+                                <img src="Captures/Tango-refonte-dashboard-fr.webp"
+                                data-lang-en="Captures/Tango-refonte-dashboard-en.webp" 
+                                data-lang-fr="Captures/Tango-refonte-dashboard-fr.webp" 
+                                alt="Comparaison avant/après de la refonte du dashboard Tango avec interface simplifiée" loading="lazy"/>
+                            </div>
+                            <div class="portfolio-image hidden" id="mytango-2" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                                <img src="Captures/MyTango-note-hausse-fr.webp"
+                                data-lang-en="Captures/MyTango-note-hausse-en.webp"
+                                data-lang-fr="Captures/MyTango-note-hausse-fr.webp"
+                                alt="Notes App Store et Google Play de l'application Tango avec évaluations positives"/>
+                            </div>
+                            <div class="portfolio-image hidden" id="mytango-3" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                                <img src="Captures/Tango-enjoy-optimisation-fr.webp" 
+                                data-lang-en="Captures/Tango-enjoy-optimisation-en.webp"
+                                data-lang-fr="Captures/Tango-enjoy-optimisation-fr.webp"
+                                alt="Optimisation du jeu La Roue avec parcours simplifié en trois étapes" />
+                            </div>
+                            <div class="portfolio-image hidden" id="mytango-4" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                                <img src="Captures/Tango-parcours-simplifie-fr.webp"
+                                data-lang-en="Captures/Tango-parcours-simplifie-en.webp"
+                                data-lang-fr="Captures/Tango-parcours-simplifie-fr.webp"    
+                                alt="Processus de conception incrémentale pour simplifier l'expérience utilisateur Tango" />
+                            </div>
                         </div>
-                        <div class="portfolio-insights">
-                            <h4 data-i18n="portfolio.tango_app.insights">Réalisations clés :</h4>
-                            <button class="insight-btn active" onclick="switchImage(this,'mytango-1')">
-                                <h6 data-i18n="portfolio.tango_app.btn1">Résolution d'une friction récurrente</h6>
-                                <span data-i18n="portfolio.tango_app.btn1.desc">Dashboard de consommation repensé sur l'affichage des jauges</span>
-                            </button>
-                            <button class="insight-btn" onclick="switchImage(this,'mytango-3')">
-                                <h6 data-i18n="portfolio.tango_app.btn2">Stratégie de rétention : Jeu Enjoy</h6>
-                                <span data-i18n="portfolio.tango_app.btn2.desc">Optimisation UX Gaming in-app et redirection vers pages clés</span>
-                            </button>
-                            <button class="insight-btn" onclick="switchImage(this,'mytango-4')">
-                                <h6 data-i18n="portfolio.tango_app.btn3">Nouvelle offre complexe simplifiée</h6>
-                                <span data-i18n="portfolio.tango_app.btn3.desc">Activation intuitive malgré contraintes multiples au lancement</span>
-                            </button>
-                            <button class="insight-btn" onclick="switchImage(this,'mytango-2')">
-                                <h6 data-i18n="portfolio.tango_app.btn4">Satisfaction utilisateurs en hausse</h6>
-                                <span data-i18n="portfolio.tango_app.btn4.desc">Note App Store améliorée durant la période</span>
-                            </button>
+
+                        <div class="portfolio-left">
+                            <div>
+                                <h3 data-i18n="portfolio.tango_app.title">MyTango Mobile App</h3>
+                                <h4 class="role" data-i18n="portfolio.tango_app.role">UX/UI Designer · Opérateur télécom Luxembourg</h4>
+                                <p data-i18n-html="portfolio.tango_app.desc">Tango est un opérateur télécom luxembourgeois avec une app mobile permettant la gestion des offres, des paiements, et des services additionnels.<span class="mobile-hidden"><br/> Mission : refondre l'expérience de l'app mobile pour résoudre des frictions critiques.</span></p>
+                            </div>
+                            <div class="portfolio-insights">
+                                <h4 data-i18n="portfolio.tango_app.insights">Réalisations clés :</h4>
+                                <button class="insight-btn active" onclick="switchImage(this,'mytango-1')">
+                                    <h6 data-i18n="portfolio.tango_app.btn1">Résolution d'une friction récurrente</h6>
+                                    <span data-i18n="portfolio.tango_app.btn1.desc">Dashboard de consommation repensé sur l'affichage des jauges</span>
+                                </button>
+                                <button class="insight-btn" onclick="switchImage(this,'mytango-3')">
+                                    <h6 data-i18n="portfolio.tango_app.btn2">Stratégie de rétention : Jeu Enjoy</h6>
+                                    <span data-i18n="portfolio.tango_app.btn2.desc">Optimisation UX Gaming in-app et redirection vers pages clés</span>
+                                </button>
+                                <button class="insight-btn" onclick="switchImage(this,'mytango-4')">
+                                    <h6 data-i18n="portfolio.tango_app.btn3">Nouvelle offre complexe simplifiée</h6>
+                                    <span data-i18n="portfolio.tango_app.btn3.desc">Activation intuitive malgré contraintes multiples au lancement</span>
+                                </button>
+                                <button class="insight-btn" onclick="switchImage(this,'mytango-2')">
+                                    <h6 data-i18n="portfolio.tango_app.btn4">Satisfaction utilisateurs en hausse</h6>
+                                    <span data-i18n="portfolio.tango_app.btn4.desc">Note App Store améliorée durant la période</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-
-                <!-- Card 1 · Tango.lu E-Commerce -->
-                <div class="portfolio-card" data-index="1">
-                    <div class="portfolio-right">
-                    <div class="portfolio-image" id="tangoweb-1">
-                        <img src="Captures/Tango.lu-offre-avant-fr.webp"
-                        data-lang-en="Captures/Tango.lu-offre-avant-en.webp"
-                        data-lang-fr="Captures/Tango.lu-offre-avant-fr.webp"
-                        alt="Interface web Tango avant refonte : page offre Tango Smart pour abonnement téléphone 5G sans engagement, offre La Kidwatch (montre connectée) à gauche
-                        et encard de selection d'abonnement à droite choix abonnement Smart Unlimited+ à 
-                        80€ pour 50GB data (choix 50dB volume), en dessous congiguration de data, choix possibles (Illimités,  25Gb, 15GB, 7Gb 
-                        et 4GB), en dessous choix data incluse en europe (data 4GB en Europe +) boutons 'le plus de l'offre' et  'Choisir du forfait' 
-                        et engagement 24 mois" loading="lazy"/>
-                    </div>
-                    <div class="portfolio-image hidden" id="tangoweb-2" style="background: linear-gradient(135deg, #667eea, #764ba2);">
-                        <img src="Captures/Tango.lu-offre-apres-fr.webp"
-                        data-lang-en="Captures/Tango.lu-offre-apres-en.webp"
-                        data-lang-fr="Captures/Tango.lu-offre-apres-fr.webp"
-                        alr="Interface web Tango après refonte pour offre GO Mobile : forfait GO Mobile Unlimited extra à 60€ avec data illimité 
-                        + 80 GB de volumes en Europe, USA et Canad (autres choix illimité +70BG en europe, 30GB,20GB et 5GB à prix décroissants), 
-                        choix sans smartphone, options déjà client Tango fibre (30BG en plus et remise de 3€/mois), exclusivités digitales,
-                         bouton rose 'Choisir ce forfait'" loading="lazy"/>
-                    </div>
-                    <div class="portfolio-image hidden" id="tangoweb-3" style="background: linear-gradient(135deg, #667eea, #764ba2);">
-                        <img src="Captures/Tango.lu-parcour-simplifie-fr.webp"
-                        data-lang-en="Captures/Tango.lu-parcour-simplifie-en.webp"
-                        data-lang-fr="Captures/Tango.lu-parcour-simplifie-en.webp"
-                        alt="Comparaison parcours d'inscription Tango avant/après refonte : en haut (avant), étapes Partner - 
-                        Coordonnées/Contrat - Livraison/Installation - Récapitulatif/Paiement - Confirmé (cercles bleus connectés) ; 
-                        en bas (après), étapes Adresse - Modem - Installation - Confirmation (cercles bleus avec coche finale). 
-                        Diagramme linéaire illustrant simplification du flux utilisateur" loading="lazy"/>
-                    </div>
-                    <div class="portfolio-image hidden" id="tangoweb-4" style="background: linear-gradient(135deg, #667eea, #667eea);">
-                        <img src="Captures/Tango.lu-design-system-fr.webp"
-                        data-lang-en="Captures/Tango.lu-design-system-en.webp"
-                        data-lang-fr="Captures/Tango.lu-design-system-fr.webp"
-                        alt="Design system Tango : checklist validée (Consistant, Scalable, Bien nommé, Organisé, App/site/web self-care) avec menu Spacing/Border Radius ; 
-                        exemples boutons variés (bleus, verts, blancs) ; palette couleurs UI structurée en grille 
-                        (nuances bleu/vert/rose/jaune/violet/orange/gris 
-                        pour états primary/secondary/success/warning/error)" loading="lazy"/>
-                    </div>
-                </div>
-
-
-                    <div class="portfolio-left">
-                        <div>
-                            <h3 data-i18n="portfolio.tango_web.title">Tango.lu E-Commerce</h3>
-                            <p class="role" data-i18n="portfolio.tango_web.role">UX/UI Designer · Opérateur télécom Luxembourg</p>
-                            <p data-i18n-html="portfolio.tango_web.desc">Le site web Tango.lu est la principale porte d'entrée pour l'acquisition et la conversion de nouveaux clients télécom.<span class="mobile-hidden"><br/> Mission : optimiser le funnel d'achat.</span></p>
+                    <!-- Card 1 · Tango.lu E-Commerce -->
+                    <div class="portfolio-card" data-index="1">
+                        <div class="portfolio-right">
+                            <div class="portfolio-image" id="tangoweb-1">
+                                <img src="Captures/Tango.lu-offre-avant-fr.webp"
+                                data-lang-en="Captures/Tango.lu-offre-avant-en.webp"
+                                data-lang-fr="Captures/Tango.lu-offre-avant-fr.webp"
+                                alt="Interface web Tango avant refonte avec page de sélection d'offres mobiles" loading="lazy"/>
+                            </div>
+                            <div class="portfolio-image hidden" id="tangoweb-2" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                                <img src="Captures/Tango.lu-offre-apres-fr.webp"
+                                data-lang-en="Captures/Tango.lu-offre-apres-en.webp"
+                                data-lang-fr="Captures/Tango.lu-offre-apres-fr.webp"
+                                alt="Interface web Tango après refonte avec offres GO Mobile simplifiées et hiérarchisées"/>
+                            </div>
+                            <div class="portfolio-image hidden" id="tangoweb-3" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                                <img src="Captures/Tango.lu-parcour-simplifie-fr.webp"
+                                data-lang-en="Captures/Tango.lu-parcour-simplifie-en.webp"
+                                data-lang-fr="Captures/Tango.lu-parcour-simplifie-en.webp"
+                                alt="Diagramme avant/après montrant la simplification du parcours d'inscription en 4 étapes" />
+                            </div>
+                            <div class="portfolio-image hidden" id="tangoweb-4" style="background: linear-gradient(135deg, #667eea, #667eea);">
+                                <img src="Captures/Tango.lu-design-system-fr.webp"
+                                data-lang-en="Captures/Tango.lu-design-system-en.webp"
+                                data-lang-fr="Captures/Tango.lu-design-system-fr.webp"
+                                alt="Design system Tango avec palette de couleurs, boutons et composants UI"/>
+                            </div>
                         </div>
-                        <div class="portfolio-insights">
-                            <h4 data-i18n="portfolio.tango_web.insights">Réalisations clés</h4>
-                            <button class="insight-btn active" onclick="switchImage(this,'tangoweb-1')">
-                                <h6 data-i18n="portfolio.tango_web.btn1">Page offre AVANT</h6>
-                                <span data-i18n="portfolio.tango_web.btn1.desc">Sous-expositions observées : les plus de l'offre, configurateur d'offre</span>
-                            </button>
-                            <button class="insight-btn" onclick="switchImage(this,'tangoweb-2')">
-                                <h6 data-i18n="portfolio.tango_web.btn2">Page offre APRÈS</h6>
-                                <span data-i18n="portfolio.tango_web.btn2.desc">Facilité de comparaison entre les offres avec leur détail</span>
-                            </button>
-                            <button class="insight-btn" onclick="switchImage(this,'tangoweb-3')">
-                                <h6 data-i18n="portfolio.tango_web.btn3">Parcours utilisateur optimisé</h6>
-                                <span data-i18n="portfolio.tango_web.btn3.desc">Clarification de l'UI et des étapes clés pour un parcours plus fluide</span>
-                            </button>
-                            <button class="insight-btn" onclick="switchImage(this,'tangoweb-4')">
-                                <h6 data-i18n="portfolio.tango_web.btn4">Cohérence cross-plateforme</h6>
-                                <span data-i18n="portfolio.tango_web.btn4.desc">Design system partagé avec l'app mobile et la plateforme Self-care</span>
-                            </button>
+
+                        <div class="portfolio-left">
+                            <div>
+                                <h3 data-i18n="portfolio.tango_web.title">Tango.lu E-Commerce</h3>
+                                <p class="role" data-i18n="portfolio.tango_web.role">UX/UI Designer · Opérateur télécom Luxembourg</p>
+                                <p data-i18n-html="portfolio.tango_web.desc">Le site web Tango.lu est la principale porte d'entrée pour l'acquisition et la conversion de nouveaux clients télécom.<span class="mobile-hidden"><br/> Mission : optimiser le funnel d'achat.</span></p>
+                            </div>
+                            <div class="portfolio-insights">
+                                <h4 data-i18n="portfolio.tango_web.insights">Réalisations clés</h4>
+                                <button class="insight-btn active" onclick="switchImage(this,'tangoweb-1')">
+                                    <h6 data-i18n="portfolio.tango_web.btn1">Page offre AVANT</h6>
+                                    <span data-i18n="portfolio.tango_web.btn1.desc">Sous-expositions observées : les plus de l'offre, configurateur d'offre</span>
+                                </button>
+                                <button class="insight-btn" onclick="switchImage(this,'tangoweb-2')">
+                                    <h6 data-i18n="portfolio.tango_web.btn2">Page offre APRÈS</h6>
+                                    <span data-i18n="portfolio.tango_web.btn2.desc">Facilité de comparaison entre les offres avec leur détail</span>
+                                </button>
+                                <button class="insight-btn" onclick="switchImage(this,'tangoweb-3')">
+                                    <h6 data-i18n="portfolio.tango_web.btn3">Parcours utilisateur optimisé</h6>
+                                    <span data-i18n="portfolio.tango_web.btn3.desc">Clarification de l'UI et des étapes clés pour un parcours plus fluide</span>
+                                </button>
+                                <button class="insight-btn" onclick="switchImage(this,'tangoweb-4')">
+                                    <h6 data-i18n="portfolio.tango_web.btn4">Cohérence cross-plateforme</h6>
+                                    <span data-i18n="portfolio.tango_web.btn4.desc">Design system partagé avec l'app mobile et la plateforme Self-care</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-
-                <!-- Card 2 · Axian Group -->
-                <div class="portfolio-card" data-index="2">
-                    <div class="portfolio-image" id="axian-1" style="background: #D30F3F;">
-                        <img src="Captures/Axian-vision-business-fr.webp"
-                        data-lang-en="Captures/Axian-vision-business-en.webp"
-                        data-lang-fr="Captures/Axian-vision-business-fr.webp"
-                        alt="Poster corporate Axian Group: logo rouge, vision business 'Devenir le champion d'un écosystème numérique, 
-                        inclusif, finançant et énergisant plus audacieux en Afrique' ; mots-clés Audace, Fier, Disruptif ; 
-                        grille photos portraits africains (femme cheveux crépus bouclés yeux proches, homme torse nu levant bras, 
-                        couple moderne, homme masque facial, motifs wax, lampe lanternes main)" loading="lazy"/>
-                    </div>
-                    <div class="portfolio-image hidden" id="axian-2" style="background: #D30F3F;">
-                        <img src="Captures/Axian-unification-ecosysteme-fr.webp"
-                        data-lang-en="Captures/Axian-unification-ecosysteme-en.webp"
-                        data-lang-fr="Captures/Axian-unification-ecosysteme-fr.webp"
-                        alt="Mockups superposés sites web Axian et filiales : 'AXIAN +5 secteurs' avec logos Axian University et Fondation Axian, 
-                        captures pages Site web Axian, Axian univesity (Catalogue de formation homme contemplatif), Fondation Axian (Agir pour transformer avec enfants, sites colorés 
-                        jaune/bleu/rouge avec groupes personnes Afrique). 
-                        Composition visuelle illustrant écosystème digital inclusif" loading="lazy"/>
-                    </div>
-                    <div class="portfolio-image hidden" id="axian-3" style="background: #C0CAD1;">
-                        <img src="Captures/Axian-refonte-corporate-fr.webp"
-                        data-lang-en="Captures/Axian-refonte-corporate-en.webp"
-                        data-lang-fr="Captures/Axian-refonte-corporate-fr.webp"
-                        alt="Infographie refonte site Axian : colonne grise 'Problèmes' (Pas d'identité groupe, Design vieillot, Contenus surchargés) avec 
-                        captures sites filiales (Telco Madagascar, Énergie, Madagscar Fibre Océan, Plus de 2000 sites) 
-                        → colonne rouge 'Solutions' (Nouveau branding, Contenu site plus structuré et aéré) ; captures redesign moderne (Axian 'Devenir le champion d'un écosystème 
-                        numérique inclusif et innovant en Afrique', pôles restructurées)" loading="lazy"/>
-                    </div>
-                    <div class="portfolio-image hidden" id="axian-4" style="background: #151D42;">
-                        <img src="Captures/Axian-4-prix-creative-fr.webp"
-                        data-lang-en="Captures/Axian-4-prix-creative-en.webp"
-                        data-lang-fr="Captures/Axian-4-prix-creative-fr.webp"
-                        alt="Fond bleu marine 'CRÉATRICES PUBLIQUES' avec étoile blanche : 'Meilleures créations conçues' ; section 'ÉDITIONS 2021-22' 
-                        listant prix : Campagne digitale 2022 (1er Prix), Rapport Annuel 2021 (1er Prix), Stratégie Com Telecom 2022 (2ème Prix), 
-                        Rapport Impact 2020 (1er Prix), Branding Axian 2021 (3ème Prix)" loading="lazy"/>
-                    </div>
-
-
-                    <div class="portfolio-left">
-                        <div>
-                            <h3 data-i18n="portfolio.axian.title">Axian Group</h3>
-                            <p class="role" data-i18n="portfolio.axian.role">Digital Designer · Grand Groupe Panafricain</p>
-                            <p data-i18n-html="portfolio.axian.desc">Axian Group est l'un des plus grands groupes panafricains de Madagascar.<span class="mobile-hidden"><br/>En tant que Digital Designer pendant 5 ans, j'ai participé à la refonte complète de l'identité de marque du groupe.</span></p>
+                    <!-- Card 2 · Axian Group -->
+                    <div class="portfolio-card" data-index="2">
+                        <div class="portfolio-right">
+                            <div class="portfolio-image" id="axian-1" style="background: #D30F3F;">
+                                <img src="Captures/Axian-vision-business-fr.webp"
+                                data-lang-en="Captures/Axian-vision-business-en.webp"
+                                data-lang-fr="Captures/Axian-vision-business-fr.webp"
+                                alt="Poster Axian Group présentant la vision business et l'identité culturelle Afrixian" loading="lazy"/>
+                            </div>
+                            <div class="portfolio-image hidden" id="axian-2" style="background: #D30F3F;">
+                                <img src="Captures/Axian-unification-ecosysteme-fr.webp"
+                                data-lang-en="Captures/Axian-unification-ecosysteme-en.webp"
+                                data-lang-fr="Captures/Axian-unification-ecosysteme-fr.webp"
+                                alt="Mockups des sites web Axian illustrant l'écosystème digital avec 5 secteurs unifiés" />
+                            </div>
+                            <div class="portfolio-image hidden" id="axian-3" style="background: #C0CAD1;">
+                                <img src="Captures/Axian-refonte-corporate-fr.webp"
+                                data-lang-en="Captures/Axian-refonte-corporate-en.webp"
+                                data-lang-fr="Captures/Axian-refonte-corporate-fr.webp"
+                                alt="Infographie avant/après montrant les problèmes et solutions de la refonte Axian"/>
+                            </div>
+                            <div class="portfolio-image hidden" id="axian-4" style="background: #151D42;">
+                                <img src="Captures/Axian-4-prix-creative-fr.webp"
+                                data-lang-en="Captures/Axian-4-prix-creative-en.webp"
+                                data-lang-fr="Captures/Axian-4-prix-creative-fr.webp"
+                                alt="Liste des 4 prix Creatives 974 Awards remportés pour les créations Axian 2021-2022" />
+                            </div>
                         </div>
-                        <div class="portfolio-insights">
-                            <button class="insight-btn active" onclick="switchImage(this,'axian-1')">
-                                <h6 data-i18n="portfolio.axian.btn1">Vision business incarnée</h6>
-                                <span data-i18n="portfolio.axian.btn1.desc">Création d'une identité culturelle forte "Afrixian"</span>
-                            </button>
-                            <button class="insight-btn" onclick="switchImage(this,'axian-2')">
-                                <h6 data-i18n="portfolio.axian.btn2">Unification de l'écosystème</h6>
-                                <span data-i18n="portfolio.axian.btn2.desc">5 secteurs rassemblés sous une identité commune et un storytelling partagé</span>
-                            </button>
-                            <button class="insight-btn" onclick="switchImage(this,'axian-3')">
-                                <h6 data-i18n="portfolio.axian.btn3">Refonte site web corporate</h6>
-                                <span data-i18n="portfolio.axian.btn3.desc">Architecture de l'information + design UI + storytelling de l'impact</span>
-                            </button>
-                            <button class="insight-btn" onclick="switchImage(this,'axian-4')">
-                                <h6 data-i18n="portfolio.axian.btn4">4 prix Creatives 974 Awards</h6>
-                                <span data-i18n="portfolio.axian.btn4.desc">Direction artistique reconnue internationalement</span>
-                            </button>
+
+                        <div class="portfolio-left">
+                            <div>
+                                <h3 data-i18n="portfolio.axian.title">Axian Group</h3>
+                                <p class="role" data-i18n="portfolio.axian.role">Digital Designer · Grand Groupe Panafricain</p>
+                                <p data-i18n-html="portfolio.axian.desc">Axian Group est l'un des plus grands groupes panafricains de Madagascar.<span class="mobile-hidden"><br/>En tant que Digital Designer pendant 5 ans, j'ai participé à la refonte complète de l'identité de marque du groupe.</span></p>
+                            </div>
+                            <div class="portfolio-insights">
+                                <button class="insight-btn active" onclick="switchImage(this,'axian-1')">
+                                    <h6 data-i18n="portfolio.axian.btn1">Vision business incarnée</h6>
+                                    <span data-i18n="portfolio.axian.btn1.desc">Création d'une identité culturelle forte "Afrixian"</span>
+                                </button>
+                                <button class="insight-btn" onclick="switchImage(this,'axian-2')">
+                                    <h6 data-i18n="portfolio.axian.btn2">Unification de l'écosystème</h6>
+                                    <span data-i18n="portfolio.axian.btn2.desc">5 secteurs rassemblés sous une identité commune et un storytelling partagé</span>
+                                </button>
+                                <button class="insight-btn" onclick="switchImage(this,'axian-3')">
+                                    <h6 data-i18n="portfolio.axian.btn3">Refonte site web corporate</h6>
+                                    <span data-i18n="portfolio.axian.btn3.desc">Architecture de l'information + design UI + storytelling de l'impact</span>
+                                </button>
+                                <button class="insight-btn" onclick="switchImage(this,'axian-4')">
+                                    <h6 data-i18n="portfolio.axian.btn4">4 prix Creatives 974 Awards</h6>
+                                    <span data-i18n="portfolio.axian.btn4.desc">Direction artistique reconnue internationalement</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-
-                <!-- Card 3 · Silva Paris -->
-                <div class="portfolio-card" data-index="3">
-                    <div class="portfolio-right">
-                    <div class="portfolio-image" id="silva-1" style="background:#EAECF2;">
-                        <img src="Captures/Silva-identite-web-fr.webp"
-                        data-lang-en="Captures/Silva-identite-web-en.webp"
-                        data-lang-fr="Captures/Silva-identite-web-fr.webp"
-                        alt="Brand identity Silva Paris : logos minimalistes 'Artisan Imprimeur' avec icônes ciseaux/rouleau pinceau ; nom 'SILVA' en typo 
-                        serif beige/marron ; palette couleurs (beige, blanc, noir, marron) étiquetée 'Paris' ; 
-                        mockup laptop ouvert sur site Silva (intérieur luxueux : salon style haussmannien boiseries, lustre design, plantes, canapés beiges, cheminée)" loading="lazy"/>
-                    </div>
-                    <div class="portfolio-image hidden" id="silva-2" style="background: #E4EAEF;">
-                        <img src="Captures/Silva-refonte-site-web-fr.webp"
-                        data-lang-en="Captures/Silva-refonte-site-web-en.webp"
-                        data-lang-fr="Captures/Silva-refonte-site-web-fr.webp"
-                        alt="Comparaison refonte site Silva : colonne gauche 'AVANT' (Savoir-faire noyés scrolls, L'art de la confection perdu, 
-                        L'Habillage d'une assise perfectible) avec captures pages chambres/salons surchargées ❌ ; colonne droite 'APRÈS' (Vue d'ensemble immédiate carrousel réalisations 
-                        navigation immersive, Savoir-Faire d'Excellence, Des collaborations uniques) avec captures catalogues meubles/chaises mains sur tissus/carrelages" loading="lazy"/>
-                    </div>
-                    <div class="portfolio-image hidden" id="silva-3" style="background: #F4F4EE;">
-                        <img src="Captures/Silva-design-system-fr.webp"
-                        data-lang-en="Captures/Silva-design-system-en.webp"
-                        data-lang-fr="Captures/Silva-design-system-fr.webp"
-                       alt="Design system Silva : checklist validée (Consistant, Scalable, Bien nommé, Organisé, App/site/web self-care) ; grille palettes couleurs 'Couleurs Primaires' et 'Secondaires' 
-                       (nuances beige/marron/beige clair/gris 100-900) avec échantillons ; vignettes icônes/display (étoiles, lignes, formes géométriques)" loading="lazy"/>
-                    </div>
-                </div>
-
-
-                    <div class="portfolio-left">
-                        <div>
-                            <h3 data-i18n="portfolio.silva.title">Silva Paris</h3>
-                            <p class="role" data-i18n="portfolio.silva.role">Direction Artistique Web / UX Design · Artisanat de luxe</p>
-                            <p data-i18n-html="portfolio.silva.desc">Silva Paris est une maison d'artisanat tapissier de luxe depuis 1982.<span class="mobile-hidden"><br/> Mon rôle : déclinaison digitale de l'identité de marque.</span></p>
+                    <!-- Card 3 · Silva Paris -->
+                    <div class="portfolio-card" data-index="3">
+                        <div class="portfolio-right">
+                            <div class="portfolio-image" id="silva-1" style="background:#EAECF2;">
+                                <img src="Captures/Silva-identite-web-fr.webp"
+                                data-lang-en="Captures/Silva-identite-web-en.webp"
+                                data-lang-fr="Captures/Silva-identite-web-fr.webp"
+                                alt="Identité de marque Silva Paris avec logo, palette de couleurs et mockup du site web" loading="lazy"/>
+                            </div>
+                            <div class="portfolio-image hidden" id="silva-2" style="background: #E4EAEF;">
+                                <img src="Captures/Silva-refonte-site-web-fr.webp"
+                                data-lang-en="Captures/Silva-refonte-site-web-en.webp"
+                                data-lang-fr="Captures/Silva-refonte-site-web-fr.webp"
+                                alt="Comparaison avant/après de la refonte du site Silva avec navigation optimisée"/>
+                            </div>
+                            <div class="portfolio-image hidden" id="silva-3" style="background: #F4F4EE;">
+                                <img src="Captures/Silva-design-system-fr.webp"
+                                data-lang-en="Captures/Silva-design-system-en.webp"
+                                data-lang-fr="Captures/Silva-design-system-fr.webp"
+                                alt="Design system Silva avec palettes de couleurs primaires et secondaires"/>
+                            </div>
                         </div>
-                        <div class="portfolio-insights">
-                            <button class="insight-btn active" onclick="switchImage(this,'silva-1')">
-                                <h6 data-i18n="portfolio.silva.btn1">Déclinaison web de l'identité</h6>
-                                <span data-i18n="portfolio.silva.btn1.desc">Adaptation des codes visuels au digital</span>
-                            </button>
-                            <button class="insight-btn" onclick="switchImage(this,'silva-2')">
-                                <h6 data-i18n="portfolio.silva.btn2">Architecture d'information optimisée</h6>
-                                <span data-i18n="portfolio.silva.btn2.desc">Parcours utilisateur condensé, mise en valeur du savoir-faire artisanal</span>
-                            </button>
-                            <button class="insight-btn" onclick="switchImage(this,'silva-3')">
-                                <h6 data-i18n="portfolio.silva.btn3">Design system cohérent</h6>
-                                <span data-i18n="portfolio.silva.btn3.desc">Composants UI réutilisables, guidelines pour le développement</span>
-                            </button>
+
+                        <div class="portfolio-left">
+                            <div>
+                                <h3 data-i18n="portfolio.silva.title">Silva Paris</h3>
+                                <p class="role" data-i18n="portfolio.silva.role">Direction Artistique Web / UX Design · Artisanat de luxe</p>
+                                <p data-i18n-html="portfolio.silva.desc">Silva Paris est une maison d'artisanat tapissier de luxe depuis 1982.<span class="mobile-hidden"><br/> Mon rôle : déclinaison digitale de l'identité de marque.</span></p>
+                            </div>
+                            <div class="portfolio-insights">
+                                <button class="insight-btn active" onclick="switchImage(this,'silva-1')">
+                                    <h6 data-i18n="portfolio.silva.btn1">Déclinaison web de l'identité</h6>
+                                    <span data-i18n="portfolio.silva.btn1.desc">Adaptation des codes visuels au digital</span>
+                                </button>
+                                <button class="insight-btn" onclick="switchImage(this,'silva-2')">
+                                    <h6 data-i18n="portfolio.silva.btn2">Architecture d'information optimisée</h6>
+                                    <span data-i18n="portfolio.silva.btn2.desc">Parcours utilisateur condensé, mise en valeur du savoir-faire artisanal</span>
+                                </button>
+                                <button class="insight-btn" onclick="switchImage(this,'silva-3')">
+                                    <h6 data-i18n="portfolio.silva.btn3">Design system cohérent</h6>
+                                    <span data-i18n="portfolio.silva.btn3.desc">Composants UI réutilisables, guidelines pour le développement</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-
-                <!-- Pagination & Navigation -->
-                <div class="portfolio-pagination">
-                    <div class="pagination-dot active" onclick="goToSlide(0)"></div>
-                    <div class="pagination-dot" onclick="goToSlide(1)"></div>
-                    <div class="pagination-dot" onclick="goToSlide(2)"></div>
-                    <div class="pagination-dot" onclick="goToSlide(3)"></div>
+                    <!-- Pagination & Navigation -->
+                    <div class="portfolio-pagination">
+                        <div class="pagination-dot active" onclick="goToSlide(0)"></div>
+                        <div class="pagination-dot" onclick="goToSlide(1)"></div>
+                        <div class="pagination-dot" onclick="goToSlide(2)"></div>
+                        <div class="pagination-dot" onclick="goToSlide(3)"></div>
+                    </div>
+                    <button class="portfolio-nav prev" onclick="goToSlide(currentSlide - 1)">‹</button>
+                    <button class="portfolio-nav next" onclick="goToSlide(currentSlide + 1)">›</button>
                 </div>
-                <button class="portfolio-nav prev" onclick="goToSlide(currentSlide - 1)">‹</button>
-                <button class="portfolio-nav next" onclick="goToSlide(currentSlide + 1)">›</button>
             </div>
-        </div>
+
 
 
         <!-- ── MODAL OFFRES ───────────────────────────────────────── -->
@@ -923,7 +879,7 @@
 
                 </div>
             </div>
-        </div>
+    </div>
 
     <script>
         let portfolioTrigger = null;

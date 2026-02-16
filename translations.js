@@ -49,7 +49,7 @@ const translations = {
     'form.name':    'Nom complet',
     'form.email':   'Email professionnel',
     'form.company' : '<label for="company">Votre entreprise</label>' + 
-                      '<input type="text" id="company" name="company" placeholder="Votre entreprise" required>',
+                      '<input type="text" id="company" name="company" placeholder="e.g SpaceX" required>',
     'form.website': 'Site web',
     'form.project': 'Type de projet',
     'form.message': ' <label for="message">Message</label>' +
@@ -622,7 +622,7 @@ const translations = {
     'form.name':    'Full name',
     'form.email':   'Professional email',
     'form.company' : '<label for="company">Your company</label>' + 
-                     '<input type="text" id="company" name="company" placeholder="Your company" required>',
+                     '<input type="text" id="company" name="company" placeholder="e.g SpaceX" required>',
     'form.website': 'Website',
     'form.project': 'Project type',
     'form.message': ' <label for="message">Message</label>' +
@@ -1215,5 +1215,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const lang    = saved || (browser === 'en' ? 'en' : 'fr');
   switchLanguage(lang);
 });
+
+
+
+/**
+ * setLang(lang)
+ * Appelé par les boutons du switcher custom.
+ * Met à jour l'UI du switcher + délègue à switchLanguage() de translations.js
+ */
+function setLang(lang) {
+    // 1. Transition visuelle des boutons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        const isActive = btn.dataset.lang === lang;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+
+    // 2. Sync avec le <select> natif (garde la compat avec translations.js)
+    const select = document.querySelector('.lang-select');
+    if (select) select.value = lang;
+
+    // 3. Appel du moteur de traduction de translations.js
+    if (typeof switchLanguage === 'function') {
+        switchLanguage(lang);
+    }
+}
 
 
