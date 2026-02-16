@@ -424,7 +424,7 @@
             color: var(--white);
         }
 
-        .hero-content blockquote{
+        .hero-content .hero-sub{
             font-size: calc(var(--font-xs) * 1.5);
         }
 

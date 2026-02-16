@@ -175,6 +175,10 @@ const translations = {
     'testimonial.7.text': '"Jacob était un collaborateur très réactif et force de proposition, notamment sur les aspects techniques. Il a une vraie capacité à comprendre rapidement les enjeux et à proposer des solutions concrètes et pertinentes."',
     'testimonial.7.name': 'Saraha',
     'testimonial.7.role': 'Brand Manager',
+    'testimonial.8.text': '"Jacob est une vraie référence en matière de design. Son sens du détail, son excellence esthétique et sa veille constante des tendances garantissent un travail toujours à la pointe. Collaborer avec lui est non seulement efficace, mais également un véritable plaisir."',
+    'testimonial.8.name': 'Theodorakus Bezafy',
+    'testimonial.8.role': 'Motion Graphic · Designer Axian Group',
+    
 
     // ── Modal · FAQ ───────────────────────────────
     'modal.faq.title': 'FAQ',
@@ -747,7 +751,10 @@ const translations = {
     'testimonial.6.role': 'Telecoms & Infrastructure',
     'testimonial.7.text': '"Jacob was a very responsive collaborator with great initiative, particularly on technical aspects. He has a genuine ability to quickly understand the stakes and propose concrete, relevant solutions."',
     'testimonial.7.name': 'Saraha',
-    'testimonial.7.role': 'Brand Manager',
+    'testimonial.7.role': 'Brand Manager',    
+    'testimonial.8.text': '"Jacob is a true reference in design. His attention to detail, aesthetic excellence, and constant monitoring of trends ensure work that is always cutting-edge. Collaborating with him is not only effective, but also a genuine pleasure."',
+    'testimonial.8.name': 'Theodorakus Bezafy',
+    'testimonial.8.role': 'Motion Graphic · Designer Axian Group',
 
     // ── Modal · FAQ ───────────────────────────────
     'modal.faq.title': 'FAQ',
