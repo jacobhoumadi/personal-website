@@ -1209,3 +1209,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+function switchLanguage(lang) {
+  // Votre code existant pour les textes avec data-i18n
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+      const key = element.getAttribute('data-i18n');
+      element.textContent = translations[lang][key];
+  });
+  
+  // Ajouter cette partie pour les images
+  document.querySelectorAll('img[data-lang-fr], img[data-lang-en]').forEach(img => {
+      const newSrc = img.getAttribute('data-lang-' + lang);
+      if (newSrc) {
+      img.src = newSrc;
+      }
+  });
+}
+
