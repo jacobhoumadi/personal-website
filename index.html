@@ -18,6 +18,17 @@
    })(window,document,'script','dataLayer','GTM-PRKVLWBW');</script>
 
      <!-- End Google Tag Manager -->
+     <!-- Microsoft Clarity -->
+     <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "vjhao9vgsp");
+    </script>
+    
+     <!-- End Microsoft Clarity -->
+
    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -936,6 +947,175 @@
                 }, 1000);
             }
         }
+
+        // ============================================
+        // ANALYTICS TRACKING
+        // ============================================
+
+        function trackEvent(eventName, eventParams = {}) {
+            if (typeof gtag === 'function') {
+                gtag('event', eventName, eventParams);
+            }
+        }
+
+        // Track modal opens
+        function openModal(modalName) {
+            modalTrigger = document.activeElement;
+            hidePortfolio();
+            closeAllModals();
+
+            const modal = document.getElementById(modalName + 'Modal');
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+
+                // 🔥 TRACKING
+                trackEvent('modal_open', {
+                    modal_name: modalName,
+                    modal_type: 'service_info'
+                });
+
+                const closeBtn = modal.querySelector('.close-btn');
+                if (closeBtn) {
+                    setTimeout(() => closeBtn.focus(), 50);
+                }
+                modal.addEventListener('keydown', trapFocusModal);
+            }
+        }
+
+        // Track portfolio views
+        function showPortfolio() {
+            portfolioTrigger = document.activeElement;
+            const portfolioSection = document.getElementById('portfolioSection');
+            portfolioSection.classList.add('active');
+            document.body.classList.add('portfolio-open');
+            document.body.style.overflow = 'hidden';
+            closeAllModals();
+            currentSlide = 0;
+
+            // 🔥 TRACKING
+            trackEvent('portfolio_view', {
+                entry_point: 'navigation'
+            });
+
+            const cards = portfolioContainer.querySelectorAll('.portfolio-card');
+            if (cards[0]) {
+                portfolioContainer.scrollLeft = 0;
+            }
+            updatePagination();
+            updateNavigationButtons();
+            portfolioSection.addEventListener('keydown', trapFocusPortfolio);
+            setTimeout(() => {
+                document.getElementById('portfolioClose').focus();
+            }, 50);
+        }
+
+        // Track portfolio slide changes
+        function goToSlide(index) {
+            const cards = portfolioContainer.querySelectorAll('.portfolio-card');
+            const maxSlide = cards.length - 1;
+
+            if (index < 0) index = 0;
+            if (index > maxSlide) index = maxSlide;
+
+            currentSlide = index;
+
+            // 🔥 TRACKING
+            const projectNames = ['MyTango Mobile App', 'Tango.lu E-Commerce', 'Axian Group', 'Silva Paris'];
+            trackEvent('portfolio_slide_view', {
+                project_name: projectNames[index] || 'Unknown',
+                slide_index: index
+            });
+
+            const card = cards[index];
+            const containerRect = portfolioContainer.getBoundingClientRect();
+            const cardRect = card.getBoundingClientRect();
+            const currentScroll = portfolioContainer.scrollLeft;
+            const cardLeftRelative = cardRect.left - containerRect.left;
+            const target = currentScroll + cardLeftRelative - (containerRect.width - cardRect.width) / 2;
+
+            portfolioContainer.scrollTo({ left: target, behavior: 'smooth' });
+            updatePagination();
+            updateNavigationButtons();
+        }
+
+        // Track form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const templateParams = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                company: document.getElementById('company').value || 'Non renseigné',
+                website: document.getElementById('website').value || 'Non renseigné',
+                project: document.getElementById('project').value,
+                message: document.getElementById('message').value || 'Pas de message'
+            };
+            
+            const btn = document.getElementById('submitBtn');
+            btn.classList.add('loading');
+            btn.textContent = 'Envoi en cours';
+
+            // 🔥 TRACKING (avant envoi)
+            trackEvent('form_submit_attempt', {
+                project_type: templateParams.project,
+                has_company: templateParams.company !== 'Non renseigné',
+                has_website: templateParams.website !== 'Non renseigné'
+            });
+
+            emailjs.send("service_xl8mfv4", "template_4gwxouq", templateParams)
+                .then(() => {
+                    // 🔥 TRACKING (succès)
+                    trackEvent('form_submit_success', {
+                        project_type: templateParams.project
+                    });
+
+                    document.getElementById('leftcontent').style.display = 'none';
+                    const calendlyBlock = document.getElementById('calendlyBlock');
+                    calendlyBlock.style.display = 'block';
+                    if (window.Calendly) {
+                        Calendly.initInlineWidgets();
+                    }
+                    calendlyBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, (error) => {
+                    // 🔥 TRACKING (erreur)
+                    trackEvent('form_submit_error', {
+                        error_type: error.text || 'unknown'
+                    });
+
+                    btn.classList.remove('loading');
+                    btn.textContent = 'Démarrer la conversation →';
+                    alert('❌ Erreur d\'envoi. Écrivez-moi directement : jacob.radonirina@gmail.com');
+                });
+        });
+
+        // Track CTA clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track hero CTA
+            const heroCTA = document.querySelector('.hero-cta');
+            if (heroCTA) {
+                heroCTA.addEventListener('click', () => {
+                    trackEvent('cta_click', {
+                        cta_location: 'hero',
+                        cta_text: 'Voir mes offres'
+                    });
+                });
+            }
+
+            // Track social links
+            document.querySelectorAll('.social-links a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    const platform = e.currentTarget.getAttribute('href').includes('linkedin') ? 'linkedin' :
+                                e.currentTarget.getAttribute('href').includes('malt') ? 'malt' :
+                                e.currentTarget.getAttribute('href').includes('behance') ? 'behance' : 'email';
+                    
+                    trackEvent('social_click', {
+                        platform: platform,
+                        location: 'footer'
+                    });
+                });
+            });
+        });
         
         function acceptCookies() {
             localStorage.setItem('cookieConsent', 'accepted');
