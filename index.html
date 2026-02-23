@@ -306,23 +306,47 @@
         <section class="hero-section" id="heroSection">
             <div class="hero-background" id="heroBackground"></div>
             <div class="hero-content">
-                <h1 class="hero-title" data-i18n-html="h1.1">Product designer<br/> expert en branding</h1>
-                <p class="hero-sub" data-i18n="hero.quote">10 ans en design. Madagascar → Luxembourg → France</p>
-                <p class="hero-subtitle" data-i18n-html="hero.subtitle">
-                    Autodidacte. Prouvé loin de chez moi.<br/> En laissant toujours mon empreinte 'digitale' 😉.<br/>
-                    Aujourd'hui j'aide les PME et startups B2B à transformer leurs produits en interfaces
-                    qui convertissent — avec des résultats mesurables.
-                </p>
-                <button href="javascript:void(0)" onclick="openModal('offres')" class="hero-cta" data-i18n="hero.cta">Voir mes offres</button>
-            </div>
-        </section>
+                    <!-- Texte (gauche) -->
+                    <div class="hero-text">
+                        <h1 class="hero-title" data-i18n-html="h1.1">Product designer<br/> expert en branding</h1>
+                         <p class="hero-role-badge" id="heroRoleBadge" onclick="swapHeroPhoto()">10 ans en design. Madagascar → Luxembourg → France</p>
+                        <p class="hero-subtitle" data-i18n-html="hero.subtitle">
+                            Autodidacte. Prouvé loin de chez moi.<br/> En laissant toujours mon empreinte 'digitale' 😉.<br/>
+                            Aujourd'hui j'aide les PME et startups B2B à transformer leurs produits en interfaces
+                            qui convertissent — avec des résultats mesurables.
+                        </p>
+                        <button href="javascript:void(0)" onclick="openModal('offres')" class="hero-cta" data-i18n="hero.cta">Voir mes offres</button>
+                    </div>
+                    <!-- Photos stackées (droite) -->
+                    <div class="hero-photos">
+                        <div class="hero-photo-stack"
+                            id="heroPhotoStack"
+                            role="button"
+                            tabindex="0"
+                            aria-label="Cliquer pour découvrir d'autres facettes de Jacob"
+                            onclick="swapHeroPhoto()"
+                            onkeydown="if(event.key==='Enter'||event.key===' ')swapHeroPhoto()">
 
-        <!-- ── MAIN CONTENT ───────────────────────────────────────── -->
-        <div class="main-content" id="landing">
-            <div class="container">
+                            <!-- Ordre DOM = arrière → avant (z-index géré par classes) -->
+                            <img class="hero-photo-img photo-back3"  id="heroPhotoD"
+                                src="jacob-dessin.png"
+                                alt="Jacob, Peintre digital" />
+                            <img class="hero-photo-img photo-back2" id="heroPhotoB"
+                                src="jacob-food.png"
+                                alt="Jacob, responsable du goûter du vendredi chez Axian" />
+                            <img class="hero-photo-img photo-back1" id="heroPhotoA"
+                                src="jacob-jardinier.jpg"
+                                alt="Jacob, Futur paysan agroforestier" />
+                            <img class="hero-photo-img photo-front"  id="heroPhotoC"
+                                src="jacob.png"
+                                alt="Jacob Houmadi, Product Designer" />
 
-                <!-- LEFT SIDE (visuellement à droite) -->
-                <div class="right-side">
+                            <div class="hero-photo-hint" data-i18n-html="hero.hint" aria-hidden="true">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M12 4a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm0 4a1 1 0 0 0-1 1v6a1 1 0 0 0 2 0v-6a1 1 0 0 0-1-1zm0-6C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                                Cliquer pour en découvrir mes autres facettes
+                            </div>
+                        </div>
+                    </div>
                     <div class="client-logos">
                         <p class="client-logos__label" data-i18n="logos.label">Ils m'ont fait confiance</p>
                         <div class="client-logos__row" aria-label="Logos de clients">
@@ -333,8 +357,17 @@
                             <span><img src="logos/Logo-Jovena.svg"   alt="Jovena"      loading="lazy" /></span>
                             <span><img src="logos/Logo-nexta.svg"    alt="Nexta"       loading="lazy" /></span>
                         </div>
-                    </div>
+                    </div>     
 
+            </div>
+        </section>
+
+        <!-- ── MAIN CONTENT ───────────────────────────────────────── -->
+        <div class="main-content" id="landing">
+            <div class="container">
+
+                <!-- LEFT SIDE (visuellement à droite) -->
+                <div class="right-side">                 
                     <div class="image-placeholder">
                         <div class="quote">
                             <p data-i18n="quote.text">Les marques qui intègrent branding et UX dès le départ créent des expériences 40 % plus mémorables et fidélisent mieux.</p>
@@ -348,10 +381,11 @@
                                 <div class="stat-label" data-i18n="stat.sector.label">Secteurs</div>
                                 <div class="stat-number" data-i18n="stat.sector">SaaS · B2B</div>
                             </div>
-                            <div class="stat-item">
+                            <button class="stat-item tooltip" onclick="showAxianAwards()" aria-label="Voir les 4 prix Creatives 974 dans le portfolio">
                                 <div class="stat-number" data-i18n="stat.awards">4 prix</div>
                                 <div class="stat-label" data-i18n="stat.awards.label">Creatives 974</div>
-                            </div>
+                                <span class="tooltiptext" data-i18n="stat.tooltip">🏆 Voir la slide Axian Awards →</span>                                
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -475,7 +509,7 @@
 
 
                     </a>
-                    <a href="mailto:jacob.radonirina@gmail.com" title="Email" aria-label="Email">
+                    <a href="/cdn-cgi/l/email-protection#d4beb5b7bbb6faa6b5b0bbbabda6bdbab594b3b9b5bdb8fab7bbb9" title="Email" aria-label="Email">
                         <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                     </a>
                 </div>
@@ -488,7 +522,7 @@
 
                 <div class="portfolio-container" id="portfolioContainer">
 
-                    <!-- Card 0 · Tango.lu E-Commerce 
+                     <!-- Card 0 · Tango.lu E-Commerce -->
                     <div class="portfolio-card" data-index="0">
                         <div class="portfolio-right">
                             <div class="portfolio-image" id="tangoweb-1">
@@ -543,30 +577,30 @@
                                 </button>
                             </div>
                         </div>
-                    </div> -->
+                    </div> 
                     
-                    <!-- Card 1 · MyTango Mobile App 
+                    <!-- Card 1 · MyTango Mobile App -->
                     <div class="portfolio-card" data-index="1">
                         <div class="portfolio-right">
-                            <div class="portfolio-image" id="mytango-1">
+                            <!--<div class="portfolio-image hidden" id="mytango-1">
                                 <img src="Captures/Tango-refonte-dashboard-fr.webp"
                                 data-lang-en="Captures/Tango-refonte-dashboard-en.webp" 
                                 data-lang-fr="Captures/Tango-refonte-dashboard-fr.webp" 
                                 alt="Comparaison avant/après de la refonte du dashboard Tango avec interface simplifiée" loading="lazy"/>
-                            </div>
+                            </div>-->
                             <div class="portfolio-image hidden" id="mytango-2" style="background: linear-gradient(135deg, #667eea, #764ba2);">
                                 <img src="Captures/MyTango-note-hausse-fr.webp"
                                 data-lang-en="Captures/MyTango-note-hausse-en.webp"
                                 data-lang-fr="Captures/MyTango-note-hausse-fr.webp"
                                 alt="Notes App Store et Google Play de l'application Tango avec évaluations positives"/>
                             </div>
-                            <div class="portfolio-image hidden" id="mytango-3" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                            <!--<div class="portfolio-image hidden" id="mytango-3" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
                                 <img src="Captures/Tango-enjoy-optimisation-fr.webp" 
                                 data-lang-en="Captures/Tango-enjoy-optimisation-en.webp"
                                 data-lang-fr="Captures/Tango-enjoy-optimisation-fr.webp"
                                 alt="Optimisation du jeu La Roue avec parcours simplifié en trois étapes" />
-                            </div>
-                            <div class="portfolio-image hidden" id="mytango-4" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                            </div>-->
+                            <div class="portfolio-image" id="mytango-4" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
                                 <img src="Captures/Tango-parcours-simplifie-fr.webp"
                                 data-lang-en="Captures/Tango-parcours-simplifie-en.webp"
                                 data-lang-fr="Captures/Tango-parcours-simplifie-fr.webp"    
@@ -581,16 +615,16 @@
                                 <p data-i18n-html="portfolio.tango_app.desc">Tango est un opérateur télécom luxembourgeois avec une app mobile permettant la gestion des offres, des paiements, et des services additionnels.<span class="mobile-hidden"><br/> Mission : refondre l'expérience de l'app mobile pour résoudre des faiblesses critiques.</span></p>
                             </div>
                             <div class="portfolio-insights">
-                                <h4 data-i18n="portfolio.tango_app.insights">Réalisations clés :</h4>
-                                <button class="insight-btn active" onclick="switchImage(this,'mytango-1')">
+                                <!--<h4 data-i18n="portfolio.tango_app.insights">Réalisations clés :</h4>
+                                <button class="insight-btn" onclick="switchImage(this,'mytango-1')">
                                     <h6 data-i18n="portfolio.tango_app.btn1">Résolution d'un point de douleur récurrent</h6>
                                     <span data-i18n="portfolio.tango_app.btn1.desc">Dashboard de consommation repensé sur l'affichage des jauges</span>
-                                </button>
-                                <button class="insight-btn" onclick="switchImage(this,'mytango-3')">
+                                </button>-->
+                                <!--<button class="insight-btn" onclick="switchImage(this,'mytango-3')">
                                     <h6 data-i18n="portfolio.tango_app.btn2">Stratégie de rétention : Jeu Enjoy</h6>
                                     <span data-i18n="portfolio.tango_app.btn2.desc">Optimisation UX Gaming in-app et redirection vers pages clés</span>
-                                </button>
-                                <button class="insight-btn" onclick="switchImage(this,'mytango-4')">
+                                </button> -->
+                                <button class="insight-btn active" onclick="switchImage(this,'mytango-4')">
                                     <h6 data-i18n="portfolio.tango_app.btn3">Nouvelle offre complexe simplifiée</h6>
                                     <span data-i18n="portfolio.tango_app.btn3.desc">Activation intuitive malgré contraintes multiples au lancement</span>
                                 </button>
@@ -600,8 +634,7 @@
                                 </button>
                             </div>
                         </div>
-                    </div> -->
-
+                    </div> 
 
                     <!-- Card 2 · Axian Group -->
                     <div class="portfolio-card" data-index="2">
@@ -709,8 +742,8 @@
 
                     <!-- Pagination & Navigation -->
                     <div class="portfolio-pagination">
-                        <!--<div class="pagination-dot active" onclick="goToSlide(0)"></div>
-                        <div class="pagination-dot" onclick="goToSlide(1)"></div> -->
+                        <div class="pagination-dot active" onclick="goToSlide(0)"></div>
+                        <div class="pagination-dot" onclick="goToSlide(1)"></div>
                         <div class="pagination-dot" onclick="goToSlide(2)"></div>
                         <div class="pagination-dot" onclick="goToSlide(3)"></div>
                     </div>
@@ -925,6 +958,7 @@
             </div>
     </div>
 
+  
    <script>
         let portfolioTrigger = null;
         let isScrolling = false;

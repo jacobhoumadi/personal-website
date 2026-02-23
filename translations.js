@@ -30,6 +30,12 @@ const translations = {
     'hero.quote':   '10 ans en design. Madagascar → Luxembourg → France',
     'hero.subtitle':'Autodidacte. Prouvé loin de chez moi.<br/> En laissant toujours mon empreinte \'digitale\' 😉.<br/> Aujourd\'hui j\'aide les PME et startups B2B à transformer leurs produits en interfaces qui convertissent — avec des résultats mesurables.',
     'hero.cta':     'Voir mes offres',
+    'hero.hint' : ' <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M12 4a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm0 4a1 1 0 0 0-1 1v6a1 1 0 0 0 2 0v-6a1 1 0 0 0-1-1zm0-6C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>' +
+                                'Cliquer pour en découvrir mes autres facettes',
+    'hero.role.pro'    : '10 ans en design. Madagascar → Luxembourg → France',
+    'hero.role.garden' : 'Futur paysan agroforestier 🌳🌴',
+    'hero.role.snack'  : 'Ex-coordinateur du goûter rotatif du vendredi ☕',
+    'hero.role.artist' : 'Artiste digital 🎨',
 
     // ── Section logos & stats ────────────────────
     'logos.label':       'Ils m\'ont fait confiance',
@@ -40,6 +46,7 @@ const translations = {
     'stat.sector.label': 'Secteurs',
     'stat.awards': '4 prix',
     'stat.awards.label': 'Creatives 974',
+    'stat.tooltip' : '🏆 Voir la slide Axian Awards →',
 
     // ── Bandeau principal ─────────────────────────
     'main.h2':      'Transformez votre identité de marque en <span>expérience digitale mémorable</span>',
@@ -108,7 +115,7 @@ const translations = {
     'portfolio.axian.title':    'Axian Group',
     'portfolio.axian.role':     'Digital Designer · Grand Groupe Panafricain',
     'portfolio.axian.desc':     'Axian Group est l\'un des plus grands groupes panafricains de Madagascar, opérant dans les télécoms, l\'énergie, les infrastructures, les services financiers et la fintech.<span class="mobile-hidden"><br/>En tant que Digital Designer pendant 5 ans, j\'ai participé à la refonte complète de l\'identité de marque du groupe.</span>',
-    'portfolio.axian.btn1':     'Vision business incarnée',
+    'portfolio.axian.btn1':     'Incarnation de la vision business',
     'portfolio.axian.btn1.desc':'Création d\'une identité culturelle forte "Afrixian"',
     'portfolio.axian.btn2':     'Unification de l\'écosystème',
     'portfolio.axian.btn2.desc':'5 secteurs rassemblés sous une identité commune et un storytelling partagé',
@@ -623,6 +630,13 @@ const translations = {
     'hero.quote':   '10 years in design. Madagascar → Luxembourg → France',
     'hero.subtitle':'Self-taught. Proven far from home.<br/> Always leaving my \'digital\' mark 😉.<br/> Today I help SMEs and B2B startups transform their products into interfaces that convert — with measurable results.',
     'hero.cta':     'View my services',
+    'hero.hint' : ' <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M12 4a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm0 4a1 1 0 0 0-1 1v6a1 1 0 0 0 2 0v-6a1 1 0 0 0-1-1zm0-6C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>' +
+                                'Click to discover my other sides',
+
+    'hero.role.pro'    : '10 years in design. Madagascar → Luxembourg → France',
+    'hero.role.garden' : '"Future agroforestry farmer  🌳🌴',
+    'hero.role.snack'  : 'Former friday snack ritual coordinator ☕',
+    'hero.role.artist' : 'Digital artist 🎨',
 
     // ── Section logos & stats ────────────────────
     'logos.label':       'They trusted me',
@@ -633,6 +647,7 @@ const translations = {
     'stat.sector.label': 'Sectors',
     'stat.exp' : '10 years',
     'stat.awards': '4 prize',
+    'stat.tooltip' : '🏆 See the Axian Awards slide →',
 
     // ── Bandeau principal ─────────────────────────
     'main.h2':      'Transform your brand identity into a <span>memorable digital experience</span>',
@@ -701,7 +716,7 @@ const translations = {
     'portfolio.axian.title':    'Axian Group',
     'portfolio.axian.role':     'Digital Designer · Pan-African Group',
     'portfolio.axian.desc':     'Axian Group is one of the largest pan-African groups from Madagascar, operating in telecoms, energy, infrastructure, financial services and fintech.<span class="mobile-hidden"><br/>As Digital Designer for 5 years, I led the complete rebranding of the group\'s corporate identity.</span>',
-    'portfolio.axian.btn1':     'Business vision embodied',
+    'portfolio.axian.btn1':     'Embodying the business vision',
     'portfolio.axian.btn1.desc':'Building a strong cultural identity "Afrixian"',
     'portfolio.axian.btn2':     'Ecosystem unification',
     'portfolio.axian.btn2.desc':'5 sectors united under a shared identity and storytelling',
