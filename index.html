@@ -1374,6 +1374,102 @@
             }
         }
 
+        
+        // ============================================
+        // AXIAN AWARDS — raccourci depuis stat Creatives
+        // ============================================
+
+        function showAxianAwards() {
+            showPortfolio();
+            // On attend que l'ouverture soit effective avant de naviguer
+            setTimeout(() => {
+                goToSlide(2); // slide Axian Group (index 2)
+                setTimeout(() => {
+                    // Activer le bouton 4 "4 prix Creatives 974 Awards"
+                    const axianCard = document.querySelector('.portfolio-card[data-index="2"]');
+                    if (axianCard) {
+                        const btns = axianCard.querySelectorAll('.insight-btn');
+                        if (btns[3]) switchImage(btns[3], 'axian-4'); // 4e bouton (index 3)
+                    }
+                }, 550);
+            }, 280);
+        }
+
+        // ============================================
+        // HERO PHOTO SWAP
+        // ============================================
+
+       const heroSwapData = [
+            { role: 'hero.role.pro'    },
+            { role: 'hero.role.garden' },
+            { role: 'hero.role.snack'  },
+            { role: 'hero.role.artist' },
+        ];
+        // Ordre des photos dans le DOM : B (food), A (jardinier), C (pro=front au départ)
+        // On track quelle image est en quelle position via un tableau d'indices
+        // positions[0] = id de l'img en front, [1] = back1, [2] = back2
+        let heroPositions = ['heroPhotoC', 'heroPhotoA', 'heroPhotoB', 'heroPhotoD'];
+        let heroDataIndex = 0; // index dans heroSwapData pour le badge rôle
+        let heroSwapping = false;
+
+        function swapHeroPhoto() {
+            if (heroSwapping) return;
+            heroSwapping = true;
+
+            const frontId  = heroPositions[0];
+            const back1Id  = heroPositions[1];
+            const back2Id  = heroPositions[2];
+            const back3Id  = heroPositions[3];
+
+            const frontEl  = document.getElementById(frontId);
+            const back1El  = document.getElementById(back1Id);
+            const back2El  = document.getElementById(back2Id);
+            const back3El  = document.getElementById(back3Id);
+
+            if (!frontEl || !back1El || !back2El || !back3El ) { heroSwapping = false; return; }
+
+            // 1. Lancer l'animation de sortie sur le front
+            frontEl.classList.remove('photo-front');
+            frontEl.classList.add('photo-exit');
+
+            // 2. Après la sortie, réorganiser les classes
+            setTimeout(() => {
+                frontEl.classList.remove('photo-exit');
+
+                back1El.classList.remove('photo-back1');
+                back1El.classList.add('photo-front');
+
+                back2El.classList.remove('photo-back2');
+                back2El.classList.add('photo-back1');
+
+                back3El.classList.remove('photo-back3');
+                back3El.classList.add('photo-back2');
+
+                frontEl.classList.add('photo-back3');
+
+                // 3. Mettre à jour le tableau des positions (rotation gauche)
+                heroPositions = [back1Id, back2Id, back3Id, frontId];
+
+                
+                // 4. Mettre à jour le badge rôle avec une mini-animation
+                heroDataIndex = (heroDataIndex + 1) % heroSwapData.length;
+                const badge = document.getElementById('heroRoleBadge');
+                const currentLang = localStorage.getItem('lang') || 'fr';
+                if (badge) {
+                    badge.style.transition = 'opacity 0.18s ease, transform 0.18s ease';
+                    badge.style.opacity    = '0';
+                    badge.style.transform  = 'translateY(-5px)';
+                    setTimeout(() => {
+                        badge.textContent = translations[currentLang][heroSwapData[heroDataIndex].role] ?? heroSwapData[heroDataIndex].role;
+                        badge.style.opacity    = '1';
+                        badge.style.transform  = 'translateY(0)';
+                    }, 200);
+                }
+
+                heroSwapping = false;
+            }, 380);
+        }
+
         // ============================================
         // MOBILE MENU
         // ============================================
