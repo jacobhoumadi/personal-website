@@ -415,7 +415,7 @@
             margin: 0 auto;
             color: var(--white);
             align-items: center;
-            padding: 0 var(--space-md);
+            padding: 0 var(--space-xl);
         }
 
         .client-logos {
@@ -436,10 +436,9 @@
         background: rgba(255, 255, 255, 0.08);
         border: 1px solid rgba(255, 255, 255, 0.18);
         color: rgba(255, 255, 255, 0.82);
-        font-family: 'Montserrat', sans-serif;
-        font-size: 0.7rem;
+        font-size: var(--font-xs);
         font-weight: 700;
-        letter-spacing: 0.07em;
+        letter-spacing: 0.08em;
         text-transform: uppercase;
         padding: 0.45rem 1.1rem;
         border-radius: 100px;
@@ -453,7 +452,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-bottom:40px;
+        padding-bottom:20px;
     }
 
     #heroRoleBadge {
@@ -463,7 +462,7 @@
     .hero-photo-stack {
         position: relative;    
         width: 444px;
-        height: 620px;
+        height: 75vh;
         cursor: pointer;
         outline: none;
         -webkit-tap-highlight-color: transparent;
@@ -716,7 +715,7 @@
 
         .container {
             display: grid;
-            grid-template-columns: 1fr 0.6fr;
+            grid-template-columns: 0.8fr 0.8fr;
             height: calc(100vh - var(--space-lg));
             padding: calc(var(--space-2xl) * 1.25) var(--space-2xl);
             max-width: 1400px;
@@ -891,13 +890,13 @@
             background: url(Captures/6.png);
             display: flex;
             background-repeat: no-repeat;
-            justify-content: flex-end;
+            justify-content: space-between;
             background-size: 110%;
             right: var(--space-lg);
             height: 100%;
             overflow: hidden;
             border-radius: var(--radius-xl);
-            padding: var(--space-xl);
+            padding: var(--space-lg);
             color: var(--white);
             will-change: order;
             transition: all 0.3s;
@@ -905,7 +904,6 @@
             background-position-x: -100%;
             background-color: var(--primary);
             flex-direction: column;
-            align-items: center;
         }
 
         .image-placeholder {
@@ -933,12 +931,14 @@
             display: grid;
             gap: var(--space-xs);
             grid-template-columns: 0.6fr 1fr 0.6fr;
+            width: 100%;
         }
 
         .quote{
             font-size: var(--font-lg);
             line-height: 1.6;
             font-style: italic;
+            width: 80%;
         }
 
         .stat-item {  
@@ -1612,7 +1612,8 @@
         @media (min-width: 1081px) {
             .container {                          
                 gap: var(--space-2xl);
-            }   
+            } 
+            
             
         }
 
@@ -1624,6 +1625,10 @@
                 padding-top: calc(var(--space-3xl) * 1.2);                
                 gap: var(--space-lg);
                 height: inherit;
+            }
+
+            .stat-number{
+                font-size: var(--font-xl);
             }
             
             .faq-question{
@@ -1693,7 +1698,7 @@
             .right-side {
                 position: relative;
                 height: auto;
-                min-height: 400px;
+                min-height: 50vh;
                 right: inherit;
                 top:inherit;
                 margin: 0 var(--space-lg);
@@ -1708,9 +1713,6 @@
                 max-width: 76%;
             }
 
-            .quote {
-                font-size: var(--font-md);
-            }
             .stats {
                 width: inherit;
             }
@@ -1790,6 +1792,14 @@
                 scroll-snap-align:none;
             }
 
+            .hero-section{
+                height: 165vh;
+            }
+
+            .hero-photo-stack {
+                height: 75vh;
+            }
+
               .client-logos {
                     max-width: 100%;
                 }
@@ -1863,9 +1873,24 @@
 
         @media (max-width: 486px) {
 
-                header {
-                    width: 100vw;
-                }
+            .hero-section{
+                height: 150vh;
+            }
+            button.logo{
+                display: none;
+            }
+
+            .hero-photo-stack {
+                height: 60vh;
+            }
+
+            header {
+                width: 100vw;                    
+                justify-content: flex-end;
+                background:transparent;
+                backdrop-filter: inherit;
+                box-shadow: inherit;
+            }
 
             .portfolio-nav.next, .portfolio-nav.prev{
                 display: none;
@@ -1875,17 +1900,21 @@
                 padding-top:0;
             }
 
+            .image-placeholder{
+                margin:0;
+            }
+
             .quote{
-                font-size: var(--font-sm);
+                font-size: var(--font-md);
             }
 
             .left-side{
                 padding: 0 var(--space-md);
             }
             .right-side {
-                padding-top: var(--space-2xl);
                 margin:inherit;
                 align-items: inherit;
+                justify-content: inherit;
             }
 
             .client-logos{
@@ -1907,7 +1936,9 @@
 
             .right-side {
                 background-size: 114%;
-        background-position-x: -150%;
+                background-position-x: -150%;
+                gap: var(--space-md);
+                min-height: 80%;
             }
 
             .stats{
@@ -1920,11 +1951,16 @@
                 grid-template-columns: 1fr; 
             }
 
+            
+            footer{
+                padding: var(--space-sm) var(--space-sm);
+            }
+
             .footer-content {
                 display: grid;
                 justify-content: space-between;
                 align-items: center;
-                grid-template-columns: 0.6fr 1fr;
+                grid-template-columns: 0.7fr 1fr;
             }
             .social-links {
                 display: flex;
