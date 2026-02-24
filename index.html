@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-     <!-- Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-67D06JS6R4"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-67D06JS6R4');
+    </script>
+   <!-- Google Tag Manager -->
    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -254,7 +263,7 @@
     <!-- Menu Mobile -->
     <nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobile">
         <div class="mobile-nav-header">
-            <button class="logo"><img src="logo-jacob.png" alt="logo"></button>
+            <button class="logo-mobile"><img src="logo-jacob.png" alt="logo"></button>
             <button class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="Fermer le menu">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -1003,23 +1012,6 @@
         // SCROLL & NAVIGATION
         // ============================================
 
-        // Parallax Effect et Snap Scroll
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const heroBackground = document.getElementById('heroBackground');
-
-            // Parallax effect (slower scroll for background)
-            if (heroBackground && scrolled < heroHeight) {
-                heroBackground.style.transform = `translateY(${scrolled * -0.2}px)`;
-            }
-
-            // Snap automatique vers le landing quand on scroll 60% du hero
-            if (!isScrolling && scrolled > heroHeight * 0.6 && scrolled < heroHeight * 1.2) {
-                isScrolling = true;
-                window.scrollTo({ top: heroHeight, behavior: 'smooth' });
-                setTimeout(() => { isScrolling = false; }, 1000);
-            }
-        });
 
         // Scroll to Top
         function scrollToTop() {
@@ -1481,6 +1473,8 @@
             mobileOverlay.classList.add('active');
             body.style.overflow = 'hidden';
 
+            syncMobileLangSwitcher();
+
             setTimeout(() => {
                 mobileNav.querySelector('.mobile-menu-close').focus();
             }, 50);
@@ -1497,6 +1491,16 @@
 
             document.querySelector('.mobile-menu-toggle').focus();
         }
+
+
+        function syncMobileLangSwitcher() {
+            const currentLang = localStorage.getItem('lang') || 'fr';
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                const isActive = btn.getAttribute('data-lang') === currentLang;
+                btn.classList.toggle('active', isActive);
+                btn.setAttribute('aria-pressed', isActive.toString());
+            });
+            }
 
         // ============================================
         // KEYBOARD SHORTCUTS
@@ -1606,6 +1610,7 @@
                     });
                 });
             });
+        syncMobileLangSwitcher();
         });
 
         // ============================================
