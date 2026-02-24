@@ -1874,8 +1874,9 @@
         @media (max-width: 486px) {
 
             .hero-section{
-                height: 150vh;
+               height: 120vh;
             }
+
             button.logo{
                 display: none;
             }
