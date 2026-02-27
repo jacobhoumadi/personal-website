@@ -136,9 +136,14 @@
 
         body {
             font-family: var(--font-family-base);
-            background: var(--navy);
+            background: var(--white);
             color: var(--dark);
             overflow-x: hidden;
+        }
+
+        
+        body.home{
+            background: var(--navy);
         }
 
 
