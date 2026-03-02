@@ -273,6 +273,7 @@
   display: flex;
   gap: 12px;
   align-items: flex-start;
+  max-width: 600px;
 }
 .comm-dot {
   width: 6px; height: 6px;
@@ -283,13 +284,13 @@
 }
 .comm-dot.blue-dot { background: var(--blue, #0066FF); }
 .comm-label {
-  font-size: 12px; font-weight: 600;
+  font-size: var(--font-sm); font-weight: 400;
   color: var(--dark, #1A1A2E);
   letter-spacing: -0.01em;
   margin-bottom: 2px;
 }
 .comm-sub {
-  font-size: 12px; line-height: 1.55;
+  font-size: var(--font-sm); line-height: 1.55;
   color: var(--gray, #6B7280);
   font-weight: 300;
 }
@@ -370,7 +371,7 @@
   <section class="slide slide--journey" data-i="1">
     <div class="slide-num-wm">02</div>
     <div class="chapter a">Chapter I · Who I am</div>
-    <h2 class="headline a" style="font-size:var(--font-2xl);margin-bottom:6px">My journey, <span class="blue">five chapters.</span></h2>
+    <h2 class="headline a" style="font-size:var(--font-2xl);margin-bottom:6px">My journey, <span class="blue">four chapters.</span></h2>
     <p class="subtext a" style="margin-bottom:14px;font-size:13px">Two pulls. Click any period to see how they evolved.</p>
     <div class="timeline-wrap a" id="timeline">
 
@@ -699,75 +700,99 @@
 
 
   <!-- 07 · COMMUNITY — I show up for them -->
-  <section class="slide slide--community" data-i="6">
-    <div class="slide-num-wm">07</div>
-    <div class="split-row" style="flex:1;min-height:0">
-  
-      <div class="sl-left">
-         <div class="chapter a">Chapter II · Beyond the screen</div>
-        <h2 class="headline headline--md a">I don't just design <br class="mobile-hidden">for people.<br><span class="blue">I show up for them.</span></h2>
-        <div class="community-list a">
-          <div class="comm-item">
-            <div class="comm-dot"></div>
-            <div>
-              <div class="comm-label">Malagasy Team Leapers — co-founder</div>
-              <div class="comm-sub">Parkour club. Forest-protection concert. Solidarity marches ending at Tsimbazaza Zoo. Eco-village visits in Taratanana. Support for girls victims of abuse.</div>
-            </div>
-          </div>
-          <div class="comm-item">
-            <div class="comm-dot"></div>
-            <div>
-              <div class="comm-label">YMCA — Parkour branch leader</div>
-              <div class="comm-sub">Opened a second MTL branch for wider reach. Completed Subject to Citizen (S2C) leadership training.</div>
-            </div>
-          </div>
-          <div class="comm-item">
-            <div class="comm-dot"></div>
-            <div>
-              <div class="comm-label">Catholic community center — volunteer</div>
-              <div class="comm-sub">Four weeks supporting logistics and activities for underprivileged children during summer holidays.</div>
-            </div>
-          </div>
-          <div class="comm-item">
-            <div class="comm-dot"></div>
-            <div>
-              <div class="comm-label">Axian ACTERS program</div>
-              <div class="comm-sub">2 volunteer days/month through the foundation. Visited and supported former inmates in social reintegration.</div>
-            </div>
-          </div>
-          <div class="comm-item">
-            <div class="comm-dot"></div>
-            <div>
-              <div class="comm-label">Agroforestry</div>
-              <div class="comm-sub">Completed agroforestry training</div>
-            </div>
-          </div>
-          <div class="comm-item">
-            <div class="comm-dot comm-dot--blue"></div>
-            <div>
-              <div class="comm-label" style="color:var(--blue)">France — Now</div>
-              <div class="comm-sub">Weekend family host for children in care. Weekly IT classes for visually impaired — every Wednesday.</div>
+ <section class="slide slide--community" data-i="6">
+  <div class="slide-num-wm">07</div>
+  <div class="split-row" style="flex:1;min-height:0">
+
+    <div class="sl-left">
+      <div class="chapter a">Chapter II · Beyond the screen</div>
+      <h2 class="headline headline--md a">
+        I've always moved toward<br>
+        <span class="blue">the person the system forgot.</span>
+      </h2>
+
+      <p class="subtext a">
+        Before product design, there was community building. <br>
+        Before design systems, there were people systems.
+      </p>
+
+      <div class="community-list a">
+
+        <div class="comm-item">
+          <div class="comm-dot"></div>
+          <div>
+            <div class="comm-label">Parkour community leader in Madagascar</div>
+            <div class="comm-sub">
+              It grew into environmental actions, solidarity marches,
+              and advocacy for young women facing injustice.
             </div>
           </div>
         </div>
-       
-        
-      </div>
-        <div class="sl-right" style="overflow:visible">
-           <div class="axian-entry-grid">
-            <div class="eg-cell span-full">
-              <img src="Jacob-story/parkour-charity.jpg" alt="" data-tooltip="Support for girls victims of abuse" style="width:100%;height:100%;object-fit:cover;display:block">
-            </div>
-            <div class="eg-cell span-full">
-              <img src="Jacob-story/agroforestry.webp" alt="" data-tooltip="Completed agroforestry training" style="width:100%;height:100%;object-fit:cover;display:block">
+
+        <div class="comm-item">
+          <div class="comm-dot"></div>
+          <div>
+            <div class="comm-label">YMCA: opened a second parkour branch</div>
+            <div class="comm-sub">
+              Completed formal leadership training.
             </div>
           </div>
+        </div>
+
+        <div class="comm-item">
+          <div class="comm-dot"></div>
+          <div>
+            <div class="comm-label">Axian ACTERS program</div>
+            <div class="comm-sub">
+               Two volunteer days per month. Supported former inmates in their social reintegration journey.
+            </div>
+          </div>
+        </div>
+
+        <div class="comm-item">
+          <div class="comm-dot"></div>
+          <div>
+            <div class="comm-label">Agroforestry practice</div>
+            <div class="comm-sub">
+              Applied locally. Intention to scale responsibly.
+            </div>
+          </div>
+        </div>
+
+        <div class="comm-item">
+          <div class="comm-dot comm-dot--blue"></div>
+          <div>
+            <div class="comm-label" style="color:var(--blue)">France — Today</div>
+            <div class="comm-sub">
+              Weekend host for children in care.
+              Weekly IT classes for the visually impaired.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
     </div>
-  </section>
+
+    <div class="sl-right">
+      <div class="axian-entry-grid">
+        <div class="eg-cell span-full"  >
+          <img src="Jacob-story/parkour-charity.jpg" alt=""
+               style="width:100%;height:100%;object-fit:cover;display:block"  data-tooltip="Solidarity actions — Malagasy Team Leapers">
+        </div>
+        <div class="eg-cell span-full" >
+          <img src="Jacob-story/agroforestry.webp" alt=""
+               style="width:100%;height:100%;object-fit:cover;display:block"  data-tooltip="Applied on a small plot in Madagascar — long-term ambition: scale it.">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
   <!-- 08 · AXIAN CONTEXT -->
   <section class="slide" data-i="7">
-    <div class="slide-num-wm">07</div>
+    <div class="slide-num-wm">08</div>
     <div class="split-row" style="flex:1;min-height:0">
       <div class="sl-left">
         <div class="chapter a">Chapter III · Axian Group · 2018–2023</div>
@@ -783,7 +808,7 @@
           <div><div class="stat-num">5</div><div class="stat-label">Years building it</div></div>
         </div>
         <p class="subtext subtext--sm a" style="margin-top:16px">I didn't arrive to a creative department. We built one from scratch. 
-        Inside one of Madagascar's largest groups, I was the CEO of the <strong>friday rotating breakfast</strong>.
+        Inside one of Madagascar's largest groups, I coordinated the Friday rotating breakfast: every week, a different person, a different table.
         We made it a place where good work actually wanted to happen.</p>
       </div>
         <div class="sl-right" style="overflow:visible">
@@ -798,7 +823,7 @@
 
   <!-- 8 · AFRIXIAN -->
   <section class="slide" data-i="8">
-    <div class="slide-num-wm">8</div>
+    <div class="slide-num-wm">09</div>
     <div class="split-row" style="flex:1;min-height:0">
       <div class="sl-left">
         <div class="chapter a">Chapter III · Axian Group · The breakthrough</div>
@@ -806,7 +831,7 @@
         <div class="stats a">
           <div><div class="stat-num">4</div><div class="stat-label">Creatives 974 Awards</div></div>
         </div>
-        <p class="subtext subtext--sm a" style="margin-top:16px">To build the brands Identity, we stopped borrowing from outside and started digging from within. This is how Afrixian was born <strong>african culture, turned into something disruptive.</strong></p>
+        <p class="subtext subtext--sm a" style="margin-top:16px">To build the brand's identity, we stopped borrowing from outside and started digging from within. This is how Afrixian was born — <strong>African culture, turned into something disruptive.</strong></p>
         <p class="subtext subtext--sm a" style="margin-top:10px">Once we had that concept, everything accelerated. And I started to wear African clothes to the office, imagine how jealous the financial department was.</p>
         <div class="blockquote a" style="margin-top:18px">It wasn't only the brand that had been built. <strong>It was us.</strong></div>
       </div>
@@ -822,10 +847,10 @@
 
   <!-- 9 · THE LEAP -->
   <section class="slide" data-i="9">
-      <div class="slide-num-wm">9</div>
+      <div class="slide-num-wm">10</div>
       <div class="split-row" style="flex:1;min-height:0">
           <div class="sl-left">
-            <div class="chapter a">Chapter III · The leap</div>
+            <div class="chapter a">Chapter III · The Leap</div>
             <h2 class="headline headline--lg a">I applied <br class="mobile-hidden">from Madagascar.<br><span class="blue">Told them I was <br  class="mobile-hidden">already moving.</span></h2>
             <p class="subtext subtext--sm a" style="margin-top:16px">I wasn't. Not yet.</p>
             <p class="subtext subtext--sm a" style="margin-top:10px">But saying it out loud made it real. Months later, I called back.</p>
@@ -853,7 +878,7 @@
 
   <!-- 10 · TANGO CONTEXT -->
   <section class="slide" data-i="10">
-    <div class="slide-num-wm">10</div>
+    <div class="slide-num-wm">11</div>
 
     <div class="split-row" style="flex:1;min-height:0">
       <div class="sl-left">
@@ -866,7 +891,7 @@
           </div>
           <div class="stats a">
             <div><div class="stat-num">2</div><div class="stat-label">Schools</div></div>
-            <div><div class="stat-num">5</div><div class="stat-label">Stackholders</div></div>
+            <div><div class="stat-num">5</div><div class="stat-label">Stakeholders</div></div>
             <div><div class="stat-num">1</div><div class="stat-label">Dashboard</div></div>
           </div>
           <p class="subtext subtext--sm a" style="margin-top:16px">
@@ -885,7 +910,7 @@
 
    <!-- 11 · TANGO DECISION -->
   <section class="slide" data-i="11">
-    <div class="slide-num-wm">11</div>
+    <div class="slide-num-wm">12</div>
     <div class="split-row" style="flex:1;min-height:0">
       <div class="sl-left">
         <div class="chapter a">Chapter III · Tango Luxembourg · The decision</div>
@@ -901,7 +926,7 @@
 
  <!-- 12 · WHY HOSPITABLE -->
   <section class="slide" data-i="12">
-    <div class="slide-num-wm">12</div>
+    <div class="slide-num-wm">13</div>
     <div class="split-row" style="flex:1;min-height:0">
       <div class="sl-left">
         <div class="chapter a">Chapter IV · Why Hospitable</div>
@@ -922,8 +947,8 @@
   </section>
 
   <!-- LAST · CTA -->
-  <section class="slide slide--cta" data-i="15">
-    <div class="slide-num-wm">16</div>
+  <section class="slide slide--cta" data-i="13">
+    <div class="slide-num-wm">14</div>
     <h2 class="cta-headline a">I might doubt myself.<br>I don't <span class="blue">let go.</span></h2>
 
     <div class="cta-sub a" style="max-width:520px;margin:0 auto 32px;text-align:center;">
