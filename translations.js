@@ -634,7 +634,7 @@ const translations = {
                                 'Click to discover my other sides',
 
     'hero.role.pro'    : '10 years in design. Madagascar → Luxembourg → France',
-    'hero.role.garden' : '"Future agroforestry farmer  🌳🌴',
+    'hero.role.garden' : 'Future agroforestry farmer  🌳🌴',
     'hero.role.snack'  : 'Former friday snack ritual coordinator ☕',
     'hero.role.artist' : 'Digital artist 🎨',
 
