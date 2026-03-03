@@ -406,38 +406,49 @@ overflow: hidden;
 .cover-tag-line{width:28px;height:1px;background:rgba(255,255,255,0.15)}
 
 /* ── SLIDE 2 TIMELINE ── */
-.timeline-wrap{display:flex;gap:0;width:100%;margin-top:16px;border-radius:16px;overflow:hidden;border:1px solid var(--border); height: 100%;}
-.period-card{
-    display: flex;
-  flex:1;padding:24px 20px;cursor:pointer;
-  border-right:1px solid var(--border);
-  background:#fff;transition:background 0.25s,transform 0.2s;
-  position:relative;
-    flex-direction: column;
-    justify-content: space-between;
-    will-change: all;transition: var(--transition-slow);
+
+/* ── TIMELINE (My Journey) ── */
+.timeline-wrap {
+  display: flex; gap: 0;
+  border-radius: 16px; overflow: hidden;
+  border: 1px solid var(--border, #E5E7EB);
+  flex: 1; min-height: 0;
 }
-.period-card:last-child{border-right:none}
-.period-card:hover{background:var(--blue-light); will-change: all;transition: var(--transition-base);}
-.period-card:hover .bar-artist{background-color: white;}
-.period-card:hover .duality-bar-wrap{background-color: #3166d0;will-change: all;transition: var(--transition-base);}
-.period-card:hover{background:var(--blue);will-change: all;transition: var(--transition-slow);}
-.period-card:hover .period-age{color:rgba(255,255,255,0.6)}
+.period-card {
+  flex: 1; padding: 20px 16px; cursor: pointer;
+  border-right: 1px solid var(--border, #E5E7EB);
+  background: #fff; position: relative;
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+  transition: background 0.25s ease;
+}
+
+.period-card:last-child { border-right: none; }
+.period-card:hover { background: #1a56d6; }
+.period-card:hover .period-age { color: rgba(255,255,255,0.65); }
+.period-card:hover .duality-bar { color: rgba(255,255,255,0.8); }
+.period-card:hover .duality-bar-wrap { background: rgba(255,255,255,0.2); }
+.period-card:hover .bar-artist { background: #fff; }
+.period-card:hover .bar-solver { background: rgba(255,255,255,0.6); }
+.period-card:hover .radar-hint { color: rgba(255,255,255,0.5); }
+.period-age { font-size: 9px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--blue, #0066FF); margin-bottom: 8px; }
 .period-card:hover .period-figure, 
 .period-card:hover .duality-bar
 {color:#fff}
-.period-card:hover .tag-pill{background:rgba(255,255,255,0.15);color:#fff}
+
+.bars {display: flex;flex-direction: column;gap: var(--space-xs)}
 .period-card:hover{background:#1a56d6; will-change: all;transition: var(--transition-slow);}
-.period-age{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+.period-age{font-size: var(--font-sm);text-align: center;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
 .period-figure{font-size:52px;margin-bottom:16px;line-height:1;display:block;text-align:center}
-.duality-bar{display:flex;align-items:center;gap:6px;font-size:10px;color:var(--gray)}
-.duality-bar-wrap{flex:1;height:5px;background:var(--border);border-radius:4px;overflow:hidden; will-change: all;transition: var(--transition-base);}
+.duality-bar{display:flex;gap: var(--space-xs);;font-size:var(--font-sm);color:var(--gray);flex-direction: column;}
+.duality-bar span{width: }
+.duality-bar-wrap{height:5px;background:var(--border);border-radius:4px;overflow:hidden; will-change: all;transition: var(--transition-base);}
 .duality-bar-fill{height:100%;border-radius:4px;transition:width 0.6s ease}
 .bar-artist{background:var(--blue)}
 .bar-solver{background:var(--dark)}
 .period-tags{display:grid;flex-wrap:wrap;gap:5px;margin-top:10px; grid-template-columns: max-content;}
-.tag-pill{font-size:14px;padding:4px 10px;border-radius:100px;color:var(--blue);font-weight:500}
-.radar-hint{font-size:9px;margin-top:14px;opacity:.6;text-align:center;letter-spacing:.05em}
+.tag-pill{font-size: var(--font-sm);padding:4px 10px;border-radius:100px;color:var(--blue);font-weight:500;background: var(--gray-light);}
+.radar-hint{font-size:var(--font-xs);margin-top:14px;text-align:center;letter-spacing:.05em}
 
 
 /* ── RADAR DRAWER ── */
@@ -647,7 +658,7 @@ svg#radarSvg{
   .case-tags{justify-content:flex-start}
   .case-grid{grid-template-columns:1fr;gap:24px}
   .timeline-wrap{flex-direction:column;border-radius:12px}
-  .period-card{border-right:none;border-bottom:1px solid var(--border)}
+  .period-card{border-right:none;border-bottom:1px solid var(--border);border-radius: var(--radius-md);}
   .period-card:last-child{border-bottom:none}
   .dropdown{width:90vw;grid-template-columns:repeat(3,1fr)}
   .radar-body{flex-direction:column}
@@ -928,6 +939,21 @@ svg#radarSvg{
   height: 40vh;
 }
 
+.timeline-wrap {
+    flex: unset;
+    border:inherit;
+    min-height: 320px;
+    overflow-x: auto;
+    overflow-y: visible !important;
+    -webkit-overflow-scrolling: touch;
+     gap: var(--space-sm);
+  }
+
+.slide--journey {
+    overflow-y: auto;
+    background-color: var(--light-gray);
+  }
+
 .split-row-3 {
   grid-template-columns: 1fr 1fr;
   gap:var(--space-md)
@@ -971,6 +997,11 @@ svg#radarSvg{
   gap: var(--space-sm);
 }
 
+.timeline-wrap{
+  gap: var(--space-md);
+  border: inherit;
+  border-radius:inherit;
+}
   
 .split-row>.sl-right{
   order: 1;  
@@ -996,19 +1027,7 @@ justify-content: center;
   }
 
 
-  /* My Journey — scroll horizontal sur la timeline */
-  .slide--journey {
-    overflow-y: auto;
-    padding-top: 70px !important;
-  }
-  .timeline-wrap {
-    flex: unset;
-    min-height: 320px;
-    overflow-x: auto;
-    overflow-y: visible !important;
-    -webkit-overflow-scrolling: touch;
-    gap: 0;
-  }
+
   .period-card {
     min-width: 180px;
     flex: 0 0 180px;
@@ -1149,6 +1168,10 @@ justify-content: center;
 
 @media(max-width:480px){
 
+  .tag-pill{
+    padding: 4px 8px;
+  }
+
   .axian-entry-grid .eg-cell img, .axian-entry-grid-2 .eg-cell img {
         max-height: 27vh;
   }
@@ -1201,6 +1224,10 @@ justify-content: center;
 
   .attribution {
   margin-top:6px;padding-left:0;
+}
+
+.timeline-wrap {
+  margin-top:0;
 }
 
 

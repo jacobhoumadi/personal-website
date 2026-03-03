@@ -62,14 +62,14 @@
 .headline {
   font-size: var(--font-2xl);;
   font-weight: 600; line-height: 1.08;
-  letter-spacing: -0.03em; margin-bottom: 18px;
+  letter-spacing: -0.03em; margin-bottom: var(--space-md);
   color: var(--dark, #1A1A2E);
 }
 .headline .blue { color: var(--blue, #0066FF); }
 .chapter {
   font-size: 10px; font-weight: 500;
   letter-spacing: .18em; text-transform: uppercase;
-  color: var(--blue, #0066FF); margin-bottom: 18px;
+  color: var(--blue, #0066FF); margin-bottom: var(--space-md);
   border: 0.1px solid #0066ff1c;
     border-radius: var(--radius-full);
     padding: var(--space-sm);
@@ -86,43 +86,10 @@
 }
 
 
-/* ── TIMELINE (My Journey) ── */
-.slide--journey { justify-content: flex-start !important; padding-top: 80px !important;}
-.timeline-wrap {
-  display: flex; gap: 0;
-  border-radius: 16px; overflow: hidden;
-  border: 1px solid var(--border, #E5E7EB);
-  flex: 1; min-height: 0;
-}
-.period-card {
-  flex: 1; padding: 20px 16px; cursor: pointer;
-  border-right: 1px solid var(--border, #E5E7EB);
-  background: #fff; position: relative;
-  display: flex; flex-direction: column;
-  justify-content: space-between;
-  transition: background 0.25s ease;
-}
-.period-card:last-child { border-right: none; }
-.period-card:hover { background: #1a56d6; }
-.period-card:hover .period-age { color: rgba(255,255,255,0.65); }
-.period-card:hover .duality-bar { color: rgba(255,255,255,0.8); }
-.period-card:hover .duality-bar-wrap { background: rgba(255,255,255,0.2); }
-.period-card:hover .bar-artist { background: #fff; }
-.period-card:hover .bar-solver { background: rgba(255,255,255,0.6); }
-.period-card:hover .tag-pill { background: rgba(255,255,255,0.15); color: #fff; }
-.period-card:hover .radar-hint { color: rgba(255,255,255,0.5); }
-.period-age { font-size: 9px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--blue, #0066FF); margin-bottom: 8px; }
-
 .period-figure { display: flex; align-items: flex-end; justify-content: center; height: 56px; margin-bottom: 6px; }
 .period-figure svg { max-height: 50px; width: auto; }
 .period-figure.first{justify-content: space-between;padding:0 20px;}
 
-.bars { display: flex; flex-direction: column; gap: 5px; margin: 8px 0; }
-.duality-bar { display: flex; align-items: center; gap: 6px; font-size: 10px; color: var(--gray, #6B7280); }
-.duality-bar-wrap { flex: 1; height: 4px; background: var(--border, #E5E7EB); border-radius: 4px; overflow: hidden; }
-.duality-bar-fill { height: 100%; border-radius: 4px; }
-.bar-artist { background: var(--blue, #0066FF); }
-.bar-solver { background: var(--dark, #1A1A2E); }
 
 /* ── CASE STUDY HEADER (Axian/Tango) ── */
 .case-header-v2 { margin-bottom: 20px; }
@@ -434,8 +401,8 @@
           <span class="tag-pill" data-t="period.3-9.t4">Hobby: Drawing</span>
         </div>
         <div class="bars">
-          <div class="duality-bar"><span style="width:38px;font-size:10px" data-t="duality.artist">Artist</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-artist" style="width:40%"></div></div></div>
-          <div class="duality-bar"><span style="width:38px;font-size:10px" data-t="duality.solver">Solver</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-solver" style="width:20%"></div></div></div>
+          <div class="duality-bar"><span data-t="duality.artist">Artist</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-artist" style="width:40%"></div></div></div>
+          <div class="duality-bar"><span data-t="duality.solver">Solver</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-solver" style="width:20%"></div></div></div>
         </div>
         <div class="radar-hint" data-t="journey.hint">↗ Click for strengths</div>
       </div>
@@ -522,8 +489,8 @@
         </div>
         
         <div class="bars">
-          <div class="duality-bar"><span style="width:38px;font-size:10px" data-t="duality.artist">Artist</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-artist" style="width:40%"></div></div></div>
-          <div class="duality-bar"><span style="width:38px;font-size:10px" data-t="duality.solver">Solver</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-solver" style="width:20%"></div></div></div>
+          <div class="duality-bar"><span data-t="duality.artist">Artist</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-artist" style="width:40%"></div></div></div>
+          <div class="duality-bar"><span data-t="duality.solver">Solver</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-solver" style="width:20%"></div></div></div>
         </div>
         <div class="radar-hint" data-t="journey.hint">↗ Click for strengths</div>
       </div>
@@ -568,8 +535,8 @@
           <span class="tag-pill" data-t="period.17-26.t5">Father</span>
         </div>        
         <div class="bars">
-          <div class="duality-bar"><span style="width:38px;font-size:10px" data-t="duality.artist">Artist</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-artist" style="width:40%"></div></div></div>
-          <div class="duality-bar"><span style="width:38px;font-size:10px" data-t="duality.solver">Solver</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-solver" style="width:20%"></div></div></div>
+          <div class="duality-bar"><span data-t="duality.artist">Artist</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-artist" style="width:40%"></div></div></div>
+          <div class="duality-bar"><span data-t="duality.solver">Solver</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-solver" style="width:20%"></div></div></div>
         </div>
         <div class="radar-hint" data-t="journey.hint">↗ Click for strengths</div>
       </div>
@@ -613,8 +580,8 @@
           <span class="tag-pill" data-t="period.26-34.t4">Goal: Self-sufficient</span>
         </div>        
         <div class="bars">
-          <div class="duality-bar"><span style="width:38px;font-size:10px" data-t="duality.artist">Artist</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-artist" style="width:40%"></div></div></div>
-          <div class="duality-bar"><span style="width:38px;font-size:10px" data-t="duality.solver">Solver</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-solver" style="width:20%"></div></div></div>
+          <div class="duality-bar"><span data-t="duality.artist">Artist</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-artist" style="width:40%"></div></div></div>
+          <div class="duality-bar"><span data-t="duality.solver">Solver</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-solver" style="width:20%"></div></div></div>
         </div>
         <div class="radar-hint" data-t="journey.hint">↗ Click for strengths</div>
       </div>

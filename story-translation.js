@@ -14,6 +14,8 @@ const T = {
     'journey.h2': 'My journey, <span class="blue">four chapters.</span>',
     'journey.sub': 'Two pulls. Click any period to see how they evolved.',
     'journey.hint': '↗ Click for strengths',
+    'duality.artist': 'Artist',
+    'duality.solver': 'Solver',
 
     /* ── PERIOD TAGS ── */
     'period.l1' : '3 - 9 years',
@@ -183,6 +185,9 @@ const T = {
     'journey.sub': 'Deux forces. Cliquez sur une période pour voir comment elles ont évolué.',
     'journey.hint': '↗ Cliquer pour les forces',
     'twoppl.chapter': 'Chapitre I · Qui je suis',
+    'duality.artist': 'Artiste',
+    'duality.solver': 'Solutionneur',
+
      /* ── PERIOD TAGS ── */
     'period.l1' : '3 - 9 ans',
     'period.l2' : '9 - 17 ans',
@@ -349,6 +354,9 @@ const T = {
     'journey.h2': 'Ny diako, <span class="blue">fizarana efatra.</span>',
     'journey.sub': 'Fitarihan-dalana roa. Tsindrio ny fe-potoana hahitanao ny fandrosoany.',
     'journey.hint': '↗ Tsindrio ahitanao ny herin-tsaina',
+    'duality.artist': 'Artista',
+    'duality.solver': 'Mpandalina',
+
     /* ── PERIOD TAGS ── */
     'period.l1' : '3 - 9 taona',
     'period.l2' : '9 - 17 taona',
@@ -360,7 +368,7 @@ const T = {
     'period.3-9.t4':  'Fialam-boly: Manao sary',
     'period.9-17.t1': 'Saro-kenatra',
     'period.9-17.t2': 'Tsy matoky tena',
-    'period.9-17.t3': 'Asa nolanilanina: Mpahay siansa',
+    'period.9-17.t3': 'Asa novinavinaina: Mpikaroka',
     'period.9-17.t4': 'Fialam-boly: "Jeux video"',
     'period.17-26.t1': 'Mpanao fanatanjahantena',
     'period.17-26.t2': "Vondron'olona",
