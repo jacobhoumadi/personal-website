@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="root">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="alternate" hreflang="fr" href="https://jacob-houmadi.com/jacob-story">
+<link rel="alternate" hreflang="en" href="https://jacob-houmadi.com/jacob-story/en/">
 
  <!-- Favicon -->
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -258,6 +261,8 @@
   transform: translateY(0);
 }
 
+
+
 /* Désactiver ouverture dropdown au hover — click only */
 .dropdown { pointer-events: none; }
 .dropdown.open { pointer-events: all; }
@@ -295,6 +300,8 @@
   font-weight: 300;
 }
 </style>
+<script src="story-translation.js"></script>
+
 </head>
 <body>
 
@@ -327,7 +334,7 @@
   <div class="radar-drawer">
     <!-- Left: photo -->
      <div class="radar-pane-top">
-        <div class="radar-pane-title" id="radarTitle">Character strengths · <span>3–9 years</span></div>
+        <div class="radar-pane-title" id="radarTitle" >Character strengths · <span>3–9 years</span></div>
         <button class="radar-close" id="radarClose">×</button>
       </div>
     <div class="radar-photo">
@@ -349,19 +356,19 @@
   <section class="slide slide--cover" data-i="0" style="flex-direction:row;">
     <div class="slide-num-wm">01</div>
     <div class="split-row" style="background: #0F0F1B;flex:1;gap:0; border-radius:var(--radius-md); overflow: hidden;">
-      <div class="sl-left" style="display: flex;margin: 0 auto;height: 100%;align-self: center;flex-direction: column;justify-content: center;">
-        <div class="chapter a" style="color:rgba(255,255,255,0.45)">Product Designer · 10 years</div>
+      <div class="sl-left" style="display: flex;margin: 0 auto;height: 100%;align-self: center;flex-direction: column;justify-content: center; padding: 10px;">
+        <div class="chapter a" style="color:rgba(255,255,255,0.45)" data-t="cover.chapter">Product Designer · 10 years</div>
         <h1 class="headline a" style="color:#fff;    font-size: var(--font-3xl);">Jacob <br  class="mobile-hidden"><span class="blue">Houmadi.</span></h1>
-        <p class="cover-sub a">Madagascar → Luxembourg → France.<br><strong>Self-taught. Proven far from home.</strong><br>Always leaving my <strong style="color:var(--blue)">digital</strong> mark.</p>
+        <p class="cover-sub a" data-t="cover.sub">Madagascar → Luxembourg → France.<br><strong>Self-taught. Proven far from home.</strong><br>Always leaving my <strong style="color:var(--blue)">digital</strong> mark.</p>
         <div class="cover-tags a">
-          <span class="cover-tag">Graphic Design</span>
+          <span class="cover-tag" data-t="cover.tag.graphic">Graphic Design</span>
           <span class="cover-tag-line"></span>
-          <span class="cover-tag">Branding</span>
+          <span class="cover-tag" data-t="cover.tag.branding">Branding</span>
           <span class="cover-tag-line"></span>
-          <span class="cover-tag">Product Design</span>
+          <span class="cover-tag" data-t="cover.tag.product">Product Design</span>
         </div>
       </div>
-      <div class="sl-right" style="overflow:hidden"  data-tooltip="Hover images to see legends. Enjoy your visit →">
+      <div class="sl-right" style="overflow:hidden" data-t="tooltip.cover">
         <img src="jacob.webp" alt="" style="width:auto;height:100%;object-fit:cover;object-position:top center;display:block">
       </div>
     </div>
@@ -370,14 +377,14 @@
   <!-- 02 · MY JOURNEY -->
   <section class="slide slide--journey" data-i="1">
     <div class="slide-num-wm">02</div>
-    <div class="chapter a">Chapter I · Who I am</div>
-    <h2 class="headline a" style="font-size:var(--font-2xl);margin-bottom:6px">My journey, <span class="blue">four chapters.</span></h2>
-    <p class="subtext a" style="margin-bottom:14px;font-size:13px">Two pulls. Click any period to see how they evolved.</p>
+    <div class="chapter a" data-t="journey.chapter">Chapter I · Who I am</div>
+    <h2 class="headline a" style="font-size:var(--font-2xl);margin-bottom:6px" data-t="journey.h2">My journey, <span class="blue">four chapters.</span></h2>
+    <p class="subtext a" style="margin-bottom:14px;font-size:13px" data-t="journey.sub">Two pulls. Click any period to see how they evolved.</p>
     <div class="timeline-wrap a" id="timeline">
 
       <!-- 3-9 -->
       <div class="period-card" data-period="3-9" onclick="openRadar('3-9')">
-        <div class="period-age">3 – 9 years</div>
+        <div class="period-age"  data-t="period.l1">3 – 9 years</div>
         <div class="period-figure first">
           <svg width="32" height="24.5" viewBox="0 0 96 74" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M56.1285 72.4116L54.1591 45.0332H37.419L40.3731 59.8032L26.5872 62.7573V72.412L56.1285 72.4116Z" fill="url(#p0g0)"/>
@@ -421,21 +428,21 @@
 
         </div>
         <div class="period-tags">
-          <span class="tag-pill">Oct 31st, 1992</span>
-          <span class="tag-pill">MLG - FR</span>
-          <span class="tag-pill">Left handed</span>
-          <span class="tag-pill">Hobby: Drawing</span>
+          <span class="tag-pill" data-t="period.3-9.t1">Oct 31st, 1992</span>
+          <span class="tag-pill" data-t="period.3-9.t2">MLG - FR</span>
+          <span class="tag-pill" data-t="period.3-9.t3">Left handed</span>
+          <span class="tag-pill" data-t="period.3-9.t4">Hobby: Drawing</span>
         </div>
         <div class="bars">
-          <div class="duality-bar"><span style="width:38px;font-size:10px">Artist</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-artist" style="width:40%"></div></div></div>
-          <div class="duality-bar"><span style="width:38px;font-size:10px">Solver</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-solver" style="width:20%"></div></div></div>
+          <div class="duality-bar"><span style="width:38px;font-size:10px" data-t="duality.artist">Artist</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-artist" style="width:40%"></div></div></div>
+          <div class="duality-bar"><span style="width:38px;font-size:10px" data-t="duality.solver">Solver</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-solver" style="width:20%"></div></div></div>
         </div>
-        <div class="radar-hint">↗ Click for strengths</div>
+        <div class="radar-hint" data-t="journey.hint">↗ Click for strengths</div>
       </div>
 
       <!-- 9-17 -->
       <div class="period-card" data-period="9-17" onclick="openRadar('9-17')">
-        <div class="period-age">9 – 17 years</div>
+        <div class="period-age" data-t="period.l2">9 – 17 years</div>
         <div class="period-figure first">
          <svg width="32" height="109" viewBox="0 0 32 109" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20.2801 32.8877V26.4791L11.7354 23.6309V29.6834L20.2801 32.8877Z" fill="url(#paint0_linear_38958_1092)"/>
@@ -508,22 +515,22 @@
 
         </div>
         <div class="period-tags">
-          <span class="tag-pill">Introvert</span>          
-          <span class="tag-pill">Insecure</span>
-          <span class="tag-pill">Intended career: Scientist</span>
-          <span class="tag-pill">Hobby: Video games</span>
+          <span class="tag-pill" data-t="period.9-17.t1">Introvert</span>
+          <span class="tag-pill" data-t="period.9-17.t2">Insecure</span>
+          <span class="tag-pill" data-t="period.9-17.t3">Intended career: Scientist</span>
+          <span class="tag-pill" data-t="period.9-17.t4">Hobby: Video games</span>
         </div>
         
         <div class="bars">
-          <div class="duality-bar"><span style="width:38px;font-size:10px">Artist</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-artist" style="width:30%"></div></div></div>
-          <div class="duality-bar"><span style="width:38px;font-size:10px">Solver</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-solver" style="width:50%"></div></div></div>
+          <div class="duality-bar"><span style="width:38px;font-size:10px" data-t="duality.artist">Artist</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-artist" style="width:40%"></div></div></div>
+          <div class="duality-bar"><span style="width:38px;font-size:10px" data-t="duality.solver">Solver</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-solver" style="width:20%"></div></div></div>
         </div>
-        <div class="radar-hint">↗ Click for strengths</div>
+        <div class="radar-hint" data-t="journey.hint">↗ Click for strengths</div>
       </div>
 
       <!-- 17-26 -->
       <div class="period-card" data-period="17-26" onclick="openRadar('17-26')">
-        <div class="period-age">17 – 26 years</div>
+        <div class="period-age" data-t="period.l3">17 – 26 years</div>
         <div class="period-figure">
           <svg width="72" height="107" viewBox="0 0 72 107" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12.2375 54.5042L17.0142 74.3994C14.9473 78.2166 11.8648 78.6423 10.0646 76.1303C7.30252 72.2761 6.6431 57.1268 6.35826 55.0611C5.98188 52.3315 9.70965 39.5954 11.0686 35.748C12.4276 31.9006 16.5769 33.114 15.5205 36.757C14.5184 40.213 13.6964 49.8924 12.2375 54.5042Z" fill="#78A5EA"/>
@@ -554,22 +561,22 @@
           </svg>
         </div>
         <div class="period-tags">
-          <span class="tag-pill">Athlete</span>
-          <span class="tag-pill">Community</span>
-          <span class="tag-pill">Design career</span>
-          <span class="tag-pill">Married</span>
-          <span class="tag-pill">Father</span>
+          <span class="tag-pill" data-t="period.17-26.t1">Athlete</span>
+          <span class="tag-pill" data-t="period.17-26.t2">Community</span>
+          <span class="tag-pill" data-t="period.17-26.t3">Design career</span>
+          <span class="tag-pill" data-t="period.17-26.t4">Married</span>
+          <span class="tag-pill" data-t="period.17-26.t5">Father</span>
         </div>        
         <div class="bars">
-          <div class="duality-bar"><span style="width:38px;font-size:10px">Artist</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-artist" style="width:65%"></div></div></div>
-          <div class="duality-bar"><span style="width:38px;font-size:10px">Solver</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-solver" style="width:60%"></div></div></div>
+          <div class="duality-bar"><span style="width:38px;font-size:10px" data-t="duality.artist">Artist</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-artist" style="width:40%"></div></div></div>
+          <div class="duality-bar"><span style="width:38px;font-size:10px" data-t="duality.solver">Solver</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-solver" style="width:20%"></div></div></div>
         </div>
-        <div class="radar-hint">↗ Click for strengths</div>
+        <div class="radar-hint" data-t="journey.hint">↗ Click for strengths</div>
       </div>
 
       <!-- 26-34 -->
       <div class="period-card" data-period="26-34" onclick="openRadar('26-34')">
-        <div class="period-age">26 – 34 years</div>
+        <div class="period-age" data-t="period.l4">26 – 34 years</div>
         <div class="period-figure">
          <svg width="48" height="147" viewBox="0 0 48 147" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M28.1448 29.9264V23.6628L19.7932 20.8789V26.7946L28.1448 29.9264Z" fill="url(#paint0_linear_38958_1190)"/>
@@ -600,16 +607,16 @@
             </svg>
         </div>
         <div class="period-tags">
-          <span class="tag-pill">Travel to Europe</span>
-          <span class="tag-pill">Invest</span>
-          <span class="tag-pill">Open mind</span>
-          <span class="tag-pill">Goal: Self-sufficient</span>
+          <span class="tag-pill" data-t="period.26-34.t1">Travel to Europe</span>
+          <span class="tag-pill" data-t="period.26-34.t2">Invest</span>
+          <span class="tag-pill" data-t="period.26-34.t3">Open mind</span>
+          <span class="tag-pill" data-t="period.26-34.t4">Goal: Self-sufficient</span>
         </div>        
         <div class="bars">
-          <div class="duality-bar"><span style="width:38px;font-size:10px">Artist</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-artist" style="width:70%"></div></div></div>
-          <div class="duality-bar"><span style="width:38px;font-size:10px">Solver</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-solver" style="width:75%"></div></div></div>
+          <div class="duality-bar"><span style="width:38px;font-size:10px" data-t="duality.artist">Artist</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-artist" style="width:40%"></div></div></div>
+          <div class="duality-bar"><span style="width:38px;font-size:10px" data-t="duality.solver">Solver</span><div class="duality-bar-wrap"><div class="duality-bar-fill bar-solver" style="width:20%"></div></div></div>
         </div>
-        <div class="radar-hint">↗ Click for strengths</div>
+        <div class="radar-hint" data-t="journey.hint">↗ Click for strengths</div>
       </div>
 
 
@@ -624,11 +631,11 @@
         <img src="Jacob-story/drawing-hand.png" alt="" style="object-fit:cover;object-position:center;display:block">
       </div>
       <div class="sl-middle" style="flex:1;justify-content:center">
-        <div class="chapter a">Chapter I · Who I am</div>
-        <h2 class="headline a">Two people. <br class="mobile-hidden"><span class="blue">One revelation.</span></h2>
-        <p class="subtext a">For a long time, I didn't know what I was doing. I knew I liked to draw. I knew I liked to solve things. But those felt like two different people, and I spent years not knowing which one I was supposed to be.</p>
-        <div class="blockquote a" style="margin-top:16px">The creator and the problem-solver.<br>Two pulls, no clear answer.</div>
-        <p class="subtext a" style="margin-top:16px">Then came the web. <strong>Not a compromise. A revelation.</strong> The only place where both people could exist at the same time — and actually be useful together.</p>
+        <div class="chapter a" data-t="twoppl.chapter">Chapter I · Who I am</div>
+        <h2 class="headline a" data-t="twoppl.h2">Two people. <br class="mobile-hidden"><span class="blue">One revelation.</span></h2>
+        <p class="subtext a" data-t="twoppl.p1">For a long time, I didn't know what I was doing. I knew I liked to draw. I knew I liked to solve things. But those felt like two different people, and I spent years not knowing which one I was supposed to be.</p>
+        <div class="blockquote a" style="margin-top:16px" data-t="twoppl.blockquote">The creator and the problem-solver.<br>Two pulls, no clear answer.</div>
+        <p class="subtext a" style="margin-top:16px" data-t="twoppl.p2">Then came the web. <strong>Not a compromise. A revelation.</strong> The only place where both people could exist at the same time — and actually be useful together.</p>
       </div>
       <div class="sl-right" style="flex:0 0 26%;border-radius:12px;overflow:hidden;">
         <img src="Jacob-story/observing-hand.png" alt="" style="object-fit:cover;object-position:center;display:block">
@@ -642,11 +649,11 @@
     <div class="slide-num-wm">04</div>
     <div class="split-row" style="flex:1;min-height:0">
       <div class="sl-left">
-        <div class="chapter a">Chapter I · The Revelation</div>
-        <h2 class="headline a">Localhost. <br class="mobile-hidden"><span class="blue">No internet.</span> <br class="mobile-hidden">No problem.</h2>
-        <p class="subtext a">No money for a powerful PC, no internet at home. So I'd go to the cybercafé, download tutorials, go home, and work offline. Hours. Just me and a screen that wasn't even connected.</p>
-        <p class="subtext a" style="margin-top:12px">What I noticed quietly changed everything: when I touched the interface, people <strong>reacted.</strong> When I improved what was underneath, they didn't feel a thing. That asymmetry became my compass.</p>
-        <p class="a text-muted" style="margin-top:10px">Madagascar → Luxembourg → France. Figuring it out as I moved.</p>
+        <div class="chapter a" data-t="local.chapter">Chapter I · The Revelation</div>
+        <h2 class="headline a" data-t="local.h2">Localhost. <br class="mobile-hidden"><span class="blue">No internet.</span> <br class="mobile-hidden">No problem.</h2>
+        <p class="subtext a" data-t="local.p1">No money for a powerful PC, no internet at home. So I'd go to the cybercafé, download tutorials, go home, and work offline. Hours. Just me and a screen that wasn't even connected.</p>
+        <p class="subtext a" style="margin-top:12px" data-t="local.p2">What I noticed quietly changed everything: when I touched the interface, people <strong>reacted.</strong> When I improved what was underneath, they didn't feel a thing. That asymmetry became my compass.</p>
+        <p class="a text-muted" style="margin-top:10px" data-t="local.muted">Madagascar → Luxembourg → France. Figuring it out as I moved.</p>
       </div>
       <div class="sl-right">
         <div class="sl-img-ph internet"><img src="Jacob-story/no-internet-hand.png" alt=""></div>
@@ -657,32 +664,32 @@
   <!-- 05 · I FILTER IT + SHORTCUTS -->
   <section class="slide" data-i="4">
     <div class="slide-num-wm">05</div>
-     <div class="chapter a">Chapter II · How I think</div>
+     <div class="chapter a" data-t="filter.chapter">Chapter II · How I think</div>
     <div class="ketchup-row">
-          <h2 class="headline a">I don't read <br class="mobile-hidden">an interface.<br><span class="blue">I filter it.</span></h2>
+          <h2 class="headline a" data-t="filter.h2">I don't read <br class="mobile-hidden">an interface.<br><span class="blue">I filter it.</span></h2>
           <div class="ketchup-img"><img src="Jacob-story/ketchup.webp" alt="ketchup"></div>
     </div>
 
     <div class="filter-grid a">
       <div>
-        <div class="filter-col-label">The question</div>
-        <p class="subtext subtext--sm">What's here to help the user act?<br>What's here to reassure the designer?<br><br>Those are two very different things. Most of the time they don't belong in the same place.</p>
-        <p class="subtext subtext--sm" style="margin-top:14px"><strong>A good design doesn't ask to be admired. It asks to be used.</strong></p>
+        <div class="filter-col-label" data-t="filter.label1">The question</div>
+        <p class="subtext subtext--sm" data-t="filter.p1">What's here to help the user act?<br>What's here to reassure the designer?<br><br>Those are two very different things. Most of the time they don't belong in the same place.</p>
+        <p class="subtext subtext--sm" style="margin-top:14px" data-t="filter.p2"><strong>A good design doesn't ask to be admired. It asks to be used.</strong></p>
       </div>
       <div>
-        <div class="filter-col-label">What I don't trust</div>
+        <div class="filter-col-label" data-t="filter.label2">What I don't trust</div>
         <div style="border-top:1px solid var(--border,#E5E7EB);margin-top:4px">
           <div style="padding:12px 0;border-bottom:1px solid var(--border,#E5E7EB);display:flex;gap:14px;align-items:flex-start">
             <span class="filter-num">01</span>
-            <span class="subtext subtext--sm">LinkedIn vanity metrics tell you nothing about the quality of the work.</span>
+            <span class="subtext subtext--sm" data-t="filter.item1">LinkedIn vanity metrics tell you nothing about the quality of the work.</span>
           </div>
           <div style="padding:12px 0;border-bottom:1px solid var(--border,#E5E7EB);display:flex;gap:14px;align-items:flex-start">
             <span class="filter-num">02</span>
-            <span class="subtext subtext--sm">The UX vs UI ketchup bottle comparison has been shared thousands of times. Never verified.</span>
+            <span class="subtext subtext--sm" data-t="filter.item2">The UX vs UI ketchup bottle comparison has been shared thousands of times. Never verified.</span>
           </div>
           <div style="padding:12px 0;display:flex;gap:14px;align-items:flex-start">
             <span class="filter-num">03</span>
-            <span class="subtext subtext--sm">I'd rather sit with a harder question than reach for an easy answer.</span>
+            <span class="subtext subtext--sm" data-t="filter.item3">I'd rather sit with a harder question than reach for an easy answer.</span>
           </div>          
         </div>
       </div>
@@ -692,10 +699,10 @@
   <!-- 06 · SINGULARITY -->
   <section class="slide slide--conviction" data-i="5">
     <div class="slide-num-wm">06</div>
-    <div class="chapter a">Chapter II · Singularity</div>
-    <p class="conviction-quote a">Not originality<br>for its own sake.<br><span class="blue">The honest thing.</span></p>
-    <div class="blockquote a" style="max-width:560px;margin-top:28px;text-align:left">It's to make you remember how it felt to navigate it.</div>
-    <p class="a text-sm" style="color:var(--gray);margin-top:14px">Every designer has a portfolio. Few have a point of view.</p>
+    <div class="chapter a" data-t="sing.chapter">Chapter II · Singularity</div>
+    <p class="conviction-quote a" data-t="sing.quote">Not originality<br>for its own sake.<br><span class="blue">The honest thing.</span></p>
+    <div class="blockquote a" style="max-width:560px;margin-top:28px;text-align:left" data-t="sing.blockquote">It's to make you remember how it felt to navigate it.</div>
+    <p class="a text-sm" style="color:var(--gray);margin-top:14px" data-t="sing.small">Every designer has a portfolio. Few have a point of view.</p>
   </section>
 
 
@@ -705,13 +712,13 @@
   <div class="split-row" style="flex:1;min-height:0">
 
     <div class="sl-left">
-      <div class="chapter a">Chapter II · Beyond the screen</div>
-      <h2 class="headline headline--md a">
+      <div class="chapter a" data-t="comm.chapter">Chapter II · Beyond the screen</div>
+      <h2 class="headline headline--md a" data-t="comm.h2">
         I've always moved toward<br>
         <span class="blue">the person the system forgot.</span>
       </h2>
 
-      <p class="subtext a">
+      <p class="subtext a" data-t="comm.intro">
         Before product design, there was community building. <br>
         Before design systems, there were people systems.
       </p>
@@ -721,8 +728,8 @@
         <div class="comm-item">
           <div class="comm-dot"></div>
           <div>
-            <div class="comm-label">Parkour community leader in Madagascar</div>
-            <div class="comm-sub">
+            <div class="comm-label" data-t="comm.l1.label">Parkour community leader in Madagascar</div>
+            <div class="comm-sub" data-t="comm.l1.sub">
               It grew into environmental actions, solidarity marches,
               and advocacy for young women facing injustice.
             </div>
@@ -732,7 +739,7 @@
         <div class="comm-item">
           <div class="comm-dot"></div>
           <div>
-            <div class="comm-label">YMCA: opened a second parkour branch</div>
+            <div class="comm-label" data-t="comm.l2.label">YMCA: opened a second parkour branch</div>
             <div class="comm-sub">
               Completed formal leadership training.
             </div>
@@ -742,8 +749,8 @@
         <div class="comm-item">
           <div class="comm-dot"></div>
           <div>
-            <div class="comm-label">Axian ACTERS program</div>
-            <div class="comm-sub">
+            <div class="comm-label" data-t="comm.l3.label">Axian ACTERS program</div>
+            <div class="comm-sub" data-t="comm.l3.sub">
                Two volunteer days per month. Supported former inmates in their social reintegration journey.
             </div>
           </div>
@@ -752,8 +759,8 @@
         <div class="comm-item">
           <div class="comm-dot"></div>
           <div>
-            <div class="comm-label">Agroforestry practice</div>
-            <div class="comm-sub">
+            <div class="comm-label" data-t="comm.l4.label">Agroforestry practice</div>
+            <div class="comm-sub" data-t="comm.l4.sub">
               Applied locally. Intention to scale responsibly.
             </div>
           </div>
@@ -762,8 +769,8 @@
         <div class="comm-item">
           <div class="comm-dot comm-dot--blue"></div>
           <div>
-            <div class="comm-label" style="color:var(--blue)">France — Today</div>
-            <div class="comm-sub">
+            <div class="comm-label" style="color:var(--blue)" data-t="comm.fr.label">France — Today</div>
+            <div class="comm-sub" data-t="comm.fr.sub">
               Weekend host for children in care.
               Weekly IT classes for the visually impaired.
             </div>
@@ -778,11 +785,11 @@
       <div class="axian-entry-grid">
         <div class="eg-cell span-full"  >
           <img src="Jacob-story/parkour-charity.jpg" alt=""
-               style="width:100%;height:100%;object-fit:cover;display:block"  data-tooltip="Solidarity actions — Malagasy Team Leapers">
+               style="width:100%;height:100%;object-fit:cover;display:block"  data-t="tooltip.comm.solidarity">
         </div>
         <div class="eg-cell span-full" >
           <img src="Jacob-story/agroforestry.webp" alt=""
-               style="width:100%;height:100%;object-fit:cover;display:block"  data-tooltip="Applied on a small plot in Madagascar — long-term ambition: scale it.">
+               style="width:100%;height:100%;object-fit:cover;display:block"  data-t="tooltip.agroforestry">
         </div>
       </div>
     </div>
@@ -795,27 +802,27 @@
     <div class="slide-num-wm">08</div>
     <div class="split-row" style="flex:1;min-height:0">
       <div class="sl-left">
-        <div class="chapter a">Chapter III · Axian Group · 2018–2023</div>
-        <h2 class="headline headline--md a">We weren't hired <br class="mobile-hidden">to join a team.<br><span class="blue">We built one.</span></h2>
+        <div class="chapter a" data-t="axian.chapter">Chapter III · Axian Group · 2018–2023</div>
+        <h2 class="headline headline--md a" data-t="axian.h2">We weren't hired <br class="mobile-hidden">to join a team.<br><span class="blue">We built one.</span></h2>
         <div class="case-meta-inline a">
           <span class="case-tag">Branding</span>
           <span class="case-tag">Art Direction</span>
           <span class="case-tag">Web Design</span>
         </div>
         <div class="stats a">
-          <div><div class="stat-num">9</div><div class="stat-label">Founding members</div></div>
-          <div><div class="stat-num">5</div><div class="stat-label">Sectors unified</div></div>
-          <div><div class="stat-num">5</div><div class="stat-label">Years building it</div></div>
+          <div><div class="stat-num">9</div><div class="stat-label" data-t="axian.s1">Founding members</div></div>
+          <div><div class="stat-num">5</div><div class="stat-label" data-t="axian.s2">Sectors unified</div></div>
+          <div><div class="stat-num">5</div><div class="stat-label" data-t="axian.s3">Years building it</div></div>
         </div>
-        <p class="subtext subtext--sm a" style="margin-top:16px">I didn't arrive to a creative department. We built one from scratch. 
+        <p class="subtext subtext--sm a" style="margin-top:16px" data-t="axian.sub">I didn't arrive to a creative department. We built one from scratch. 
         Inside one of Madagascar's largest groups, I coordinated the Friday rotating breakfast: every week, a different person, a different table.
         We made it a place where good work actually wanted to happen.</p>
       </div>
         <div class="sl-right" style="overflow:visible">
           <div class="axian-entry-grid">
-            <div class="eg-cell span-full"><img src="Jacob-story/axian-acters.webp" alt="" data-tooltip="Acters program, supported families in social reintegration"></div>
-            <div class="eg-cell"><img src="Jacob-story/gouter.jpg" alt="" data-tooltip="Friday mornings were the best part of the week"></div>
-            <div class="eg-cell"><img src="Jacob-story/foot-axian.jpg" alt="" data-tooltip="Axian Corporate Games — entities going head to head"></div>
+            <div class="eg-cell span-full"><img src="Jacob-story/axian-acters.webp" alt="" data-t="tooltip.axian.acters"></div>
+            <div class="eg-cell"><img src="Jacob-story/gouter.jpg" alt="" data-t="tooltip.axian.snacks"></div>
+            <div class="eg-cell"><img src="Jacob-story/foot-axian.jpg" alt="" data-t="tooltip.axian.foot"></div>
           </div>
         </div>
     </div>
@@ -826,19 +833,19 @@
     <div class="slide-num-wm">09</div>
     <div class="split-row" style="flex:1;min-height:0">
       <div class="sl-left">
-        <div class="chapter a">Chapter III · Axian Group · The breakthrough</div>
-        <h2 class="headline headline--lg a"><span class="blue">Afrixian.</span> <br  class="mobile-hidden">Not borrowed. <br  class="mobile-hidden">Found.</h2>
+        <div class="chapter a" data-t="afrix.chapter">Chapter III · Axian Group · The breakthrough</div>
+        <h2 class="headline headline--lg a" data-t="afrix.h2"><span class="blue">Afrixian.</span> <br  class="mobile-hidden">Not borrowed. <br  class="mobile-hidden">Found.</h2>
         <div class="stats a">
-          <div><div class="stat-num">4</div><div class="stat-label">Creatives 974 Awards</div></div>
+          <div><div class="stat-num">4</div><div class="stat-label" data-t="afrix.s1">Creatives 974 Awards</div></div>
         </div>
-        <p class="subtext subtext--sm a" style="margin-top:16px">To build the brand's identity, we stopped borrowing from outside and started digging from within. This is how Afrixian was born — <strong>African culture, turned into something disruptive.</strong></p>
-        <p class="subtext subtext--sm a" style="margin-top:10px">Once we had that concept, everything accelerated. And I started to wear African clothes to the office, imagine how jealous the financial department was.</p>
-        <div class="blockquote a" style="margin-top:18px">It wasn't only the brand that had been built. <strong>It was us.</strong></div>
+        <p class="subtext subtext--sm a" style="margin-top:16px" data-t="afrix.sub1">To build the brand's identity, we stopped borrowing from outside and started digging from within. This is how Afrixian was born — <strong>African culture, turned into something disruptive.</strong></p>
+        <p class="subtext subtext--sm a" style="margin-top:10px" data-t="afrix.sub2">Once we had that concept, everything accelerated. And I started to wear African clothes to the office, imagine how jealous the financial department was.</p>
+        <div class="blockquote a" style="margin-top:18px" data-t="afrix.blockquote">It wasn't only the brand that had been built. <strong>It was us.</strong></div>
       </div>
       <div class="sl-right">
         <div class="axian-entry-grid-2">
-          <div class="eg-cell span-full"><img src="Jacob-story/afrixian.webp" alt="" data-tooltip="African + Axian — an identity built from within"></div>
-          <div class="eg-cell"><img src="Jacob-story/african-clohtes.webp" alt="" data-tooltip="Showed up in African clothes. Finance wasn't ready."></div>
+          <div class="eg-cell span-full"><img src="Jacob-story/afrixian.webp" alt="" data-t="tooltip.afrixian"></div>
+          <div class="eg-cell"><img src="Jacob-story/african-clohtes.webp" alt="" data-t="tooltip.african.clothes"></div>
         </div>
           
       </div>
@@ -850,27 +857,27 @@
       <div class="slide-num-wm">10</div>
       <div class="split-row" style="flex:1;min-height:0">
           <div class="sl-left">
-            <div class="chapter a">Chapter III · The Leap</div>
-            <h2 class="headline headline--lg a">I applied <br class="mobile-hidden">from Madagascar.<br><span class="blue">Told them I was <br  class="mobile-hidden">already moving.</span></h2>
-            <p class="subtext subtext--sm a" style="margin-top:16px">I wasn't. Not yet.</p>
-            <p class="subtext subtext--sm a" style="margin-top:10px">But saying it out loud made it real. Months later, I called back.</p>
-            <div class="blockquote a" style="margin-top:16px">"Ça y est, je suis là."</div>
-            <p class="subtext subtext--sm a" style="margin-top:16px">That's how the Luxembourg chapter started, not with a contract. With a commitment I made to myself before anyone asked me to.</p>
+            <div class="chapter a" data-t="leap.chapter">Chapter III · The Leap</div>
+            <h2 class="headline headline--lg a" data-t="leap.h2">I applied <br class="mobile-hidden">from Madagascar.<br><span class="blue">Told them I was <br  class="mobile-hidden">already moving.</span></h2>
+            <p class="subtext subtext--sm a" style="margin-top:16px" data-t="leap.p1">I wasn't. Not yet.</p>
+            <p class="subtext subtext--sm a" style="margin-top:10px" data-t="leap.p2">But saying it out loud made it real. Months later, I called back.</p>
+            <div class="blockquote a" style="margin-top:16px" data-t="leap.blockquote">"Ça y est, je suis là."</div>
+            <p class="subtext subtext--sm a" style="margin-top:16px" data-t="leap.p3">That's how the Luxembourg chapter started, not with a contract. With a commitment I made to myself before anyone asked me to.</p>
           </div>
           <div class="sl-right" style="display:flex;flex-direction:column;justify-content:center;">     
             <div class="axian-entry-grid-2">
               <div class="eg-cell span-full">
                 <div class="valerie-quote">
-                  <p>"I first met Jacob remotely, on a video call from Madagascar. His profile caught my attention immediately. 
+                  <p data-t="testimonial.text">"I first met Jacob remotely, on a video call from Madagascar. His profile caught my attention immediately. 
                   Some time later, he called back to say: 'I'm here!' marking the start of our collaboration in Luxembourg. 
                   A serious, committed and pleasant designer, Jacob demonstrates great professionalism and a genuine ability to connect with people."</p>
-                  <div class="a" style="margin-top:20px;padding-left:18px">
+                  <div class="attribution a">
                   <div class="attribution-name">Valérie Candat</div>
-                  <div class="attribution-role">Executive Assistant & HR · ID+P Luxembourg</div>
+                  <div class="attribution-role" data-t="leap.valrole">Executive Assistant & HR · ID+P Luxembourg</div>
                   </div>
                 </div>  
               </div>
-              <div class="eg-cell"><img src="Jacob-story/quantum-leap.jpg" alt="book" data-tooltip="This book changed my life. Sometimes all it takes is a leap into the unknown."></div>
+              <div class="eg-cell"><img src="Jacob-story/quantum-leap.jpg" alt="book" data-t="tooltip.quantum.leap"></div>
             </div>
           </div>
       </div>
@@ -882,27 +889,27 @@
 
     <div class="split-row" style="flex:1;min-height:0">
       <div class="sl-left">
-       <div class="chapter a">Chapter III · Tango Luxembourg · 2024–2025</div>
-      <h2 class="headline headline--md a">Two schools.<br><span class="blue">One dashboard</span></h2>
+       <div class="chapter a" data-t="tango.chapter">Chapter III · Tango Luxembourg · 2024–2025</div>
+      <h2 class="headline headline--md a" data-t="tango.h2">Two schools.<br><span class="blue">One dashboard</span></h2>
         <div class="case-meta-inline a">
             <span class="case-tag">Product Design</span>
             <span class="case-tag">Design System</span>
             <span class="case-tag">Fintech</span>
           </div>
           <div class="stats a">
-            <div><div class="stat-num">2</div><div class="stat-label">Schools</div></div>
-            <div><div class="stat-num">5</div><div class="stat-label">Stakeholders</div></div>
-            <div><div class="stat-num">1</div><div class="stat-label">Dashboard</div></div>
+            <div><div class="stat-num">2</div><div class="stat-label" data-t="tango.s1">Schools</div></div>
+            <div><div class="stat-num">5</div><div class="stat-label" data-t="tango.s2">Stakeholders</div></div>
+            <div><div class="stat-num">1</div><div class="stat-label" data-t="tango.s3">Dashboard</div></div>
           </div>
-          <p class="subtext subtext--sm a" style="margin-top:16px">
+          <p class="subtext subtext--sm a" style="margin-top:16px" data-t="tango.p1">
             One side wanted better wording. <br>
            I wanted something you understand before you finish opening the app.</p>
-          <p class="subtext subtext--sm a" style="margin-top:14px">The problem wasn't the labels. Users didn't know which counter actually mattered: <br>main plan, add-ons, rolled-over data, all at <strong>the same visual level.</strong></p>
+          <p class="subtext subtext--sm a" style="margin-top:14px" data-t="tango.p2">The problem wasn't the labels. Users didn't know which counter actually mattered: <br>main plan, add-ons, rolled-over data, all at <strong>the same visual level.</strong></p>
       </div>
       <div class="sl-right">
         <div class="axian-entry-grid-2">
-        <div class="eg-cell span-full"><img src="Jacob-story/incremental conception.png" alt="" data-tooltip="Ship small. Learn fast. Iterate."></div>
-          <div class="eg-cell"><img src="Jacob-story/zombi-vr.webp" alt="" data-tooltip="2,387 zombies down. The UI was solid, and so was the team."></div>
+        <div class="eg-cell span-full"><img src="Jacob-story/incremental conception.png" alt="" data-t="tooltip.incremental"></div>
+          <div class="eg-cell"><img src="Jacob-story/zombi-vr.webp" alt="" data-t="tooltip.zombi.vr"></div>
         </div>
       </div>
     </div>    
@@ -913,13 +920,13 @@
     <div class="slide-num-wm">12</div>
     <div class="split-row" style="flex:1;min-height:0">
       <div class="sl-left">
-        <div class="chapter a">Chapter III · Tango Luxembourg · The decision</div>
-        <h2 class="headline headline--lg a">Open.<br>Scan.<br><span class="blue">Understand.</span></h2>
-        <p class="subtext subtext--sm a" style="margin-top:12px">I looked at how fintech apps handle it. Two seconds after opening — you already know where you stand. That became the reference.</p>
-        <p class="subtext subtext--sm a" style="margin-top:10px">One primary counter. A data/calls switcher. A detail page for the full breakdown. <br> Color-coding was removed to preserve brand neutrality — <strong>a compromise I could live with, because the structure was right.</strong></p>
+        <div class="chapter a" data-t="tangod.chapter">Chapter III · Tango Luxembourg · The decision</div>
+        <h2 class="headline headline--lg a" data-t="tangod.h2">Open.<br>Scan.<br><span class="blue">Understand.</span></h2>
+        <p class="subtext subtext--sm a" style="margin-top:12px" data-t="tangod.p1">I looked at how fintech apps handle it. Two seconds after opening — you already know where you stand. That became the reference.</p>
+        <p class="subtext subtext--sm a" style="margin-top:10px" data-t="tangod.p2">One primary counter. A data/calls switcher. A detail page for the full breakdown. <br> Color-coding was removed to preserve brand neutrality — <strong>a compromise I could live with, because the structure was right.</strong></p>
       </div>
       <div class="sl-right">
-        <div class="sl-img-ph"><img src="Jacob-story/Mytango-app.webp" alt="tango app" data-tooltip="The dashboard that started the debate." style="width: auto; height: 100%;border-radius: 10px;"></div>
+        <div class="sl-img-ph"><img src="Jacob-story/Mytango-app.webp" alt="tango app" data-t="tooltip.dashboard" style="width: auto; height: 100%;border-radius: 10px;"></div>
       </div>
     </div>
   </section>
@@ -929,12 +936,12 @@
     <div class="slide-num-wm">13</div>
     <div class="split-row" style="flex:1;min-height:0">
       <div class="sl-left">
-        <div class="chapter a">Chapter IV · Why Hospitable</div>
-        <h2 class="headline headline--hspt a">I came looking<br>for instructions.<br><span class="blue">I found something else.</span></h2>
-        <p class="subtext subtext--sm a" style="margin-top:14px">I'd never seen a company put that kind of effort into how they welcome a candidate. One sentence stopped me. I went in looking for how to qualify — and found myself in front of real questions.</p>
-        <p class="subtext subtext--sm a" style="margin-top:10px">The profiles. The way the team is built across 31 countries without losing its humanity. People who seem to have their own singularity — the kind you don't often see on a team page. I caught myself wanting to know more about them before I'd even finished reading.</p>
-        <div class="blockquote a" style="margin-top:16px">There were moments of doubt during this process.<br>But somewhere along the way I realized — <strong>whatever happens, I'm walking away with things I'm keeping for myself.</strong></div>
-        <p class="subtext subtext--sm a" style="margin-top:14px;opacity:.6">That's not something a job posting does to you.</p>
+        <div class="chapter a" data-t="hspt.chapter">Chapter IV · Why Hospitable</div>
+        <h2 class="headline headline--hspt a" data-t="hspt.h2">I came looking<br>for instructions.<br><span class="blue">I found something else.</span></h2>
+        <p class="subtext subtext--sm a" style="margin-top:14px" data-t="hspt.p1">I'd never seen a company put that kind of effort into how they welcome a candidate. One sentence stopped me. I went in looking for how to qualify — and found myself in front of real questions.</p>
+        <p class="subtext subtext--sm a" style="margin-top:10px" data-t="hspt.p2">The profiles. The way the team is built across 31 countries without losing its humanity. People who seem to have their own singularity — the kind you don't often see on a team page. I caught myself wanting to know more about them before I'd even finished reading.</p>
+        <div class="blockquote a" style="margin-top:16px" data-t="hspt.blockquote">There were moments of doubt during this process.<br>But somewhere along the way I realized — <strong>whatever happens, I'm walking away with things I'm keeping for myself.</strong></div>
+        <p class="subtext subtext--sm a" style="margin-top:14px;opacity:.6" data-t="hspt.small">That's not something a job posting does to you.</p>
       </div>
       <div class="sl-right">
         <div class="hspt-portraits">
@@ -949,21 +956,21 @@
   <!-- LAST · CTA -->
   <section class="slide slide--cta" data-i="13">
     <div class="slide-num-wm">14</div>
-    <h2 class="cta-headline a">I might doubt myself.<br>I don't <span class="blue">let go.</span></h2>
+    <h2 class="cta-headline a" data-t="cta.h2">I might doubt myself.<br>I don't <span class="blue">let go.</span></h2>
 
-    <div class="cta-sub a" style="max-width:520px;margin:0 auto 32px;text-align:center;">
+    <div class="cta-sub a" style="max-width:520px;margin:0 auto 32px;text-align:center;" data-t="cta.sub1">
       I learned to remember the most important things <br> about who I am, about what a job should feel like.<br><br>
       This is why I left Tango. I'd identified the next constraint: <strong>myself.</strong>
     </div>
 
-    <p class="cta-sub a">10 years of figuring out how to do good work far from where I started. <strong>Ready to do the best work yet.</strong></p>
+    <p class="cta-sub a" data-t="cta.sub2">10 years building. 3 years away from home. <br> <strong>I know what I'm made of.</strong></p>
     <div class="cta-btns a">
-      <a href="https://calendly.com/jacob-radonirina/30min" class="btn btn-primary">Book a call →</a>
+      <a href="https://calendly.com/jacob-radonirina/30min" class="btn btn-primary" data-t="cta.btn1">Book a call →</a>
       <a href="https://jacob-houmadi.com" class="btn btn-outline">Portfolio</a>
-      <a href="/cdn-cgi/l/email-protection#c2a8a3a1ada0ecb0a3a6adacabb0abaca382a5afa3abaeeca1adaf" class="btn btn-outline">Email</a>
+      <a href="/cdn-cgi/l/email-protection#c2a8a3a1ada0ecb0a3a6adacabb0abaca382a5afa3abaeeca1adaf" class="btn btn-outline" data-t="cta.btn3">Email</a>
     </div>
-    <p class="cta-footer a">jacob-houmadi.com · Hayange, France · <span style="color:#16A34A">●</span> Available now</p>
-    <div class="map" data-tooltip="Home"><img src="Jacob-story/worldmap.png" alt="map"></div>
+    <p class="cta-footer a" data-t="cta.footer">jacob-houmadi.com · Hayange, France · <span style="color:#16A34A">●</span> Available now</p>
+    <div class="map" data-t="tooltip.home"><img src="Jacob-story/worldmap.png" alt="map"></div>
   </section>
 
 </div><!-- /slider -->
@@ -972,14 +979,16 @@
  
 <button class="bottom-nav prev" id="prevBtn" disabled><</button>
 <button class="bottom-nav next"id="nextBtn">></button>
-<div class="kbd-hint">← → to navigate</div>
+<div class="kbd-hint"  data-t="nav.bottom">← → to navigate</div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>/* ── RADAR DATA ── */
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+<script>/* ── RADAR DATA ── */
 const RADAR_DATA = {
   '3-9': {
     label: '3 – 9 years',
-    img: 'Jacob-story/jacob-child.jpg',
-    photoCaption: 'Little Jacob, already drawing everything.',
+    img: 'Jacob-story/jacob-child.webp',
+    photoCaption: 'In the good old days, we ate for free.',
     scores: { Courage:30, Knowledge:45, Justice:30, Temperance:15, Transcendance:20, Humanity:90 },
     tags: { Courage:[], Knowledge:[{text:'-/+ Curiosity',type:'neutral'}], Justice:[{text:'- Leadership',type:'malus'}], Temperance:[{text:'- Selfcontrol',type:'malus'}], Transcendance:[{text:'- No purpose',type:'malus'}], Humanity:[{text:'+ Kindness',type:'bonus'}] }
   },
@@ -1093,12 +1102,13 @@ function drawRadar(key) {
       'font-size':'14', 'font-weight':'600',
       fill:'#1A1A2E', 'text-anchor': anchor,
       'font-family':'Bricolage Grotesque,sans-serif'
-    }, cat));
+    }, radarCatLabel(cat)));
 
     const tags = data.tags[cat] || [];
     tags.forEach((tag, ti) => {
       const col    = TAG_COLORS[tag.type] || TAG_COLORS.neutral;
-      const label  = col.icon + ' ' + tag.text.replace(/^[+\-\/\s]+/, '');
+      const stripped = tag.text.replace(/^[+\-\/\s]+/, '');
+      const label    = col.icon + ' ' + radarTagText(stripped);
       const pillW  = Math.max(label.length * 6.2 + 18, 56);
       const pillH  = 25;
       const tagY   = ly + 8 + ti*(pillH+5);
@@ -1126,21 +1136,24 @@ function buildLegend(key) {
   const el = document.getElementById('radarLegend');
   if (el) el.innerHTML = '';
 }
-
 function openRadar(key) {
   const data = RADAR_DATA[key];
-  document.getElementById('radarTitle').innerHTML = `Character strengths · <span>${data.label}</span>`;
+  document.getElementById('radarTitle').innerHTML =
+    `${radarTitle()} · <span>${data.label}</span>`;
 
-  const img      = document.getElementById('radarImg');
-  const ph       = document.getElementById('radarPhotoPh');
-  const grid     = document.getElementById('radarImgsGrid');
+  const img  = document.getElementById('radarImg');
+  const ph   = document.getElementById('radarPhotoPh');
+  const grid = document.getElementById('radarImgsGrid');
 
   if (data.imgs && data.imgs.length > 0) {
     img.style.display  = 'none';
     ph.style.display   = 'none';
     grid.style.display = 'flex';
     grid.innerHTML = data.imgs.map((src, i) => {
-      const cap = (data.imgCaptions && data.imgCaptions[i]) ? ` data-tooltip="${data.imgCaptions[i]}"` : '';
+      const translated = radarCaption(key, i);
+      const fallback   = (data.imgCaptions && data.imgCaptions[i]) || '';
+      const cap        = (translated || fallback)
+        ? ` data-tooltip="${translated || fallback}"` : '';
       return `<div class="radar-img-slot"><img src="${src}" alt=""${cap}></div>`;
     }).join('');
   } else if (data.img) {
@@ -1148,8 +1161,9 @@ function openRadar(key) {
     img.style.display  = 'block';
     ph.style.display   = 'none';
     grid.style.display = 'none';
-    if (data.photoCaption) {
-      img.setAttribute('data-tooltip', data.photoCaption);
+    const caption = radarCaption(key) || data.photoCaption;
+    if (caption) {
+      img.setAttribute('data-tooltip', caption);
     } else {
       img.removeAttribute('data-tooltip');
     }
@@ -1355,4 +1369,5 @@ function bindTooltips() {
   });
 }
 bindTooltips();
+
 </script>
