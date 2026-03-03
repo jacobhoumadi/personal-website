@@ -415,7 +415,7 @@ overflow: hidden;
   flex: 1; min-height: 0;
 }
 .period-card {
-  flex: 1; padding: 20px 16px; cursor: pointer;
+  flex: 1;padding: var(--space-md) var(--space-md); cursor: pointer;
   border-right: 1px solid var(--border, #E5E7EB);
   background: #fff; position: relative;
   display: flex; flex-direction: column;
@@ -506,7 +506,7 @@ overflow: hidden;
   flex: 1; min-width: 0;
   display: flex; 
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: center;
   overflow-y: auto;
   gap: 20px;
 }
@@ -594,12 +594,12 @@ svg#radarSvg{
 
 /* ── CTA SLIDE ── */
 .slide--cta{text-align:center;align-items: center;}
-.cta-headline{font-size:var(--font-3xl);font-weight:700;line-height:1.05;letter-spacing:-0.03em;margin-bottom:16px}
+.cta-headline{font-size:var(--font-2xl);font-weight:700;line-height:1.05;letter-spacing:-0.03em;margin-bottom:16px}
 .cta-headline .blue{color:var(--blue)}
-.cta-sub{font-size:18px;color:var(--gray);font-weight:300;margin-bottom:50px;max-width:440px}
+.cta-sub{font-size:var(--font-sm);color:var(--gray);font-weight:300;margin-bottom:50px;max-width:440px}
 .cta-sub strong{color:var(--dark);font-weight:500}
 .cta-btns{display:flex;gap:10px;justify-content:center;align-items:center}
-.btn{display:inline-flex;align-items:center;gap:7px;padding:12px 24px;border-radius:100px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:all .25s ease;font-family:var(--font)}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:12px 24px;border-radius:100px;font-size: var(--font-xs);font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:all .25s ease;font-family:var(--font)}
 .btn-primary{background:var(--blue);color:#fff}
 .btn-primary:hover{background:#1a56d6}
 .btn-outline{border:1.5px solid var(--border);color:var(--gray);background:#fff}
@@ -634,7 +634,25 @@ svg#radarSvg{
     .bottom-nav.prev {
         left: var(--space-lg);
     }
-.nav-arrow{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--border);background:#fff;color:var(--gray);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .22s;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+
+  .nav-arrow::before {
+	    border: solid var(--primary);
+    border-width: 0.18em 0.18em 0 0;
+    content: '';
+    display: inline-block;
+    height: 0.5em;
+    left: 0.15em;
+    position: relative;
+    transform: rotate(-135deg);
+    vertical-align: top;
+    width: 0.5em;
+}
+
+.nav-arrow.next::before{
+  left: 0;
+transform: rotate(45deg);
+}
+.nav-arrow{border-radius:50%;border:1.5px solid var(--border);background:#fff;color:var(--gray);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .22s;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
 .nav-arrow:hover:not(:disabled){border-color:var(--blue);color:var(--blue)}
 .nav-arrow:disabled{opacity:.25;cursor:not-allowed}
 .nav-arrow svg{width:14px;height:14px}
@@ -658,12 +676,15 @@ svg#radarSvg{
   .case-tags{justify-content:flex-start}
   .case-grid{grid-template-columns:1fr;gap:24px}
   .timeline-wrap{flex-direction:column;border-radius:12px}
-  .period-card{border-right:none;border-bottom:1px solid var(--border);border-radius: var(--radius-md);}
+  .period-card{border-right:none;border-bottom:1px solid var(--border);border-radius: var(--radius-md);gap: var(--space-md);}
   .period-card:last-child{border-bottom:none}
   .dropdown{width:90vw;grid-template-columns:repeat(3,1fr)}
   .radar-body{flex-direction:column}
   .kbd-hint{display:none}
   .cta-btns{flex-direction:column;gap:8px}
+  .radar-hint{margin-top:0;}
+  .period-tags{margin-top:0;}
+  .period-age{margin-bottom: inherit}
 }
 
 
@@ -1235,7 +1256,12 @@ justify-content: center;
         max-height: 120px;}
 
   .radar-pane{
-    justify-content:inherit;
+    justify-content: center;
+  }
+
+  .map{
+    position: relative;
+    transform:translateY(10%)
   }
 }
 
