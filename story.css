@@ -618,7 +618,7 @@ svg#radarSvg{
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    font-size: var(--font-sm);
+    font-size: var(--font-md);
     color: var(--primary);
     cursor: pointer;
     z-index: 100;
