@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" id="root">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PRKVLWBW');</script>
+<!-- End Google Tag Manager -->
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -189,15 +197,13 @@
 
 /* ── CONVICTION SLIDE ── */
 .slide--conviction { align-items: center; justify-content: center; text-align: center; }
-.conviction-quote { font-size: clamp(32px,4.2vw,60px); font-weight: 600; line-height: 1.12; letter-spacing: -0.025em; color: var(--dark, #1A1A2E); }
+.conviction-quote { font-size: var(--font-2xl); font-weight: 600; line-height: 1.12; letter-spacing: -0.025em; color: var(--dark, #1A1A2E); }
 .conviction-quote .blue { color: var(--blue, #0066FF); }
 
 /* ── CTA ── */
 .cta-headline .blue { color: var(--blue, #0066FF); }
-.cta-sub { font-size: 17px; color: var(--gray, #6B7280); font-weight: 300; margin-bottom: 40px; max-width: 440px; line-height: 1.7; }
 .cta-sub strong { color: var(--dark, #1A1A2E); font-weight: 500; }
 .cta-btns { display: flex; gap: 10px; justify-content: center; align-items: center; }
-.btn { display: inline-flex; align-items: center; gap: 7px; padding: 12px 24px; border-radius: 100px; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; transition: all .25s; font-family: inherit; cursor: pointer; }
 .btn-primary { background: var(--blue, #0066FF); color: #fff; border: none; }
 .btn-primary:hover { background: #004ecc; }
 .btn-outline { border: 1.5px solid var(--border, #E5E7EB); color: var(--gray, #6B7280); background: #fff; }
@@ -271,6 +277,10 @@
 
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRKVLWBW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager -->
 
 <!-- MOUSE TOOLTIP -->
 <div class="img-tooltip" id="imgTooltip"></div>
@@ -870,12 +880,16 @@
           </div>
           <p class="subtext subtext--sm a" style="margin-top:16px" data-t="tango.p1">
             One side wanted better wording. <br>
+            The other wanted a better structure. <br>
            I wanted something you understand before you finish opening the app.</p>
           <p class="subtext subtext--sm a" style="margin-top:14px" data-t="tango.p2">The problem wasn't the labels. Users didn't know which counter actually mattered: <br>main plan, add-ons, rolled-over data, all at <strong>the same visual level.</strong></p>
+          <p class="subtext subtext--sm a" style="margin-top:14px" data-t="tango.p3">The debate got intense.
+                  We settled it in zombie VR. <br>
+                  <strong> UI survived. So did the team.</strong></p>
       </div>
       <div class="sl-right">
         <div class="axian-entry-grid-2">
-        <div class="eg-cell span-full"><img src="Jacob-story/incremental conception.png" alt="" data-t="tooltip.incremental"></div>
+        <div class="eg-cell span-full"><img src="Jacob-story/old-dashboard.webp" alt="" data-t="tooltip.incremental"></div>
           <div class="eg-cell"><img src="Jacob-story/zombi-vr.webp" alt="" data-t="tooltip.zombi.vr"></div>
         </div>
       </div>
@@ -944,8 +958,8 @@
 
 <!-- BOTTOM NAV -->
  
-<button class="bottom-nav prev" id="prevBtn" disabled><</button>
-<button class="bottom-nav next"id="nextBtn">></button>
+<button class="bottom-nav nav-arrow prev" id="prevBtn" disabled></button>
+<button class="bottom-nav nav-arrow next"id="nextBtn"></button>
 <div class="kbd-hint"  data-t="nav.bottom">← → to navigate</div>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
@@ -955,7 +969,7 @@ const RADAR_DATA = {
   '3-9': {
     label: '3 – 9 years',
     img: 'Jacob-story/jacob-child.webp',
-    photoCaption: 'In the good old days, we ate for free.',
+    photoCaption: 'In the good old days, with free food.',
     scores: { Courage:30, Knowledge:45, Justice:30, Temperance:15, Transcendance:20, Humanity:90 },
     tags: { Courage:[], Knowledge:[{text:'-/+ Curiosity',type:'neutral'}], Justice:[{text:'- Leadership',type:'malus'}], Temperance:[{text:'- Selfcontrol',type:'malus'}], Transcendance:[{text:'- No purpose',type:'malus'}], Humanity:[{text:'+ Kindness',type:'bonus'}] }
   },
@@ -970,14 +984,14 @@ const RADAR_DATA = {
     label: '17 – 26 years',
     img: '',
     imgs: ['Jacob-story/childs-charity.jpg', 'Jacob-story/leapers-banner.jpg', 'Jacob-story/ymca.jpg'],
-    imgCaptions: ['Activities for underprivileged children during summer holidays', 'Movement to express something — solidarity march', 'Completed Subject to Citizen (S2C) leadership training'],
+    imgCaptions: ['Four weeks showing up for kids the system forgot.', 'When parkour became a voice — and the streets became a stage.', 'The day I learned that leading means serving first.'],
     scores: { Courage:90, Knowledge:85, Justice:60, Temperance:60, Transcendance:70, Humanity:75 },
     tags: { Courage:[{text:'+ Perseverance',type:'bonus'}], Knowledge:[{text:'+ Creativity',type:'bonus'}], Justice:[{text:'+ Teamwork',type:'bonus'},{text:'+ Leadership',type:'bonus'}], Temperance:[{text:'- Self-control',type:'malus'}], Transcendance:[{text:'-/+ Humor',type:'neutral'}], Humanity:[{text:'+ Love',type:'bonus'}] }
   },
   '26-34': {
     label: '26 – 34 years',
     img: 'Jacob-story/tango-briefing.webp',
-    photoCaption: 'Tango team briefing — Luxembourg, 2024.',
+    photoCaption: 'Product design is the only place where both people could exist at the same time',
     scores: { Courage:90, Knowledge:90, Justice:70, Temperance:60, Transcendance:85, Humanity:80 },
     tags: { Courage:[{text:'+ Enthusiasm',type:'bonus'}], Knowledge:[{text:'+ Love of learning',type:'bonus'}], Justice:[{text:'+ Fairness',type:'bonus'}], Temperance:[{text:'- Prudence',type:'malus'}], Transcendance:[{text:'+ Humor',type:'bonus'},{text:'+ Purpose',type:'bonus'}], Humanity:[{text:'+ Social intelligence',type:'bonus'}] }
   },
@@ -1054,7 +1068,7 @@ function drawRadar(key) {
     malus:   { bg:'#FF7C7C', fg:'#111', icon:'▼' },
     neutral: { bg:'#B8E4FF', fg:'#111', icon:'—' }
   };
-  const labelR = maxR + 48;
+  const labelR = maxR + 38;
 
   CATEGORIES.forEach((cat, i) => {
     const deg = -90 + i*60;

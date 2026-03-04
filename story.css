@@ -581,6 +581,9 @@ svg#radarSvg{
 .stats{display:flex;gap:36px;margin-top:16px}
 .stat-num{font-size:38px;font-weight:700;color:var(--blue);line-height:1}
 .stat-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-top:3px}
+[lang="mg"] .stat-num { order: 2; font-size:38px; font-weight: 700; }
+[lang="mg"] .stat-label { order: 1; font-size:10px; }
+[lang="mg"] .stats > div { display: flex; flex-direction: column; }
 .case-image-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:10px;height:340px}
 .case-img{border-radius:10px;background:var(--gray-light);overflow:hidden;font-size:11px;color:var(--gray);display:flex;align-items:center;justify-content:center}
 .case-img.tall{grid-row:1/3}
