@@ -356,7 +356,7 @@ const T = {
     'journey.h2': 'Ny tantarako, <span class="blue">fizarana efatra.</span>',
     'journey.sub': 'Fitarihan-dalana roa. Tsindrio ny fe-potoana hahitanao ny fandrosoany.',
     'journey.hint': '↗ Tsindrio ahitanao ny herin-tsaina',
-    'duality.artist': 'Artista',
+    'duality.artist': 'Mpanakanto',
     'duality.solver': 'Mpandalina',
 
     /* ── PERIOD TAGS ── */
