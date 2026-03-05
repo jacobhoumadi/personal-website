@@ -130,9 +130,9 @@ const T = {
     'tooltip.afrixian':        'The moment we stopped looking outside.',
     'tooltip.african.clothes': 'Showed up in African clothes. Finance wasn\'t ready.',
     'tooltip.quantum.leap':    'This book changed my life. Sometimes all it takes is a leap into the unknown.',
-    'tooltip.incremental':     'Ship small. Learn fast. Iterate.',
+    'tooltip.incremental':     '"I have an unlimited plan, so why do I see a counter ?" — We recieved that one a lot.',
     'tooltip.zombi.vr':        'The debate got heated. We settled it in zombie VR. The UI held up. So did the team.',
-    'tooltip.dashboard':       'One dashboard. Two schools. One verdict.',
+    'tooltip.dashboard':       'The fix wasn\'t more information. It was the right information, in the right order',
     'tooltip.home':            'Home',
     /* ── RADAR ── */
     'radar.title':             'Character strengths',
@@ -145,7 +145,7 @@ const T = {
     /* Captions photos */
     'radar.caption.3-9':       'In the good old days, with free food.',
     'radar.caption.9-17':      'Teenager Jacob — quiet, curious, and already figuring things out on his own.',
-    'radar.caption.26-34':     'Product design is the only place where both ther artist and th solver could exist at the same time.',
+    'radar.caption.26-34':     'Product design is the only place where both the artist and the solver could exist at the same time.',
     'radar.imgcap.17-26.0':    'Four weeks showing up for kids the system forgot.',
     'radar.imgcap.17-26.1':    'When parkour became a voice — and the streets became a stage.',
     'radar.imgcap.17-26.2':    'The day I learned that leading means serving first.',
@@ -203,7 +203,7 @@ const T = {
     'period.9-17.t3': 'Carrière souhaitée : Scientifique',
     'period.9-17.t4': 'Hobby : Jeux vidéo',
     'period.17-26.t1': 'Sportif',
-    'period.17-26.t2': 'Communaute',
+    'period.17-26.t2': 'Communauté',
     'period.17-26.t3': 'Carrière design',
     'period.17-26.t4': 'Marié',
     'period.17-26.t5': 'Père',
@@ -213,11 +213,11 @@ const T = {
     'period.26-34.t4': 'Objectif : Autosuffisance',
     'twoppl.h2': 'Deux personnes. <br class="mobile-hidden"><span class="blue">Une révélation.</span>',
     'twoppl.p1': "Pendant longtemps, je ne savais pas ce que je faisais. Je savais que j'aimais dessiner. Je savais que j'aimais résoudre des problèmes. Mais c'était comme deux personnes différentes, et j'ai passé des années sans savoir laquelle j'étais censé être.",
-    'twoppl.blockquote': 'Le créatif et le problem-solver.<br>Deux forces, sans réponse claire.',
+    'twoppl.blockquote': 'Le créatif et le solutionneur..<br>Deux forces, sans réponse claire.',
     'twoppl.p2': 'Puis est venu le web. <strong>Pas un compromis. Une révélation.</strong> Le seul endroit où les deux personnes pouvaient coexister — et être vraiment utiles ensemble.',
     'local.chapter': 'Chapitre I · La révélation',
     'local.h2': 'Localhost. <br class="mobile-hidden"><span class="blue">Pas d\'internet.</span> <br class="mobile-hidden">Pas de problème.',
-    'local.p1': "Pas d'argent pour un bon PC, pas d'internet à la maison. Alors j'allais au cybercafé, je téléchargeais des tutoriels, je rentrais et je travaillais hors ligne.",
+    'local.p1': "Pas d'argent pour un bon PC, pas d'internet chez moi. Alors j'allais au cybercafé, je téléchargeais des tutoriels, je rentrais et je travaillais hors ligne.",
     'local.p2': "Ce que j'ai remarqué silencieusement a tout changé : quand je touchais l'interface, les gens <strong>réagissaient.</strong> Quand j'améliorais ce qui était en dessous, ils ne sentaient rien. Cette asymétrie est devenue ma boussole.",
     'local.muted': 'Madagascar → Luxembourg → France. Apprendre en avançant.',
     'filter.chapter': 'Chapitre II · Comment je pense',
@@ -237,7 +237,7 @@ const T = {
     'comm.h2': 'J\'ai toujours avancé vers<br><span class="blue">ceux que le système a oublié.</span>',
     'comm.intro': 'Avant le product design, il y avait la construction de communautés.<br>Avant les design systems, il y avait des systèmes humains.',
     'comm.l1.label': 'Leader d\'une communauté parkour à Madagascar',
-    'comm.l1.sub': 'Elle s\'est transformée en actions environnementales, marches solidaires, et plaidoyer pour les jeunes femmes victimes d\'injustices.',
+    'comm.l1.sub': 'Elle s\'est transformée en actions environnementales, marches de solidarité, et plaidoyer pour les jeunes femmes victimes d\'injustices.',
     'comm.l2.label': 'YMCA — ouverture d\'une deuxième branche parkour',
     'comm.l2.sub': 'Formation en leadership complétée.',
     'comm.l3.label': 'Programme ACTERS d\'Axian',
@@ -271,17 +271,17 @@ const T = {
     'tango.s1': 'Cas d\'écoles',
     'tango.s2': 'Stakeholders',
     'tango.s3': 'Dashboard',
-    'tango.p1': "L'une voulait de meilleures formulations.<br>L'autre voulais une meilleure structure; <br> Je me situé entre les deux; je voulais quelque chose qu'on comprend avant même d'avoir fini d'ouvrir l'app.",
+    'tango.p1': "L'une voulait de meilleures formulations.<br>L'autre voulait une meilleure structure; <br> Je me situe entre les deux : je voulais quelque chose qu’on comprenne avant même d’avoir fini d’ouvrir l’app.",
     'tango.p2': "Le problème, ce n'était pas les labels. Les utilisateurs ne savaient pas quel compteur importait vraiment : forfait principal, options, data reportée — tout au <strong>même niveau visuel.</strong>",
-    'tango.p3': "Le débat s\'est enflammé. Nous l\'avons réglé dans un zombies VR. <br> <strong>L\'interface utilisateur a tenu le coup. L\'équipe aussi.</strong>",
+    'tango.p3': "Le débat s\'est enflammé. Nous l\'avons réglé dans une partie de zombie. <br> <strong>L\'interface utilisateur a tenu le coup. L\'équipe aussi.</strong>",
     'tangod.chapter': 'Chapitre III · Tango Luxembourg · La décision',
     'tangod.h2': 'Ouvrir. <br class="mobile-hidden">Scanner. <br class="mobile-hidden"><span class="blue">Comprendre. </span>',
     'tangod.p1': "J'ai regardé comment les apps fintech gèrent ça. Deux secondes après l'ouverture — tu sais déjà où tu en es. C'est devenu la référence.",
-    'tangod.p2': "Un compteur principal. Un switch data/appels. Une page de détail pour le reste.<br>Le color-coding a été retiré pour préserver la neutralité de la marque — <strong>un compromis acceptable, parce que la structure était juste.</strong>",
+    'tangod.p2': "Un compteur principal. Un switch data/appels. Une page de détail pour le reste.<br>La proposition pour ajouter un code couleur n'a pas été retenue pour préserver la neutralité de la marque — <strong>un compromis acceptable, parce que la structure était juste.</strong>",
     'hspt.chapter': 'Chapitre IV · Pourquoi Hospitable',
     'hspt.h2': 'Je cherchais<br>des instructions.<br><span class="blue">J\'ai trouvé autre chose.</span>',
     'hspt.p1': "Je n'avais jamais vu une entreprise mettre autant de soin dans la façon d'accueillir un candidat. Une phrase m'a arrêté. Je suis entré en cherchant comment me qualifier — et je me suis retrouvé face à de vraies questions.",
-    'hspt.p2': "Les profils. La façon dont l'équipe est construite dans 31 pays sans perdre son humanité. Des gens qui semblent avoir leur propre singularité — le genre qu'on voit rarement sur une page équipe. Je me suis surpris à vouloir en savoir plus sur eux avant même d'avoir fini de lire.",
+    'hspt.p2': "Les profils. La façon dont l'équipe est répartie dans 31 pays sans perdre son humanité. Des gens qui semblent avoir leur propre singularité — le genre qu'on voit rarement sur une page équipe. Je me suis surpris à vouloir en savoir plus sur eux avant même d'avoir fini de lire.",
     'hspt.blockquote': "Il y a eu des moments de doute pendant ce processus.<br>Mais quelque part en chemin j'ai réalisé — <strong>quoi qu'il arrive, je repars avec des choses que je garde pour moi.</strong>",
     'hspt.small': "Ce n'est pas ce qu'une offre d'emploi vous fait d'habitude.",
     'cta.h2': 'Je peux douter de moi.<br>Je ne <span class="blue">lâche pas.</span>',
@@ -302,9 +302,9 @@ const T = {
     'tooltip.afrixian':        'Le moment où nous avons cessé de regarder à l\'extérieur.',
     'tooltip.african.clothes': 'Arrivé en vêtements africains au bureau. La finance n\'était pas prête.',
     'tooltip.quantum.leap':    'Ce livre a changé ma vie. Parfois, il suffit d\'un saut dans l\'inconnu.',
-    'tooltip.incremental':     'Livrer petit. Apprendre vite. Itérer.',
+    'tooltip.incremental':     '« J\'ai le forfait illimité et pourquoi je vois un compteur ?» — Nous avons souvent entendu cette remarque.',
     'tooltip.zombi.vr':        'Le débat s\'est enflammé. Nous l\'avons réglé dans un zombies VR. L\'interface utilisateur a tenu le coup. L\'équipe aussi.',
-    'tooltip.dashboard':       'Un dashboard. Deux écoles. Un verdict.',
+    'tooltip.dashboard':       'La solution n\'était pas d\'avoir plus d\'informations. Mais d\'avoir les bonnes informations, dans le bon ordre.',
     'tooltip.home':            'Maison',
     /* ── RADAR ── */
     'radar.title':             'Forces de caractère',
@@ -318,8 +318,8 @@ const T = {
     'radar.caption.3-9':       'La belle époque — nourritures gratuites',
     'radar.caption.9-17':      'Jacob adolescent — calme, curieux, et déjà en train de tout comprendre par lui-même.',
     'radar.caption.26-34':     'La conception de produits est le seul domaine où l\'artiste et le solutionneur peuvent coexister.',
-    'radar.imgcap.17-26.0':    'Quatre semaines consacrées aux enfants que le système a oubliés.',
-    'radar.imgcap.17-26.1':    'Quand le parkour est devenue une voix, et que les rues sont devenues une scène.',
+    'radar.imgcap.17-26.0':    'Quatre semaines consacrées aux enfants que le système a oublié.',
+    'radar.imgcap.17-26.1':    'Quand le parkour est devenu une voix, et que les rues sont devenues une scène.',
     'radar.imgcap.17-26.2':    'Le jour où j\'ai appris que diriger signifie d\'abord servir.',
     /* Tags */
     'radar.tag.Curiosity':          'Curiosité',
@@ -448,7 +448,7 @@ const T = {
     'tangod.chapter': 'Toko III · Tango Luxembourg · Ny fanapahan-kevitra',
     'tangod.h2': 'Manokatra. <br class="mobile-hidden">Mahita. <br class="mobile-hidden"><span class="blue">Mahazo.</span>',
     'tangod.p1': "Nijery ny fomba fitantanan'ny apps fintech izany aho. Roa segondra aorian'ny fanokafana — fantanao sahady ny toetranao. Izany no lasa tsodrano.",
-    'tangod.p2': "Kaontera voalohany iray. bokotra mampiseo data/antso. Pejy antsipiriany ho an'ny sisa.<br>Nesorina ny fampiadina loko mba hitahirizana ny fitoviana amin'ny marika — <strong> Nekeko io fanampahankevitra io, satria efa voavaha ny olan'ny sokajy.</strong>",
+    'tangod.p2': "Kaontera voalohany iray. bokotra mampiseo data/antso. Pejy antsipiriany ho an'ny sisa.<br>Tsy noraisina ny sosokevitra anampiana fampiadina loko samy hafa mba hitahirizana ny fitoviana amin'ny marika — <strong> Nekeko io fanampahankevitra io, satria efa voavaha ny olan'ny sokajy.</strong>",
     'hspt.chapter': 'Toko IV · Nahoana Hospitable',
     'hspt.h2': 'Nitady torolàlana aho.<br>Nefa<br><span class="blue">nahita zavatra hafa.</span>',
     'hspt.p1': "Mbola tsy nahita orinasa nandany fotoana tamin'ny fandraisan'ny kandidà aho. Fehezanteny iray no nampiato ahy. Nitady fomba hahafahako mahafeno fepetra no anton'dihako — ary nahita fanontaniana mafonja.",
@@ -474,9 +474,9 @@ const T = {
     'tooltip.afrixian':        'African + Axian — maha-izy azy niorina avy ao anatiny.',
     'tooltip.african.clothes': 'Nanao akanjo afrikanina any amin\'ny birao. Tsy nampoizin\'ny sampan-draharahan\'ny fitantanam-bola.',
     'tooltip.quantum.leap':    'Ity boky ity no naova ny fiainako. Indraindray, vikina iray ao amin\'ny tsy fantatra dia ampy.',
-    'tooltip.incremental':     'Alefa kely. Ianarana haingana. Ovaina.',
+    'tooltip.incremental':     'Manana Giga "illimité" aho, dia maninona aho no mahita kaontera ? Izay no fitarainana miverimberina matetika indrindra.',
     'tooltip.zombi.vr':        'Nihamafana ny adihevitra. Nifarana tamin\'ny fifaninana mitifitra zombie VR. Nahazaka tsara ny UI. Toy izany koa ny ekipa.',
-    'tooltip.dashboard':       'Tabilao iray. Lasy roa. Didy iray.',
+    'tooltip.dashboard':       'Tsy ny fanampihana ny fampahalalana no vahaolana. Fa ny fampiseohana ny tena zavadehibe, amin\'ny filaharana mazava.',
     'tooltip.home':            'Fonenana',
     /* ── RADAR ── */
     'radar.title':             'Herin-tsaina',
@@ -542,6 +542,14 @@ const T = {
         }
       }
     });
+
+      // Ajouter cette partie pour les images
+  document.querySelectorAll('img[data-lang-fr], img[data-lang-en]').forEach(img => {
+      const newSrc = img.getAttribute('data-lang-' + lang);
+      if (newSrc) {
+      img.src = newSrc;
+      }
+  });
 
     /* ── Update dropdown slide titles ── */
     const titles = SLIDE_TITLES_I18N[lang] || SLIDE_TITLES_I18N.en;

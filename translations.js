@@ -324,7 +324,7 @@ const translations = {
       "<strong>Email :</strong> <a href='mailto:jacob.radonirina@gmail.com'>jacob.radonirina@gmail.com</a>",
     "legal.052":
     "<strong>By email:</strong> <a href='mailto:jacob.radonirina@gmail.com'>jacob.radonirina@gmail.com</a><br/>" +
-    "<strong>Via LinkedIn:</strong> <a href='https://www.linkedin.com/in/jacob-radonirina-houmadi-120841b0' target='_blank'>Jacob Radonirina</a><br/>" +
+    "<strong>Via LinkedIn:</strong> <a href='https://www.linkedin.com/in/jacob-houmadi' target='_blank'>Jacob Radonirina</a><br/>" +
     "<strong>Via Malt :</strong> <a href='https://www.malt.fr/profile/jacobhoumadi' target='_blank'> @jacobhoumadi</a>",
 
     /* ── Footer ── */
@@ -579,7 +579,7 @@ const translations = {
       "<strong>Email :</strong> <a href='mailto:jacob.radonirina@gmail.com'>jacob.radonirina@gmail.com</a><br />" +
       "<strong>Délai de réponse :</strong> 30 jours maximum (conformément au RGPD)<br />" +
       "<strong>LinkedIn :</strong>" +
-      "<a href='https://www.linkedin.com/in/jacob-radonirina-houmadi-120841b0' rel='noopener' target='_blank'>Jacob Houmadi</a>",
+      "<a href='https://www.linkedin.com/in/jacob-houmadi' rel='noopener' target='_blank'>Jacob Houmadi</a>",
 
     /* ── Footer ── */
     "privacy.142": "",
@@ -590,7 +590,7 @@ const translations = {
       "404.h1":        "Cette page n'a pas été designée.",
       "404.sub":       "L'URL que vous cherchez n'existe pas — ou a été déplacée. Pas d'inquiétude, même les meilleurs wireframes ont des écrans manquants.",
       "404.btn1":      'Retour à l\'accueil <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>',
-      "404.btn2":      "Voir le portfolio",
+      "404.btn2":      "Explorer mon histoire",
       "404.btn3":      "Me contacter",
       "404.toast":     "Page non trouvée — erreur 404",
       "404.prop-title":"Page",
@@ -634,13 +634,13 @@ const translations = {
                                 'Click to discover my other sides',
 
     'hero.role.pro'    : '10 years in design. Madagascar → Luxembourg → France',
-    'hero.role.garden' : 'Future agroforestry farmer  🌳🌴',
+    'hero.role.garden' : '"Future agroforestry farmer  🌳🌴',
     'hero.role.snack'  : 'Former friday snack ritual coordinator ☕',
     'hero.role.artist' : 'Digital artist 🎨',
 
     // ── Section logos & stats ────────────────────
     'logos.label':       'They trusted me',
-    'quote.text':        'Brands that integrate branding and UX from the start create experiences 40% more memorable and drive stronger loyalty.',
+    'quote.text':        'For B2B SaaS and Fintech teams who\'ve already lost time with designers who didn\'t get the product.',
     'stat.exp.label':    'of experience',
     'stat.sector':       'SaaS · B2B',
     'stat.awards.label': 'Creatives 974',
@@ -650,7 +650,7 @@ const translations = {
     'stat.tooltip' : '🏆 See the Axian Awards slide →',
 
     // ── Bandeau principal ─────────────────────────
-    'main.h2':      'Transform your brand identity into a <span>memorable digital experience</span>',
+    'main.h2':      'I don\'t start in Figma. I start with <span> your product problems.</span>',
     'main.subtitle':'Tell me about your project. I\'ll get back to you within 24h with a personalised proposal.',
 
     // ── Formulaire ────────────────────────────────
@@ -924,7 +924,7 @@ const translations = {
       "<strong>Email:</strong> <a href='mailto:jacob.radonirina@gmail.com'>jacob.radonirina@gmail.com</a>",
     "legal.052":
       "<strong>By email:</strong> <a href='mailto:jacob.radonirina@gmail.com'>jacob.radonirina@gmail.com</a><br/>" +
-      "<strong>Via LinkedIn:</strong> <a href='https://www.linkedin.com/in/jacob-radonirina-houmadi-120841b0' target='_blank'>Jacob Radonirina</a><br/>" +
+      "<strong>Via LinkedIn:</strong> <a href='https://www.linkedin.com/in/jacob-houmadi' target='_blank'>Jacob Radonirina</a><br/>" +
       "<strong>Via Malt :</strong> <a href='https://www.malt.fr/profile/jacobhoumadi' target='_blank'> @jacobhoumadi</a>",
 
 
@@ -1182,7 +1182,7 @@ const translations = {
       "<strong>Email :</strong> <a href='mailto:jacob.radonirina@gmail.com'>jacob.radonirina@gmail.com</a><br />" +
       "<strong>Délai de réponse :</strong> 30 days maximum (in accordance with GDPR)<br />" +
       "<strong>LinkedIn : </strong>" +
-      "<a href='https://www.linkedin.com/in/jacob-radonirina-houmadi-120841b0' rel='noopener' target='_blank'>Jacob Houmadi</a>",
+      "<a href='https://www.linkedin.com/in/jacob-houmadi' rel='noopener' target='_blank'>Jacob Houmadi</a>",
 
     /* ── Footer ── */
     "privacy.142": "",
@@ -1193,7 +1193,7 @@ const translations = {
     "404.h1":        "This page was never designed.",
     "404.sub":       "The URL you're looking for doesn't exist — or has been moved. Don't worry, even the best wireframes have missing screens.",
     "404.btn1":      'Back to home <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>',
-    "404.btn2":      "View portfolio",
+    "404.btn2":      "Explore my journey",
     "404.btn3":      "Contact me",
     "404.toast":     "Page not found — error 404",
     "404.prop-title":"Page",
@@ -1235,6 +1235,7 @@ function switchLanguage(lang) {
     } else {
       el.textContent = t;
     }
+     syncMobileLangSwitcher();
   });
 
   // ── HTML intérieur ─────────────────────────────

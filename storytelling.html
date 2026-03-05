@@ -138,54 +138,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .afrixian-grid .mood-cell:nth-child(3) { background: #DFE1E5; }
 .afrixian-grid .mood-cell:nth-child(4) { background: #E4E6EA; }
 
-/* ── HOSPITABLE PORTRAITS ── */
-.hspt-portraits {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-areas:
-    ". b"
-    "a b"
-    "a c"
-    ". c";
-  gap: 6px;
-  height: 100%;
-  width: 100%;
-}
-
-.hspt-portraits .portrait.large {
-  grid-area: a;
-}
-.hspt-portraits .portrait.top {
-  grid-area: b;
-}
-.hspt-portraits .portrait.bottom {
-  grid-area: c;
-}
-
-.hspt-portraits .portrait {
-  overflow: hidden;
-  border-radius: 10px;
-  min-height: 0;
-}
-
-/* A — image centrée, pas étirée */
-.hspt-portraits .portrait.large img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-}
-
-/* B et C — image qui remplit */
-.hspt-portraits .portrait.top img,
-.hspt-portraits .portrait.bottom img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-}
 
 
 
@@ -677,13 +629,162 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
 
-  <!-- 07 · COMMUNITY — I show up for them -->
- <section class="slide slide--community" data-i="6">
-  <div class="slide-num-wm">07</div>
+
+  <!-- 07 · AXIAN CONTEXT -->
+  <section class="slide" data-i="6">
+    <div class="slide-num-wm">07</div>
+    <div class="split-row" style="flex:1;min-height:0">
+      <div class="sl-left">
+        <div class="chapter a" data-t="axian.chapter">Chapter III · Axian Group · 2018–2023</div>
+        <h2 class="headline headline--md a" data-t="axian.h2">We weren't hired <br class="mobile-hidden">to join a team.<br><span class="blue">We built one.</span></h2>
+        <div class="case-meta-inline a">
+          <span class="case-tag">Branding</span>
+          <span class="case-tag">Art Direction</span>
+          <span class="case-tag">Web Design</span>
+        </div>
+        <div class="stats a">
+          <div><div class="stat-num">9</div><div class="stat-label" data-t="axian.s1">Founding members</div></div>
+          <div><div class="stat-num">5</div><div class="stat-label" data-t="axian.s2">Sectors unified</div></div>
+          <div><div class="stat-num">5</div><div class="stat-label" data-t="axian.s3">Years building it</div></div>
+        </div>
+        <p class="subtext subtext--sm a" style="margin-top:16px" data-t="axian.sub">I didn't arrive to a creative department. We built one from scratch. 
+        Inside one of Madagascar's largest groups, I coordinated the Friday rotating breakfast: every week, a different person, a different table.
+        We made it a place where good work actually wanted to happen.</p>
+      </div>
+        <div class="sl-right" style="overflow:visible">
+          <div class="axian-entry-grid">
+            <div class="eg-cell span-full"><img src="Jacob-story/axian-acters.webp" alt="" data-t="tooltip.axian.acters"></div>
+            <div class="eg-cell"><img src="Jacob-story/gouter.jpg" alt="" data-t="tooltip.axian.snacks"></div>
+            <div class="eg-cell"><img src="Jacob-story/foot-axian.jpg" alt="" data-t="tooltip.axian.foot"></div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- 8 · AFRIXIAN -->
+  <section class="slide" data-i="7">
+    <div class="slide-num-wm">08</div>
+    <div class="split-row" style="flex:1;min-height:0">
+      <div class="sl-left">
+        <div class="chapter a" data-t="afrix.chapter">Chapter III · Axian Group · The breakthrough</div>
+        <h2 class="headline headline--lg a" data-t="afrix.h2"><span class="blue">Afrixian.</span> <br  class="mobile-hidden">Not borrowed. <br  class="mobile-hidden">Found.</h2>
+        <div class="stats a">
+          <div><div class="stat-num">4</div><div class="stat-label" data-t="afrix.s1">Creatives 974 Awards</div></div>
+        </div>
+        <p class="subtext subtext--sm a" style="margin-top:16px" data-t="afrix.sub1">To build the brand's identity, we stopped borrowing from outside and started digging from within. This is how Afrixian was born — <strong>African culture, turned into something disruptive.</strong></p>
+        <p class="subtext subtext--sm a" style="margin-top:10px" data-t="afrix.sub2">Once we had that concept, everything accelerated. And I started to wear African clothes to the office, imagine how jealous the financial department was.</p>
+        <div class="blockquote a" style="margin-top:18px" data-t="afrix.blockquote">It wasn't only the brand that had been built. <strong>It was us.</strong></div>
+      </div>
+      <div class="sl-right">
+        <div class="axian-entry-grid-2">
+          <div class="eg-cell span-full"><img src="Jacob-story/afrixian.webp" alt="" data-t="tooltip.afrixian"></div>
+          <div class="eg-cell"><img src="Jacob-story/african-clohtes.webp" alt="" data-t="tooltip.african.clothes"></div>
+        </div>
+          
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 · THE LEAP -->
+  <section class="slide" data-i="8">
+      <div class="slide-num-wm">09</div>
+      <div class="split-row" style="flex:1;min-height:0">
+          <div class="sl-left">
+            <div class="chapter a" data-t="leap.chapter">Chapter III · The Leap</div>
+            <h2 class="headline headline--lg a" data-t="leap.h2">I applied <br class="mobile-hidden">from Madagascar.<br><span class="blue">Told them I was <br  class="mobile-hidden">already moving.</span></h2>
+            <p class="subtext subtext--sm a" style="margin-top:16px" data-t="leap.p1">I wasn't. Not yet.</p>
+            <p class="subtext subtext--sm a" style="margin-top:10px" data-t="leap.p2">But saying it out loud made it real. Months later, I called back.</p>
+            <div class="blockquote a" style="margin-top:16px" data-t="leap.blockquote">"Ça y est, je suis là."</div>
+            <p class="subtext subtext--sm a" style="margin-top:16px" data-t="leap.p3">That's how the Luxembourg chapter started, not with a contract. With a commitment I made to myself before anyone asked me to.</p>
+          </div>
+          <div class="sl-right" style="display:flex;flex-direction:column;justify-content:center;">     
+            <div class="axian-entry-grid-2">
+              <div class="eg-cell span-full">
+                <div class="valerie-quote">
+                  <p data-t="testimonial.text">"I first met Jacob remotely, on a video call from Madagascar. His profile caught my attention immediately. 
+                  Some time later, he called back to say: 'I'm here!' marking the start of our collaboration in Luxembourg. 
+                  A serious, committed and pleasant designer, Jacob demonstrates great professionalism and a genuine ability to connect with people."</p>
+                  <div class="attribution a">
+                  <div class="attribution-name">Valérie Candat</div>
+                  <div class="attribution-role" data-t="leap.valrole">Executive Assistant & HR · ID+P Luxembourg</div>
+                  </div>
+                </div>  
+              </div>
+              <div class="eg-cell"><img src="Jacob-story/quantum-leap.jpg" alt="book" data-t="tooltip.quantum.leap"></div>
+            </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- 10 · TANGO CONTEXT -->
+  <section class="slide" data-i="9">
+    <div class="slide-num-wm">09</div>
+
+    <div class="split-row" style="flex:1;min-height:0">
+      <div class="sl-left">
+       <div class="chapter a" data-t="tango.chapter">Chapter III · Tango Luxembourg · 2024–2025</div>
+      <h2 class="headline headline--md a" data-t="tango.h2">Two schools.<br><span class="blue">One dashboard</span></h2>
+        <div class="case-meta-inline a">
+            <span class="case-tag">Product Design</span>
+            <span class="case-tag">Design System</span>
+            <span class="case-tag">Fintech</span>
+          </div>
+          <div class="stats a">
+            <div><div class="stat-num">2</div><div class="stat-label" data-t="tango.s1">Schools</div></div>
+            <div><div class="stat-num">5</div><div class="stat-label" data-t="tango.s2">Stakeholders</div></div>
+            <div><div class="stat-num">1</div><div class="stat-label" data-t="tango.s3">Dashboard</div></div>
+          </div>
+          <p class="subtext subtext--sm a" style="margin-top:16px" data-t="tango.p1">
+            One side wanted better wording. <br>
+            The other wanted a better structure. <br>
+           I wanted something you understand before you finish opening the app.</p>
+          <p class="subtext subtext--sm a" style="margin-top:14px" data-t="tango.p2">The problem wasn't the labels. Users didn't know which counter actually mattered: <br>main plan, add-ons, rolled-over data, all at <strong>the same visual level.</strong></p>
+          <p class="subtext subtext--sm a" style="margin-top:14px" data-t="tango.p3">The debate got intense.
+                  We settled it in zombie VR. <br>
+                  <strong> UI survived. So did the team.</strong></p>
+      </div>
+      <div class="sl-right">
+        <div class="axian-entry-grid-2">
+        <div class="eg-cell span-full">
+          <img src="Jacob-story/old-dashboard.webp" 
+          data-lang-en="Jacob-story/old-dashboard-en.webp"
+          data-lang-fr="Jacob-story/old-dashboard-fr.webp"
+          data-lang-mg="Jacob-story/old-dashboard-fr.webp"
+          alt="" data-t="tooltip.incremental"></div>
+          <div class="eg-cell"><img src="Jacob-story/zombi-vr.webp" alt="" data-t="tooltip.zombi.vr"></div>
+        </div>
+      </div>
+    </div>    
+  </section>
+
+   <!-- 11 · TANGO DECISION -->
+  <section class="slide" data-i="10">
+    <div class="slide-num-wm">11</div>
+    <div class="split-row" style="flex:1;min-height:0">
+      <div class="sl-left">
+        <div class="chapter a" data-t="tangod.chapter">Chapter III · Tango Luxembourg · The decision</div>
+        <h2 class="headline headline--lg a" data-t="tangod.h2">Open. <br class="mobile-hidden">Scan.<br class="mobile-hidden"><span class="blue">Understand.</span></h2>
+        <p class="subtext subtext--sm a" style="margin-top:12px" data-t="tangod.p1">I looked at how fintech apps handle it. Two seconds after opening — you already know where you stand. That became the reference.</p>
+        <p class="subtext subtext--sm a" style="margin-top:10px" data-t="tangod.p2">One primary counter. A data/calls switcher. A detail page for the full breakdown. <br> Color-coding was removed to preserve brand neutrality — <strong>a compromise I could live with, because the structure was right.</strong></p>
+      </div>
+      <div class="sl-right">
+        <div class="sl-img-ph"><img src="Jacob-story/Mytango-app-1.webp" 
+          data-lang-en="Jacob-story/Mytango-app-en.webp"
+          data-lang-fr="Jacob-story/Mytango-app-fr.webp"
+          data-lang-mg="Jacob-story/Mytango-app-fr.webp"
+          alt="tango app" data-t="tooltip.dashboard" style=" width: 100%;height: auto;;border-radius: 10px;"></div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <!-- 12 · COMMUNITY — I show up for them -->
+ <section class="slide slide--community" data-i="11">
+  <div class="slide-num-wm">12</div>
   <div class="split-row" style="flex:1;min-height:0">
 
     <div class="sl-left">
-      <div class="chapter a" data-t="comm.chapter.hospitable">Chapter II · Beyond the screen</div>
+      <div class="chapter a" data-t="comm.chapter.default">Chapter IV · Beyond the screen</div>
       <h2 class="headline headline--md a" data-t="comm.h2">
         I've always moved toward<br>
         <span class="blue">the person the system forgot.</span>
@@ -768,178 +869,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-  <!-- 08 · AXIAN CONTEXT -->
-  <section class="slide" data-i="7">
-    <div class="slide-num-wm">08</div>
-    <div class="split-row" style="flex:1;min-height:0">
-      <div class="sl-left">
-        <div class="chapter a" data-t="axian.chapter">Chapter III · Axian Group · 2018–2023</div>
-        <h2 class="headline headline--md a" data-t="axian.h2">We weren't hired <br class="mobile-hidden">to join a team.<br><span class="blue">We built one.</span></h2>
-        <div class="case-meta-inline a">
-          <span class="case-tag">Branding</span>
-          <span class="case-tag">Art Direction</span>
-          <span class="case-tag">Web Design</span>
-        </div>
-        <div class="stats a">
-          <div><div class="stat-num">9</div><div class="stat-label" data-t="axian.s1">Founding members</div></div>
-          <div><div class="stat-num">5</div><div class="stat-label" data-t="axian.s2">Sectors unified</div></div>
-          <div><div class="stat-num">5</div><div class="stat-label" data-t="axian.s3">Years building it</div></div>
-        </div>
-        <p class="subtext subtext--sm a" style="margin-top:16px" data-t="axian.sub">I didn't arrive to a creative department. We built one from scratch. 
-        Inside one of Madagascar's largest groups, I coordinated the Friday rotating breakfast: every week, a different person, a different table.
-        We made it a place where good work actually wanted to happen.</p>
-      </div>
-        <div class="sl-right" style="overflow:visible">
-          <div class="axian-entry-grid">
-            <div class="eg-cell span-full"><img src="Jacob-story/axian-acters.webp" alt="" data-t="tooltip.axian.acters"></div>
-            <div class="eg-cell"><img src="Jacob-story/gouter.jpg" alt="" data-t="tooltip.axian.snacks"></div>
-            <div class="eg-cell"><img src="Jacob-story/foot-axian.jpg" alt="" data-t="tooltip.axian.foot"></div>
-          </div>
-        </div>
-    </div>
-  </section>
-
-  <!-- 09 · AFRIXIAN -->
-  <section class="slide" data-i="8">
-    <div class="slide-num-wm">09</div>
-    <div class="split-row" style="flex:1;min-height:0">
-      <div class="sl-left">
-        <div class="chapter a" data-t="afrix.chapter">Chapter III · Axian Group · The breakthrough</div>
-        <h2 class="headline headline--lg a" data-t="afrix.h2"><span class="blue">Afrixian.</span> <br  class="mobile-hidden">Not borrowed. <br  class="mobile-hidden">Found.</h2>
-        <div class="stats a">
-          <div><div class="stat-num">4</div><div class="stat-label" data-t="afrix.s1">Creatives 974 Awards</div></div>
-        </div>
-        <p class="subtext subtext--sm a" style="margin-top:16px" data-t="afrix.sub1">To build the brand's identity, we stopped borrowing from outside and started digging from within. This is how Afrixian was born — <strong>African culture, turned into something disruptive.</strong></p>
-        <p class="subtext subtext--sm a" style="margin-top:10px" data-t="afrix.sub2">Once we had that concept, everything accelerated. And I started to wear African clothes to the office, imagine how jealous the financial department was.</p>
-        <div class="blockquote a" style="margin-top:18px" data-t="afrix.blockquote">It wasn't only the brand that had been built. <strong>It was us.</strong></div>
-      </div>
-      <div class="sl-right">
-        <div class="axian-entry-grid-2">
-          <div class="eg-cell span-full"><img src="Jacob-story/afrixian.webp" alt="" data-t="tooltip.afrixian"></div>
-          <div class="eg-cell"><img src="Jacob-story/african-clohtes.webp" alt="" data-t="tooltip.african.clothes"></div>
-        </div>
-          
-      </div>
-    </div>
-  </section>
-
-  <!-- 10 · THE LEAP -->
-  <section class="slide" data-i="9">
-      <div class="slide-num-wm">10</div>
-      <div class="split-row" style="flex:1;min-height:0">
-          <div class="sl-left">
-            <div class="chapter a" data-t="leap.chapter">Chapter III · The Leap</div>
-            <h2 class="headline headline--lg a" data-t="leap.h2">I applied <br class="mobile-hidden">from Madagascar.<br><span class="blue">Told them I was <br  class="mobile-hidden">already moving.</span></h2>
-            <p class="subtext subtext--sm a" style="margin-top:16px" data-t="leap.p1">I wasn't. Not yet.</p>
-            <p class="subtext subtext--sm a" style="margin-top:10px" data-t="leap.p2">But saying it out loud made it real. Months later, I called back.</p>
-            <div class="blockquote a" style="margin-top:16px" data-t="leap.blockquote">"Ça y est, je suis là."</div>
-            <p class="subtext subtext--sm a" style="margin-top:16px" data-t="leap.p3">That's how the Luxembourg chapter started, not with a contract. With a commitment I made to myself before anyone asked me to.</p>
-          </div>
-          <div class="sl-right" style="display:flex;flex-direction:column;justify-content:center;">     
-            <div class="axian-entry-grid-2">
-              <div class="eg-cell span-full">
-                <div class="valerie-quote">
-                  <p data-t="testimonial.text">"I first met Jacob remotely, on a video call from Madagascar. His profile caught my attention immediately. 
-                  Some time later, he called back to say: 'I'm here!' marking the start of our collaboration in Luxembourg. 
-                  A serious, committed and pleasant designer, Jacob demonstrates great professionalism and a genuine ability to connect with people."</p>
-                  <div class="attribution a">
-                  <div class="attribution-name">Valérie Candat</div>
-                  <div class="attribution-role" data-t="leap.valrole">Executive Assistant & HR · ID+P Luxembourg</div>
-                  </div>
-                </div>  
-              </div>
-              <div class="eg-cell"><img src="Jacob-story/quantum-leap.jpg" alt="book" data-t="tooltip.quantum.leap"></div>
-            </div>
-          </div>
-      </div>
-  </section>
-
-  <!-- 11 · TANGO CONTEXT -->
-  <section class="slide" data-i="10">
-    <div class="slide-num-wm">11</div>
-
-    <div class="split-row" style="flex:1;min-height:0">
-      <div class="sl-left">
-       <div class="chapter a" data-t="tango.chapter">Chapter III · Tango Luxembourg · 2024–2025</div>
-      <h2 class="headline headline--md a" data-t="tango.h2">Two schools.<br><span class="blue">One dashboard</span></h2>
-        <div class="case-meta-inline a">
-            <span class="case-tag">Product Design</span>
-            <span class="case-tag">Design System</span>
-            <span class="case-tag">Fintech</span>
-          </div>
-          <div class="stats a">
-            <div><div class="stat-num">2</div><div class="stat-label" data-t="tango.s1">Schools</div></div>
-            <div><div class="stat-num">5</div><div class="stat-label" data-t="tango.s2">Stakeholders</div></div>
-            <div><div class="stat-num">1</div><div class="stat-label" data-t="tango.s3">Dashboard</div></div>
-          </div>
-          <p class="subtext subtext--sm a" style="margin-top:16px" data-t="tango.p1">
-            One side wanted better wording. <br>
-            The other wanted a better structure. <br>
-           I wanted something you understand before you finish opening the app.</p>
-          <p class="subtext subtext--sm a" style="margin-top:14px" data-t="tango.p2">The problem wasn't the labels. Users didn't know which counter actually mattered: <br>main plan, add-ons, rolled-over data, all at <strong>the same visual level.</strong></p>
-          <p class="subtext subtext--sm a" style="margin-top:14px" data-t="tango.p3">The debate got intense.
-                  We settled it in zombie VR. <br>
-                  <strong> UI survived. So did the team.</strong></p>
-      </div>
-      <div class="sl-right">
-        <div class="axian-entry-grid-2">
-        <div class="eg-cell span-full">
-          <img src="Jacob-story/old-dashboard-en.webp" 
-          data-lang-en="Jacob-story/old-dashboard-en.webp"
-          data-lang-fr="Jacob-story/old-dashboard-fr.webp"
-          data-lang-mg="Jacob-story/old-dashboard-fr.webp"
-          alt="" data-t="tooltip.incremental"></div>
-          <div class="eg-cell"><img src="Jacob-story/zombi-vr.webp" alt="" data-t="tooltip.zombi.vr"></div>
-        </div>
-      </div>
-    </div>    
-  </section>
-
-   <!-- 12 · TANGO DECISION -->
-  <section class="slide" data-i="11">
-    <div class="slide-num-wm">12</div>
-    <div class="split-row" style="flex:1;min-height:0">
-      <div class="sl-left">
-        <div class="chapter a" data-t="tangod.chapter">Chapter III · Tango Luxembourg · The decision</div>
-        <h2 class="headline headline--lg a" data-t="tangod.h2">Open. <br class="mobile-hidden">Scan.<br class="mobile-hidden"><span class="blue">Understand.</span></h2>
-        <p class="subtext subtext--sm a" style="margin-top:12px" data-t="tangod.p1">I looked at how fintech apps handle it. Two seconds after opening — you already know where you stand. That became the reference.</p>
-        <p class="subtext subtext--sm a" style="margin-top:10px" data-t="tangod.p2">One primary counter. A data/calls switcher. A detail page for the full breakdown. <br> Color-coding was removed to preserve brand neutrality — <strong>a compromise I could live with, because the structure was right.</strong></p>
-      </div>
-      <div class="sl-right">
-        <div class="sl-img-ph"><img src="Jacob-story/Mytango-app-en.webp" 
-          data-lang-en="Jacob-story/Mytango-app-en.webp"
-          data-lang-fr="Jacob-story/Mytango-app-fr.webp"
-          data-lang-mg="Jacob-story/Mytango-app-fr.webp"
-          alt="tango app" data-t="tooltip.dashboard" style=" width: 100%;height: auto;;border-radius: 10px;"></div>
-      </div>
-    </div>
-  </section>
-
- <!-- 13 · WHY HOSPITABLE -->
-  <section class="slide" data-i="12">
-    <div class="slide-num-wm">13</div>
-    <div class="split-row" style="flex:1;min-height:0">
-      <div class="sl-left">
-        <div class="chapter a" data-t="hspt.chapter">Chapter IV · Why Hospitable</div>
-        <h2 class="headline headline--hspt a" data-t="hspt.h2">I came looking<br>for instructions.<br><span class="blue">I found something else.</span></h2>
-        <p class="subtext subtext--sm a" style="margin-top:14px" data-t="hspt.p1">I'd never seen a company put that kind of effort into how they welcome a candidate. One sentence stopped me. I went in looking for how to qualify — and found myself in front of real questions.</p>
-        <p class="subtext subtext--sm a" style="margin-top:10px" data-t="hspt.p2">The profiles. The way the team is built across 31 countries without losing its humanity. People who seem to have their own singularity — the kind you don't often see on a team page. I caught myself wanting to know more about them before I'd even finished reading.</p>
-        <div class="blockquote a" style="margin-top:16px" data-t="hspt.blockquote">There were moments of doubt during this process.<br>But somewhere along the way I realized — <strong>whatever happens, I'm walking away with things I'm keeping for myself.</strong></div>
-        <p class="subtext subtext--sm a" style="margin-top:14px;opacity:.6" data-t="hspt.small">That's not something a job posting does to you.</p>
-      </div>
-      <div class="sl-right">
-        <div class="hspt-portraits">
-          <div class="portrait large"><img src="Jacob-story/Matt_J_sq.webp" alt="Hospitable member 1"/></div>
-          <div class="portrait top"><img src="Jacob-story/Andrew-sq-prpl.webp" alt="Hospitable member 2"/></div>
-          <div class="portrait bottom"><img src="Jacob-story/Denise_2.webp" alt="Hospitable member 3"/></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- LAST · CTA -->
-  <section class="slide slide--cta" data-i="13">
-    <div class="slide-num-wm">14</div>
+  <section class="slide slide--cta" data-i="12">
+    <div class="slide-num-wm">13</div>
     <h2 class="cta-headline a" data-t="cta.h2">I might doubt myself.<br>I don't <span class="blue">let go.</span></h2>
 
     <div class="cta-sub a" style="max-width:520px;margin:0 auto 32px;text-align:center;" data-t="cta.sub1">
@@ -967,14 +899,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 
-<script>/* ── RADAR DATA ── */
+<script>
+
+
 /* ── i18n ── */
 const SLIDE_TITLES_I18N = {
-  en: ['Jacob Houmadi','My Journey','Two People','Localhost','How I Think','Singularity','Community','Axian — Context','Afrixian','The Leap','Tango — Context','Tango — Outcome','Why Hospitable ?','CTA'],
-  fr: ['Jacob Houmadi','Mon histoire','Deux Personnes','Localhost','Comment Je Pense','Singularité','Communauté','Axian — Contexte','Afrixian','Le Grand Saut','Tango — Contexte','Tango — La Décision','Pourquoi Hospitable ?','CTA'],
-  mg: ['Jacob Houmadi','Ny Tantarako','Olona Roa','Localhost','Ny Fisainako','Ny mampiavaka ahy','Asa sosialy','Axian — Tontolon\'asa','Afrixian','Ilay vikina','Tango — Tontolon\'asa','Tango — Fanapahan-kevitra','Nahoana no i Hospitable ?','Fanasàna anao']
+  en: ['Jacob Houmadi','My Journey','Two People','Localhost','How I Think','Singularity','Axian — Context','Afrixian','The Leap','Tango — Context','Tango — Outcome','Community','CTA'],
+  fr: ['Jacob Houmadi','Mon histoire','Deux Personnes','Localhost','Comment Je Pense','Singularité','Axian — Contexte','Afrixian','Le Grand Saut','Tango — Contexte','Tango — La Décision','Actions communautaires','CTA'],
+  mg: ['Jacob Houmadi','Ny Tantarako','Olona Roa','Localhost','Ny Fisainako','Ny mampiavaka ahy','Axian — Tontolon\'asa','Afrixian','Ilay vikina','Tango — Tontolon\'asa','Tango — Fanapahan-kevitra','Asa sosialy','Fanasàna anao']
 };
 
+
+/* ── RADAR DATA ── */
 const RADAR_DATA = {
   '3-9': {
     label: '3 – 9 years',
@@ -1238,14 +1174,19 @@ function goTo(next) {
 
 /* ── DROPDOWN ── */
 const SLIDE_TITLES = [
-  {num:'01',title:'Jacob Houmadi',bg:'dark-bg',thumb:'Thumbnail-0.webp'},{num:'02',title:'My Journey',bg:'blue-bg',thumb:'Thumbnail-1.webp'},
-  {num:'03',title:'Two People',bg:'',thumb:'Thumbnail-2.webp'},{num:'04',title:'Localhost',bg:'',thumb:'Thumbnail-3.webp'},
-  {num:'05',title:'How I Think',bg:'',thumb:'Thumbnail-4.webp'},{num:'06',title:'Singularity',bg:'',thumb:'Thumbnail-5.webp'},
-  {num:'07',title:'Community',bg:'',thumb:'Thumbnail-6.webp'},
-  {num:'08',title:'Axian — Context',bg:'',thumb:'Thumbnail-7.webp'},{num:'09',title:'Afrixian',bg:'',thumb:'Thumbnail-8.webp'},
-  {num:'10',title:'The Leap',bg:'',thumb:'Thumbnail-9.webp'},{num:'11',title:'Tango — Context',bg:'',thumb:'Thumbnail-10.webp'},
-  {num:'12',title:'Tango — Outcome',bg:'',thumb:'Thumbnail-11.webp'},{num:'13',title:'Why Hospitable',bg:'',thumb:'Thumbnail-12.webp'},
-  {num:'14',title:'CTA',bg:'',thumb:'Thumbnail-13.webp'}
+  {num:'01',title:'Jacob Houmadi',bg:'dark-bg',thumb:'Thumbnail-0.webp'},
+  {num:'02',title:'My Journey',bg:'blue-bg',thumb:'Thumbnail-1.webp'},
+  {num:'03',title:'Two People',bg:'',thumb:'Thumbnail-2.webp'},
+  {num:'04',title:'Localhost',bg:'',thumb:'Thumbnail-3.webp'},
+  {num:'05',title:'How I Think',bg:'',thumb:'Thumbnail-4.webp'},
+  {num:'06',title:'Singularity',bg:'',thumb:'Thumbnail-5.webp'},
+  {num:'07',title:'Axian — Context',bg:'',thumb:'Thumbnail-7.webp'},
+  {num:'08',title:'Afrixian',bg:'',thumb:'Thumbnail-8.webp'},
+  {num:'09',title:'The Leap',bg:'',thumb:'Thumbnail-9.webp'},
+  {num:'10',title:'Tango — Context',bg:'',thumb:'Thumbnail-10.webp'},
+  {num:'11',title:'Tango — Outcome',bg:'',thumb:'Thumbnail-11.webp'},
+  {num:'12',title:'Community',bg:'',thumb:'Thumbnail-6.webp'},
+  {num:'13',title:'CTA',bg:'',thumb:'Thumbnail-13.webp'}
 ];
 const dropdown = document.getElementById('dropdown');
 SLIDE_TITLES.forEach((s,i) => {
