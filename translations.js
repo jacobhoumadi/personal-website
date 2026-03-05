@@ -39,17 +39,17 @@ const translations = {
 
     // ── Section logos & stats ────────────────────
     'logos.label':       'Ils m\'ont fait confiance',
-    'quote.text':        'Les marques qui intègrent branding et UX dès le départ créent des expériences 40 % plus mémorables et fidélisent mieux.',
-    'stat.exp' : '10 ans',
+    'quote.text':        'Je ne commence pas par Figma. <br><span> Je commence par les problèmes de votre produit. </span>',
     'stat.exp.label':    'd\'expériences',
     'stat.sector':       'SaaS · B2B',
-    'stat.sector.label': 'Secteurs',
-    'stat.awards': '4 prix',
-    'stat.awards.label': 'Creatives 974',
-    'stat.tooltip' : '🏆 Voir la slide Axian Awards →',
+    'stat.awards.label': '→ Handoff',
+    'stat.sector.label': 'Fintech',
+    'stat.exp' : '10 ans',
+    'stat.awards': 'Découverte',
+
 
     // ── Bandeau principal ─────────────────────────
-    'main.h2':      'Transformez votre identité de marque en <span>expérience digitale mémorable</span>',
+    'main.h2':      'Pour les équipes B2B qui ont perdu du temps avec des <span>designers qui n\'ont pas compris le produit.</span>',
     'main.subtitle':'Parlez-moi de votre projet. Je vous réponds sous 24h avec une proposition personnalisée.',
 
     // ── Formulaire ────────────────────────────────
@@ -158,6 +158,8 @@ const translations = {
     'modal.offer2.li5':      '10-15 écrans UI professionnels',
     'modal.offer2.li6':      'Handoff développeurs / Support 2 semaines',
     'modal.offer2.ideal':    'Vous partez de zéro ou refonte complète',
+    'offer.badge' : 'Le plus populaire',
+    'offer.cta' : 'Démarrer',
 
     // ── Modal · Témoignages ───────────────────────
     'modal.testimonials.title': 'Témoignages',
@@ -640,17 +642,16 @@ const translations = {
 
     // ── Section logos & stats ────────────────────
     'logos.label':       'They trusted me',
-    'quote.text':        'For B2B SaaS and Fintech teams who\'ve already lost time with designers who didn\'t get the product.',
+    'quote.text':        'I don\'t start in Figma. <br><span> I start with your product problems.</span>',
     'stat.exp.label':    'of experience',
     'stat.sector':       'SaaS · B2B',
-    'stat.awards.label': 'Creatives 974',
-    'stat.sector.label': 'Sectors',
+    'stat.awards.label': '→ Handoff',
+    'stat.sector.label': 'Fintech',
     'stat.exp' : '10 years',
-    'stat.awards': '4 prize',
-    'stat.tooltip' : '🏆 See the Axian Awards slide →',
+    'stat.awards': 'Discovery',
 
     // ── Bandeau principal ─────────────────────────
-    'main.h2':      'I don\'t start in Figma. I start with <span> your product problems.</span>',
+    'main.h2':      'For B2B teams who\'ve lost time with designers <span> who didn\'t get the product.</span>',
     'main.subtitle':'Tell me about your project. I\'ll get back to you within 24h with a personalised proposal.',
 
     // ── Formulaire ────────────────────────────────
@@ -758,7 +759,9 @@ const translations = {
     'modal.offer2.li4':      'Scalable design system',
     'modal.offer2.li5':      '10–15 professional UI screens',
     'modal.offer2.li6':      'Developer handoff / 2-week support',
-    'modal.offer2.ideal':    'Starting from scratch or full redesign',
+    'modal.offer2.ideal':    'Starting from scratch or full redesign',    
+    'offer.badge' : 'Most popular',
+    'offer.cta' : 'Start',
 
     // ── Modal · Testimonials ──────────────────────
     'modal.testimonials.title': 'Testimonials',
