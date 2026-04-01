@@ -1415,7 +1415,6 @@
         }
 
         .offer-card p{
-            color: var(--text-gray); 
             font-size: var(--font-md);
             margin-top: 1rem;
         }
@@ -2036,7 +2035,7 @@
 
 .offers-grid {
   display: grid;
-  grid-template-columns:0.6fr 1fr;
+  grid-template-columns:1fr 0.8fr;
   gap: var(--space-md);
   align-items: stretch;
 }
@@ -2070,6 +2069,11 @@
   background: var(--navy-mid);
   border: 1px solid rgba(255,255,255,0.06);
   color: var(--white);
+}
+
+/* ── Carte featured (Most Popular) ─────────────────── */
+.offer-card.offer-featured {
+  box-shadow: 0 8px 32px rgba(0, 102, 255, 0.18);
 }
 
 
@@ -2172,7 +2176,7 @@
 }
 
 .offer-light li { color: var(--text-gray); }
-.offer-dark  li { color: rgba(255,255,255,0.78); }
+.offer-dark  li { color:var(--white) }
 
 /* ── Footer : prix + CTA ────────────────────────────── */
 .offer-footer {
