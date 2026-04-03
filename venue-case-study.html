@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-67D06JS6R4"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-67D06JS6R4');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PRKVLWBW');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "vjhao9vgsp");
+    </script>
+    <!-- End Microsoft Clarity -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Design Studios · UX Case Study — Venue by Yummy Labs · Jacob Houmadi</title>
+    <meta name="description" content="How I designed a social layer for 4M players that creates belonging through observation, not opt-in. A UX case study for Venue by Yummy Labs.">
+    <meta name="author" content="Jacob Houmadi">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jacob-houmadi.com/venue-case-study.html">
+    <meta name="theme-color" content="#0A0E1A">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jacob-houmadi.com/venue-case-study.html">
+    <meta property="og:title" content="Increasing retention without adding friction — Venue UX Case Study · Jacob Houmadi">
+    <meta property="og:description" content="How I designed a social layer for 4M players that creates belonging through observation, not opt-in.">
+    <meta property="og:image" content="https://jacob-houmadi.com/og-image.jpg">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cookie-consent.css">
+    <link rel="stylesheet" href="nav-mobile.css">
+
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- Calendly -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+    <script src="translations.js" defer></script>
+
+    <style>
+    /* ── CASE STUDY SCOPED TOKENS ── */
+    .cs-venue-content {
+        --cs-coral:       #EF9180;
+        --cs-coral-light: #F8D5CF;
+        --cs-coral-bg:    #FDF0ED;
+        --cs-yellow:      #FFC236;
+        --cs-cream:       #F6EEE6;
+        --cs-ink:         #1A1714;
+        --cs-ink-2:       #3D3733;
+        --cs-ink-3:       #6B6460;
+        --cs-ink-4:       #9E9894;
+        --cs-border:      #ECEAE7;
+        --cs-surface:     #FAFAF9;
+        --cs-r-sm:  6px;
+        --cs-r-md:  12px;
+        --cs-r-lg:  20px;
+        --cs-r-xl:  28px;
+        --cs-shadow-sm: 0 2px 8px rgba(26,23,20,0.07);
+        --cs-shadow-md: 0 4px 20px rgba(26,23,20,0.09);
+        --cs-max: 800px;
+        --cs-font: 'Poppins', sans-serif;
+    }
+
+    /* ── LAYOUT ── */
+    .cs-venue-content {
+        font-family: var(--cs-font);
+        font-size: 16px;
+        line-height: 1.7;
+        color: var(--cs-ink-2);
+        background: #FFFFFF;
+        -webkit-font-smoothing: antialiased;
+        padding-top: 75px;
+    }
+    .cs-venue-content img { display: block; max-width: 100%; }
+
+    /* ── BACK LINK ── */
+    .cs-back-link {
+        max-width: var(--cs-max, 720px);
+        margin: 0 auto;
+        padding: 24px 24px 0;
+    }
+    .cs-back-link a {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-family: var(--cs-font);
+        font-size: 13px;
+        font-weight: 600;
+        color: #64748B;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+    .cs-back-link a:hover { color: #EF9180; }
+
+    /* ── HERO ── */
+    .cs-venue-content .hero {
+        padding: 36px 24px 64px;
+        text-align: center;
+    }
+    .cs-venue-content .hero-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--cs-coral);
+        color: white;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 5px 12px;
+        border-radius: 100px;
+        margin-bottom: 32px;
+    }
+    .cs-venue-content .hero h1 {
+        font-size: clamp(36px, 6vw, 60px);
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.03em;
+        color: var(--cs-ink);
+        max-width: 680px;
+        margin: 0 auto 16px;
+        }
+    .cs-venue-content .hero-sub {
+        font-size: 14px;
+        color: var(--cs-ink-4);
+        font-weight: 400;
+        margin-bottom: 48px;
+    }
+    .cs-venue-content .hero-image {
+        background: var(--cs-coral-bg);
+        border-radius: var(--cs-r-xl);
+        padding: 40px 32px;
+        max-width: 560px;
+        margin: 0 auto 64px;
+        position: relative;
+        overflow: hidden;
+    }
+    .cs-venue-content .hero-image::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse at 30% 0%, rgba(239,145,128,0.3) 0%, transparent 60%);
+        pointer-events: none;
+    }
+    .cs-venue-content .hero-image img {
+        margin: 0 auto;
+        border-radius: var(--cs-r-md);
+        box-shadow: var(--cs-shadow-md);
+        position: relative;
+        z-index: 1;
+    }
+    .cs-venue-content .hero-placeholder {
+        width: 100%;
+        aspect-ratio: 16/10;
+        background: linear-gradient(135deg, rgba(239,145,128,0.2), rgba(239,145,128,0.05));
+        border-radius: var(--cs-r-md);
+        border: 2px dashed rgba(239,145,128,0.4);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        position: relative;
+        z-index: 1;
+    }
+    .cs-venue-content .hero-placeholder-icon { font-size: 32px; opacity: 0.5; }
+    .cs-venue-content .hero-placeholder-text { font-size: 12px; color: var(--cs-coral); font-weight: 500; opacity: 0.8; }
+
+    /* ── META ── */
+    .cs-venue-content .meta-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(160px, 1fr));
+        gap: 24px 32px;
+        max-width: var(--cs-max);
+        margin: 0 auto 80px;
+        padding: 0 24px;
+    }
+    .cs-venue-content .meta-label {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: var(--cs-ink-4);
+        margin-bottom: 4px;
+    }
+    .cs-venue-content .meta-value {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--cs-ink);
+        line-height: 1.4;
+    }
+
+    /* ── DIVIDER ── */
+    .cs-venue-content hr {
+        border: none;
+        border-top: 1px solid var(--cs-border);
+        margin: 64px 0;
+    }
+
+    /* ── PROSE ── */
+    .cs-venue-content .prose { max-width: var(--cs-max); margin: 0 auto; padding: 0 24px; }
+    .cs-venue-content .prose h2 {
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: var(--cs-ink);
+        line-height: 1.25;
+        margin-top: 72px;
+        margin-bottom: 20px;
+    }
+    .cs-venue-content .prose h2:first-child { margin-top: 0; }
+    .cs-venue-content .prose h3 {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--cs-ink);
+        margin-top: 32px;
+        margin-bottom: 10px;
+        letter-spacing: -0.01em;
+    }
+    .cs-venue-content .prose p {
+        font-size: 15.5px;
+        color: var(--cs-ink-2);
+        line-height: 1.75;
+        margin-bottom: 20px;
+    }
+    .cs-venue-content .prose strong { font-weight: 700; color: var(--cs-ink); }
+    .cs-venue-content .prose em { font-style: italic; color: var(--cs-ink-3); }
+
+    /* ── CALLOUT ── */
+    .cs-venue-content .callout {
+        background: var(--cs-cream);
+        border-radius: var(--cs-r-lg);
+        padding: 24px 28px;
+        margin: 32px 0;
+    }
+    .cs-venue-content .callout-coral { background: var(--cs-coral-bg); }
+    .cs-venue-content .callout p { margin: 0; font-size: 15px; }
+    .cs-venue-content .callout p + p { margin-top: 12px; }
+
+    /* ── PULLQUOTE ── */
+    .cs-venue-content blockquote {
+        border-left: 3px solid var(--cs-coral);
+        padding: 4px 0 4px 24px;
+        margin: 32px 0;
+    }
+    .cs-venue-content blockquote p {
+        font-size: 18px;
+        font-style: italic;
+        color: var(--cs-ink);
+        font-weight: 500;
+        letter-spacing: -0.01em;
+        line-height: 1.55;
+        margin: 0;
+    }
+
+    /* ── IMAGE SLOT ── */
+    .cs-venue-content .img-slot {
+        background: var(--cs-surface);
+        border: 1.5px dashed var(--cs-border);
+        border-radius: var(--cs-r-lg);
+        padding: 40px 24px;
+        margin: 32px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    .cs-venue-content .img-slot-icon { font-size: 24px; opacity: 0.4; }
+    .cs-venue-content .img-slot-label {
+        font-size: 12px;
+        color: var(--cs-ink-4);
+        font-weight: 500;
+        max-width: 320px;
+        line-height: 1.5;
+    }
+
+    /* ── PRINCIPLES ── */
+    .cs-venue-content .principles { display: grid; gap: 16px; margin: 32px 0; }
+    .cs-venue-content .principle {
+        display: grid;
+        grid-template-columns: 36px 1fr;
+        gap: 16px;
+        align-items: start;
+        background: var(--cs-surface);
+        border: 1px solid var(--cs-border);
+        border-radius: var(--cs-r-md);
+        padding: 20px;
+    }
+    .cs-venue-content .principle-num {
+        width: 36px;
+        height: 36px;
+        background: var(--cs-coral-bg);
+        color: var(--cs-coral);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        font-weight: 700;
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+    .cs-venue-content .principle h3 { margin-top: 0; margin-bottom: 6px; }
+    .cs-venue-content .principle p { margin: 0; font-size: 14px; color: var(--cs-ink-3); }
+
+    /* ── REFERENCES ── */
+    .cs-venue-content .references { display: grid; gap: 16px; margin: 32px 0; }
+    .cs-venue-content .ref-card {
+        border: 1px solid var(--cs-border);
+        border-radius: var(--cs-r-md);
+        padding: 20px 24px;
+        background: #FFFFFF;
+        transition: box-shadow 0.2s;
+    }
+    .cs-venue-content .ref-card:hover { box-shadow: var(--cs-shadow-sm); }
+    .cs-venue-content .ref-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 10px;
+    }
+    .cs-venue-content .ref-icon {
+        font-size: 22px;
+        width: 40px;
+        height: 40px;
+        background: var(--cs-cream);
+        border-radius: var(--cs-r-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+    .cs-venue-content .ref-title { font-size: 14px; font-weight: 700; color: var(--cs-ink); }
+    .cs-venue-content .ref-tag {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        background: var(--cs-coral-bg);
+        color: var(--cs-coral);
+        padding: 3px 8px;
+        border-radius: 100px;
+        margin-left: auto;
+    }
+    .cs-venue-content .ref-body { font-size: 13.5px; color: var(--cs-ink-3); line-height: 1.6; }
+
+    /* ── CURRENCIES ── */
+    .cs-venue-content .currencies { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 32px 0; }
+    .cs-venue-content .currency-card { border-radius: var(--cs-r-md); padding: 24px; }
+    .cs-venue-content .currency-weekly { background: var(--cs-cream); }
+    .cs-venue-content .currency-permanent { background: var(--cs-ink); color: white; }
+    .cs-venue-content .currency-icon { font-size: 24px; margin-bottom: 12px; }
+    .cs-venue-content .currency-title { font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 4px; }
+    .cs-venue-content .currency-weekly .currency-title { color: var(--cs-ink-4); }
+    .cs-venue-content .currency-permanent .currency-title { color: rgba(255,255,255,0.5); }
+    .cs-venue-content .currency-name { font-size: 20px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 12px; }
+    .cs-venue-content .currency-weekly .currency-name { color: var(--cs-ink); }
+    .cs-venue-content .currency-permanent .currency-name { color: white; }
+    .cs-venue-content .currency-desc { font-size: 13px; line-height: 1.6; }
+    .cs-venue-content .currency-weekly .currency-desc { color: var(--cs-ink-3); }
+    .cs-venue-content .currency-permanent .currency-desc { color: rgba(255,255,255,0.65); }
+    .cs-venue-content .currency-tag { display: inline-block; margin-top: 16px; font-size: 12px; font-weight: 600; font-style: italic; }
+    .cs-venue-content .currency-weekly .currency-tag { color: var(--cs-ink-3); }
+    .cs-venue-content .currency-permanent .currency-tag { color: rgba(255,255,255,0.5); }
+
+    /* ── FLOW STEPS ── */
+    .cs-venue-content .flow-steps { margin: 32px 0; }
+    .cs-venue-content .flow-step {
+        display: grid;
+        grid-template-columns: 32px 1fr;
+        gap: 16px;
+        align-items: start;
+        padding: 16px 0;
+        border-bottom: 1px solid var(--cs-border);
+    }
+    .cs-venue-content .flow-step:last-child { border-bottom: none; }
+    .cs-venue-content .flow-step-num {
+        width: 28px;
+        height: 28px;
+        background: var(--cs-coral);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 700;
+        margin-top: 2px;
+        flex-shrink: 0;
+    }
+    .cs-venue-content .flow-step-title { font-size: 14px; font-weight: 700; color: var(--cs-ink); margin-bottom: 4px; }
+    .cs-venue-content .flow-step-desc { font-size: 13.5px; color: var(--cs-ink-3); line-height: 1.6; }
+
+    /* ── ARC ── */
+    .cs-venue-content .arc { display: flex; gap: 0; margin: 32px 0; overflow-x: auto; padding-bottom: 8px; }
+    .cs-venue-content .arc-step { flex: 1; min-width: 80px; text-align: center; position: relative; }
+    .cs-venue-content .arc-step::after {
+        content: '';
+        position: absolute;
+        top: 14px;
+        border-top: 2px solid var(--cs-border);
+        width: calc(100% - 28px);
+        right: 0;
+        left: 28px;
+    }
+    .cs-venue-content .arc-step:last-child::after { display: none; }
+    .cs-venue-content .arc-dot {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: var(--cs-coral-bg);
+        border: 2px solid var(--cs-coral-light);
+        margin: 0 auto 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--cs-coral);
+        position: relative;
+        z-index: 1;
+    }
+    .cs-venue-content .arc-label { font-size: 11px; font-weight: 600; color: var(--cs-ink-4); line-height: 1.3; }
+
+    /* ── OUTCOMES ── */
+    .cs-venue-content .outcomes { display: grid; gap: 16px; margin: 32px 0; }
+    .cs-venue-content .outcome {
+        display: flex;
+        gap: 16px;
+        align-items: start;
+        padding: 20px;
+        background: var(--cs-surface);
+        border: 1px solid var(--cs-border);
+        border-radius: var(--cs-r-md);
+    }
+    .cs-venue-content .outcome-tag {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        background: var(--cs-coral-bg);
+        color: var(--cs-coral);
+        padding: 4px 10px;
+        border-radius: 100px;
+        white-space: nowrap;
+        margin-top: 2px;
+    }
+    .cs-venue-content .outcome-body { font-size: 14px; color: var(--cs-ink-3); line-height: 1.65; }
+    .cs-venue-content .outcome-body strong { color: var(--cs-ink); }
+
+    /* ── NEXT ── */
+    .cs-venue-content .next-items { display: grid; gap: 12px; margin: 24px 0; }
+    .cs-venue-content .next-item { display: flex; gap: 12px; align-items: start; font-size: 14px; color: var(--cs-ink-3); line-height: 1.6; }
+    .cs-venue-content .next-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--cs-coral); margin-top: 8px; flex-shrink: 0; }
+    .cs-venue-content .next-item strong { color: var(--cs-ink); }
+
+    /* ── QUOTES ── */
+    .cs-venue-content .quotes { display: grid; gap: 12px; margin: 32px 0; }
+    .cs-venue-content .quote-item {
+        background: var(--cs-cream);
+        border-radius: var(--cs-r-md);
+        padding: 20px 24px 20px 40px;
+        font-size: 14.5px;
+        font-style: italic;
+        color: var(--cs-ink-2);
+        line-height: 1.65;
+        position: relative;
+    }
+    .cs-venue-content .quote-item::before {
+        content: '"';
+        position: absolute;
+        left: 16px;
+        top: 14px;
+        font-size: 28px;
+        font-style: normal;
+        color: var(--cs-coral-light);
+        line-height: 1;
+        font-weight: 800;
+    }
+
+    /* ── CTA BLOCK ── */
+    .cs-venue-content .cta-block {
+        background: var(--cs-ink);
+        border-radius: var(--cs-r-xl);
+        padding: 56px 48px;
+        text-align: center;
+        margin: 80px 0 48px;
+        position: relative;
+        overflow: hidden;
+    }
+    .cs-venue-content .cta-block::before {
+        content: '';
+        position: absolute;
+        top: -60px; right: -60px;
+        width: 240px; height: 240px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(239,145,128,0.2), transparent 70%);
+        pointer-events: none;
+    }
+    .cs-venue-content .cta-block::after {
+        content: '';
+        position: absolute;
+        bottom: -80px; left: -40px;
+        width: 200px; height: 200px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(132,201,201,0.15), transparent 70%);
+        pointer-events: none;
+    }
+    .cs-venue-content .cta-block h2 { color: white; font-size: 26px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px; position: relative; z-index: 1; }
+    .cs-venue-content .cta-block p { color: rgba(255,255,255,0.55); font-size: 14px; margin-bottom: 32px; position: relative; z-index: 1; }
+    .cs-venue-content .deliverables { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 36px; position: relative; z-index: 1; }
+    .cs-venue-content .deliverable-tag {
+        background: rgba(255,255,255,0.08);
+        color: rgba(255,255,255,0.7);
+        font-size: 12px;
+        font-weight: 500;
+        padding: 6px 14px;
+        border-radius: 100px;
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+    .cs-venue-content .cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--cs-coral);
+        color: white;
+        font-family: var(--cs-font);
+        font-size: 14px;
+        font-weight: 700;
+        padding: 14px 32px;
+        border-radius: 100px;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        transition: opacity 0.2s, transform 0.2s;
+        position: relative;
+        z-index: 1;
+    }
+    .cs-venue-content .cta-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+    /* ── UTIL ── */
+    .cs-venue-content .label-coral { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--cs-coral); margin-bottom: 8px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+        .cs-venue-content .currencies { grid-template-columns: 1fr; }
+        .cs-venue-content .cta-block { padding: 40px 24px; }
+        .cs-venue-content .hero h1 { font-size: 34px; }
+        .cs-venue-content .meta-grid { grid-template-columns: 1fr 1fr; }
+    }
+    </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRKVLWBW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- Cookie Consent Banner -->
+<div id="cookieConsent" class="cookie-consent" style="display: none;">
+    <div class="cookie-content">
+        <div class="cookie-text">
+            <h3 data-i18n="cookie.01">🍪 Cookies et confidentialité</h3>
+            <p data-i18n-html="cookie.02">Ce site utilise des cookies essentiels pour son fonctionnement (formulaire de contact via EmailJS). Aucun cookie publicitaire ou de tracking. <a href="politique-confidentialite.html">En savoir plus</a></p>
+        </div>
+        <div class="cookie-buttons">
+            <button onclick="acceptCookies()" class="cookie-accept">Accepter</button>
+            <button onclick="refuseCookies()" class="cookie-refuse">Refuser</button>
+        </div>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header>
+    <button class="logo" onclick="window.location.href='index.html'" aria-label="Jacob Houmadi — Accueil">Jacob<span aria-hidden="true">.</span></button>
+    <nav class="desktop-nav">
+        <ul>
+            <li><button onclick="showPortfolio()" data-i18n="nav.portfolio">Portfolio</button></li>
+            <li><a href="cases-studies.html" class="nav-active" data-i18n="nav.casestudies">Cases studies</a></li>
+            <li><button onclick="openModal('offres')" data-i18n="nav.services">Offres</button></li>
+            <li><button onclick="openModal('temoignages')" data-i18n="nav.testimonials">Témoignages</button></li>
+            <li><button onclick="openModal('faq')" data-i18n="nav.faq">FAQ</button></li>
+            <li>
+                <label for="lang-select" class="sr-only">Langue / Language</label>
+                <select class="lang-select" onchange="switchLanguage(this.value)" aria-label="Sélectionner la langue">
+                    <option value="fr">FR</option>
+                    <option value="en">EN</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Bouton Hamburger Mobile -->
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</header>
+
+<!-- Menu Mobile Overlay -->
+<div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="closeMobileMenu()"></div>
+
+<!-- Menu Mobile -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobile">
+    <div class="mobile-nav-header">
+        <button class="logo-mobile"><img src="logo-jacob.png" alt="logo"></button>
+        <button class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="Fermer le menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+    </div>
+    <ul class="mobile-nav-links">
+        <li><button onclick="showPortfolio(); closeMobileMenu();" data-i18n="nav.portfolio">Portfolio</button></li>
+        <li><a href="cases-studies.html" class="nav-active" data-i18n="nav.casestudies">Cases studies</a></li>
+        <li><button onclick="openModal('offres'); closeMobileMenu();" data-i18n="nav.services">Offres</button></li>
+        <li><button onclick="openModal('temoignages'); closeMobileMenu();" data-i18n="nav.testimonials">Témoignages</button></li>
+        <li><button onclick="openModal('faq'); closeMobileMenu();" data-i18n="nav.faq">FAQ</button></li>
+        <li>
+            <div class="mobile-lang-switcher" role="group" aria-label="Langue / Language">
+                <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')" aria-pressed="true" aria-label="Français">FR</button>
+                <button class="lang-btn" data-lang="en" onclick="setLang('en')" aria-pressed="false" aria-label="English">EN</button>
+            </div>
+        </li>
+    </ul>
+    <div class="mobile-nav-footer">
+        <p data-i18n="mobilenav.p">Transformons votre projet ensemble</p>
+        <button onclick="document.getElementById('landing').scrollIntoView({behavior:'smooth'}); closeMobileMenu();" class="mobile-cta" data-i18n="mobilenav.cta">Me contacter</button>
+    </div>
+    <div>
+        <ul class="footer-nav-legals">
+            <li><a href="mentions-legales.html" data-i18n="footer.legal1">Mentions légales</a></li>
+            <li><a href="politique-confidentialite.html" data-i18n="footer.legal2">Politiques de confidentialités</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ── CASE STUDY CONTENT ──────────────────────────────── -->
+<div class="cs-venue-content">
+
+    <div class="cs-back-link">
+        <a href="cases-studies.html">← Cases studies</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-tag">🌸 Venue</div>
+        <h1>Increasing retention without adding friction or moderation cost.</h1>
+        <p class="hero-sub">Design Studios · UX Case Study — Venue by Yummy Labs</p>
+        <div class="hero-image">
+            <img src="Captures/venue_d7_d30-fr.webp" alt="Venue D7–D30 retention flow" loading="lazy">
+        </div>
+    </section>
+
+    <!-- META -->
+    <div class="meta-grid">
+        <div class="meta-item">
+            <div class="meta-label">Project</div>
+            <div class="meta-value">Venue, Design Studios (Phase 2 Social)</div>
+        </div>
+        <div class="meta-item">
+            <div class="meta-label">Role</div>
+            <div class="meta-value">Lead UX &amp; Product Designer</div>
+        </div>
+        <div class="meta-item">
+            <div class="meta-label">Studio</div>
+            <div class="meta-value">Independent, in collaboration with Yummy Labs / Superbloom</div>
+        </div>
+        <div class="meta-item">
+            <div class="meta-label">Deliverables</div>
+            <div class="meta-value">Concept system · Discovery flow · Interaction model · Presentation deck</div>
+        </div>
+        <div class="meta-item">
+            <div class="meta-label">Constraint</div>
+            <div class="meta-value">Zero new behaviour required from the player</div>
+        </div>
+    </div>
+
+    <!-- PROSE -->
+    <main class="prose">
+
+        <h2>The Problem</h2>
+        <p>Every night, Beth closes Venue and opens Facebook.</p>
+        <p>She's been playing for months. She designs rooms, submits them to be voted on, collects rewards. She's engaged. She's good at it. But when she wants to <em>feel something</em> — to share a result, to see if anyone noticed — the game has nothing to offer. So she goes elsewhere.</p>
+        <p>The problem wasn't low engagement. Venue had 4M+ downloads, a 90% female player base, and strong daily loops.</p>
+        <div class="callout callout-coral">
+            <p><strong>The problem was that none of it felt like it mattered to anyone else.</strong> She had already found her community. She'd just found it outside the product.</p>
+        </div>
+
+        <div class="img-slot">
+            <span class="img-slot-icon">📸</span>
+            <span class="img-slot-label">Facebook community screenshot vs. Venue in-game social feed — contrasting where Beth's social energy actually goes</span>
+        </div>
+
+        <hr>
+
+        <h2>The Insight</h2>
+        <p style="font-size: 23px; font-weight: 600;line-height: 1.5;"> Most social features in games solve the wrong problem. They ask players to <em>do something social</em>: join a guild, add friends, post a score. But players like Beth don't want to perform belonging. They want to feel it.</p>
+        <p>Two things follow from that:</p>
+        <div class="callout">
+            <p><strong>1. The moment you ask someone to join, you create a moment where they can say no.</strong> Opt-in mechanics are opt-out risks. Every explicit step leaks.</p>
+            <p><strong>2. Social mechanics that rely on moderation or settings to stay non-toxic will eventually fail.</strong> Toxicity needs to be structurally impossible, not just manageable.</p>
+        </div>
+
+        <hr>
+
+        <h2>The Design Challenge</h2>
+        <p>Yummy Labs' brief: design a group-based social system for Venue that encourages collaboration, creates shared goals, and feels <em>cozy</em>, not competitive.</p>
+        <p>Not a guild war system. A creative collective.</p>
+        <p>Three hard constraints made this interesting:</p>
+        <div class="callout">
+            <p>Voting in Venue is <strong>anonymous</strong> — players can't choose whose work they see. The player base skews <strong>casual</strong> — no tolerance for extra homework. The game has <strong>no chat</strong> — no text, no moderation overhead.</p>
+        </div>
+
+        <div class="img-slot">
+            <span class="img-slot-icon">📸</span>
+            <span class="img-slot-label">Yummy Labs brief slide — "This is not a guild war system. This is a creative collective."</span>
+        </div>
+
+        <hr>
+
+        <h2>Design Principles</h2>
+        <p>Before touching a single screen, I defined four non-negotiables that every mechanic had to pass.</p>
+
+        <div class="principles">
+            <div class="principle">
+                <div class="principle-num">1</div>
+                <div>
+                    <h3>Structurally incapable of toxicity</h3>
+                    <p>If a mechanic can produce a bad feeling, it will. The fix isn't a setting — it's removing the mechanism. No leaderboards. No individual contribution visibility. No way to compare members.</p>
+                </div>
+            </div>
+            <div class="principle">
+                <div class="principle-num">2</div>
+                <div>
+                    <h3>Absence must feel inconsequential</h3>
+                    <p>Missing a week should carry zero guilt signal. No "you let your team down." No streak breaks. Contribution is meaningful when you show up, invisible when you don't.</p>
+                </div>
+            </div>
+            <div class="principle">
+                <div class="principle-num">3</div>
+                <div>
+                    <h3>Belonging is observed, not declared</h3>
+                    <p>The system watches what players already do and uses it as contribution. Normal play <em>is</em> participation. No opt-in threshold, no confirmation modal.</p>
+                </div>
+            </div>
+            <div class="principle">
+                <div class="principle-num">4</div>
+                <div>
+                    <h3>Collective over individual</h3>
+                    <p>Milestones are collective. Rewards are shared. Progress is one bar, not aggregated personal bars. The Studio succeeds together or not at all.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>The Solution · Design Studios</h2>
+        <p>Design Studios is a passive community membership system embedded in Venue's existing game loop. Players contribute to a shared Studio by playing normally — submitting designs, voting, completing chapters. No new behaviour required.</p>
+        <p>Each Studio has 10–20 members matched on design aesthetic, a shared weekly goal, a Studio Room that grows as the Studio levels up, and a collective gallery where members' submitted designs appear for each other.</p>
+        <p>The Studio is named and curated. Ours: <strong>Casa Bloom 🌸</strong></p>
+
+        <div class="img-slot">
+            <span class="img-slot-icon">📸</span>
+            <span class="img-slot-label">System overview — how existing game actions (design, vote, chapter) feed automatically into Studio keys</span>
+        </div>
+
+        <hr>
+
+        <h2>Design Precedents · What We Borrowed and Why</h2>
+        <p>Every structural constraint in Design Studios — no leaderboard, no guilt for absence, no free text — has a precedent in a game that already solved it. We didn't invent caution. We borrowed proven architecture.</p>
+
+        <div class="references">
+            <div class="ref-card">
+                <div class="ref-header">
+                    <div class="ref-icon">🧟</div>
+                    <div><div class="ref-title">State of Decay 2</div></div>
+                    <span class="ref-tag">The volunteering state</span>
+                </div>
+                <div class="ref-body">In State of Decay 2, you volunteer into another player's survival world as a temporary collaborator. You help, you contribute, you leave — with no permanent record of who did what. No formal commitment required. This is the direct model for how Beth enters a Studio: she plays as normal, contributes passively, and membership becomes true after two weeks without her ever having to decide. The mechanic is structurally incapable of producing rejection.</div>
+            </div>
+            <div class="ref-card">
+                <div class="ref-header">
+                    <div class="ref-icon">✨</div>
+                    <div><div class="ref-title">Journey (thatgamecompany)</div></div>
+                    <span class="ref-tag">No toxicity by architecture</span>
+                </div>
+                <div class="ref-body">Journey's players meet anonymously, communicate only through a single sound, and never know who their companion was until the credits roll. The game doesn't rely on community guidelines to prevent harassment — it removes the tools for it entirely. This is the foundational principle behind feedback tags and gallery reactions: preset signals only, no free text, no way to send a negative signal even if you wanted to.</div>
+            </div>
+            <div class="ref-card">
+                <div class="ref-header">
+                    <div class="ref-icon">🐱</div>
+                    <div><div class="ref-title">Neko Atsume</div></div>
+                    <span class="ref-tag">Absence without guilt</span>
+                </div>
+                <div class="ref-body">Neko Atsume has no streak, no timer, no record of what you missed. Cats come and go; the experience is always positive when you return. This is the direct model for how Studios handles absence: the weekly goal advances or it doesn't, but Beth's absence is never made visible, never counted, never punished.</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>The Joining Mechanic · "You Can't Fail to Belong"</h2>
+        <p>This was the most consequential decision in the entire system.</p>
+        <p>During onboarding, the player taps a Studio and goes back to play. Nothing changes on screen. But behind the scenes she knows, everything she already does starts contributing to something shared.</p>
+        <p>Two weekly cycles later, she's a member. Not because she declared it. Because the system observed it. The transition is quiet: a status line change. A private notification. No announcement to the Studio. No fanfare.</p>
+
+        <blockquote>
+            <p>Belonging isn't a step. It's a pattern. The moment you ask someone to commit, you surface their ambivalence. This system bypasses that entirely.</p>
+        </blockquote>
+
+        <h3>From volunteer to member, without crossing a line</h3>
+        <p>In the first two weeks, Beth is technically a volunteer. She contributes through normal play, exactly as members do, but she carries no label, no badge, no expectation. The word "volunteer" never appears in the interface — it's a system-side concept only.</p>
+        <p>The distinction matters for one reason: it means no one can fail to join. There is no threshold she can miss, no week she can fall short of, no moment where the game decides she hasn't done enough. She simply plays, and the system watches.</p>
+        <p>After two weekly cycles of contribution, the transition happens automatically. By the time she knows she's a member, she already acts like one.</p>
+
+        <div class="callout callout-coral">
+            <p><strong>Language note:</strong> The CTA throughout is <strong>"Play with this Studio"</strong>, never "Join Studio." The player is choosing to play, not to commit. That single word swap is load-bearing.</p>
+        </div>
+
+        <div class="img-slot">
+            <span class="img-slot-icon">📸</span>
+            <span class="img-slot-label">Side-by-side — traditional "Join" CTA flow vs. Design Studios' volunteer-to-member quiet transition</span>
+        </div>
+
+        <hr>
+
+        <h2>Two Currencies, Two Timelines</h2>
+        <p>The system runs on two currencies that operate on different clocks — and that distinction does most of the retention work.</p>
+
+        <div class="currencies">
+            <div class="currency-card currency-weekly">
+                <div class="currency-icon">🔑</div>
+                <div class="currency-title">Weekly progression</div>
+                <div class="currency-name">Key</div>
+                <div class="currency-desc">Unlocks the weekly reward tiers: Spark → Bloom → Glow → Radiant. Resets every week. Earned automatically through normal play: submit a design (+1), complete a vote session (+1), earn a 5-star (+2).</div>
+                <div class="currency-tag">This week. Effort that matters now.</div>
+            </div>
+            <div class="currency-card currency-permanent">
+                <div class="currency-icon">↑</div>
+                <div class="currency-title">Permanent progression</div>
+                <div class="currency-name">Arrow</div>
+                <div class="currency-desc">Accumulates across weeks and never resets. Earned exclusively by completing the weekly collective challenge as a Studio. Each Arrow level unlocks a new shared Studio Room — permanently.</div>
+                <div class="currency-tag">Forever. Leaving means leaving behind a space she helped build.</div>
+            </div>
+        </div>
+
+        <div class="img-slot">
+            <span class="img-slot-icon">📸</span>
+            <span class="img-slot-label">Currency diagram — Key weekly cycle vs. Arrow permanent accumulation, with Studio Room unlock progression</span>
+        </div>
+
+        <hr>
+
+        <h2>The D7 Discovery Flow · 7 Steps</h2>
+        <p>How does Beth first encounter her Studio? Not through a banner. Not a push notification. Through a milestone.</p>
+        <p>At Day 7, Beth has completed several chapters and been through the voting loop many times. The leaderboard just unlocked. She's reward-loop trained — red dots work on her. The trigger: <strong>10 designs submitted.</strong> Emotional peak. She's claiming a reward when the system opens a door.</p>
+
+        <div class="flow-steps">
+            <div class="flow-step">
+                <div class="flow-step-num">1</div>
+                <div><div class="flow-step-title">Milestone moment</div><div class="flow-step-desc">Reward claimed. A brief system message appears. Emotional peak — high receptivity.</div></div>
+            </div>
+            <div class="flow-step">
+                <div class="flow-step-num">2</div>
+                <div><div class="flow-step-title">Studio reveal</div><div class="flow-step-desc">Full-screen overlay. "You're ready to join a Design Studio." <em>Maybe later</em> always visible. No pressure.</div></div>
+            </div>
+            <div class="flow-step">
+                <div class="flow-step-num">3</div>
+                <div><div class="flow-step-title">Studio intro</div><div class="flow-step-desc">Three concepts only. Warm language. No mechanics dump. Understood in under 10 seconds.</div></div>
+            </div>
+            <div class="flow-step">
+                <div class="flow-step-num">4</div>
+                <div><div class="flow-step-title">Browse Studios</div><div class="flow-step-desc">3 curated suggestions based on design style. Last-design galleries show an already-active community.</div></div>
+            </div>
+            <div class="flow-step">
+                <div class="flow-step-num">5</div>
+                <div><div class="flow-step-title">Confirm join</div><div class="flow-step-desc">Studio tagline and member faces before the CTA. She's joining people, not a system.</div></div>
+            </div>
+            <div class="flow-step">
+                <div class="flow-step-num">6</div>
+                <div><div class="flow-step-title">Studio home</div><div class="flow-step-desc">First view of Casa Bloom. Key tiers visible. Goal bar live. Activity feed already moving. <em>Alive on arrival.</em></div></div>
+            </div>
+            <div class="flow-step">
+                <div class="flow-step-num">7</div>
+                <div><div class="flow-step-title">Back to her game</div><div class="flow-step-desc">No nudge. No new task. She plays as usual — keys flow automatically. Same loop, new meaning.</div></div>
+            </div>
+        </div>
+
+        <span class="label-coral">Emotional arc</span>
+        <div class="arc">
+            <div class="arc-step"><div class="arc-dot">1</div><div class="arc-label">Excited</div></div>
+            <div class="arc-step"><div class="arc-dot">2</div><div class="arc-label">Curious</div></div>
+            <div class="arc-step"><div class="arc-dot">3</div><div class="arc-label">Informed</div></div>
+            <div class="arc-step"><div class="arc-dot">4</div><div class="arc-label">Intrigued</div></div>
+            <div class="arc-step"><div class="arc-dot">5</div><div class="arc-label">Warm</div></div>
+            <div class="arc-step"><div class="arc-dot">6</div><div class="arc-label">Belonging</div></div>
+            <div class="arc-step"><div class="arc-dot">7</div><div class="arc-label">Settled</div></div>
+        </div>
+
+        <div class="img-slot">
+            <span class="img-slot-icon">📸</span>
+            <span class="img-slot-label">Full D7 discovery flow — all 7 steps shown as annotated wireframes</span>
+        </div>
+
+        <hr>
+
+        <h2>Making Anonymous Voting Feel Human</h2>
+        <p>Voting in Venue is anonymous by design. Players can't choose whose work they see — the algorithm decides. This meant the Studio feed and the voting pool are structurally separate. I couldn't build connection through votes. So I built it elsewhere.</p>
+        <p><strong>Feedback tags:</strong> When Beth votes, she can leave a preset tag alongside her vote. "Great composition." "Beautiful palette." Not a score — a signal. For a few seconds, she's not optimizing a result. She's honoring someone.</p>
+        <p><strong>Gallery reactions:</strong> In the Studio gallery, she can react to her mates' designs with preset emoji responses. No text. No moderation required. But suddenly, recognition is possible between people who know each other.</p>
+
+        <div class="callout">
+            <p>Zero moderation overhead. Structurally safe. Emotionally meaningful. The preset palette is the design decision — not a limitation.</p>
+        </div>
+
+        <div class="img-slot">
+            <span class="img-slot-icon">📸</span>
+            <span class="img-slot-label">Voting UI — feedback tag selector, preset tags only, no free text field</span>
+        </div>
+
+        <hr>
+
+        <h2>Milestones · When the Studio Responds</h2>
+        <p>When the Studio hits a collective threshold, the space responds. Light. Subtle. Shared.</p>
+        <p>No big celebration. No individual callout. Just enough to say: <em>you were part of this.</em></p>
+        <p>Milestone reveal follows a <strong>Progressive Reveal</strong> model. Rather than a single dramatic reveal that peaks and fades, the Studio room gradually comes to life as the week progresses. This produces steadier sustained engagement and avoids the emotional crash of a big reveal followed by nothing.</p>
+
+        <div class="img-slot">
+            <span class="img-slot-icon">📸</span>
+            <span class="img-slot-label">Studio milestone — before/after state of a Studio room unlocking, warm ambient animation</span>
+        </div>
+
+        <hr>
+
+        <h2>Outcomes</h2>
+        <p>This is a design concept submitted for Phase 2 development evaluation, not a shipped product. But the business logic is tight.</p>
+
+        <div class="outcomes">
+            <div class="outcome">
+                <span class="outcome-tag">D7</span>
+                <div class="outcome-body">The discovery flow hooks at the exact moment of <strong>peak emotional receptivity</strong>. Players return for the shared weekly goal before they've consciously decided to stay.</div>
+            </div>
+            <div class="outcome">
+                <span class="outcome-tag">D30</span>
+                <div class="outcome-body">Arrows create <strong>identity-level attachment</strong>. A player who has contributed to three Studio room unlocks is not the same as a player with no investment. Leaving has a real, visible cost — without any pressure mechanic.</div>
+            </div>
+            <div class="outcome">
+                <span class="outcome-tag">Ops</span>
+                <div class="outcome-body"><strong>Zero moderation overhead.</strong> No chat. No free text. No reporting flow needed. The system is structurally incapable of producing the content that requires intervention.</div>
+            </div>
+        </div>
+
+        <div class="img-slot">
+            <span class="img-slot-icon">📸</span>
+            <span class="img-slot-label">Business case diagram — D7/D30 retention loops, how key and arrow currencies drive each</span>
+        </div>
+
+        <hr>
+
+        <h2>What I'd Do Next</h2>
+        <div class="next-items">
+            <div class="next-item">
+                <div class="next-dot"></div>
+                <div><strong>The Studio feed at low activity.</strong> When a Studio is quiet, the feed goes cold. A progressive reveal model helps, but the feed still needs a minimum viable signal even when members haven't been active. This is the main identified weakness from user testing.</div>
+            </div>
+            <div class="next-item">
+                <div class="next-dot"></div>
+                <div><strong>Feedback tag visibility.</strong> Do tags feed back visibly to the designer's profile, or do they disappear into the algorithm? This question has UX and business implications and isn't resolved yet.</div>
+            </div>
+            <div class="next-item">
+                <div class="next-dot"></div>
+                <div><strong>Permanent inventory monetization.</strong> Studio rooms unlock permanently, which creates real leaving cost. Whether that can also be a monetization surface (cosmetic Studio items, limited room decor) is a viable direction that's been deliberately parked for now.</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Key Principles I'll Carry Forward</h2>
+        <div class="quotes">
+            <div class="quote-item">Social mechanics should be structurally incapable of producing toxicity, not reliant on settings or moderation to prevent bad outcomes.</div>
+            <div class="quote-item">The moment you ask someone to join, you create a moment where they can say no. Design the belonging, not the ask.</div>
+            <div class="quote-item">Absence must not feel consequential. Presence should feel meaningful. Those are not the same design problem.</div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-block">
+            <h2>Want to see the full system?</h2>
+            <p>The complete deliverable set is available on request.</p>
+            <div class="deliverables">
+                <span class="deliverable-tag">Full concept schema</span>
+                <span class="deliverable-tag">10-slide presentation deck</span>
+                <span class="deliverable-tag">Speaker script (EN + FR)</span>
+                <span class="deliverable-tag">D7 discovery flow spec</span>
+                <span class="deliverable-tag">User testing documentation</span>
+            </div>
+            <a href="mailto:jacob.radonirina@gmail.com" class="cta-btn">📩 Get in touch</a>
+        </div>
+
+    </main>
+
+</div>
+<!-- ── END CASE STUDY CONTENT ──────────────────────────── -->
+
+<!-- ── MAIN CONTENT (contact) ──────────────────────────── -->
+<div class="main-content" id="landing">
+    <div class="container">
+
+        <div class="right-side">
+            <div class="quote">
+                <p data-i18n-html="quote.text">Je ne commence pas par Figma. <br><span>Je commence par les problèmes de votre produit.</span></p>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-label" data-i18n="stat.sector.label">Fintech</div>
+                    <div class="stat-number" data-i18n="stat.sector">SaaS · B2B</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label" data-i18n="stat.awards">Discovery</div>
+                    <div class="stat-number" data-i18n="stat.awards.label">→ Handoff</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-i18n="stat.exp">10 ans</div>
+                    <div class="stat-label" data-i18n="stat.exp.label">d'expériences</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="left-side">
+            <div class="content" id="leftcontent">
+                <h2 data-i18n-html="main.h2">Pour les équipes B2B qui ont perdu du temps avec des <span>designers qui n'ont pas compris le produit.</span></h2>
+                <p class="subtitle" data-i18n="main.subtitle">Parlez-moi de votre projet. Je vous réponds sous 24h avec une proposition personnalisée.</p>
+
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" data-i18n="form.name">Nom complet</label>
+                            <input type="text" id="name" name="name" placeholder="e.g. Jhon Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="form.email">Email professionnel</label>
+                            <input type="email" id="email" name="email" placeholder="e.g. john.doe@domain.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group" data-i18n-html="form.company">
+                            <label for="company">Votre entreprise</label>
+                            <input type="text" id="company" name="company" placeholder="e.g SpaceX" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="website" data-i18n="form.website">Site web</label>
+                            <input type="url" id="website" name="website" placeholder="https://spacex.com">
+                        </div>
+                    </div>
+                    <div class="form-group m-tp">
+                        <label for="project" data-i18n="form.project">Votre situation</label>
+                        <select id="project" name="project" required>
+                            <option value=""           data-i18n="project.select">Sélectionnez...</option>
+                            <option value="structurer" data-i18n="project.structurer">Structurer – produit existant (4 500€ – 6 000€)</option>
+                            <option value="construire" data-i18n="project.construire">Construire – from scratch ou refonte (9 000€ – 12 000€)</option>
+                            <option value="renforcer"  data-i18n="project.renforcer">Renforcer – mission embarquée (TJM)</option>
+                            <option value="autre"      data-i18n="project.autre">Autre à discuter</option>
+                        </select>
+                    </div>
+                    <div class="form-group m-tp" data-i18n-html="form.message">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Votre message ..."></textarea>
+                    </div>
+                    <div class="form-group privacy-check">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text" data-i18n-html="form.consent">
+                                J'accepte que mes données soient utilisées pour traiter ma demande, conformément à la
+                                <a href="politique-confidentialite.html">Politique de confidentialité</a>.
+                            </span>
+                        </label>
+                    </div>
+                    <button type="submit" id="submitBtn" class="btn-primary" data-i18n="form.submit">Démarrer la conversation →</button>
+                </form>
+            </div>
+
+            <div id="calendlyBlock" style="display:none;">
+                <div class="calendly-success-header">
+                    <h3 data-i18n="calendly.title">✅ Message envoyé, merci !</h3>
+                    <p data-i18n-html="calendly.text">Parfait, je reviens vers vous sous 24h. En attendant, <strong>réservez directement un créneau</strong> pour qu'on parle de votre projet.</p>
+                </div>
+                <div class="calendly-inline-widget"
+                    data-url="https://calendly.com/jacob-radonirina/30min?hide_gdpr_banner=1&primary_color=0066ff"
+                    style="min-width:280px; height:660px;"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ── FOOTER ──────────────────────────────────────────── -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-text">© <span id="year"></span> Jacob HOUMADI</div>
+        <nav class="desktop-nav">
+            <ul class="footer-nav-legals">
+                <li><a href="mentions-legales.html"          data-i18n="footer.legal1">Mentions légales</a></li>
+                <li><a href="politique-confidentialite.html" data-i18n="footer.legal2">Politique de confidentialité</a></li>
+            </ul>
+        </nav>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/jacob-houmadi" target="_blank" title="LinkedIn" aria-label="Linkedin">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+            <a href="https://www.malt.fr/profile/jacobhoumadi" target="_blank" aria-label="Malt">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5384 3.46333C18.7268 1.65172 16.7916 2.82425 15.5805 4.03533L9.86041 9.75578L4.1397 15.4764C2.92862 16.6873 1.66101 18.5273 3.5677 20.4338C5.47439 22.3408 7.31439 21.073 8.52522 19.8619L14.2457 14.1414L19.9661 8.4211C21.1773 7.20989 22.3497 5.27468 20.5384 3.46333Z"/><path d="M9.60804 2.99443L12.0306 5.41685L14.4964 2.951C14.6638 2.7832 14.8338 2.62748 15.0048 2.48062C14.7466 1.1778 14.0032 0 12.0294 0C10.0519 0 9.30944 1.18243 9.05273 2.48807C9.23724 2.64778 9.42161 2.80787 9.60804 2.99443Z"/><path d="M14.4951 20.9888L12.0308 18.5244L9.60956 20.9454C9.4257 21.1294 9.24274 21.2975 9.06055 21.4554C9.3382 22.7835 10.124 24 12.0298 24C13.9406 24 14.7254 22.7769 15.0012 21.4446C14.8317 21.2987 14.662 21.1557 14.4951 20.9888Z"/><path d="M8.58048 8.86719H3.91012C2.19757 8.86719 0 9.40656 0 11.9683C0 13.8797 1.22342 14.6646 2.55604 14.9403C2.71382 14.7583 8.58048 8.86719 8.58048 8.86719Z"/><path d="M21.5126 8.9917C21.3647 9.16361 15.4858 15.0696 15.4858 15.0696H20.0899C21.8025 15.0696 24 14.665 24 11.9685C24 9.9913 22.818 9.24841 21.5126 8.9917Z"/><path d="M10.1108 7.33427L10.9452 6.4999L8.52418 4.07864C7.31297 2.86768 5.47322 1.59994 3.56653 3.50663C2.16838 4.90478 2.47892 6.26555 3.22053 7.37024C3.4464 7.35341 10.1108 7.33427 10.1108 7.33427Z"/><path d="M13.9496 16.6027L13.113 17.4392L15.5791 19.9051C16.7902 21.1163 18.7254 22.2886 20.5368 20.4772C21.8884 19.1254 21.5783 17.7057 20.831 16.5684C20.5905 16.5857 13.9496 16.6027 13.9496 16.6027Z"/></svg>
+            </a>
+            <a href="https://www.behance.net/jacobhoumadi" target="_blank" aria-label="Behance">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 11.4462C18.1846 11.7231 18.3692 12 18.4615 12.4615H15.5077C15.5077 12.3692 15.5077 12.1846 15.6 12C15.6923 11.8154 15.6923 11.7231 15.8769 11.5385C15.9692 11.3538 16.1538 11.2615 16.3385 11.1692C16.5231 11.0769 16.8 10.9846 17.0769 10.9846C17.4462 11.0769 17.8154 11.1692 18 11.4462ZM9.50769 10.8C9.69231 10.6154 9.87692 10.3385 9.87692 9.96923C9.87692 9.78462 9.87692 9.6 9.78462 9.41538C9.69231 9.32308 9.6 9.13846 9.50769 9.13846C9.41538 9.04615 9.23077 9.04615 9.04615 8.95385H6.64615V11.0769H8.67692C8.95385 11.0769 9.23077 10.9846 9.50769 10.8ZM8.76923 12.3692H6.64615V14.8615H8.76923C8.95385 14.8615 9.13846 14.8615 9.32308 14.7692C9.50769 14.7692 9.69231 14.6769 9.78462 14.5846C9.87692 14.4923 10.0615 14.4 10.1538 14.2154C10.2462 14.0308 10.2462 13.8462 10.2462 13.6615C10.2462 13.2 10.1538 12.8308 9.87692 12.6462C9.6 12.4615 9.23077 12.3692 8.76923 12.3692ZM24 4.52308V19.4769C24 21.9692 21.9692 24 19.4769 24H4.52308C2.03077 24 0 21.9692 0 19.4769V4.52308C0 2.03077 2.03077 0 4.52308 0H19.4769C21.9692 0 24 2.03077 24 4.52308ZM15.1385 8.86154H18.8308V7.93846H15.1385V8.86154ZM12.1846 13.8462C12.1846 13.2923 12.0923 12.8308 11.8154 12.3692C11.5385 12 11.1692 11.7231 10.6154 11.5385C10.9846 11.3538 11.3538 11.0769 11.5385 10.8C11.7231 10.5231 11.8154 10.1538 11.8154 9.69231C11.8154 9 11.7231 8.95385 11.6308 8.58462C11.4462 8.30769 11.2615 8.03077 11.0769 7.93846C10.8 7.75385 10.5231 7.66154 10.1538 7.56923C9.69231 7.38462 9.32308 7.38462 8.86154 7.38462H4.61538V16.4308H9.04615C9.41538 16.4308 9.87692 16.3385 10.2462 16.2462C10.6154 16.1538 10.9846 15.9692 11.2615 15.7846C11.5385 15.6 11.8154 15.3231 12 14.9538C12.0923 14.6769 12.1846 14.3077 12.1846 13.8462ZM15.5077 13.5692H20.2154C20.2154 13.0154 20.2154 12.5538 20.1231 12.0923C20.0308 11.6308 19.8462 11.1692 19.5692 10.8923C19.2923 10.5231 18.9231 10.2462 18.5538 10.0615C18.0923 9.87692 17.6308 9.69231 17.0769 9.69231C16.6154 9.69231 16.1538 9.78462 15.6923 9.96923C15.3231 10.1538 14.9538 10.4308 14.5846 10.7077C14.3077 10.9846 14.0308 11.3538 13.9385 11.8154C13.7538 12.2769 13.6615 12.7385 13.6615 13.2C13.6615 13.8923 13.7538 14.2154 13.9385 14.5846C14.1231 15.0462 14.3077 15.4154 14.5846 15.6923C14.8615 15.9692 15.2308 16.2462 15.6 16.4308C16.0615 16.6154 16.5231 16.7077 16.9846 16.7077C17.7231 16.7077 18.3692 16.5231 18.9231 16.1538C19.4769 15.7846 19.8462 15.2308 20.1231 14.4923H18.5538C18.4615 14.6769 18.3692 14.8615 18.0923 15.0462C17.8154 15.2308 17.5385 15.3231 17.1692 15.3231C16.7077 15.3231 16.2462 15.2308 15.9692 14.9538C15.6923 14.5846 15.5077 14.1231 15.5077 13.5692Z"/></svg>
+            </a>
+            <a href="mailto:jacob.radonirina@gmail.com" title="Email" aria-label="Email">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- ── PORTFOLIO SECTION ─────────────────────────────────── -->
+<div class="portfolio-section" id="portfolioSection" tabindex="-1">
+    <button class="portfolio-close" id="portfolioClose" onclick="hidePortfolio()" aria-label="Fermer le portfolio">×</button>
+    <div class="portfolio-container" id="portfolioContainer">
+
+        <!-- Card 0 · Venue -->
+        <div class="portfolio-card" data-index="0">
+            <div class="portfolio-right">
+                <div class="portfolio-image" id="venue-1" style="background:#FEDED7;"><img src="Captures/venue_d7_d30-fr.webp" data-lang-en="Captures/venue_d7_d30-en.webp" data-lang-fr="Captures/venue_d7_d30-fr.webp" alt="Venue D7-D30" loading="lazy"/></div>
+                <div class="portfolio-image hidden" id="venue-2" style="background:#FDCBC2;"><img src="Captures/venue_onboarding-fr.webp" data-lang-en="Captures/venue_onboarding-en.webp" data-lang-fr="Captures/venue_onboarding-fr.webp" alt="Venue onboarding" loading="lazy"/></div>
+            </div>
+            <div class="portfolio-left">
+                <div>
+                    <h3 data-i18n="portfolio.venue.title">Venue · SuperBloom</h3>
+                    <p class="role" data-i18n="portfolio.venue.role">Product Designer · Jeu de design d'intérieur · 4M+ joueurs</p>
+                    <p data-i18n-html="portfolio.venue.desc">Venue est un jeu de design d'intérieur avec 4M+ joueurs.<span class="mobile-hidden"><br/>Mission : introduire une dimension sociale sans créer de pression ni de compétition.</span></p>
+                </div>
+                <div class="portfolio-insights">
+                    <h4 data-i18n="portfolio.venue.insights">Réalisations clés :</h4>
+                    <button class="insight-btn active" onclick="switchImage(this,'venue-1')"><h6 data-i18n="portfolio.venue.btn1">Renforcer la rétention J7–J30</h6><span data-i18n="portfolio.venue.btn1.desc">Design Studios collectifs ancrés dans une dynamique hebdomadaire</span></button>
+                    <button class="insight-btn" onclick="switchImage(this,'venue-2')"><h6 data-i18n="portfolio.venue.btn2">Réduire la friction d'engagement</h6><span data-i18n="portfolio.venue.btn2.desc">Explorer sans s'engager, partir sans culpabiliser</span></button>
+                    <button class="insight-btn"><h6 data-i18n="portfolio.venue.btn3">Créer des interactions sans modération</h6><span data-i18n="portfolio.venue.btn3.desc">Système de réactions guidées</span></button>
+                    <button class="insight-btn"><h6 data-i18n="portfolio.venue.btn4">Intégrer des moments émotionnels</h6><span data-i18n="portfolio.venue.btn4.desc">Récompenses collectives intégrées dans l'expérience</span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 1 · Tango.lu E-Commerce -->
+        <div class="portfolio-card" data-index="1">
+            <div class="portfolio-right">
+                <div class="portfolio-image" id="tangoweb-1"><img src="Captures/Tango.lu-offre-avant-fr.webp" data-lang-en="Captures/Tango.lu-offre-avant-en.webp" data-lang-fr="Captures/Tango.lu-offre-avant-fr.webp" alt="Tango offre avant" loading="lazy"/></div>
+                <div class="portfolio-image hidden" id="tangoweb-2" style="background:linear-gradient(135deg,#667eea,#764ba2);"><img src="Captures/Tango.lu-offre-apres-fr.webp" data-lang-en="Captures/Tango.lu-offre-apres-en.webp" data-lang-fr="Captures/Tango.lu-offre-apres-fr.webp" alt="Tango offre après"/></div>
+                <div class="portfolio-image hidden" id="tangoweb-3" style="background:linear-gradient(135deg,#667eea,#764ba2);"><img src="Captures/Tango.lu-parcour-simplifie-fr.webp" data-lang-en="Captures/Tango.lu-parcour-simplifie-en.webp" data-lang-fr="Captures/Tango.lu-parcour-simplifie-fr.webp" alt="Tango parcours"/></div>
+                <div class="portfolio-image hidden" id="tangoweb-4" style="background:linear-gradient(135deg,#667eea,#667eea);"><img src="Captures/Tango.lu-design-system-fr.webp" data-lang-en="Captures/Tango.lu-design-system-en.webp" data-lang-fr="Captures/Tango.lu-design-system-fr.webp" alt="Tango design system"/></div>
+            </div>
+            <div class="portfolio-left">
+                <div>
+                    <h3 data-i18n="portfolio.tango_web.title">Tango.lu E-Commerce</h3>
+                    <p class="role" data-i18n="portfolio.tango_web.role">UX/UI Designer · Opérateur télécom Luxembourg</p>
+                    <p data-i18n-html="portfolio.tango_web.desc">Le site web Tango.lu est la principale porte d'entrée pour l'acquisition.<span class="mobile-hidden"><br/>Mission : optimiser le funnel d'achat.</span></p>
+                </div>
+                <div class="portfolio-insights">
+                    <h4 data-i18n="portfolio.tango_web.insights">Réalisations clés :</h4>
+                    <button class="insight-btn active" onclick="switchImage(this,'tangoweb-1')"><h6 data-i18n="portfolio.tango_web.btn1">Page offre AVANT</h6><span data-i18n="portfolio.tango_web.btn1.desc">Sous-expositions observées</span></button>
+                    <button class="insight-btn" onclick="switchImage(this,'tangoweb-2')"><h6 data-i18n="portfolio.tango_web.btn2">Page offre APRÈS</h6><span data-i18n="portfolio.tango_web.btn2.desc">Comparaison facilitée</span></button>
+                    <button class="insight-btn" onclick="switchImage(this,'tangoweb-3')"><h6 data-i18n="portfolio.tango_web.btn3">Optimiser le parcours</h6><span data-i18n="portfolio.tango_web.btn3.desc">Clarification des étapes clés</span></button>
+                    <button class="insight-btn" onclick="switchImage(this,'tangoweb-4')"><h6 data-i18n="portfolio.tango_web.btn4">Cohérence cross-plateforme</h6><span data-i18n="portfolio.tango_web.btn4.desc">Design system partagé avec l'app mobile</span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 · MyTango Mobile App -->
+        <div class="portfolio-card" data-index="2">
+            <div class="portfolio-right">
+                <div class="portfolio-image" id="mytango-4" style="background:linear-gradient(135deg,#4facfe,#00f2fe);"><img src="Captures/Tango-parcours-simplifie-fr.webp" data-lang-en="Captures/Tango-parcours-simplifie-en.webp" data-lang-fr="Captures/Tango-parcours-simplifie-fr.webp" alt="Tango parcours simplifié" loading="lazy"/></div>
+                <div class="portfolio-image hidden" id="mytango-2" style="background:linear-gradient(135deg,#667eea,#764ba2);"><img src="Captures/MyTango-note-hausse-fr.webp" data-lang-en="Captures/MyTango-note-hausse-en.webp" data-lang-fr="Captures/MyTango-note-hausse-fr.webp" alt="MyTango note hausse"/></div>
+            </div>
+            <div class="portfolio-left">
+                <div>
+                    <h3 data-i18n="portfolio.tango_app.title">MyTango Mobile App</h3>
+                    <h4 class="role" data-i18n="portfolio.tango_app.role">UX/UI Designer · Opérateur télécom Luxembourg</h4>
+                    <p data-i18n-html="portfolio.tango_app.desc">Tango est un opérateur télécom luxembourgeois.<span class="mobile-hidden"><br/>Mission : refondre l'expérience de l'app mobile.</span></p>
+                </div>
+                <div class="portfolio-insights">
+                    <h4 data-i18n="portfolio.tango_app.insights">Réalisations clés :</h4>
+                    <button class="insight-btn active" onclick="switchImage(this,'mytango-4')"><h6 data-i18n="portfolio.tango_app.btn3">Simplifier une offre complexe</h6><span data-i18n="portfolio.tango_app.btn3.desc">Activation intuitive</span></button>
+                    <button class="insight-btn" onclick="switchImage(this,'mytango-2')"><h6 data-i18n="portfolio.tango_app.btn4">Améliorer la satisfaction</h6><span data-i18n="portfolio.tango_app.btn4.desc">Note App Store améliorée</span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 · Axian Group -->
+        <div class="portfolio-card" data-index="3">
+            <div class="portfolio-right">
+                <div class="portfolio-image" id="axian-1" style="background:#D30F3F;"><img src="Captures/Axian-vision-business-fr.webp" data-lang-en="Captures/Axian-vision-business-en.webp" data-lang-fr="Captures/Axian-vision-business-fr.webp" alt="Axian vision business" loading="lazy"/></div>
+                <div class="portfolio-image hidden" id="axian-2" style="background:#D30F3F;"><img src="Captures/Axian-unification-ecosysteme-fr.webp" data-lang-en="Captures/Axian-unification-ecosysteme-en.webp" data-lang-fr="Captures/Axian-unification-ecosysteme-fr.webp" alt="Axian écosystème"/></div>
+                <div class="portfolio-image hidden" id="axian-3" style="background:#C0CAD1;"><img src="Captures/Axian-refonte-corporate-fr.webp" data-lang-en="Captures/Axian-refonte-corporate-en.webp" data-lang-fr="Captures/Axian-refonte-corporate-fr.webp" alt="Axian refonte"/></div>
+                <div class="portfolio-image hidden" id="axian-4" style="background:#151D42;"><img src="Captures/Axian-4-prix-creative-fr.webp" data-lang-en="Captures/Axian-4-prix-creative-en.webp" data-lang-fr="Captures/Axian-4-prix-creative-fr.webp" alt="Axian prix"/></div>
+            </div>
+            <div class="portfolio-left">
+                <div>
+                    <h3 data-i18n="portfolio.axian.title">Axian Group</h3>
+                    <p class="role" data-i18n="portfolio.axian.role">Digital Designer · Grand Groupe Panafricain</p>
+                    <p data-i18n-html="portfolio.axian.desc">Axian Group est l'un des plus grands groupes panafricains.<span class="mobile-hidden"><br/>5 ans en tant que Digital Designer.</span></p>
+                </div>
+                <div class="portfolio-insights">
+                    <h4 data-i18n="portfolio.tango_app.insights">Réalisations clés :</h4>
+                    <button class="insight-btn active" onclick="switchImage(this,'axian-1')"><h6 data-i18n="portfolio.axian.btn1">Incarner la vision business</h6><span data-i18n="portfolio.axian.btn1.desc">Identité culturelle "Afrixian"</span></button>
+                    <button class="insight-btn" onclick="switchImage(this,'axian-2')"><h6 data-i18n="portfolio.axian.btn2">Unifier l'écosystème</h6><span data-i18n="portfolio.axian.btn2.desc">5 secteurs sous une identité commune</span></button>
+                    <button class="insight-btn" onclick="switchImage(this,'axian-3')"><h6 data-i18n="portfolio.axian.btn3">Refondre le site web</h6><span data-i18n="portfolio.axian.btn3.desc">Architecture + UI + storytelling</span></button>
+                    <button class="insight-btn" onclick="switchImage(this,'axian-4')"><h6 data-i18n="portfolio.axian.btn4">4 prix Creatives 974 Awards</h6><span data-i18n="portfolio.axian.btn4.desc">Direction artistique reconnue</span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 · Silva Paris -->
+        <div class="portfolio-card" data-index="4">
+            <div class="portfolio-right">
+                <div class="portfolio-image" id="silva-1" style="background:#EAECF2;"><img src="Captures/Silva-identite-web-fr.webp" data-lang-en="Captures/Silva-identite-web-en.webp" data-lang-fr="Captures/Silva-identite-web-fr.webp" alt="Silva identité web" loading="lazy"/></div>
+                <div class="portfolio-image hidden" id="silva-2" style="background:#E4EAEF;"><img src="Captures/Silva-refonte-site-web-fr.webp" data-lang-en="Captures/Silva-refonte-site-web-en.webp" data-lang-fr="Captures/Silva-refonte-site-web-fr.webp" alt="Silva refonte"/></div>
+                <div class="portfolio-image hidden" id="silva-3" style="background:#F4F4EE;"><img src="Captures/Silva-design-system-fr.webp" data-lang-en="Captures/Silva-design-system-en.webp" data-lang-fr="Captures/Silva-design-system-fr.webp" alt="Silva design system"/></div>
+            </div>
+            <div class="portfolio-left">
+                <div>
+                    <h3 data-i18n="portfolio.silva.title">Silva Paris</h3>
+                    <p class="role" data-i18n="portfolio.silva.role">Direction Artistique Web / UX Design · Artisanat de luxe</p>
+                    <p data-i18n-html="portfolio.silva.desc">Silva Paris est une maison d'artisanat tapissier de luxe.<span class="mobile-hidden"><br/>Mon rôle : déclinaison digitale de l'identité de marque.</span></p>
+                </div>
+                <div class="portfolio-insights">
+                    <h4 data-i18n="portfolio.tango_app.insights">Réalisations clés :</h4>
+                    <button class="insight-btn active" onclick="switchImage(this,'silva-1')"><h6 data-i18n="portfolio.silva.btn1">Décliner l'identité web</h6><span data-i18n="portfolio.silva.btn1.desc">Adaptation des codes visuels</span></button>
+                    <button class="insight-btn" onclick="switchImage(this,'silva-2')"><h6 data-i18n="portfolio.silva.btn2">Optimiser l'architecture</h6><span data-i18n="portfolio.silva.btn2.desc">Parcours condensé, savoir-faire valorisé</span></button>
+                    <button class="insight-btn" onclick="switchImage(this,'silva-3')"><h6 data-i18n="portfolio.silva.btn3">Design system cohérent</h6><span data-i18n="portfolio.silva.btn3.desc">Composants UI réutilisables</span></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-pagination">
+            <div class="pagination-dot active" onclick="goToSlide(0)"></div>
+            <div class="pagination-dot" onclick="goToSlide(1)"></div>
+            <div class="pagination-dot" onclick="goToSlide(2)"></div>
+            <div class="pagination-dot" onclick="goToSlide(3)"></div>
+            <div class="pagination-dot" onclick="goToSlide(4)"></div>
+        </div>
+        <button class="portfolio-nav prev" onclick="goToSlide(currentSlide - 1)">‹</button>
+        <button class="portfolio-nav next" onclick="goToSlide(currentSlide + 1)">›</button>
+    </div>
+</div>
+
+<!-- ── MODAL OFFRES ──────────────────────────────────────── -->
+<div id="offresModal" class="modal">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeModal('offres')">×</button>
+        <div class="modal-body">
+            <h2 data-i18n="modal.offres.title">Mes Offres</h2>
+            <div class="offers-grid">
+                <div class="offer-card offer-dark offer-featured">
+                    <div class="offer-header">
+                        <h3 data-i18n="modal.offer2.title">Structurer</h3>
+                        <p class="offer-subtitle" data-i18n="modal.offer2.subtitle">Produit existant · Incohérence visuelle · Devs qui improvisent</p>
+                        <hr class="offer-separator">
+                    </div>
+                    <p class="offer-pitch" data-i18n="modal.offer2.pitch">Votre produit tourne déjà. Je viens poser un système — pour que chaque sprint parte d'une base solide, pas d'une page blanche.</p>
+                    <ul>
+                        <li data-i18n="modal.offer2.li1">Audit visuel de l'existant</li>
+                        <li data-i18n="modal.offer2.li2">Design system documenté basé sur votre charte</li>
+                        <li data-i18n="modal.offer2.li3">Maquettes haute-fidélité prêtes à implémenter</li>
+                        <li data-i18n="modal.offer2.li4">Guide de style + assets exportés pour les devs</li>
+                    </ul>
+                    <div class="offer-footer">
+                        <div class="offer-price-block">
+                            <span class="offer-price">4 500€ – 6 000€</span>
+                            <span class="offer-price-label" data-i18n="modal.offer2.duration">3-5 semaines</span>
+                        </div>
+                        <button class="offer-cta" data-i18n="offer.cta" onclick="goToContact('structurer')">Démarrer</button>
+                    </div>
+                </div>
+                <div class="offer-card offer-light">
+                    <div class="offer-header">
+                        <h3 data-i18n="modal.offer1.title">Construire</h3>
+                        <p class="offer-subtitle" data-i18n="modal.offer1.subtitle">Nouveau produit · Refonte complète · MVP</p>
+                        <hr class="offer-separator">
+                    </div>
+                    <p class="offer-pitch" data-i18n="modal.offer1.pitch">Vous partez de zéro. Je pose l'identité et l'interface ensemble — pour ne pas avoir à rattraper la cohérence en cours de route.</p>
+                    <ul>
+                        <li data-i18n="modal.offer1.li1">Audit de l'existant ou cadrage from scratch</li>
+                        <li data-i18n="modal.offer1.li2">Direction artistique + design system construits en parallèle</li>
+                        <li data-i18n="modal.offer1.li3">Wireframes, tests utilisateurs, maquettes haute-fidélité</li>
+                        <li data-i18n="modal.offer1.li4">Handoff développeurs + support 2 semaines</li>
+                    </ul>
+                    <div class="offer-footer">
+                        <div class="offer-price-block">
+                            <span class="offer-price">9 000€ – 12 000€</span>
+                            <span class="offer-price-label" data-i18n="modal.offer1.duration">8-10 semaines</span>
+                        </div>
+                        <button class="offer-cta" data-i18n="offer.cta" onclick="goToContact('construire')">Démarrer</button>
+                    </div>
+                </div>
+            </div>
+            <div class="additional-offer">
+                <h3 data-i18n="modal.addons.title">Mission — Renforcer</h3>
+                <ul>
+                    <li><span data-i18n="modal.addons.li1">Disponible en full remote ou hybride</span></li>
+                    <li><span data-i18n="modal.addons.li2">Figma, Agile, collaboration cross-fonctionnelle</span></li>
+                    <li><span data-i18n="modal.addons.li3">TJM</span> <strong style="color:var(--primary)">500€</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ── MODAL TÉMOIGNAGES ─────────────────────────────────── -->
+<div id="temoignagesModal" class="modal">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeModal('temoignages')">×</button>
+        <div class="modal-body">
+            <h2 data-i18n="modal.testimonials.title">Témoignages</h2>
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <p class="testimonial-text" data-i18n="testimonial.2.text">"J'ai d'abord connu Jacob à distance…"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><img src="Captures/Valérie-candat.jpg" alt=""></div>
+                        <div class="author-info"><h4 data-i18n="testimonial.2.name">Valérie Candat</h4><p data-i18n="testimonial.2.role">Executive Assistant & Human Resources · ID+P</p></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text" data-i18n="testimonial.3.text">"Jacob était un bon élément au sein de notre équipe…"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><img src="Captures/Marine-raelison.jpg" alt=""></div>
+                        <div class="author-info"><h4 data-i18n="testimonial.3.name">Marine Raelison</h4><p data-i18n="testimonial.3.role">Brand Strategy Director · AXIAN Group</p></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text" data-i18n="testimonial.4.text">"Expérience de travail fluide, collaborative, créative."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><img src="Captures/Caroline-meurisse.jpg" alt=""></div>
+                        <div class="author-info"><h4 data-i18n="testimonial.4.name">Caroline MEURISSE</h4><p data-i18n="testimonial.4.role">Administrateur Général · Axian University</p></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text" data-i18n="testimonial.8.text">"Jacob est une vraie référence en matière de design."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><img src="Captures/theodorakus-bezafy.png" alt=""></div>
+                        <div class="author-info"><h4 data-i18n="testimonial.8.name">Theodorakus Bezafy</h4><p data-i18n="testimonial.8.role">Motion Graphic Designer · Axian Group</p></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text" data-i18n="testimonial.1.text">"J'ai collaboré avec Jacob en tant qu'analyste développeur frontend…"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">T</div>
+                        <div class="author-info"><h4 data-i18n="testimonial.1.name">Théo</h4><p data-i18n="testimonial.1.role">Analyste Développeur</p></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text" data-i18n="testimonial.5.text">"Jacob est toujours à l'écoute de la demande client…"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PE</div>
+                        <div class="author-info"><h4 data-i18n="testimonial.5.name">People Engagement & Communication Manager</h4><p data-i18n="testimonial.5.role">Secteur Fintech & Corporate</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ── MODAL FAQ ─────────────────────────────────────────── -->
+<div id="faqModal" class="modal">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeModal('faq')">×</button>
+        <div class="modal-body">
+            <h2 data-i18n="modal.faq.title">FAQ</h2>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.q1">Quelle est la différence entre les deux offres ?</button><div class="faq-answer" data-i18n-html="faq.a1">…</div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.q2">Fais-tu également le développement ?</button><div class="faq-answer" data-i18n="faq.a2">…</div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.q3">Quels livrables vais-je recevoir ?</button><div class="faq-answer" data-i18n-html="faq.a3">…</div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.q4">Combien de révisions sont incluses ?</button><div class="faq-answer" data-i18n-html="faq.a4">…</div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.q5">Comment se passe le paiement ?</button><div class="faq-answer" data-i18n-html="faq.a5">…</div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.q6">Travailles-tu avec des clients internationaux ?</button><div class="faq-answer" data-i18n="faq.a6">…</div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.q7">Proposes-tu un accompagnement après la livraison ?</button><div class="faq-answer" data-i18n="faq.a7">…</div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.q8">Quels secteurs d'activité connais-tu le mieux ?</button><div class="faq-answer" data-i18n="faq.a8">…</div></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+
+    // EmailJS
+    emailjs.init("69fgSb-btkXkWSBtI");
+
+    // ── Cookie Consent ──────────────────────────────────────
+    function checkCookieConsent() {
+        if (!localStorage.getItem('cookieConsent')) {
+            setTimeout(() => { document.getElementById('cookieConsent').style.display = 'block'; }, 1000);
+        }
+    }
+    function acceptCookies() { localStorage.setItem('cookieConsent','accepted'); document.getElementById('cookieConsent').style.display='none'; }
+    function refuseCookies() { localStorage.setItem('cookieConsent','refused');  document.getElementById('cookieConsent').style.display='none'; }
+    checkCookieConsent();
+
+    // ── Analytics ───────────────────────────────────────────
+    function trackEvent(eventName, eventParams = {}) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ 'event': eventName, ...eventParams });
+    }
+
+    // ── Modal Management ────────────────────────────────────
+    let modalTrigger = null;
+
+    function goToContact(projectValue) {
+        closeModal('offres');
+        if (projectValue) { const s = document.getElementById('project'); if (s) s.value = projectValue; }
+        document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function openModal(modalName) {
+        modalTrigger = document.activeElement;
+        closeAllModals();
+        const modal = document.getElementById(modalName + 'Modal');
+        if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            trackEvent('modal_open', { modal_name: modalName });
+            const closeBtn = modal.querySelector('.close-btn');
+            if (closeBtn) setTimeout(() => closeBtn.focus(), 50);
+            modal.addEventListener('keydown', trapFocusModal);
+        }
+    }
+
+    function closeModal(modalName) {
+        const modal = document.getElementById(modalName + 'Modal');
+        if (modal) { modal.classList.remove('active'); modal.removeEventListener('keydown', trapFocusModal); }
+        document.body.style.overflow = 'auto';
+        if (modalTrigger) { modalTrigger.focus(); modalTrigger = null; }
+    }
+
+    function closeAllModals() {
+        document.querySelectorAll('.modal.active').forEach(m => m.classList.remove('active'));
+        document.body.style.overflow = 'auto';
+    }
+
+    function trapFocusModal(e) {
+        const modal = e.currentTarget;
+        if (e.key === 'Escape') { closeModal(modal.id.replace('Modal','')); return; }
+        if (e.key !== 'Tab') return;
+        const focusable = modal.querySelectorAll('button:not([disabled]), a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        const first = focusable[0]; const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) { closeModal(event.target.id.replace('Modal','')); }
+    };
+
+    // ── FAQ ─────────────────────────────────────────────────
+    function toggleFaq(element) {
+        const faqItem = element.parentElement;
+        const isActive = faqItem.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+            item.querySelector('.faq-question').setAttribute('aria-expanded','false');
+        });
+        if (!isActive) { faqItem.classList.add('active'); element.setAttribute('aria-expanded','true'); }
+    }
+
+    // ── Mobile Menu ─────────────────────────────────────────
+    function toggleMobileMenu() {
+        document.getElementById('mobileNav').classList.contains('active') ? closeMobileMenu() : openMobileMenu();
+    }
+    function openMobileMenu() {
+        document.getElementById('mobileNav').classList.add('active');
+        document.getElementById('mobileMenuOverlay').classList.add('active');
+        document.body.style.overflow = 'hidden';
+        syncMobileLangSwitcher();
+        setTimeout(() => document.getElementById('mobileNav').querySelector('.mobile-menu-close').focus(), 50);
+    }
+    function closeMobileMenu() {
+        document.getElementById('mobileNav').classList.remove('active');
+        document.getElementById('mobileMenuOverlay').classList.remove('active');
+        document.body.style.overflow = 'auto';
+        document.querySelector('.mobile-menu-toggle').focus();
+    }
+    function syncMobileLangSwitcher() {
+        const currentLang = localStorage.getItem('lang') || 'fr';
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            const isActive = btn.getAttribute('data-lang') === currentLang;
+            btn.classList.toggle('active', isActive);
+            btn.setAttribute('aria-pressed', isActive.toString());
+        });
+    }
+
+    // ── Portfolio Management ────────────────────────────────
+    let portfolioTrigger = null;
+    const portfolioContainer = document.getElementById('portfolioContainer');
+    let currentSlide = 0;
+
+    function showPortfolio() {
+        portfolioTrigger = document.activeElement;
+        const portfolioSection = document.getElementById('portfolioSection');
+        portfolioSection.classList.add('active');
+        document.body.classList.add('portfolio-open');
+        document.body.style.overflow = 'hidden';
+        closeAllModals();
+        currentSlide = 0;
+        trackEvent('portfolio_view', { entry_point: 'navigation' });
+        const cards = portfolioContainer.querySelectorAll('.portfolio-card');
+        if (cards[0]) portfolioContainer.scrollLeft = 0;
+        updatePagination();
+        updateNavigationButtons();
+        portfolioSection.addEventListener('keydown', trapFocusPortfolio);
+        setTimeout(() => document.getElementById('portfolioClose').focus(), 50);
+    }
+
+    function hidePortfolio() {
+        const portfolioSection = document.getElementById('portfolioSection');
+        portfolioSection.classList.remove('active');
+        document.body.classList.remove('portfolio-open');
+        document.body.style.overflow = 'auto';
+        portfolioSection.removeEventListener('keydown', trapFocusPortfolio);
+        if (portfolioTrigger) { portfolioTrigger.focus(); portfolioTrigger = null; }
+    }
+
+    function trapFocusPortfolio(e) {
+        const portfolioSection = document.getElementById('portfolioSection');
+        if (e.key === 'Escape') { hidePortfolio(); return; }
+        if (e.key !== 'Tab') return;
+        const focusable = portfolioSection.querySelectorAll('button:not([disabled]), [tabindex]:not([tabindex="-1"])');
+        const first = focusable[0]; const last = focusable[focusable.length - 1];
+        if (e.shiftKey) { if (document.activeElement === first) { e.preventDefault(); last.focus(); } }
+        else { if (document.activeElement === last) { e.preventDefault(); first.focus(); } }
+    }
+
+    if (portfolioContainer) {
+        let scrollRaf = null;
+        portfolioContainer.addEventListener('scroll', function() {
+            if (scrollRaf) cancelAnimationFrame(scrollRaf);
+            scrollRaf = requestAnimationFrame(() => {
+                const newSlide = getCenteredSlideIndex();
+                if (newSlide !== currentSlide) { currentSlide = newSlide; updatePagination(); updateNavigationButtons(); }
+            });
+        });
+        portfolioContainer.addEventListener('wheel', (e) => {
+            e.preventDefault(); e.stopPropagation();
+            portfolioContainer.scrollLeft += (e.deltaY || e.deltaX);
+        }, { passive: false });
+        portfolioContainer.addEventListener('touchstart', function(e) { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+        portfolioContainer.addEventListener('touchend', function(e) { touchEndX = e.changedTouches[0].screenX; handleSwipe(); }, { passive: true });
+    }
+
+    function getCenteredSlideIndex() {
+        const cards = portfolioContainer.querySelectorAll('.portfolio-card');
+        if (!cards.length) return 0;
+        const containerRect = portfolioContainer.getBoundingClientRect();
+        const centerX = containerRect.left + containerRect.width / 2;
+        let bestIndex = 0, bestDist = Infinity;
+        cards.forEach((card, i) => {
+            const r = card.getBoundingClientRect();
+            const dist = Math.abs(r.left + r.width / 2 - centerX);
+            if (dist < bestDist) { bestDist = dist; bestIndex = i; }
+        });
+        return bestIndex;
+    }
+
+    function goToSlide(index) {
+        const cards = portfolioContainer.querySelectorAll('.portfolio-card');
+        const maxSlide = cards.length - 1;
+        if (index < 0) index = 0;
+        if (index > maxSlide) index = maxSlide;
+        currentSlide = index;
+        const card = cards[index];
+        const containerRect = portfolioContainer.getBoundingClientRect();
+        const cardRect = card.getBoundingClientRect();
+        const target = portfolioContainer.scrollLeft + cardRect.left - containerRect.left - (containerRect.width - cardRect.width) / 2;
+        portfolioContainer.scrollTo({ left: target, behavior: 'smooth' });
+        updatePagination();
+        updateNavigationButtons();
+    }
+
+    function updatePagination() {
+        document.querySelectorAll('.pagination-dot').forEach((dot, i) => dot.classList.toggle('active', i === currentSlide));
+    }
+
+    function updateNavigationButtons() {
+        const prevBtn = document.querySelector('.portfolio-nav.prev');
+        const nextBtn = document.querySelector('.portfolio-nav.next');
+        const maxSlide = document.querySelectorAll('.portfolio-card').length - 1;
+        if (prevBtn) prevBtn.disabled = currentSlide === 0;
+        if (nextBtn) nextBtn.disabled = currentSlide === maxSlide;
+    }
+
+    let touchStartX = 0, touchEndX = 0;
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        if (touchEndX < touchStartX - swipeThreshold) goToSlide(currentSlide + 1);
+        if (touchEndX > touchStartX + swipeThreshold) goToSlide(currentSlide - 1);
+    }
+
+    function switchImage(button, imageId) {
+        const portfolioCard = button.closest('.portfolio-card');
+        portfolioCard.querySelectorAll('.insight-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        portfolioCard.querySelectorAll('.portfolio-image').forEach(img => img.classList.add('hidden'));
+        const selectedImage = document.getElementById(imageId);
+        if (selectedImage) selectedImage.classList.remove('hidden');
+    }
+
+    updateNavigationButtons();
+
+    // ── Keyboard Shortcuts ──────────────────────────────────
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            const mobileNav = document.getElementById('mobileNav');
+            if (mobileNav && mobileNav.classList.contains('active')) { closeMobileMenu(); return; }
+            if (document.getElementById('portfolioSection').classList.contains('active')) { hidePortfolio(); return; }
+            const activeModals = document.querySelectorAll('.modal.active');
+            if (activeModals.length > 0) closeModal(activeModals[0].id.replace('Modal',''));
+        }
+    });
+
+    // ── Form Submission ─────────────────────────────────────
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const templateParams = {
+            name:    document.getElementById('name').value,
+            email:   document.getElementById('email').value,
+            company: document.getElementById('company').value || 'Non renseigné',
+            website: document.getElementById('website').value || 'Non renseigné',
+            project: document.getElementById('project').value,
+            message: document.getElementById('message').value || 'Pas de message'
+        };
+        const btn = document.getElementById('submitBtn');
+        btn.classList.add('loading');
+        btn.textContent = 'Envoi en cours';
+        trackEvent('form_submit_attempt', { project_type: templateParams.project });
+
+        emailjs.send("service_xl8mfv4", "template_4gwxouq", templateParams)
+            .then(() => {
+                trackEvent('form_submit_success', { project_type: templateParams.project });
+                document.getElementById('leftcontent').style.display = 'none';
+                const calendlyBlock = document.getElementById('calendlyBlock');
+                calendlyBlock.style.display = 'block';
+                if (window.Calendly) Calendly.initInlineWidgets();
+                calendlyBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, (error) => {
+                trackEvent('form_submit_error', { error_type: error.text || 'unknown' });
+                btn.classList.remove('loading');
+                btn.textContent = 'Démarrer la conversation →';
+                alert('❌ Erreur d\'envoi. Écrivez-moi directement : jacob.radonirina@gmail.com');
+            });
+    });
+
+    // ── Social Tracking ─────────────────────────────────────
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.social-links a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = e.currentTarget.getAttribute('href') || '';
+                const platform = href.includes('linkedin') ? 'linkedin' : href.includes('malt') ? 'malt' : href.includes('behance') ? 'behance' : 'email';
+                trackEvent('social_click', { platform, location: 'footer' });
+            });
+        });
+        syncMobileLangSwitcher();
+    });
+
+    // ── Service Worker ──────────────────────────────────────
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js').then(() => {}).catch(() => {});
+        });
+    }
+</script>
+</body>
+</html>
