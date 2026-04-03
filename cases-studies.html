@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-67D06JS6R4"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-67D06JS6R4');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PRKVLWBW');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "vjhao9vgsp");
+    </script>
+    <!-- End Microsoft Clarity -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cases Studies — Jacob Houmadi · Senior Product Designer</title>
+    <meta name="description" content="Études de cas UX/UI — Venue Social Layer, Tango Mobile App, Tango Checkout. Résultats mesurables pour PME et startups B2B.">
+    <meta name="author" content="Jacob Houmadi">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jacob-houmadi.com/cases-studies.html">
+    <meta name="theme-color" content="#0A0E1A">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jacob-houmadi.com/cases-studies.html">
+    <meta property="og:title" content="Cases Studies — Jacob Houmadi · Senior Product Designer">
+    <meta property="og:description" content="Études de cas UX/UI — Venue Social Layer, Tango Mobile App, Tango Checkout.">
+    <meta property="og:image" content="https://jacob-houmadi.com/og-image.jpg">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cookie-consent.css">
+    <link rel="stylesheet" href="nav-mobile.css">
+
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- Calendly -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+    <script src="translations.js" defer></script>
+</head>
+<body class="cases-studies-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRKVLWBW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- Cookie Consent Banner -->
+<div id="cookieConsent" class="cookie-consent" style="display: none;">
+    <div class="cookie-content">
+        <div class="cookie-text">
+            <h3 data-i18n="cookie.01">🍪 Cookies et confidentialité</h3>
+            <p data-i18n-html="cookie.02">Ce site utilise des cookies essentiels pour son fonctionnement (formulaire de contact via EmailJS). Aucun cookie publicitaire ou de tracking. <a href="politique-confidentialite.html">En savoir plus</a></p>
+        </div>
+        <div class="cookie-buttons">
+            <button onclick="acceptCookies()" class="cookie-accept">Accepter</button>
+            <button onclick="refuseCookies()" class="cookie-refuse">Refuser</button>
+        </div>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header>
+    <button class="logo" onclick="window.location.href='index.html'" aria-label="Jacob Houmadi — Accueil">Jacob<span aria-hidden="true">.</span></button>
+    <nav class="desktop-nav">
+        <ul>
+            <li><button onclick="showPortfolio()" data-i18n="nav.portfolio">Portfolio</button></li>
+            <li><a href="cases-studies.html" class="nav-active" data-i18n="nav.casestudies">Cases studies</a></li>
+            <li><button onclick="openModal('offres')" data-i18n="nav.services">Offres</button></li>
+            <li><button onclick="openModal('temoignages')" data-i18n="nav.testimonials">Témoignages</button></li>
+            <li><button onclick="openModal('faq')" data-i18n="nav.faq">FAQ</button></li>
+            <li>
+                <label for="lang-select" class="sr-only">Langue / Language</label>
+                <select class="lang-select" onchange="switchLanguage(this.value)" aria-label="Sélectionner la langue">
+                    <option value="fr">FR</option>
+                    <option value="en">EN</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Bouton Hamburger Mobile -->
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</header>
+
+<!-- Menu Mobile Overlay -->
+<div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="closeMobileMenu()"></div>
+
+<!-- Menu Mobile -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobile">
+    <div class="mobile-nav-header">
+        <button class="logo-mobile"><img src="logo-jacob.png" alt="logo"></button>
+        <button class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="Fermer le menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+    </div>
+    <ul class="mobile-nav-links">
+        <li><button onclick="showPortfolio(); closeMobileMenu();" data-i18n="nav.portfolio">Portfolio</button></li>
+        <li><a href="cases-studies.html" class="nav-active" data-i18n="nav.casestudies">Cases studies</a></li>
+        <li><button onclick="openModal('offres'); closeMobileMenu();" data-i18n="nav.services">Offres</button></li>
+        <li><button onclick="openModal('temoignages'); closeMobileMenu();" data-i18n="nav.testimonials">Témoignages</button></li>
+        <li><button onclick="openModal('faq'); closeMobileMenu();" data-i18n="nav.faq">FAQ</button></li>
+        <li>
+            <div class="mobile-lang-switcher" role="group" aria-label="Langue / Language">
+                <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')" aria-pressed="true" aria-label="Français">FR</button>
+                <button class="lang-btn" data-lang="en" onclick="setLang('en')" aria-pressed="false" aria-label="English">EN</button>
+            </div>
+        </li>
+    </ul>
+    <div class="mobile-nav-footer">
+        <p data-i18n="mobilenav.p">Transformons votre projet ensemble</p>
+        <button onclick="document.getElementById('landing').scrollIntoView({behavior:'smooth'}); closeMobileMenu();" class="mobile-cta" data-i18n="mobilenav.cta">Me contacter</button>
+    </div>
+    <div>
+        <ul class="footer-nav-legals">
+            <li><a href="mentions-legales.html" data-i18n="footer.legal1">Mentions légales</a></li>
+            <li><a href="politique-confidentialite.html" data-i18n="footer.legal2">Politiques de confidentialités</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ── CASES STUDIES GRID ──────────────────────────────── -->
+<section class="cs-page-section">
+    <div class="cs-page-container">
+
+        <h1 class="cs-page-title" data-i18n="casestudies.title">Cases studies</h1>
+
+        <div class="cs-page-grid">
+
+            <!-- Card 1 · Venue — Social Layer -->
+            <a href="venue-case-study.html" class="cs-card cs-card--venue" id="venue">
+                <div class="cs-card-header">
+                    <span class="cs-card-logo-text cs-card-logo-text--venue">VENUE</span>
+                    <h2 data-i18n="casestudies.venue.title">Social Layer</h2>
+                    <p data-i18n="casestudies.venue.desc">Increasing retention without adding friction or moderation cost.</p>
+                </div>
+                <div class="cs-card-visual">
+                    <img src="Captures/venue_d7_d30-fr.webp"
+                         data-lang-en="Captures/venue_d7_d30-en.webp"
+                         data-lang-fr="Captures/venue_d7_d30-fr.webp"
+                         alt="Venue Social Layer" loading="lazy">
+                </div>
+            </a>
+
+            <!-- Card 2 · Tango — Mobile App -->
+            <a href="#tango-mobile" class="cs-card cs-card--tango" id="tango-mobile">
+                <div class="cs-card-header">
+                    <img src="logos/Logo_tango.svg" alt="Tango" class="cs-card-logo cs-card-logo--light" loading="lazy">
+                    <h2 data-i18n="casestudies.tango.title">Mobile App</h2>
+                    <p data-i18n="casestudies.tango.desc">Redesigning a telco e-commerce for conversion.</p>
+                </div>
+                <div class="cs-card-visual">
+                    <img src="Captures/Tango-refonte-dashboard-fr.webp"
+                         data-lang-en="Captures/Tango-refonte-dashboard-en.webp"
+                         data-lang-fr="Captures/Tango-refonte-dashboard-fr.webp"
+                         alt="Tango Mobile App" loading="lazy">
+                </div>
+            </a>
+
+            <!-- Card 3 · Tango — Checkout -->
+            <a href="#tango-checkout" class="cs-card cs-card--white" id="tango-checkout">
+                <div class="cs-card-header">
+                    <img src="logos/Logo_tango.svg" alt="Tango" class="cs-card-logo" loading="lazy">
+                    <h2 data-i18n="casestudies.checkout.title">Checkout</h2>
+                    <p data-i18n="casestudies.checkout.desc">Simplifying the purchase funnel to reduce drop-off.</p>
+                </div>
+                <div class="cs-card-visual">
+                    <img src="Captures/Tango.lu-parcour-simplifie-fr.webp"
+                         data-lang-en="Captures/Tango.lu-parcour-simplifie-en.webp"
+                         data-lang-fr="Captures/Tango.lu-parcour-simplifie-fr.webp"
+                         alt="Tango Checkout" loading="lazy">
+                </div>
+            </a>
+
+            <!-- Card 4 · Axian — Media Room (upcoming) -->
+            <div class="cs-card cs-card--upcoming">
+                <div class="cs-card-header">
+                    <img src="logos/axian_logo.png" alt="Axian" class="cs-card-logo" loading="lazy">
+                    <h2 data-i18n="casestudies.axian.mediaroom.title">Media Room</h2>
+                    <p data-i18n="casestudies.axian.upcoming">Upcoming</p>
+                </div>
+                <div class="cs-card-visual cs-card-visual--upcoming" aria-hidden="true"></div>
+            </div>
+
+            <!-- Card 5 · Axian — Learning (upcoming) -->
+            <div class="cs-card cs-card--upcoming">
+                <div class="cs-card-header">
+                    <img src="logos/axian_logo.png" alt="Axian" class="cs-card-logo" loading="lazy">
+                    <h2 data-i18n="casestudies.axian.learning.title">Learning</h2>
+                    <p data-i18n="casestudies.axian.upcoming">Upcoming</p>
+                </div>
+                <div class="cs-card-visual cs-card-visual--upcoming" aria-hidden="true"></div>
+            </div>
+
+            <!-- Card 6 · Axian — Website (upcoming) -->
+            <div class="cs-card cs-card--upcoming">
+                <div class="cs-card-header">
+                    <img src="logos/axian_logo.png" alt="Axian" class="cs-card-logo" loading="lazy">
+                    <h2 data-i18n="casestudies.axian.website.title">Website</h2>
+                    <p data-i18n="casestudies.axian.upcoming">Upcoming</p>
+                </div>
+                <div class="cs-card-visual cs-card-visual--upcoming" aria-hidden="true"></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ── MAIN CONTENT (contact) ──────────────────────────── -->
+<div class="main-content" id="landing">
+    <div class="container">
+
+        <!-- LEFT SIDE -->
+        <div class="right-side">
+            <div class="quote">
+                <p data-i18n-html="quote.text">Je ne commence pas par Figma. <br><span>Je commence par les problèmes de votre produit.</span></p>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-label" data-i18n="stat.sector.label">Fintech</div>
+                    <div class="stat-number" data-i18n="stat.sector">SaaS · B2B</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label" data-i18n="stat.awards">Discovery</div>
+                    <div class="stat-number" data-i18n="stat.awards.label">→ Handoff</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-i18n="stat.exp">10 ans</div>
+                    <div class="stat-label" data-i18n="stat.exp.label">d'expériences</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE (formulaire) -->
+        <div class="left-side">
+            <div class="content" id="leftcontent">
+                <h2 data-i18n-html="main.h2">Pour les équipes B2B qui ont perdu du temps avec des <span>designers qui n'ont pas compris le produit.</span></h2>
+                <p class="subtitle" data-i18n="main.subtitle">Parlez-moi de votre projet. Je vous réponds sous 24h avec une proposition personnalisée.</p>
+
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" data-i18n="form.name">Nom complet</label>
+                            <input type="text" id="name" name="name" placeholder="e.g. Jhon Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="form.email">Email professionnel</label>
+                            <input type="email" id="email" name="email" placeholder="e.g. john.doe@domain.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group" data-i18n-html="form.company">
+                            <label for="company">Votre entreprise</label>
+                            <input type="text" id="company" name="company" placeholder="e.g SpaceX" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="website" data-i18n="form.website">Site web</label>
+                            <input type="url" id="website" name="website" placeholder="https://spacex.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group m-tp">
+                        <label for="project" data-i18n="form.project">Votre situation</label>
+                        <select id="project" name="project" required>
+                            <option value=""           data-i18n="project.select">Sélectionnez...</option>
+                            <option value="structurer" data-i18n="project.structurer">Structurer – produit existant (4 500€ – 6 000€)</option>
+                            <option value="construire" data-i18n="project.construire">Construire – from scratch ou refonte (9 000€ – 12 000€)</option>
+                            <option value="renforcer"  data-i18n="project.renforcer">Renforcer – mission embarquée (TJM)</option>
+                            <option value="autre"      data-i18n="project.autre">Autre à discuter</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group m-tp" data-i18n-html="form.message">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Votre message ..."></textarea>
+                    </div>
+
+                    <div class="form-group privacy-check">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text" data-i18n-html="form.consent">
+                                J'accepte que mes données soient utilisées pour traiter ma demande, conformément à la
+                                <a href="politique-confidentialite.html">Politique de confidentialité</a>.
+                            </span>
+                        </label>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="btn-primary" data-i18n="form.submit">Démarrer la conversation →</button>
+                </form>
+            </div>
+
+            <!-- Bloc Calendly — visible après envoi -->
+            <div id="calendlyBlock" style="display:none;">
+                <div class="calendly-success-header">
+                    <h3 data-i18n="calendly.title">✅ Message envoyé, merci !</h3>
+                    <p data-i18n-html="calendly.text">Parfait, je reviens vers vous sous 24h. En attendant,
+                        <strong>réservez directement un créneau</strong> pour qu'on parle de votre projet.</p>
+                </div>
+                <div class="calendly-inline-widget"
+                    data-url="https://calendly.com/jacob-radonirina/30min?hide_gdpr_banner=1&primary_color=0066ff"
+                    style="min-width:280px; height:660px;">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ── FOOTER ──────────────────────────────────────────── -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-text">© <span id="year"></span> Jacob HOUMADI</div>
+        <nav class="desktop-nav">
+            <ul class="footer-nav-legals">
+                <li><a href="mentions-legales.html"          data-i18n="footer.legal1">Mentions légales</a></li>
+                <li><a href="politique-confidentialite.html" data-i18n="footer.legal2">Politique de confidentialité</a></li>
+            </ul>
+        </nav>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/jacob-houmadi" target="_blank" title="LinkedIn" aria-label="Linkedin">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+            <a href="https://www.malt.fr/profile/jacobhoumadi" target="_blank" aria-label="Malt">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.5384 3.46333C18.7268 1.65172 16.7916 2.82425 15.5805 4.03533L9.86041 9.75578L4.1397 15.4764C2.92862 16.6873 1.66101 18.5273 3.5677 20.4338C5.47439 22.3408 7.31439 21.073 8.52522 19.8619L14.2457 14.1414L19.9661 8.4211C21.1773 7.20989 22.3497 5.27468 20.5384 3.46333Z"/>
+                    <path d="M9.60804 2.99443L12.0306 5.41685L14.4964 2.951C14.6638 2.7832 14.8338 2.62748 15.0048 2.48062C14.7466 1.1778 14.0032 0 12.0294 0C10.0519 0 9.30944 1.18243 9.05273 2.48807C9.23724 2.64778 9.42161 2.80787 9.60804 2.99443Z"/>
+                    <path d="M14.4951 20.9888L12.0308 18.5244L9.60956 20.9454C9.4257 21.1294 9.24274 21.2975 9.06055 21.4554C9.3382 22.7835 10.124 24 12.0298 24C13.9406 24 14.7254 22.7769 15.0012 21.4446C14.8317 21.2987 14.662 21.1557 14.4951 20.9888Z"/>
+                    <path d="M8.58048 8.86719H3.91012C2.19757 8.86719 0 9.40656 0 11.9683C0 13.8797 1.22342 14.6646 2.55604 14.9403C2.71382 14.7583 8.58048 8.86719 8.58048 8.86719Z"/>
+                    <path d="M21.5126 8.9917C21.3647 9.16361 15.4858 15.0696 15.4858 15.0696H20.0899C21.8025 15.0696 24 14.665 24 11.9685C24 9.9913 22.818 9.24841 21.5126 8.9917Z"/>
+                    <path d="M10.1108 7.33427L10.9452 6.4999L8.52418 4.07864C7.31297 2.86768 5.47322 1.59994 3.56653 3.50663C2.16838 4.90478 2.47892 6.26555 3.22053 7.37024C3.4464 7.35341 10.1108 7.33427 10.1108 7.33427Z"/>
+                    <path d="M13.9496 16.6027L13.113 17.4392L15.5791 19.9051C16.7902 21.1163 18.7254 22.2886 20.5368 20.4772C21.8884 19.1254 21.5783 17.7057 20.831 16.5684C20.5905 16.5857 13.9496 16.6027 13.9496 16.6027Z"/>
+                </svg>
+            </a>
+            <a href="https://www.behance.net/jacobhoumadi" target="_blank" aria-label="Behance">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_cs_behance)">
+                    <path d="M18 11.4462C18.1846 11.7231 18.3692 12 18.4615 12.4615H15.5077C15.5077 12.3692 15.5077 12.1846 15.6 12C15.6923 11.8154 15.6923 11.7231 15.8769 11.5385C15.9692 11.3538 16.1538 11.2615 16.3385 11.1692C16.5231 11.0769 16.8 10.9846 17.0769 10.9846C17.4462 11.0769 17.8154 11.1692 18 11.4462ZM9.50769 10.8C9.69231 10.6154 9.87692 10.3385 9.87692 9.96923C9.87692 9.78462 9.87692 9.6 9.78462 9.41538C9.69231 9.32308 9.6 9.13846 9.50769 9.13846C9.41538 9.04615 9.23077 9.04615 9.04615 8.95385H6.64615V11.0769H8.67692C8.95385 11.0769 9.23077 10.9846 9.50769 10.8ZM8.76923 12.3692H6.64615V14.8615H8.76923C8.95385 14.8615 9.13846 14.8615 9.32308 14.7692C9.50769 14.7692 9.69231 14.6769 9.78462 14.5846C9.87692 14.4923 10.0615 14.4 10.1538 14.2154C10.2462 14.0308 10.2462 13.8462 10.2462 13.6615C10.2462 13.2 10.1538 12.8308 9.87692 12.6462C9.6 12.4615 9.23077 12.3692 8.76923 12.3692ZM24 4.52308V19.4769C24 21.9692 21.9692 24 19.4769 24H4.52308C2.03077 24 0 21.9692 0 19.4769V4.52308C0 2.03077 2.03077 0 4.52308 0H19.4769C21.9692 0 24 2.03077 24 4.52308ZM15.1385 8.86154H18.8308V7.93846H15.1385V8.86154ZM12.1846 13.8462C12.1846 13.2923 12.0923 12.8308 11.8154 12.3692C11.5385 12 11.1692 11.7231 10.6154 11.5385C10.9846 11.3538 11.3538 11.0769 11.5385 10.8C11.7231 10.5231 11.8154 10.1538 11.8154 9.69231C11.8154 9 11.7231 8.95385 11.6308 8.58462C11.4462 8.30769 11.2615 8.03077 11.0769 7.93846C10.8 7.75385 10.5231 7.66154 10.1538 7.56923C9.69231 7.38462 9.32308 7.38462 8.86154 7.38462H4.61538V16.4308H9.04615C9.41538 16.4308 9.87692 16.3385 10.2462 16.2462C10.6154 16.1538 10.9846 15.9692 11.2615 15.7846C11.5385 15.6 11.8154 15.3231 12 14.9538C12.0923 14.6769 12.1846 14.3077 12.1846 13.8462ZM15.5077 13.5692H20.2154C20.2154 13.0154 20.2154 12.5538 20.1231 12.0923C20.0308 11.6308 19.8462 11.1692 19.5692 10.8923C19.2923 10.5231 18.9231 10.2462 18.5538 10.0615C18.0923 9.87692 17.6308 9.69231 17.0769 9.69231C16.6154 9.69231 16.1538 9.78462 15.6923 9.96923C15.3231 10.1538 14.9538 10.4308 14.5846 10.7077C14.3077 10.9846 14.0308 11.3538 13.9385 11.8154C13.7538 12.2769 13.6615 12.7385 13.6615 13.2C13.6615 13.8923 13.7538 14.2154 13.9385 14.5846C14.1231 15.0462 14.3077 15.4154 14.5846 15.6923C14.8615 15.9692 15.2308 16.2462 15.6 16.4308C16.0615 16.6154 16.5231 16.7077 16.9846 16.7077C17.7231 16.7077 18.3692 16.5231 18.9231 16.1538C19.4769 15.7846 19.8462 15.2308 20.1231 14.4923H18.5538C18.4615 14.6769 18.3692 14.8615 18.0923 15.0462C17.8154 15.2308 17.5385 15.3231 17.1692 15.3231C16.7077 15.3231 16.2462 15.2308 15.9692 14.9538C15.6923 14.5846 15.5077 14.1231 15.5077 13.5692Z" fill="currentColor"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_cs_behance">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+            </a>
+            <a href="mailto:jacob.radonirina@gmail.com" title="Email" aria-label="Email">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- ── PORTFOLIO SECTION ─────────────────────────────────── -->
+<div class="portfolio-section" id="portfolioSection" tabindex="-1">
+    <button class="portfolio-close" id="portfolioClose" onclick="hidePortfolio()" aria-label="Fermer le portfolio">×</button>
+    <div class="portfolio-container" id="portfolioContainer">
+
+        <!-- Card 0 · Venue -->
+        <div class="portfolio-card" data-index="0">
+            <div class="portfolio-right">
+                <div class="portfolio-image" id="venue-1" style="background:#FEDED7;">
+                    <img src="Captures/venue_d7_d30-fr.webp" data-lang-en="Captures/venue_d7_d30-en.webp" data-lang-fr="Captures/venue_d7_d30-fr.webp" alt="Venue D7-D30" loading="lazy"/>
+                </div>
+                <div class="portfolio-image hidden" id="venue-2" style="background:#FDCBC2;">
+                    <img src="Captures/venue_onboarding-fr.webp" data-lang-en="Captures/venue_onboarding-en.webp" data-lang-fr="Captures/venue_onboarding-fr.webp" alt="Venue onboarding" loading="lazy"/>
+                </div>
+            </div>
+            <div class="portfolio-left">
+                <div>
+                    <h3 data-i18n="portfolio.venue.title">Venue · SuperBloom</h3>
+                    <p class="role" data-i18n="portfolio.venue.role">Product Designer · Jeu de design d'intérieur · 4M+ joueurs</p>
+                    <p data-i18n-html="portfolio.venue.desc">Venue est un jeu de design d'intérieur avec 4M+ joueurs.<span class="mobile-hidden"><br/>Mission : introduire une dimension sociale sans créer de pression ni de compétition.</span></p>
+                </div>
+                <div class="portfolio-insights">
+                    <h4 data-i18n="portfolio.venue.insights">Réalisations clés :</h4>
+                    <button class="insight-btn active" onclick="switchImage(this,'venue-1')"><h6 data-i18n="portfolio.venue.btn1">Renforcer la rétention J7–J30</h6><span data-i18n="portfolio.venue.btn1.desc">Design Studios collectifs ancrés dans une dynamique hebdomadaire</span></button>
+                    <button class="insight-btn" onclick="switchImage(this,'venue-2')"><h6 data-i18n="portfolio.venue.btn2">Réduire la friction d'engagement</h6><span data-i18n="portfolio.venue.btn2.desc">Explorer sans s'engager, partir sans culpabiliser</span></button>
+                    <button class="insight-btn"><h6 data-i18n="portfolio.venue.btn3">Créer des interactions sans modération</h6><span data-i18n="portfolio.venue.btn3.desc">Système de réactions guidées</span></button>
+                    <button class="insight-btn"><h6 data-i18n="portfolio.venue.btn4">Intégrer des moments émotionnels</h6><span data-i18n="portfolio.venue.btn4.desc">Récompenses collectives intégrées dans l'expérience</span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 1 · Tango.lu E-Commerce -->
+        <div class="portfolio-card" data-index="1">
+            <div class="portfolio-right">
+                <div class="portfolio-image" id="tangoweb-1"><img src="Captures/Tango.lu-offre-avant-fr.webp" data-lang-en="Captures/Tango.lu-offre-avant-en.webp" data-lang-fr="Captures/Tango.lu-offre-avant-fr.webp" alt="Tango offre avant" loading="lazy"/></div>
+                <div class="portfolio-image hidden" id="tangoweb-2" style="background:linear-gradient(135deg,#667eea,#764ba2);"><img src="Captures/Tango.lu-offre-apres-fr.webp" data-lang-en="Captures/Tango.lu-offre-apres-en.webp" data-lang-fr="Captures/Tango.lu-offre-apres-fr.webp" alt="Tango offre après"/></div>
+                <div class="portfolio-image hidden" id="tangoweb-3" style="background:linear-gradient(135deg,#667eea,#764ba2);"><img src="Captures/Tango.lu-parcour-simplifie-fr.webp" data-lang-en="Captures/Tango.lu-parcour-simplifie-en.webp" data-lang-fr="Captures/Tango.lu-parcour-simplifie-fr.webp" alt="Tango parcours"/></div>
+                <div class="portfolio-image hidden" id="tangoweb-4" style="background:linear-gradient(135deg,#667eea,#667eea);"><img src="Captures/Tango.lu-design-system-fr.webp" data-lang-en="Captures/Tango.lu-design-system-en.webp" data-lang-fr="Captures/Tango.lu-design-system-fr.webp" alt="Tango design system"/></div>
+            </div>
+            <div class="portfolio-left">
+                <div>
+                    <h3 data-i18n="portfolio.tango_web.title">Tango.lu E-Commerce</h3>
+                    <p class="role" data-i18n="portfolio.tango_web.role">UX/UI Designer · Opérateur télécom Luxembourg</p>
+                    <p data-i18n-html="portfolio.tango_web.desc">Le site web Tango.lu est la principale porte d'entrée pour l'acquisition.<span class="mobile-hidden"><br/>Mission : optimiser le funnel d'achat.</span></p>
+                </div>
+                <div class="portfolio-insights">
+                    <h4 data-i18n="portfolio.tango_web.insights">Réalisations clés :</h4>
+                    <button class="insight-btn active" onclick="switchImage(this,'tangoweb-1')"><h6 data-i18n="portfolio.tango_web.btn1">Page offre AVANT</h6><span data-i18n="portfolio.tango_web.btn1.desc">Sous-expositions observées</span></button>
+                    <button class="insight-btn" onclick="switchImage(this,'tangoweb-2')"><h6 data-i18n="portfolio.tango_web.btn2">Page offre APRÈS</h6><span data-i18n="portfolio.tango_web.btn2.desc">Comparaison facilitée</span></button>
+                    <button class="insight-btn" onclick="switchImage(this,'tangoweb-3')"><h6 data-i18n="portfolio.tango_web.btn3">Optimiser le parcours</h6><span data-i18n="portfolio.tango_web.btn3.desc">Clarification des étapes clés</span></button>
+                    <button class="insight-btn" onclick="switchImage(this,'tangoweb-4')"><h6 data-i18n="portfolio.tango_web.btn4">Cohérence cross-plateforme</h6><span data-i18n="portfolio.tango_web.btn4.desc">Design system partagé avec l'app mobile</span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 · MyTango Mobile App -->
+        <div class="portfolio-card" data-index="2">
+            <div class="portfolio-right">
+                <div class="portfolio-image" id="mytango-4" style="background:linear-gradient(135deg,#4facfe,#00f2fe);"><img src="Captures/Tango-parcours-simplifie-fr.webp" data-lang-en="Captures/Tango-parcours-simplifie-en.webp" data-lang-fr="Captures/Tango-parcours-simplifie-fr.webp" alt="Tango parcours simplifié" loading="lazy"/></div>
+                <div class="portfolio-image hidden" id="mytango-2" style="background:linear-gradient(135deg,#667eea,#764ba2);"><img src="Captures/MyTango-note-hausse-fr.webp" data-lang-en="Captures/MyTango-note-hausse-en.webp" data-lang-fr="Captures/MyTango-note-hausse-fr.webp" alt="MyTango note hausse"/></div>
+            </div>
+            <div class="portfolio-left">
+                <div>
+                    <h3 data-i18n="portfolio.tango_app.title">MyTango Mobile App</h3>
+                    <h4 class="role" data-i18n="portfolio.tango_app.role">UX/UI Designer · Opérateur télécom Luxembourg</h4>
+                    <p data-i18n-html="portfolio.tango_app.desc">Tango est un opérateur télécom luxembourgeois.<span class="mobile-hidden"><br/>Mission : refondre l'expérience de l'app mobile.</span></p>
+                </div>
+                <div class="portfolio-insights">
+                    <h4 data-i18n="portfolio.tango_app.insights">Réalisations clés :</h4>
+                    <button class="insight-btn active" onclick="switchImage(this,'mytango-4')"><h6 data-i18n="portfolio.tango_app.btn3">Simplifier une offre complexe</h6><span data-i18n="portfolio.tango_app.btn3.desc">Activation intuitive</span></button>
+                    <button class="insight-btn" onclick="switchImage(this,'mytango-2')"><h6 data-i18n="portfolio.tango_app.btn4">Améliorer la satisfaction</h6><span data-i18n="portfolio.tango_app.btn4.desc">Note App Store améliorée</span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 · Axian Group -->
+        <div class="portfolio-card" data-index="3">
+            <div class="portfolio-right">
+                <div class="portfolio-image" id="axian-1" style="background:#D30F3F;"><img src="Captures/Axian-vision-business-fr.webp" data-lang-en="Captures/Axian-vision-business-en.webp" data-lang-fr="Captures/Axian-vision-business-fr.webp" alt="Axian vision business" loading="lazy"/></div>
+                <div class="portfolio-image hidden" id="axian-2" style="background:#D30F3F;"><img src="Captures/Axian-unification-ecosysteme-fr.webp" data-lang-en="Captures/Axian-unification-ecosysteme-en.webp" data-lang-fr="Captures/Axian-unification-ecosysteme-fr.webp" alt="Axian écosystème"/></div>
+                <div class="portfolio-image hidden" id="axian-3" style="background:#C0CAD1;"><img src="Captures/Axian-refonte-corporate-fr.webp" data-lang-en="Captures/Axian-refonte-corporate-en.webp" data-lang-fr="Captures/Axian-refonte-corporate-fr.webp" alt="Axian refonte"/></div>
+                <div class="portfolio-image hidden" id="axian-4" style="background:#151D42;"><img src="Captures/Axian-4-prix-creative-fr.webp" data-lang-en="Captures/Axian-4-prix-creative-en.webp" data-lang-fr="Captures/Axian-4-prix-creative-fr.webp" alt="Axian prix"/></div>
+            </div>
+            <div class="portfolio-left">
+                <div>
+                    <h3 data-i18n="portfolio.axian.title">Axian Group</h3>
+                    <p class="role" data-i18n="portfolio.axian.role">Digital Designer · Grand Groupe Panafricain</p>
+                    <p data-i18n-html="portfolio.axian.desc">Axian Group est l'un des plus grands groupes panafricains.<span class="mobile-hidden"><br/>5 ans en tant que Digital Designer.</span></p>
+                </div>
+                <div class="portfolio-insights">
+                    <h4 data-i18n="portfolio.tango_app.insights">Réalisations clés :</h4>
+                    <button class="insight-btn active" onclick="switchImage(this,'axian-1')"><h6 data-i18n="portfolio.axian.btn1">Incarner la vision business</h6><span data-i18n="portfolio.axian.btn1.desc">Identité culturelle "Afrixian"</span></button>
+                    <button class="insight-btn" onclick="switchImage(this,'axian-2')"><h6 data-i18n="portfolio.axian.btn2">Unifier l'écosystème</h6><span data-i18n="portfolio.axian.btn2.desc">5 secteurs sous une identité commune</span></button>
+                    <button class="insight-btn" onclick="switchImage(this,'axian-3')"><h6 data-i18n="portfolio.axian.btn3">Refondre le site web</h6><span data-i18n="portfolio.axian.btn3.desc">Architecture + UI + storytelling</span></button>
+                    <button class="insight-btn" onclick="switchImage(this,'axian-4')"><h6 data-i18n="portfolio.axian.btn4">4 prix Creatives 974 Awards</h6><span data-i18n="portfolio.axian.btn4.desc">Direction artistique reconnue</span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 · Silva Paris -->
+        <div class="portfolio-card" data-index="4">
+            <div class="portfolio-right">
+                <div class="portfolio-image" id="silva-1" style="background:#EAECF2;"><img src="Captures/Silva-identite-web-fr.webp" data-lang-en="Captures/Silva-identite-web-en.webp" data-lang-fr="Captures/Silva-identite-web-fr.webp" alt="Silva identité web" loading="lazy"/></div>
+                <div class="portfolio-image hidden" id="silva-2" style="background:#E4EAEF;"><img src="Captures/Silva-refonte-site-web-fr.webp" data-lang-en="Captures/Silva-refonte-site-web-en.webp" data-lang-fr="Captures/Silva-refonte-site-web-fr.webp" alt="Silva refonte"/></div>
+                <div class="portfolio-image hidden" id="silva-3" style="background:#F4F4EE;"><img src="Captures/Silva-design-system-fr.webp" data-lang-en="Captures/Silva-design-system-en.webp" data-lang-fr="Captures/Silva-design-system-fr.webp" alt="Silva design system"/></div>
+            </div>
+            <div class="portfolio-left">
+                <div>
+                    <h3 data-i18n="portfolio.silva.title">Silva Paris</h3>
+                    <p class="role" data-i18n="portfolio.silva.role">Direction Artistique Web / UX Design · Artisanat de luxe</p>
+                    <p data-i18n-html="portfolio.silva.desc">Silva Paris est une maison d'artisanat tapissier de luxe.<span class="mobile-hidden"><br/>Mon rôle : déclinaison digitale de l'identité de marque.</span></p>
+                </div>
+                <div class="portfolio-insights">
+                    <h4 data-i18n="portfolio.tango_app.insights">Réalisations clés :</h4>
+                    <button class="insight-btn active" onclick="switchImage(this,'silva-1')"><h6 data-i18n="portfolio.silva.btn1">Décliner l'identité web</h6><span data-i18n="portfolio.silva.btn1.desc">Adaptation des codes visuels</span></button>
+                    <button class="insight-btn" onclick="switchImage(this,'silva-2')"><h6 data-i18n="portfolio.silva.btn2">Optimiser l'architecture</h6><span data-i18n="portfolio.silva.btn2.desc">Parcours condensé, savoir-faire valorisé</span></button>
+                    <button class="insight-btn" onclick="switchImage(this,'silva-3')"><h6 data-i18n="portfolio.silva.btn3">Design system cohérent</h6><span data-i18n="portfolio.silva.btn3.desc">Composants UI réutilisables</span></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-pagination">
+            <div class="pagination-dot active" onclick="goToSlide(0)"></div>
+            <div class="pagination-dot" onclick="goToSlide(1)"></div>
+            <div class="pagination-dot" onclick="goToSlide(2)"></div>
+            <div class="pagination-dot" onclick="goToSlide(3)"></div>
+            <div class="pagination-dot" onclick="goToSlide(4)"></div>
+        </div>
+        <button class="portfolio-nav prev" onclick="goToSlide(currentSlide - 1)">‹</button>
+        <button class="portfolio-nav next" onclick="goToSlide(currentSlide + 1)">›</button>
+    </div>
+</div>
+
+<!-- ── MODAL OFFRES ──────────────────────────────────────── -->
+<div id="offresModal" class="modal">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeModal('offres')">×</button>
+        <div class="modal-body">
+            <h2 data-i18n="modal.offres.title">Mes Offres</h2>
+            <div class="offers-grid">
+                <div class="offer-card offer-dark offer-featured">
+                    <div class="offer-header">
+                        <h3 data-i18n="modal.offer2.title">Structurer</h3>
+                        <p class="offer-subtitle" data-i18n="modal.offer2.subtitle">Produit existant · Incohérence visuelle · Devs qui improvisent</p>
+                        <hr class="offer-separator">
+                    </div>
+                    <p class="offer-pitch" data-i18n="modal.offer2.pitch">Votre produit tourne déjà. Je viens poser un système — pour que chaque sprint parte d'une base solide, pas d'une page blanche.</p>
+                    <ul>
+                        <li data-i18n="modal.offer2.li1">Audit visuel de l'existant</li>
+                        <li data-i18n="modal.offer2.li2">Design system documenté basé sur votre charte</li>
+                        <li data-i18n="modal.offer2.li3">Maquettes haute-fidélité prêtes à implémenter</li>
+                        <li data-i18n="modal.offer2.li4">Guide de style + assets exportés pour les devs</li>
+                    </ul>
+                    <div class="offer-footer">
+                        <div class="offer-price-block">
+                            <span class="offer-price">4 500€ – 6 000€</span>
+                            <span class="offer-price-label" data-i18n="modal.offer2.duration">3-5 semaines</span>
+                        </div>
+                        <button class="offer-cta" data-i18n="offer.cta" onclick="goToContact('structurer')">Démarrer</button>
+                    </div>
+                </div>
+                <div class="offer-card offer-light">
+                    <div class="offer-header">
+                        <h3 data-i18n="modal.offer1.title">Construire</h3>
+                        <p class="offer-subtitle" data-i18n="modal.offer1.subtitle">Nouveau produit · Refonte complète · MVP</p>
+                        <hr class="offer-separator">
+                    </div>
+                    <p class="offer-pitch" data-i18n="modal.offer1.pitch">Vous partez de zéro. Je pose l'identité et l'interface ensemble — pour ne pas avoir à rattraper la cohérence en cours de route.</p>
+                    <ul>
+                        <li data-i18n="modal.offer1.li1">Audit de l'existant ou cadrage from scratch</li>
+                        <li data-i18n="modal.offer1.li2">Direction artistique + design system construits en parallèle</li>
+                        <li data-i18n="modal.offer1.li3">Wireframes, tests utilisateurs, maquettes haute-fidélité</li>
+                        <li data-i18n="modal.offer1.li4">Handoff développeurs + support 2 semaines</li>
+                    </ul>
+                    <div class="offer-footer">
+                        <div class="offer-price-block">
+                            <span class="offer-price">9 000€ – 12 000€</span>
+                            <span class="offer-price-label" data-i18n="modal.offer1.duration">8-10 semaines</span>
+                        </div>
+                        <button class="offer-cta" data-i18n="offer.cta" onclick="goToContact('construire')">Démarrer</button>
+                    </div>
+                </div>
+            </div>
+            <div class="additional-offer">
+                <h3 data-i18n="modal.addons.title">Mission — Renforcer</h3>
+                <ul>
+                    <li><span data-i18n="modal.addons.li1">Disponible en full remote ou hybride</span></li>
+                    <li><span data-i18n="modal.addons.li2">Figma, Agile, collaboration cross-fonctionnelle</span></li>
+                    <li><span data-i18n="modal.addons.li3">TJM</span> <strong style="color:var(--primary)">500€</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ── MODAL TÉMOIGNAGES ─────────────────────────────────── -->
+<div id="temoignagesModal" class="modal">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeModal('temoignages')">×</button>
+        <div class="modal-body">
+            <h2 data-i18n="modal.testimonials.title">Témoignages</h2>
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <p class="testimonial-text" data-i18n="testimonial.2.text">"J'ai d'abord connu Jacob à distance…"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><img src="Captures/Valérie-candat.jpg" alt=""></div>
+                        <div class="author-info">
+                            <h4 data-i18n="testimonial.2.name">Valérie Candat</h4>
+                            <p data-i18n="testimonial.2.role">Executive Assistant & Human Resources · ID+P</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text" data-i18n="testimonial.3.text">"Jacob était un bon élément au sein de notre équipe…"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><img src="Captures/Marine-raelison.jpg" alt=""></div>
+                        <div class="author-info">
+                            <h4 data-i18n="testimonial.3.name">Marine Raelison</h4>
+                            <p data-i18n="testimonial.3.role">Brand Strategy Director · AXIAN Group</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text" data-i18n="testimonial.4.text">"Expérience de travail fluide, collaborative, créative."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><img src="Captures/Caroline-meurisse.jpg" alt=""></div>
+                        <div class="author-info">
+                            <h4 data-i18n="testimonial.4.name">Caroline MEURISSE</h4>
+                            <p data-i18n="testimonial.4.role">Administrateur Général · Axian University</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text" data-i18n="testimonial.8.text">"Jacob est une vraie référence en matière de design."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><img src="Captures/theodorakus-bezafy.png" alt=""></div>
+                        <div class="author-info">
+                            <h4 data-i18n="testimonial.8.name">Theodorakus Bezafy</h4>
+                            <p data-i18n="testimonial.8.role">Motion Graphic Designer · Axian Group</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text" data-i18n="testimonial.1.text">"J'ai collaboré avec Jacob en tant qu'analyste développeur frontend…"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">T</div>
+                        <div class="author-info">
+                            <h4 data-i18n="testimonial.1.name">Théo</h4>
+                            <p data-i18n="testimonial.1.role">Analyste Développeur</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text" data-i18n="testimonial.5.text">"Jacob est toujours à l'écoute de la demande client…"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PE</div>
+                        <div class="author-info">
+                            <h4 data-i18n="testimonial.5.name">People Engagement & Communication Manager</h4>
+                            <p data-i18n="testimonial.5.role">Secteur Fintech & Corporate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ── MODAL FAQ ─────────────────────────────────────────── -->
+<div id="faqModal" class="modal">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeModal('faq')">×</button>
+        <div class="modal-body">
+            <h2 data-i18n="modal.faq.title">FAQ</h2>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.q1">Quelle est la différence entre les deux offres ?</button><div class="faq-answer" data-i18n-html="faq.a1">…</div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.q2">Fais-tu également le développement ?</button><div class="faq-answer" data-i18n="faq.a2">…</div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.q3">Quels livrables vais-je recevoir ?</button><div class="faq-answer" data-i18n-html="faq.a3">…</div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.q4">Combien de révisions sont incluses ?</button><div class="faq-answer" data-i18n-html="faq.a4">…</div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.q5">Comment se passe le paiement ?</button><div class="faq-answer" data-i18n-html="faq.a5">…</div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.q6">Travailles-tu avec des clients internationaux ?</button><div class="faq-answer" data-i18n="faq.a6">…</div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.q7">Proposes-tu un accompagnement après la livraison ?</button><div class="faq-answer" data-i18n="faq.a7">…</div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)" data-i18n="faq.q8">Quels secteurs d'activité connais-tu le mieux ?</button><div class="faq-answer" data-i18n="faq.a8">…</div></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+
+    // EmailJS
+    emailjs.init("69fgSb-btkXkWSBtI");
+
+    // ── Cookie Consent ──────────────────────────────────────
+    function checkCookieConsent() {
+        if (!localStorage.getItem('cookieConsent')) {
+            setTimeout(() => { document.getElementById('cookieConsent').style.display = 'block'; }, 1000);
+        }
+    }
+    function acceptCookies() { localStorage.setItem('cookieConsent','accepted'); document.getElementById('cookieConsent').style.display='none'; }
+    function refuseCookies() { localStorage.setItem('cookieConsent','refused');  document.getElementById('cookieConsent').style.display='none'; }
+    checkCookieConsent();
+
+    // ── Analytics ───────────────────────────────────────────
+    function trackEvent(eventName, eventParams = {}) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ 'event': eventName, ...eventParams });
+    }
+
+    // ── Modal Management ────────────────────────────────────
+    let modalTrigger = null;
+
+    function goToContact(projectValue) {
+        closeModal('offres');
+        if (projectValue) { const s = document.getElementById('project'); if (s) s.value = projectValue; }
+        document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function openModal(modalName) {
+        modalTrigger = document.activeElement;
+        closeAllModals();
+        const modal = document.getElementById(modalName + 'Modal');
+        if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            trackEvent('modal_open', { modal_name: modalName });
+            const closeBtn = modal.querySelector('.close-btn');
+            if (closeBtn) setTimeout(() => closeBtn.focus(), 50);
+            modal.addEventListener('keydown', trapFocusModal);
+        }
+    }
+
+    function closeModal(modalName) {
+        const modal = document.getElementById(modalName + 'Modal');
+        if (modal) { modal.classList.remove('active'); modal.removeEventListener('keydown', trapFocusModal); }
+        document.body.style.overflow = 'auto';
+        if (modalTrigger) { modalTrigger.focus(); modalTrigger = null; }
+    }
+
+    function closeAllModals() {
+        document.querySelectorAll('.modal.active').forEach(m => m.classList.remove('active'));
+        document.body.style.overflow = 'auto';
+    }
+
+    function trapFocusModal(e) {
+        const modal = e.currentTarget;
+        if (e.key === 'Escape') { closeModal(modal.id.replace('Modal','')); return; }
+        if (e.key !== 'Tab') return;
+        const focusable = modal.querySelectorAll('button:not([disabled]), a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        const first = focusable[0]; const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) { closeModal(event.target.id.replace('Modal','')); }
+    };
+
+    // ── FAQ ─────────────────────────────────────────────────
+    function toggleFaq(element) {
+        const faqItem = element.parentElement;
+        const isActive = faqItem.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+            item.querySelector('.faq-question').setAttribute('aria-expanded','false');
+        });
+        if (!isActive) { faqItem.classList.add('active'); element.setAttribute('aria-expanded','true'); }
+    }
+
+    // ── Mobile Menu ─────────────────────────────────────────
+    function toggleMobileMenu() {
+        document.getElementById('mobileNav').classList.contains('active') ? closeMobileMenu() : openMobileMenu();
+    }
+    function openMobileMenu() {
+        document.getElementById('mobileNav').classList.add('active');
+        document.getElementById('mobileMenuOverlay').classList.add('active');
+        document.body.style.overflow = 'hidden';
+        syncMobileLangSwitcher();
+        setTimeout(() => document.getElementById('mobileNav').querySelector('.mobile-menu-close').focus(), 50);
+    }
+    function closeMobileMenu() {
+        document.getElementById('mobileNav').classList.remove('active');
+        document.getElementById('mobileMenuOverlay').classList.remove('active');
+        document.body.style.overflow = 'auto';
+        document.querySelector('.mobile-menu-toggle').focus();
+    }
+    function syncMobileLangSwitcher() {
+        const currentLang = localStorage.getItem('lang') || 'fr';
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            const isActive = btn.getAttribute('data-lang') === currentLang;
+            btn.classList.toggle('active', isActive);
+            btn.setAttribute('aria-pressed', isActive.toString());
+        });
+    }
+
+    // ── Portfolio Management ────────────────────────────────
+    let portfolioTrigger = null;
+    const portfolioContainer = document.getElementById('portfolioContainer');
+    let currentSlide = 0;
+
+    function showPortfolio() {
+        portfolioTrigger = document.activeElement;
+        const portfolioSection = document.getElementById('portfolioSection');
+        portfolioSection.classList.add('active');
+        document.body.classList.add('portfolio-open');
+        document.body.style.overflow = 'hidden';
+        closeAllModals();
+        currentSlide = 0;
+        trackEvent('portfolio_view', { entry_point: 'navigation' });
+        const cards = portfolioContainer.querySelectorAll('.portfolio-card');
+        if (cards[0]) portfolioContainer.scrollLeft = 0;
+        updatePagination();
+        updateNavigationButtons();
+        portfolioSection.addEventListener('keydown', trapFocusPortfolio);
+        setTimeout(() => document.getElementById('portfolioClose').focus(), 50);
+    }
+
+    function hidePortfolio() {
+        const portfolioSection = document.getElementById('portfolioSection');
+        portfolioSection.classList.remove('active');
+        document.body.classList.remove('portfolio-open');
+        document.body.style.overflow = 'auto';
+        portfolioSection.removeEventListener('keydown', trapFocusPortfolio);
+        if (portfolioTrigger) { portfolioTrigger.focus(); portfolioTrigger = null; }
+    }
+
+    function trapFocusPortfolio(e) {
+        const portfolioSection = document.getElementById('portfolioSection');
+        if (e.key === 'Escape') { hidePortfolio(); return; }
+        if (e.key !== 'Tab') return;
+        const focusable = portfolioSection.querySelectorAll('button:not([disabled]), [tabindex]:not([tabindex="-1"])');
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey) { if (document.activeElement === first) { e.preventDefault(); last.focus(); } }
+        else { if (document.activeElement === last) { e.preventDefault(); first.focus(); } }
+    }
+
+    if (portfolioContainer) {
+        let scrollRaf = null;
+        portfolioContainer.addEventListener('scroll', function() {
+            if (scrollRaf) cancelAnimationFrame(scrollRaf);
+            scrollRaf = requestAnimationFrame(() => {
+                const newSlide = getCenteredSlideIndex();
+                if (newSlide !== currentSlide) { currentSlide = newSlide; updatePagination(); updateNavigationButtons(); }
+            });
+        });
+        portfolioContainer.addEventListener('wheel', (e) => {
+            e.preventDefault(); e.stopPropagation();
+            portfolioContainer.scrollLeft += (e.deltaY || e.deltaX);
+        }, { passive: false });
+        portfolioContainer.addEventListener('touchstart', function(e) { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+        portfolioContainer.addEventListener('touchend', function(e) { touchEndX = e.changedTouches[0].screenX; handleSwipe(); }, { passive: true });
+    }
+
+    function getCenteredSlideIndex() {
+        const cards = portfolioContainer.querySelectorAll('.portfolio-card');
+        if (!cards.length) return 0;
+        const containerRect = portfolioContainer.getBoundingClientRect();
+        const centerX = containerRect.left + containerRect.width / 2;
+        let bestIndex = 0, bestDist = Infinity;
+        cards.forEach((card, i) => {
+            const r = card.getBoundingClientRect();
+            const dist = Math.abs(r.left + r.width / 2 - centerX);
+            if (dist < bestDist) { bestDist = dist; bestIndex = i; }
+        });
+        return bestIndex;
+    }
+
+    function goToSlide(index) {
+        const cards = portfolioContainer.querySelectorAll('.portfolio-card');
+        const maxSlide = cards.length - 1;
+        if (index < 0) index = 0;
+        if (index > maxSlide) index = maxSlide;
+        currentSlide = index;
+        const card = cards[index];
+        const containerRect = portfolioContainer.getBoundingClientRect();
+        const cardRect = card.getBoundingClientRect();
+        const target = portfolioContainer.scrollLeft + cardRect.left - containerRect.left - (containerRect.width - cardRect.width) / 2;
+        portfolioContainer.scrollTo({ left: target, behavior: 'smooth' });
+        updatePagination();
+        updateNavigationButtons();
+    }
+
+    function updatePagination() {
+        document.querySelectorAll('.pagination-dot').forEach((dot, i) => dot.classList.toggle('active', i === currentSlide));
+    }
+
+    function updateNavigationButtons() {
+        const prevBtn = document.querySelector('.portfolio-nav.prev');
+        const nextBtn = document.querySelector('.portfolio-nav.next');
+        const maxSlide = document.querySelectorAll('.portfolio-card').length - 1;
+        if (prevBtn) prevBtn.disabled = currentSlide === 0;
+        if (nextBtn) nextBtn.disabled = currentSlide === maxSlide;
+    }
+
+    let touchStartX = 0, touchEndX = 0;
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        if (touchEndX < touchStartX - swipeThreshold) goToSlide(currentSlide + 1);
+        if (touchEndX > touchStartX + swipeThreshold) goToSlide(currentSlide - 1);
+    }
+
+    function switchImage(button, imageId) {
+        const portfolioCard = button.closest('.portfolio-card');
+        portfolioCard.querySelectorAll('.insight-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        portfolioCard.querySelectorAll('.portfolio-image').forEach(img => img.classList.add('hidden'));
+        const selectedImage = document.getElementById(imageId);
+        if (selectedImage) selectedImage.classList.remove('hidden');
+    }
+
+    updateNavigationButtons();
+
+    // ── Keyboard Shortcuts ──────────────────────────────────
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            const mobileNav = document.getElementById('mobileNav');
+            if (mobileNav && mobileNav.classList.contains('active')) { closeMobileMenu(); return; }
+            if (document.getElementById('portfolioSection').classList.contains('active')) { hidePortfolio(); return; }
+            const activeModals = document.querySelectorAll('.modal.active');
+            if (activeModals.length > 0) closeModal(activeModals[0].id.replace('Modal',''));
+        }
+    });
+
+    // ── Form Submission ─────────────────────────────────────
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const templateParams = {
+            name:    document.getElementById('name').value,
+            email:   document.getElementById('email').value,
+            company: document.getElementById('company').value || 'Non renseigné',
+            website: document.getElementById('website').value || 'Non renseigné',
+            project: document.getElementById('project').value,
+            message: document.getElementById('message').value || 'Pas de message'
+        };
+        const btn = document.getElementById('submitBtn');
+        btn.classList.add('loading');
+        btn.textContent = 'Envoi en cours';
+        trackEvent('form_submit_attempt', { project_type: templateParams.project });
+
+        emailjs.send("service_xl8mfv4", "template_4gwxouq", templateParams)
+            .then(() => {
+                trackEvent('form_submit_success', { project_type: templateParams.project });
+                document.getElementById('leftcontent').style.display = 'none';
+                const calendlyBlock = document.getElementById('calendlyBlock');
+                calendlyBlock.style.display = 'block';
+                if (window.Calendly) Calendly.initInlineWidgets();
+                calendlyBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, (error) => {
+                trackEvent('form_submit_error', { error_type: error.text || 'unknown' });
+                btn.classList.remove('loading');
+                btn.textContent = 'Démarrer la conversation →';
+                alert('❌ Erreur d\'envoi. Écrivez-moi directement : jacob.radonirina@gmail.com');
+            });
+    });
+
+    // ── Social Tracking ─────────────────────────────────────
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.social-links a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const href = e.currentTarget.getAttribute('href') || '';
+                const platform = href.includes('linkedin') ? 'linkedin' : href.includes('malt') ? 'malt' : href.includes('behance') ? 'behance' : 'email';
+                trackEvent('social_click', { platform, location: 'footer' });
+            });
+        });
+        syncMobileLangSwitcher();
+    });
+
+    // ── Service Worker ──────────────────────────────────────
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js').then(() => {}).catch(() => {});
+        });
+    }
+</script>
+</body>
+</html>
