@@ -2646,7 +2646,6 @@ a.cs-card:hover {
 .cs-card-visual {
   flex: 1;
   overflow: hidden;
-  /*margin: 0 var(--space-lg) var(--space-lg);*/
   aspect-ratio: 4/3;
   position: relative;
 }
@@ -2657,6 +2656,7 @@ a.cs-card:hover {
   object-fit: cover;
   display: block;
 }
+
 
 .cs-card-visual--restricted img {
   transition: filter 0.35s ease, transform 0.35s ease;
@@ -2699,7 +2699,32 @@ a.cs-card:hover {
   .cs-page-section {
     padding: calc(var(--space-2xl) + 60px) var(--space-md) var(--space-xl);
   }
+
+  .cs-card-visual img {
+    height: inherit;
+    width: 100%;
+  }
   .cs-page-grid {
     grid-template-columns: 1fr;
   }
+  .cs-card {
+    flex-direction: row;
+  }
+  .cs-card-visual {
+    flex: 0 0 35%;
+    order: -1;
+    align-content: end;
+    aspect-ratio: unset;
+  }
+  .cs-card-header {
+    flex: 1;
+    padding: 12px 12px 12px 18px;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+@media (max-width: 640px) {
+    .cs-card-header h2{font-size: 19px;}
 }

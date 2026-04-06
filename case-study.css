@@ -230,7 +230,7 @@
     margin: 32px 0;
 }
 .cs-venue-content blockquote p {
-    font-size: 18px;
+    font-size: clamp(15px, 3.6vw, 18px);
     font-style: italic;
     color: var(--cs-ink);
     font-weight: 600;
@@ -365,7 +365,7 @@
     line-height: 1.75;
 }
 .cs-venue-content .problem-stats-value {
-    font-size: 19px;
+    font-size: clamp(15px, 3.8vw, 19px);
     font-weight: 400;
     color: var(--cs-ink-2);
     line-height: 1.43;
@@ -452,7 +452,7 @@
     flex-shrink: 0;
 }
 .cs-venue-content .insight-card-title {
-    font-size: 22px;
+    font-size: clamp(17px, 4.5vw, 22px);
     font-weight: 600;
     color: var(--cs-ink-2);
     line-height: 1.23;
@@ -580,7 +580,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 17px;
+    font-size: clamp(14px, 3.4vw, 17px);
     font-weight: 500;
     flex-shrink: 0;
 }
@@ -600,7 +600,7 @@
     background: #6BC3CD;
 }
 .cs-venue-content .solution-no-new {
-    font-size: 19px;
+    font-size: clamp(15px, 3.8vw, 19px);
     font-weight: 400;
     color: var(--cs-ink-2);
     line-height: 1.43;
@@ -647,7 +647,7 @@
 @media (max-width: 640px) {
     .cs-venue-content .solution-loop    { grid-template-columns: 1fr; }
     .cs-venue-content .solution-loop-image { height: 240px; }
-    .cs-venue-content .solution-panels  { grid-template-columns: 1fr; }
+    .cs-venue-content .solution-panels  { grid-template-columns: 1fr;margin-top: 20px; }
     .cs-venue-content .solution-panel   { height: auto; min-height: 160px; }
     .cs-venue-content .solution-panel-text p { font-size: clamp(15px, 3.6vw, 18px); }
     .cs-venue-content .insight-card-header{flex-direction: column;}
@@ -706,9 +706,11 @@
     display: block;
 }
 @media (max-width: 640px) {
-    .cs-venue-content .joining-cols   { grid-template-columns: 1fr; gap: 16px; }
-    .cs-venue-content .joining-images { grid-template-columns: 1fr; }
+    .cs-venue-content .joining-cols   { grid-template-columns: 1fr; gap: 16px; padding-top: 0}
+    .cs-venue-content .joining-images { grid-template-columns: 1fr; padding: 23px 0;gap: 23px;}
     .cs-venue-content .joining-img    { height: auto; aspect-ratio: 16/10; }
+    .cs-venue-content blockquote {padding: 4px 0 4px 24px; margin: 16px 0;}
+    .cs-venue-content .callout {    padding: 17px 16px;margin: 2px 0;}
 }
 
 /* ── 15b. D7 DISCOVERY FLOW ─────────────────────────────── */
@@ -909,7 +911,7 @@
     justify-content: space-between;
 }
 .cs-venue-content .precedent-title {
-    font-size: 18px;
+    font-size: clamp(15px, 3.6vw, 18px);
     font-weight: 700;
     color: var(--cs-ink-3);
     line-height: 1.7;
@@ -1305,22 +1307,28 @@
 
 /* ── 24. RESPONSIVE ─────────────────────────────────────── */
 @media (max-width: 640px) {
+    .cs-venue-content {    padding-top: 38px;}
+    .cs-venue-content .hero {padding: 12px 18px}
+    .cs-venue-content .hero-image {margin: 0 auto;}
     .cs-venue-content .guild-war-frame{    height: 30vh}
+    .cs-venue-content .hero-sub{margin-bottom: 18px;}
+    .cs-venue-content .problem-images {margin: 19px 0;}
     .cs-venue-content .solution-loop-pills {padding-top: 9px;}
     .cs-venue-content .guild-war-quote { width: 190px;}
     .cs-venue-content hr{margin: 23px 0;}
     .cs-venue-content .currencies    { grid-template-columns: 1fr; }
-    .table-container{    padding: 10px 5px;}
+    .table-container{ padding: 10px 10px; margin-top: 26px;  border-radius: 22px;}
     .cs-venue-content .milestone-table td{padding: 11px 6px;}
     .cs-venue-content .cta-block     { padding: 40px 24px; }
     .cs-venue-content .hero h1       { font-size: clamp(28px, 8vw, 34px); }
-    .cs-venue-content .meta-grid     { grid-template-columns: 1fr 1fr; }
-    .cs-venue-content .persona-card  { flex-direction: column; align-items: flex-start;}
+    .cs-venue-content .meta-grid     { grid-template-columns: 1fr 1fr;     margin: 0 auto 12px;}
+    .cs-venue-content .persona-card  { flex-direction: column; align-items: flex-start;gap: 0px;}
     .cs-venue-content .persona-photo { width: 100%; max-width: 208px; }
-    .cs-venue-content .insight-container { flex-direction: column; }
+    .cs-venue-content .insight-container { flex-direction: column; padding-top: 0}
+    .cs-venue-content .milestone-body {margin-top: 23px;}
     .cs-venue-content .insight-label { width: 100%; }
     .cs-venue-content .insight-cards { padding-right: 0; }
-    .cs-venue-content .challenge-cards { grid-template-columns: 1fr; }
+    .cs-venue-content .challenge-cards { grid-template-columns: 1fr;margin: 35px 0;}
     .cs-venue-content .challenge-card { padding: 24px 16px; }
     .cs-venue-content .principle { padding: 16px 16px 24px 16px; }
 }
@@ -1391,7 +1399,7 @@
     /* milestone + typography */
     .cs-venue-content .milestone-tiles { flex-direction: column;margin-top: 39px; }
     .cs-venue-content .milestone-tile { width: 100%; }
-    .cs-venue-content .prose h2 { margin-top: 39px; }
+    .cs-venue-content .prose h2 { margin-top: 24px; }
     .cs-venue-content .guild-war-quote p:last-child { margin: 0 auto; }
     /* disable scroll-reveal animations */
     .reveal {
