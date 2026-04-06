@@ -240,6 +240,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <nav class="desktop-nav">
             <ul>
                <li><button onclick="showPortfolio()" data-i18n="nav.portfolio">Portfolio</button></li>
+                <li><a href="cases-studies.html" data-i18n="nav.casestudies">Cases studies</a></li>
                 <li><button onclick="openModal('offres')" data-i18n="nav.services">Offres</button></li>
                 <li><button onclick="openModal('temoignages')" data-i18n="nav.testimonials">Témoignages</button></li>
                 <li><button onclick="openModal('faq')" data-i18n="nav.faq">FAQ</button></li>
@@ -277,6 +278,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
             <ul class="mobile-nav-links">
                 <li><button onclick="showPortfolio(); closeMobileMenu();" data-i18n="nav.portfolio">Portfolio</button></li>
+                <li><a href="cases-studies.html" data-i18n="nav.casestudies">Cases studies</a></li>
                 <li><button onclick="openModal('offres'); closeMobileMenu();" data-i18n="nav.services">Offres</button></li>
                 <li><button onclick="openModal('temoignages'); closeMobileMenu();" data-i18n="nav.testimonials">Témoignages</button></li>
                 <li><button onclick="openModal('faq'); closeMobileMenu();" data-i18n="nav.faq">FAQ</button></li>
@@ -366,8 +368,80 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
 
+        
+
         <!-- ── MAIN CONTENT ───────────────────────────────────────── -->
         <div class="main-content" id="landing">
+
+            <!-- ── CASES STUDIES ─────────────────────────────────────── -->
+        <section class="cases-studies-section" id="casesStudiesSection">
+            <h2 class="cases-studies-title" data-i18n="casestudies.title">Cases studies</h2>
+            <div class="cases-studies-grid">
+
+                <!-- Card 1 · Venue — Social Layer -->
+                <a href="venue-case-study.html" class="case-card case-card--venue">
+                    <div class="case-card-header">
+                        <img src="venues/Venue_Logo_Pink.png" alt="logo venue" class="cs-card-logo" loading="lazy">
+                        <h3 data-i18n="casestudies.venue.title">Social Layer</h3>
+                        <p data-i18n="casestudies.venue.desc">Increasing retention without adding friction or moderation cost.</p>
+                    </div>
+                    <div class="case-card-visual">
+                        <img src="Captures/venue_d7_d30-fr.webp"
+                             data-lang-en="Captures/venue_d7_d30-en.webp"
+                             data-lang-fr="Captures/venue_d7_d30-fr.webp"
+                             alt="Venue Social Layer — interface" loading="lazy">
+                    </div>
+                </a>
+
+                <!-- Card 2 · Tango — Mobile App -->
+                <a href="cases-studies.html#tango-mobile" class="case-card case-card--tango">
+                    <div class="case-card-header">
+                        <img src="logos/Logo_tango.svg" alt="Tango" class="case-card-logo" loading="lazy">
+                        <h3 data-i18n="casestudies.tango.title">Mobile App</h3>
+                        <p data-i18n="casestudies.tango.desc">Redesigning a telco e-commerce for conversion.</p>
+                    </div>
+                    <div class="case-card-visual case-card-visual--restricted">
+                        <img src="Captures/tango-mobile-mockup-2.png" alt="Tango Mobile App — interface" loading="lazy">
+                        <div class="restricted-badge">
+                            <div class="restricted-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                            </div>
+                            <span class="restricted-label">Restricted</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 3 · Tango — Checkout -->
+                <a href="cases-studies.html#tango-checkout" class="case-card case-card--white">
+                    <div class="case-card-header">
+                        <img src="logos/logo-tango-normal.svg" alt="Tango" class="case-card-logo" loading="lazy">
+                        <h3 data-i18n="casestudies.checkout.title">Checkout</h3>
+                        <p data-i18n="casestudies.checkout.desc">Simplifying the purchase funnel to reduce drop-off.</p>
+                    </div>
+                    <div class="case-card-visual case-card-visual--restricted">
+                        <img src="Captures/Tango-website-mockup.png" alt="Tango Checkout — interface" loading="lazy">
+                        <div class="restricted-badge">
+                            <div class="restricted-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                            </div>
+                            <span class="restricted-label">Restricted</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="cases-more-wrap">
+                <a href="cases-studies.html"
+                   class="cases-more-btn"
+                   data-i18n="casestudies.more"
+                   aria-label="Voir la page complète des études de cas">
+                    Voir tous les travaux →
+                </a>
+            </div>
+
+        </section>
+
             <div class="container">
 
                 <!-- LEFT SIDE (visuellement à droite) -->
@@ -1736,6 +1810,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     .catch(() => {}); // Silencieux si sw.js absent
             });
         }
+
+        // ── Header Auto-hide ────────────────────────────────────
+        (function() {
+            const header = document.querySelector('header');
+            let lastScrollY = window.scrollY;
+            let ticking = false;
+
+            function updateHeader() {
+                const currentScrollY = window.scrollY;
+                if (currentScrollY < 80) {
+                    header.classList.remove('header--hidden');
+                } else if (currentScrollY > lastScrollY) {
+                    header.classList.add('header--hidden');
+                } else {
+                    header.classList.remove('header--hidden');
+                }
+                lastScrollY = currentScrollY;
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    requestAnimationFrame(updateHeader);
+                    ticking = true;
+                }
+            }, { passive: true });
+
+            document.addEventListener('mousemove', function(e) {
+                if (e.clientY < 60) {
+                    header.classList.remove('header--hidden');
+                }
+            });
+        })();
 
     </script>
 </body>

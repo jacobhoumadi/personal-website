@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude --version)",
+      "mcp__claude_ai_Figma__get_design_context",
+      "Bash(mkdir -p venues/icons)",
+      "Bash(curl -s \"https://www.figma.com/api/mcp/asset/25b5ae44-7814-4780-8a52-26b37a5202ac\" -o venues/icons/icon-preregistered.svg)",
+      "Bash(curl -s \"https://www.figma.com/api/mcp/asset/8bd6dde0-8616-4c98-ab07-18287126a7b5\" -o venues/icons/icon-chat-x-solid.svg)",
+      "Bash(curl -s \"https://www.figma.com/api/mcp/asset/c7c1ea5c-1cd1-43e2-b581-3431e45eac4f\" -o venues/icons/icon-card-random.svg)",
+      "Bash(curl -s \"https://www.figma.com/api/mcp/asset/2af8fe3f-26e6-4eff-8761-830743f879e1\" -o venues/icons/icon-controller-solid.svg)",
+      "Bash(curl -s \"https://www.figma.com/api/mcp/asset/8a5062d2-dfb1-426f-913a-acd539616b15\" -o venues/icons/icon-chat-off.svg)",
+      "Bash(sed:*)",
+      "Bash(mkdir -p venues/d7)",
+      "Bash(curl -s \"https://www.figma.com/api/mcp/asset/fb4caa11-a79d-4dcb-afdc-e4e27072e1f9\" -o venues/d7/avatar-1-excited.png)",
+      "Bash(curl -s \"https://www.figma.com/api/mcp/asset/cd493ccb-c8d8-4eb9-920c-f4e4a3f55aec\" -o venues/d7/avatar-2-curious.png)",
+      "Bash(curl -s \"https://www.figma.com/api/mcp/asset/d58926d6-6f2d-4fba-9653-6cb2116a8436\" -o venues/d7/avatar-3-informed.png)",
+      "Bash(curl -s \"https://www.figma.com/api/mcp/asset/c98bd6fa-e4a9-4f90-bef8-81a0c11b1188\" -o venues/d7/avatar-4-intrigued.png)",
+      "Bash(python3:*)",
+      "Bash(n)",
+      "Bash(powershell -Command ':*)",
+      "Bash(powershell:*)"
+    ]
+  }
+}

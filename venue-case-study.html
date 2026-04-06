@@ -60,6 +60,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="cookie-consent.css">
     <link rel="stylesheet" href="nav-mobile.css">
+    <link rel="stylesheet" href="case-study.css">
 
     <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -69,521 +70,6 @@
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
     <script src="translations.js" defer></script>
-
-    <style>
-    /* ── CASE STUDY SCOPED TOKENS ── */
-    .cs-venue-content {
-        --cs-coral:       #EF9180;
-        --cs-coral-light: #F8D5CF;
-        --cs-coral-bg:    #FDF0ED;
-        --cs-yellow:      #FFC236;
-        --cs-cream:       #F6EEE6;
-        --cs-ink:         #1A1714;
-        --cs-ink-2:       #3D3733;
-        --cs-ink-3:       #6B6460;
-        --cs-ink-4:       #9E9894;
-        --cs-border:      #ECEAE7;
-        --cs-surface:     #FAFAF9;
-        --cs-r-sm:  6px;
-        --cs-r-md:  12px;
-        --cs-r-lg:  20px;
-        --cs-r-xl:  28px;
-        --cs-shadow-sm: 0 2px 8px rgba(26,23,20,0.07);
-        --cs-shadow-md: 0 4px 20px rgba(26,23,20,0.09);
-        --cs-max: 800px;
-        --cs-font: 'Poppins', sans-serif;
-    }
-
-    /* ── LAYOUT ── */
-    .cs-venue-content {
-        font-family: var(--cs-font);
-        font-size: 16px;
-        line-height: 1.7;
-        color: var(--cs-ink-2);
-        background: #FFFFFF;
-        -webkit-font-smoothing: antialiased;
-        padding-top: 75px;
-    }
-    .cs-venue-content img { display: block; max-width: 100%; }
-
-    /* ── BACK LINK ── */
-    .cs-back-link {
-        max-width: var(--cs-max, 720px);
-        margin: 0 auto;
-        padding: 24px 24px 0;
-    }
-    .cs-back-link a {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        font-family: var(--cs-font);
-        font-size: 13px;
-        font-weight: 600;
-        color: #64748B;
-        text-decoration: none;
-        transition: color 0.2s;
-    }
-    .cs-back-link a:hover { color: #EF9180; }
-
-    /* ── HERO ── */
-    .cs-venue-content .hero {
-        padding: 36px 24px 64px;
-        text-align: center;
-    }
-    .cs-venue-content .hero-tag {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: var(--cs-coral);
-        color: white;
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        padding: 5px 12px;
-        border-radius: 100px;
-        margin-bottom: 32px;
-    }
-    .cs-venue-content .hero h1 {
-        font-size: clamp(36px, 6vw, 60px);
-        font-weight: 600;
-        line-height: 1.2;
-        letter-spacing: -0.03em;
-        color: var(--cs-ink);
-        max-width: 680px;
-        margin: 0 auto 16px;
-        }
-    .cs-venue-content .hero-sub {
-        font-size: 14px;
-        color: var(--cs-ink-4);
-        font-weight: 400;
-        margin-bottom: 48px;
-    }
-    .cs-venue-content .hero-image {
-        background: var(--cs-coral-bg);
-        border-radius: var(--cs-r-xl);
-        padding: 40px 32px;
-        max-width: 560px;
-        margin: 0 auto 64px;
-        position: relative;
-        overflow: hidden;
-    }
-    .cs-venue-content .hero-image::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(ellipse at 30% 0%, rgba(239,145,128,0.3) 0%, transparent 60%);
-        pointer-events: none;
-    }
-    .cs-venue-content .hero-image img {
-        margin: 0 auto;
-        border-radius: var(--cs-r-md);
-        box-shadow: var(--cs-shadow-md);
-        position: relative;
-        z-index: 1;
-    }
-    .cs-venue-content .hero-placeholder {
-        width: 100%;
-        aspect-ratio: 16/10;
-        background: linear-gradient(135deg, rgba(239,145,128,0.2), rgba(239,145,128,0.05));
-        border-radius: var(--cs-r-md);
-        border: 2px dashed rgba(239,145,128,0.4);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        position: relative;
-        z-index: 1;
-    }
-    .cs-venue-content .hero-placeholder-icon { font-size: 32px; opacity: 0.5; }
-    .cs-venue-content .hero-placeholder-text { font-size: 12px; color: var(--cs-coral); font-weight: 500; opacity: 0.8; }
-
-    /* ── META ── */
-    .cs-venue-content .meta-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(160px, 1fr));
-        gap: 24px 32px;
-        max-width: var(--cs-max);
-        margin: 0 auto 80px;
-        padding: 0 24px;
-    }
-    .cs-venue-content .meta-label {
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 0.07em;
-        text-transform: uppercase;
-        color: var(--cs-ink-4);
-        margin-bottom: 4px;
-    }
-    .cs-venue-content .meta-value {
-        font-size: 13px;
-        font-weight: 600;
-        color: var(--cs-ink);
-        line-height: 1.4;
-    }
-
-    /* ── DIVIDER ── */
-    .cs-venue-content hr {
-        border: none;
-        border-top: 1px solid var(--cs-border);
-        margin: 64px 0;
-    }
-
-    /* ── PROSE ── */
-    .cs-venue-content .prose { max-width: var(--cs-max); margin: 0 auto; padding: 0 24px; }
-    .cs-venue-content .prose h2 {
-        font-size: 26px;
-        font-weight: 700;
-        letter-spacing: -0.02em;
-        color: var(--cs-ink);
-        line-height: 1.25;
-        margin-top: 72px;
-        margin-bottom: 20px;
-    }
-    .cs-venue-content .prose h2:first-child { margin-top: 0; }
-    .cs-venue-content .prose h3 {
-        font-size: 16px;
-        font-weight: 700;
-        color: var(--cs-ink);
-        margin-top: 32px;
-        margin-bottom: 10px;
-        letter-spacing: -0.01em;
-    }
-    .cs-venue-content .prose p {
-        font-size: 15.5px;
-        color: var(--cs-ink-2);
-        line-height: 1.75;
-        margin-bottom: 20px;
-    }
-    .cs-venue-content .prose strong { font-weight: 700; color: var(--cs-ink); }
-    .cs-venue-content .prose em { font-style: italic; color: var(--cs-ink-3); }
-
-    /* ── CALLOUT ── */
-    .cs-venue-content .callout {
-        background: var(--cs-cream);
-        border-radius: var(--cs-r-lg);
-        padding: 24px 28px;
-        margin: 32px 0;
-    }
-    .cs-venue-content .callout-coral { background: var(--cs-coral-bg); }
-    .cs-venue-content .callout p { margin: 0; font-size: 15px; }
-    .cs-venue-content .callout p + p { margin-top: 12px; }
-
-    /* ── PULLQUOTE ── */
-    .cs-venue-content blockquote {
-        border-left: 3px solid var(--cs-coral);
-        padding: 4px 0 4px 24px;
-        margin: 32px 0;
-    }
-    .cs-venue-content blockquote p {
-        font-size: 18px;
-        font-style: italic;
-        color: var(--cs-ink);
-        font-weight: 500;
-        letter-spacing: -0.01em;
-        line-height: 1.55;
-        margin: 0;
-    }
-
-    /* ── IMAGE SLOT ── */
-    .cs-venue-content .img-slot {
-        background: var(--cs-surface);
-        border: 1.5px dashed var(--cs-border);
-        border-radius: var(--cs-r-lg);
-        padding: 40px 24px;
-        margin: 32px 0;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-    }
-    .cs-venue-content .img-slot-icon { font-size: 24px; opacity: 0.4; }
-    .cs-venue-content .img-slot-label {
-        font-size: 12px;
-        color: var(--cs-ink-4);
-        font-weight: 500;
-        max-width: 320px;
-        line-height: 1.5;
-    }
-
-    /* ── PRINCIPLES ── */
-    .cs-venue-content .principles { display: grid; gap: 16px; margin: 32px 0; }
-    .cs-venue-content .principle {
-        display: grid;
-        grid-template-columns: 36px 1fr;
-        gap: 16px;
-        align-items: start;
-        background: var(--cs-surface);
-        border: 1px solid var(--cs-border);
-        border-radius: var(--cs-r-md);
-        padding: 20px;
-    }
-    .cs-venue-content .principle-num {
-        width: 36px;
-        height: 36px;
-        background: var(--cs-coral-bg);
-        color: var(--cs-coral);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 13px;
-        font-weight: 700;
-        flex-shrink: 0;
-        margin-top: 2px;
-    }
-    .cs-venue-content .principle h3 { margin-top: 0; margin-bottom: 6px; }
-    .cs-venue-content .principle p { margin: 0; font-size: 14px; color: var(--cs-ink-3); }
-
-    /* ── REFERENCES ── */
-    .cs-venue-content .references { display: grid; gap: 16px; margin: 32px 0; }
-    .cs-venue-content .ref-card {
-        border: 1px solid var(--cs-border);
-        border-radius: var(--cs-r-md);
-        padding: 20px 24px;
-        background: #FFFFFF;
-        transition: box-shadow 0.2s;
-    }
-    .cs-venue-content .ref-card:hover { box-shadow: var(--cs-shadow-sm); }
-    .cs-venue-content .ref-header {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 10px;
-    }
-    .cs-venue-content .ref-icon {
-        font-size: 22px;
-        width: 40px;
-        height: 40px;
-        background: var(--cs-cream);
-        border-radius: var(--cs-r-sm);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-    }
-    .cs-venue-content .ref-title { font-size: 14px; font-weight: 700; color: var(--cs-ink); }
-    .cs-venue-content .ref-tag {
-        display: inline-block;
-        font-size: 10px;
-        font-weight: 600;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        background: var(--cs-coral-bg);
-        color: var(--cs-coral);
-        padding: 3px 8px;
-        border-radius: 100px;
-        margin-left: auto;
-    }
-    .cs-venue-content .ref-body { font-size: 13.5px; color: var(--cs-ink-3); line-height: 1.6; }
-
-    /* ── CURRENCIES ── */
-    .cs-venue-content .currencies { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 32px 0; }
-    .cs-venue-content .currency-card { border-radius: var(--cs-r-md); padding: 24px; }
-    .cs-venue-content .currency-weekly { background: var(--cs-cream); }
-    .cs-venue-content .currency-permanent { background: var(--cs-ink); color: white; }
-    .cs-venue-content .currency-icon { font-size: 24px; margin-bottom: 12px; }
-    .cs-venue-content .currency-title { font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 4px; }
-    .cs-venue-content .currency-weekly .currency-title { color: var(--cs-ink-4); }
-    .cs-venue-content .currency-permanent .currency-title { color: rgba(255,255,255,0.5); }
-    .cs-venue-content .currency-name { font-size: 20px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 12px; }
-    .cs-venue-content .currency-weekly .currency-name { color: var(--cs-ink); }
-    .cs-venue-content .currency-permanent .currency-name { color: white; }
-    .cs-venue-content .currency-desc { font-size: 13px; line-height: 1.6; }
-    .cs-venue-content .currency-weekly .currency-desc { color: var(--cs-ink-3); }
-    .cs-venue-content .currency-permanent .currency-desc { color: rgba(255,255,255,0.65); }
-    .cs-venue-content .currency-tag { display: inline-block; margin-top: 16px; font-size: 12px; font-weight: 600; font-style: italic; }
-    .cs-venue-content .currency-weekly .currency-tag { color: var(--cs-ink-3); }
-    .cs-venue-content .currency-permanent .currency-tag { color: rgba(255,255,255,0.5); }
-
-    /* ── FLOW STEPS ── */
-    .cs-venue-content .flow-steps { margin: 32px 0; }
-    .cs-venue-content .flow-step {
-        display: grid;
-        grid-template-columns: 32px 1fr;
-        gap: 16px;
-        align-items: start;
-        padding: 16px 0;
-        border-bottom: 1px solid var(--cs-border);
-    }
-    .cs-venue-content .flow-step:last-child { border-bottom: none; }
-    .cs-venue-content .flow-step-num {
-        width: 28px;
-        height: 28px;
-        background: var(--cs-coral);
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 12px;
-        font-weight: 700;
-        margin-top: 2px;
-        flex-shrink: 0;
-    }
-    .cs-venue-content .flow-step-title { font-size: 14px; font-weight: 700; color: var(--cs-ink); margin-bottom: 4px; }
-    .cs-venue-content .flow-step-desc { font-size: 13.5px; color: var(--cs-ink-3); line-height: 1.6; }
-
-    /* ── ARC ── */
-    .cs-venue-content .arc { display: flex; gap: 0; margin: 32px 0; overflow-x: auto; padding-bottom: 8px; }
-    .cs-venue-content .arc-step { flex: 1; min-width: 80px; text-align: center; position: relative; }
-    .cs-venue-content .arc-step::after {
-        content: '';
-        position: absolute;
-        top: 14px;
-        border-top: 2px solid var(--cs-border);
-        width: calc(100% - 28px);
-        right: 0;
-        left: 28px;
-    }
-    .cs-venue-content .arc-step:last-child::after { display: none; }
-    .cs-venue-content .arc-dot {
-        width: 28px;
-        height: 28px;
-        border-radius: 50%;
-        background: var(--cs-coral-bg);
-        border: 2px solid var(--cs-coral-light);
-        margin: 0 auto 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 11px;
-        font-weight: 700;
-        color: var(--cs-coral);
-        position: relative;
-        z-index: 1;
-    }
-    .cs-venue-content .arc-label { font-size: 11px; font-weight: 600; color: var(--cs-ink-4); line-height: 1.3; }
-
-    /* ── OUTCOMES ── */
-    .cs-venue-content .outcomes { display: grid; gap: 16px; margin: 32px 0; }
-    .cs-venue-content .outcome {
-        display: flex;
-        gap: 16px;
-        align-items: start;
-        padding: 20px;
-        background: var(--cs-surface);
-        border: 1px solid var(--cs-border);
-        border-radius: var(--cs-r-md);
-    }
-    .cs-venue-content .outcome-tag {
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        background: var(--cs-coral-bg);
-        color: var(--cs-coral);
-        padding: 4px 10px;
-        border-radius: 100px;
-        white-space: nowrap;
-        margin-top: 2px;
-    }
-    .cs-venue-content .outcome-body { font-size: 14px; color: var(--cs-ink-3); line-height: 1.65; }
-    .cs-venue-content .outcome-body strong { color: var(--cs-ink); }
-
-    /* ── NEXT ── */
-    .cs-venue-content .next-items { display: grid; gap: 12px; margin: 24px 0; }
-    .cs-venue-content .next-item { display: flex; gap: 12px; align-items: start; font-size: 14px; color: var(--cs-ink-3); line-height: 1.6; }
-    .cs-venue-content .next-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--cs-coral); margin-top: 8px; flex-shrink: 0; }
-    .cs-venue-content .next-item strong { color: var(--cs-ink); }
-
-    /* ── QUOTES ── */
-    .cs-venue-content .quotes { display: grid; gap: 12px; margin: 32px 0; }
-    .cs-venue-content .quote-item {
-        background: var(--cs-cream);
-        border-radius: var(--cs-r-md);
-        padding: 20px 24px 20px 40px;
-        font-size: 14.5px;
-        font-style: italic;
-        color: var(--cs-ink-2);
-        line-height: 1.65;
-        position: relative;
-    }
-    .cs-venue-content .quote-item::before {
-        content: '"';
-        position: absolute;
-        left: 16px;
-        top: 14px;
-        font-size: 28px;
-        font-style: normal;
-        color: var(--cs-coral-light);
-        line-height: 1;
-        font-weight: 800;
-    }
-
-    /* ── CTA BLOCK ── */
-    .cs-venue-content .cta-block {
-        background: var(--cs-ink);
-        border-radius: var(--cs-r-xl);
-        padding: 56px 48px;
-        text-align: center;
-        margin: 80px 0 48px;
-        position: relative;
-        overflow: hidden;
-    }
-    .cs-venue-content .cta-block::before {
-        content: '';
-        position: absolute;
-        top: -60px; right: -60px;
-        width: 240px; height: 240px;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(239,145,128,0.2), transparent 70%);
-        pointer-events: none;
-    }
-    .cs-venue-content .cta-block::after {
-        content: '';
-        position: absolute;
-        bottom: -80px; left: -40px;
-        width: 200px; height: 200px;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(132,201,201,0.15), transparent 70%);
-        pointer-events: none;
-    }
-    .cs-venue-content .cta-block h2 { color: white; font-size: 26px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px; position: relative; z-index: 1; }
-    .cs-venue-content .cta-block p { color: rgba(255,255,255,0.55); font-size: 14px; margin-bottom: 32px; position: relative; z-index: 1; }
-    .cs-venue-content .deliverables { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 36px; position: relative; z-index: 1; }
-    .cs-venue-content .deliverable-tag {
-        background: rgba(255,255,255,0.08);
-        color: rgba(255,255,255,0.7);
-        font-size: 12px;
-        font-weight: 500;
-        padding: 6px 14px;
-        border-radius: 100px;
-        border: 1px solid rgba(255,255,255,0.1);
-    }
-    .cs-venue-content .cta-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: var(--cs-coral);
-        color: white;
-        font-family: var(--cs-font);
-        font-size: 14px;
-        font-weight: 700;
-        padding: 14px 32px;
-        border-radius: 100px;
-        border: none;
-        cursor: pointer;
-        text-decoration: none;
-        transition: opacity 0.2s, transform 0.2s;
-        position: relative;
-        z-index: 1;
-    }
-    .cs-venue-content .cta-btn:hover { opacity: 0.9; transform: translateY(-1px); }
-
-    /* ── UTIL ── */
-    .cs-venue-content .label-coral { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--cs-coral); margin-bottom: 8px; }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 640px) {
-        .cs-venue-content .currencies { grid-template-columns: 1fr; }
-        .cs-venue-content .cta-block { padding: 40px 24px; }
-        .cs-venue-content .hero h1 { font-size: 34px; }
-        .cs-venue-content .meta-grid { grid-template-columns: 1fr 1fr; }
-    }
-    </style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -675,361 +161,607 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="cs-venue-content">
 
     <div class="cs-back-link">
-        <a href="cases-studies.html">← Cases studies</a>
+        <a href="cases-studies.html" data-i18n="cs.venue.back">← Cases studies</a>
     </div>
 
     <!-- HERO -->
     <section class="hero">
-        <div class="hero-tag">🌸 Venue</div>
-        <h1>Increasing retention without adding friction or moderation cost.</h1>
-        <p class="hero-sub">Design Studios · UX Case Study — Venue by Yummy Labs</p>
+        <div class="hero-tag"><img src="venues/Venue_Logo_Pink.png" alt="logo venue"></div>
+        <h1 data-i18n="cs.venue.h1">Increasing retention without adding friction or moderation cost.</h1>
+        <p class="hero-sub" data-i18n="cs.venue.hero.sub">Design Studios · UX Case Study — Venue by Yummy Labs</p>
         <div class="hero-image">
-            <img src="Captures/venue_d7_d30-fr.webp" alt="Venue D7–D30 retention flow" loading="lazy">
+            <img src="Captures/venue_d7_d30-en.webp" 
+            data-lang-fr="Captures/venue_d7_d30-fr.webp"
+            data-lang-en="Captures/venue_d7_d30-en.webp"
+             alt="Venue D7–D30 retention flow" loading="lazy">
         </div>
     </section>
 
     <!-- META -->
     <div class="meta-grid">
         <div class="meta-item">
-            <div class="meta-label">Project</div>
-            <div class="meta-value">Venue, Design Studios (Phase 2 Social)</div>
+            <div class="meta-label" data-i18n="cs.venue.meta.project.label">Project</div>
+            <div class="meta-value" data-i18n="cs.venue.meta.project.value">Venue, Design Studios (Phase 2 Social)</div>
         </div>
         <div class="meta-item">
-            <div class="meta-label">Role</div>
-            <div class="meta-value">Lead UX &amp; Product Designer</div>
+            <div class="meta-label" data-i18n="cs.venue.meta.role.label">Role</div>
+            <div class="meta-value" data-i18n="cs.venue.meta.role.value">Lead UX &amp; Product Designer</div>
         </div>
         <div class="meta-item">
-            <div class="meta-label">Studio</div>
-            <div class="meta-value">Independent, in collaboration with Yummy Labs / Superbloom</div>
+            <div class="meta-label" data-i18n="cs.venue.meta.studio.label">Studio</div>
+            <div class="meta-value" data-i18n="cs.venue.meta.studio.value">Yummy Labs in partnership with Superbloom</div>
         </div>
         <div class="meta-item">
-            <div class="meta-label">Deliverables</div>
-            <div class="meta-value">Concept system · Discovery flow · Interaction model · Presentation deck</div>
+            <div class="meta-label" data-i18n="cs.venue.meta.deliv.label">Deliverables</div>
+            <div class="meta-value" data-i18n="cs.venue.meta.deliv.value">Concept system · Discovery flow · Interaction model · Presentation deck</div>
         </div>
         <div class="meta-item">
-            <div class="meta-label">Constraint</div>
-            <div class="meta-value">Zero new behaviour required from the player</div>
+            <div class="meta-label" data-i18n="cs.venue.meta.constraint.label">Constraint</div>
+            <div class="meta-value" data-i18n="cs.venue.meta.constraint.value">Zero new behaviour required from the player</div>
+        </div>
+        <div class="meta-item">
+            <div class="meta-label" data-i18n="cs.venue.meta.recog.label">Recognition</div>
+            <div class="meta-value" data-i18n="cs.venue.meta.recog.value">Top Sprinter, March 2026</div>
         </div>
     </div>
 
     <!-- PROSE -->
     <main class="prose">
 
-        <h2>The Problem</h2>
-        <p>Every night, Beth closes Venue and opens Facebook.</p>
-        <p>She's been playing for months. She designs rooms, submits them to be voted on, collects rewards. She's engaged. She's good at it. But when she wants to <em>feel something</em> — to share a result, to see if anyone noticed — the game has nothing to offer. So she goes elsewhere.</p>
-        <p>The problem wasn't low engagement. Venue had 4M+ downloads, a 90% female player base, and strong daily loops.</p>
-        <div class="callout callout-coral">
-            <p><strong>The problem was that none of it felt like it mattered to anyone else.</strong> She had already found her community. She'd just found it outside the product.</p>
+        <!-- BETH PERSONA CARD -->
+        <div class="persona-card reveal">
+            <div class="persona-photo">
+               <img src="venues/beth.webp" alt="Beth">
+            </div>
+            <div class="persona-info">
+                <div class="persona-username-pill">
+                    <div class="persona-avatar">
+                        <div class="img-slot" style="margin:0;padding:0;border:none;background:none;width:44px;height:44px;border-radius:50%;"><img src="venues/avatar-beth.jpg" alt=""></div>
+                    </div>
+                    <span class="persona-username">Its_Beth 🐬</span>
+                </div>
+                <div class="persona-stats">
+                    <div class="persona-stat" data-i18n="cs.venue.persona.stat1">20h in game</div>
+                    <div class="persona-stat" data-i18n="cs.venue.persona.stat2">600 designs</div>
+                    <div class="persona-stat" data-i18n="cs.venue.persona.stat3">Lvl 12</div>
+                    <div class="persona-stat" data-i18n="cs.venue.persona.stat4">Minimalism style</div>
+                </div>
+            </div>
         </div>
 
-        <div class="img-slot">
-            <span class="img-slot-icon">📸</span>
-            <span class="img-slot-label">Facebook community screenshot vs. Venue in-game social feed — contrasting where Beth's social energy actually goes</span>
+        <h2 class="reveal" data-i18n="cs.venue.h2.problem">The Problem</h2>
+        <p class="lead reveal reveal--delay-1" data-i18n="cs.venue.problem.lead">Every night, Beth closes Venue and opens Facebook.</p>
+        <p class="reveal reveal--delay-2" data-i18n-html="cs.venue.problem.p1">She's been playing for months. She designs rooms, submits them to be voted on, collects rewards. She's engaged. She's good at it. But when she wants to <em>feel something</em> — to share a result, to see if anyone noticed — the game has nothing to offer. So she goes elsewhere.</p>
+        <p class="reveal reveal--delay-3" data-i18n="cs.venue.problem.p2">The problem wasn't low engagement.</p>
+        <div class="problem-stats reveal reveal--delay-4">
+            <div class="problem-stats-label" data-i18n="cs.venue.problem.stats.label">Venue had :</div>
+            <div class="problem-stats-value" data-i18n="cs.venue.problem.stats.value">4M+ downloads — 90% female player base — strong daily loops.</div>
+        </div>
+        <div class="problem-images">
+            <div class="problem-img-left reveal reveal--from-left">
+                <img src="venues/Venue-app-store.webp" alt="Venue on the App Store and Google Play">
+            </div>
+            <div class="problem-img-right reveal reveal--from-right reveal--delay-1">
+                <img src="venues/venue-facebook-capture.png" alt="Venue Facebook community group">
+            </div>
+        </div>
+
+        <p class="problem-conclusion reveal" data-i18n-html="cs.venue.problem.conclusion">The problem was that none of it felt like it mattered to anyone else. <span class="muted">She had already found</span> her community<span class="muted">. She'd just found it </span>outside the product.</p>
+
+        <hr>
+
+        <h2 class="reveal" data-i18n="cs.venue.h2.insight">The Insight</h2>
+        <p class="lead reveal reveal--delay-1" data-i18n-html="cs.venue.insight.lead">Most social features in games solve the wrong problem. They ask players to <em>act social</em><span class="text-gray">:</span> join a guild, add friends, post a score. But players like Beth don't want to perform belonging. They want to feel it.</p>
+        <div class="insight-container reveal reveal--delay-2">
+            <div class="insight-label" data-i18n="cs.venue.insight.label">Two things follow from that:</div>
+            <div class="insight-cards">
+                <div class="insight-card">
+                    <div class="insight-card-header">
+                        <img src="venues/icons/icon-preregistered.svg" class="insight-icon" alt="" width="28" height="28">
+                        <div class="insight-card-title" data-i18n="cs.venue.insight.card1.title">Low cognition load</div>
+                    </div>
+                    <div class="insight-card-desc">
+                        <p data-i18n-html="cs.venue.insight.card1.desc"><strong>The moment you ask someone to join, you create a moment where they can say no.</strong> Opt-in mechanics are opt-out risks. Every explicit step leaks.</p>
+                    </div>
+                </div>
+                <div class="insight-card">
+                    <div class="insight-card-header">
+                        <img src="venues/icons/icon-chat-x-solid.svg" class="insight-icon" alt="" width="28" height="28">
+                        <div class="insight-card-title" data-i18n="cs.venue.insight.card2.title">No moderation required</div>
+                    </div>
+                    <div class="insight-card-desc">
+                        <p data-i18n="cs.venue.insight.card2.desc">Social mechanics that rely on moderation or settings to stay non-toxic will eventually fail. Toxicity needs to be structurally impossible, not just manageable.</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <hr>
 
-        <h2>The Insight</h2>
-        <p style="font-size: 23px; font-weight: 600;line-height: 1.5;"> Most social features in games solve the wrong problem. They ask players to <em>do something social</em>: join a guild, add friends, post a score. But players like Beth don't want to perform belonging. They want to feel it.</p>
-        <p>Two things follow from that:</p>
-        <div class="callout">
-            <p><strong>1. The moment you ask someone to join, you create a moment where they can say no.</strong> Opt-in mechanics are opt-out risks. Every explicit step leaks.</p>
-            <p><strong>2. Social mechanics that rely on moderation or settings to stay non-toxic will eventually fail.</strong> Toxicity needs to be structurally impossible, not just manageable.</p>
+        <h2 class="reveal" data-i18n="cs.venue.h2.challenge">The Design Challenge</h2>
+        <p class="lead reveal reveal--delay-1" data-i18n="cs.venue.challenge.lead">SuperBloom's brief: design a group-based social system for Venue that encourages collaboration, creates shared goals, and feels cozy, not competitive.</p>
+        <div class="challenge-constraints-label reveal reveal--delay-2" data-i18n="cs.venue.challenge.constraints.label">Three hard constraints made this interesting:</div>
+        <div class="challenge-cards">
+            <div class="challenge-card reveal reveal--delay-1">
+                <img src="venues/icons/icon-card-random.svg" class="challenge-icon" alt="" width="53" height="53">
+                <div class="challenge-card-title" data-i18n="cs.venue.challenge.card1.title">Anonymous voting</div>
+                <p data-i18n="cs.venue.challenge.card1.desc">Players can't choose whose work they see</p>
+            </div>
+            <div class="challenge-card reveal reveal--delay-2">
+                <img src="venues/icons/icon-controller-solid.svg" class="challenge-icon" alt="" width="53" height="53">
+                <div class="challenge-card-title" data-i18n="cs.venue.challenge.card2.title">Casual play</div>
+                <p data-i18n="cs.venue.challenge.card2.desc">No tolerance for extra homework</p>
+            </div>
+            <div class="challenge-card reveal reveal--delay-3">
+                <img src="venues/icons/icon-chat-off.svg" class="challenge-icon" alt="" width="53" height="53">
+                <div class="challenge-card-title" data-i18n="cs.venue.challenge.card3.title">No chat</div>
+                <p data-i18n="cs.venue.challenge.card3.desc">no text, no moderation overhead.</p>
+            </div>
+        </div>
+        <div class="guild-war-frame reveal reveal--delay-4">
+            <div class="guild-war-quote">
+                <p data-i18n-html="cs.venue.challenge.quote">This is not a "guild war" system.<br>This is a creative collective.</p>
+            </div>
         </div>
 
         <hr>
 
-        <h2>The Design Challenge</h2>
-        <p>Yummy Labs' brief: design a group-based social system for Venue that encourages collaboration, creates shared goals, and feels <em>cozy</em>, not competitive.</p>
-        <p>Not a guild war system. A creative collective.</p>
-        <p>Three hard constraints made this interesting:</p>
-        <div class="callout">
-            <p>Voting in Venue is <strong>anonymous</strong> — players can't choose whose work they see. The player base skews <strong>casual</strong> — no tolerance for extra homework. The game has <strong>no chat</strong> — no text, no moderation overhead.</p>
-        </div>
-
-        <div class="img-slot">
-            <span class="img-slot-icon">📸</span>
-            <span class="img-slot-label">Yummy Labs brief slide — "This is not a guild war system. This is a creative collective."</span>
-        </div>
-
-        <hr>
-
-        <h2>Design Principles</h2>
-        <p>Before touching a single screen, I defined four non-negotiables that every mechanic had to pass.</p>
+        <h2 class="reveal" data-i18n="cs.venue.h2.principles">Design Principles</h2>
+        <p class="lead reveal reveal--delay-1" data-i18n="cs.venue.principles.lead">Before touching a single screen, I defined four non-negotiables that every mechanic had to pass.</p>
 
         <div class="principles">
-            <div class="principle">
+            <div class="principle reveal reveal--delay-1">
                 <div class="principle-num">1</div>
-                <div>
-                    <h3>Structurally incapable of toxicity</h3>
-                    <p>If a mechanic can produce a bad feeling, it will. The fix isn't a setting — it's removing the mechanism. No leaderboards. No individual contribution visibility. No way to compare members.</p>
+                <div class="principle-body">
+                    <div class="principle-title" data-i18n="cs.venue.principle.1.title">Structurally incapable of toxicity</div>
+                    <div class="principle-desc" data-i18n="cs.venue.principle.1.desc">If a mechanic can produce a bad feeling, it will. The fix isn't a setting — it's removing the mechanism. No leaderboards. No individual contribution visibility. No way to compare members.</div>
                 </div>
             </div>
-            <div class="principle">
+            <div class="principle reveal reveal--delay-2">
                 <div class="principle-num">2</div>
-                <div>
-                    <h3>Absence must feel inconsequential</h3>
-                    <p>Missing a week should carry zero guilt signal. No "you let your team down." No streak breaks. Contribution is meaningful when you show up, invisible when you don't.</p>
+                <div class="principle-body">
+                    <div class="principle-title" data-i18n="cs.venue.principle.2.title">Absence must feel inconsequential</div>
+                    <div class="principle-desc" data-i18n-html="cs.venue.principle.2.desc">Missing a week should carry zero guilt signal. No "you let your team down." No streak breaks.<br>Contribution is meaningful when you show up, invisible when you don't.</div>
                 </div>
             </div>
-            <div class="principle">
+            <div class="principle reveal reveal--delay-3">
                 <div class="principle-num">3</div>
-                <div>
-                    <h3>Belonging is observed, not declared</h3>
-                    <p>The system watches what players already do and uses it as contribution. Normal play <em>is</em> participation. No opt-in threshold, no confirmation modal.</p>
+                <div class="principle-body">
+                    <div class="principle-title" data-i18n="cs.venue.principle.3.title">Belonging is observed, not declared</div>
+                    <div class="principle-desc" data-i18n-html="cs.venue.principle.3.desc">The system watches what players already do and uses it as contribution. Normal play <em>is</em> participation. No opt-in threshold, no confirmation modal.</div>
                 </div>
             </div>
-            <div class="principle">
+            <div class="principle reveal reveal--delay-4">
                 <div class="principle-num">4</div>
-                <div>
-                    <h3>Collective over individual</h3>
-                    <p>Milestones are collective. Rewards are shared. Progress is one bar, not aggregated personal bars. The Studio succeeds together or not at all.</p>
+                <div class="principle-body">
+                    <div class="principle-title" data-i18n="cs.venue.principle.4.title">Collective over individual</div>
+                    <div class="principle-desc" data-i18n="cs.venue.principle.4.desc">Milestones are collective. Rewards are shared. Progress is one bar, not aggregated personal bars. The Studio succeeds together or not at all.</div>
                 </div>
             </div>
         </div>
 
         <hr>
 
-        <h2>The Solution · Design Studios</h2>
-        <p>Design Studios is a passive community membership system embedded in Venue's existing game loop. Players contribute to a shared Studio by playing normally — submitting designs, voting, completing chapters. No new behaviour required.</p>
-        <p>Each Studio has 10–20 members matched on design aesthetic, a shared weekly goal, a Studio Room that grows as the Studio levels up, and a collective gallery where members' submitted designs appear for each other.</p>
-        <p>The Studio is named and curated. Ours: <strong>Casa Bloom 🌸</strong></p>
-
-        <div class="img-slot">
-            <span class="img-slot-icon">📸</span>
-            <span class="img-slot-label">System overview — how existing game actions (design, vote, chapter) feed automatically into Studio keys</span>
+        <h2 class="reveal" data-i18n="cs.venue.h2.solution">The Solution · Design Studios</h2>
+        <p class="lead reveal reveal--delay-1" data-i18n="cs.venue.solution.lead1">Design Studios is a passive community membership system embedded in Venue's existing game loop.</p>
+        <p class="lead reveal reveal--delay-2" data-i18n="cs.venue.solution.lead2">Players contribute to a shared Studio by playing normally</p>
+        <div class="solution-loop reveal reveal--delay-3">
+            <div class="solution-loop-image">
+                <img src="venues/beth-playing.webp" alt="Beth playing">
+            </div>
+            <div class="solution-loop-pills">
+                <div class="solution-pill solution-pill-teal" data-i18n="cs.venue.solution.pill1">submitting designs</div>
+                <div class="solution-connector"></div>
+                <div class="solution-pill solution-pill-teal" data-i18n="cs.venue.solution.pill2">voting</div>
+                <div class="solution-connector"></div>
+                <div class="solution-pill solution-pill-teal" data-i18n="cs.venue.solution.pill3">completing chapters</div>
+                <div class="solution-connector"></div>
+                <div class="solution-pill solution-pill-outline" data-i18n="cs.venue.solution.pill4">Shared goal</div>
+            </div>
         </div>
-
-        <hr>
-
-        <h2>Design Precedents · What We Borrowed and Why</h2>
-        <p>Every structural constraint in Design Studios — no leaderboard, no guilt for absence, no free text — has a precedent in a game that already solved it. We didn't invent caution. We borrowed proven architecture.</p>
-
-        <div class="references">
-            <div class="ref-card">
-                <div class="ref-header">
-                    <div class="ref-icon">🧟</div>
-                    <div><div class="ref-title">State of Decay 2</div></div>
-                    <span class="ref-tag">The volunteering state</span>
-                </div>
-                <div class="ref-body">In State of Decay 2, you volunteer into another player's survival world as a temporary collaborator. You help, you contribute, you leave — with no permanent record of who did what. No formal commitment required. This is the direct model for how Beth enters a Studio: she plays as normal, contributes passively, and membership becomes true after two weeks without her ever having to decide. The mechanic is structurally incapable of producing rejection.</div>
+        <p class="solution-no-new reveal" data-i18n="cs.venue.solution.no-new">No new behaviour required.</p>
+        <p class="reveal" data-i18n="cs.venue.solution.p1">Each Studio has 10–20 members matched on design aesthetic, a shared weekly goal, a Studio Room that grows as the Studio levels up, and a collective gallery where members' submitted designs appear for each other.</p>
+        <div class="solution-panels">
+            <div class="solution-panel solution-panel-image reveal reveal--from-left">
+                <img src="venues/Social_popup.png" alt="Casa Bloom studio — matching screen">
             </div>
-            <div class="ref-card">
-                <div class="ref-header">
-                    <div class="ref-icon">✨</div>
-                    <div><div class="ref-title">Journey (thatgamecompany)</div></div>
-                    <span class="ref-tag">No toxicity by architecture</span>
-                </div>
-                <div class="ref-body">Journey's players meet anonymously, communicate only through a single sound, and never know who their companion was until the credits roll. The game doesn't rely on community guidelines to prevent harassment — it removes the tools for it entirely. This is the foundational principle behind feedback tags and gallery reactions: preset signals only, no free text, no way to send a negative signal even if you wanted to.</div>
-            </div>
-            <div class="ref-card">
-                <div class="ref-header">
-                    <div class="ref-icon">🐱</div>
-                    <div><div class="ref-title">Neko Atsume</div></div>
-                    <span class="ref-tag">Absence without guilt</span>
-                </div>
-                <div class="ref-body">Neko Atsume has no streak, no timer, no record of what you missed. Cats come and go; the experience is always positive when you return. This is the direct model for how Studios handles absence: the weekly goal advances or it doesn't, but Beth's absence is never made visible, never counted, never punished.</div>
+            <div class="solution-panel solution-panel-text reveal reveal--from-right reveal--delay-1">
+                <p data-i18n-html="cs.venue.solution.panel.text">The Studio is named and curated.<br>Ours: <strong>Casa Bloom 🌸</strong></p>
             </div>
         </div>
 
         <hr>
 
-        <h2>The Joining Mechanic · "You Can't Fail to Belong"</h2>
-        <p>This was the most consequential decision in the entire system.</p>
-        <p>During onboarding, the player taps a Studio and goes back to play. Nothing changes on screen. But behind the scenes she knows, everything she already does starts contributing to something shared.</p>
-        <p>Two weekly cycles later, she's a member. Not because she declared it. Because the system observed it. The transition is quiet: a status line change. A private notification. No announcement to the Studio. No fanfare.</p>
+        <h2 class="reveal" data-i18n="cs.venue.h2.precedents">These constraints aren't new.</h2>
+        <p class="lead reveal reveal--delay-1" data-i18n="cs.venue.precedents.lead">The best games already solved them, just never combined them.</p>
+        <div class="precedents-grid">
+            <div class="precedent-card reveal reveal--delay-1">
+                <div class="precedent-title">State of Decay 2</div>
+                <span class="precedent-tag" data-i18n="cs.venue.precedent.1.tag">The volunteering state</span>
+            </div>
+            <div class="precedent-card reveal reveal--delay-2">
+                <div class="precedent-title">Journey</div>
+                <span class="precedent-tag" data-i18n="cs.venue.precedent.2.tag">No toxicity by architecture</span>
+            </div>
+            <div class="precedent-card reveal reveal--delay-3">
+                <div class="precedent-title">Neko Atsume</div>
+                <span class="precedent-tag" data-i18n="cs.venue.precedent.3.tag">Absence without guilt</span>
+            </div>
+        </div>
 
-        <blockquote>
-            <p>Belonging isn't a step. It's a pattern. The moment you ask someone to commit, you surface their ambivalence. This system bypasses that entirely.</p>
+        <hr>
+
+          <h2 class="reveal" data-i18n="cs.venue.h2.joining">The Joining Mechanic · "You Can't Fail to Belong"</h2>
+        <p class="lead reveal reveal--delay-1" data-i18n="cs.venue.joining.lead">This was the most consequential decision in the entire system.</p>
+        <div class="joining-cols reveal reveal--delay-2">
+            <p data-i18n="cs.venue.joining.p1">During onboarding, the player taps a Studio and goes back to play. Nothing changes on screen.</p>
+            <p data-i18n="cs.venue.joining.p2">But behind the scenes she knows, everything she already does starts contributing to something shared.</p>
+        </div>
+        <div class="joining-images">
+            <div class="joining-img joining-img-left reveal reveal--from-left">
+                <img src="venues/Social_popup_2.png" alt="Play with this Studio — onboarding modal">
+            </div>
+            <div class="joining-img joining-img-right reveal reveal--from-right reveal--delay-1">
+                   <img src="venues/joigning-mechanic-croped.png" alt="Play with this Studio — onboarding modal">
+            </div>
+        </div>
+        <p class="reveal" data-i18n="cs.venue.joining.p3">In the first two weeks, Beth is technically a volunteer. She contributes without changing anything she already does, without label, expectation, or visibility.</p>
+        <p class="reveal" data-i18n="cs.venue.joining.p4">After two weekly cycles, the transition happens automatically. A quiet status line change appears in her Studio view.</p>
+        <div class="joining-timeline reveal reveal--delay-1">
+            <img src="venues/2weeks-volunteering-en.svg" alt="Discovery → Volunteer → Member — 3-week timeline" data-lang-en="venues/2weeks-volunteering-en.svg" data-lang-fr="venues/2weeks-volunteering-fr.svg">
+        </div>
+        <blockquote class="reveal reveal--delay-1">
+            <p data-i18n-html="cs.venue.joining.blockquote">Belonging isn't a step. It's a pattern.<br>By the time she knows she's a member, she already behaves like one.</p>
         </blockquote>
-
-        <h3>From volunteer to member, without crossing a line</h3>
-        <p>In the first two weeks, Beth is technically a volunteer. She contributes through normal play, exactly as members do, but she carries no label, no badge, no expectation. The word "volunteer" never appears in the interface — it's a system-side concept only.</p>
-        <p>The distinction matters for one reason: it means no one can fail to join. There is no threshold she can miss, no week she can fall short of, no moment where the game decides she hasn't done enough. She simply plays, and the system watches.</p>
-        <p>After two weekly cycles of contribution, the transition happens automatically. By the time she knows she's a member, she already acts like one.</p>
-
-        <div class="callout callout-coral">
-            <p><strong>Language note:</strong> The CTA throughout is <strong>"Play with this Studio"</strong>, never "Join Studio." The player is choosing to play, not to commit. That single word swap is load-bearing.</p>
+        <div class="callout callout-coral reveal reveal--delay-2">
+            <p data-i18n-html="cs.venue.joining.callout"><strong>Language note:</strong> The CTA throughout is <strong>"Play with this Studio"</strong>, never "Join Studio."<br>The player is choosing to play, not to commit. That single word swap is load-bearing.</p>
         </div>
 
-        <div class="img-slot">
-            <span class="img-slot-icon">📸</span>
-            <span class="img-slot-label">Side-by-side — traditional "Join" CTA flow vs. Design Studios' volunteer-to-member quiet transition</span>
+       
+
+        <hr>
+
+      
+
+         <h2 class="reveal" data-i18n="cs.venue.h2.d7">The D7 Discovery Flow · 7 Steps</h2>
+        <p class="lead reveal reveal--delay-1" data-i18n-html="cs.venue.d7.lead">How does Beth first encounter her Studio? <span class="muted"> Not through a banner. Not a push notification.</span> Through a milestone.</p>
+        <p class="reveal reveal--delay-2" data-i18n="cs.venue.d7.p1">At Day 7, Beth has completed several chapters and been through the voting loop many times. The leaderboard just unlocked. She's reward-loop trained — red dots work on her. </p>
+        <p class="d7-trigger reveal reveal--delay-3" data-i18n-html="cs.venue.d7.trigger">The trigger: <br/><strong>10 designs submitted.</strong> Emotional peak. She's claiming a reward when the system opens a door.</p>
+        <div class="d7-flow-outer reveal reveal--delay-1">
+            <button class="d7-expand-btn" onclick="openD7Modal()" title="View full flow">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 1.5H12.5V5.5M12.5 1.5L7.5 6.5M5.5 12.5H1.5V8.5M1.5 12.5L6.5 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span data-i18n="cs.venue.d7.expand">Expand</span>
+            </button>
+            <div class="d7-flow-wrapper">
+            <div class="d7-grid">
+                <div class="d7-step-col">
+                    <div class="d7-step-num" data-i18n="cs.venue.d7.step1.num">1. Milestone moment</div>
+                    <div class="d7-step-desc" data-i18n-html="cs.venue.d7.step1.desc"><ul><li>Reward claimed.</li><li>A brief system message appears.</li></ul></div>
+                    <div class="d7-step-insight" data-i18n="cs.venue.d7.step1.insight">Emotional peak — high receptivity.</div>
+                </div>
+                <div class="d7-step-col">
+                    <div class="d7-step-num" data-i18n="cs.venue.d7.step2.num">2. Studio reveal</div>
+                    <div class="d7-step-desc" data-i18n-html="cs.venue.d7.step2.desc"><ul><li>Full-screen overlay.</li><li>"You're ready to join a Design Studio."</li></ul></div>
+                    <div class="d7-step-insight" data-i18n="cs.venue.d7.step2.insight">Maybe later always visible. No pressure.</div>
+                </div>
+                <div class="d7-step-col">
+                    <div class="d7-step-num" data-i18n="cs.venue.d7.step3.num">3. Studio intro</div>
+                    <div class="d7-step-desc" data-i18n-html="cs.venue.d7.step3.desc"><ul><li>Three concepts only.</li><li>Warm language.</li><li>No mechanics dump.</li></ul></div>
+                    <div class="d7-step-insight" data-i18n="cs.venue.d7.step3.insight">Understood in under 10 seconds.</div>
+                </div>
+                <div class="d7-step-col">
+                    <div class="d7-step-num" data-i18n="cs.venue.d7.step4.num">4. Browse Studios</div>
+                    <div class="d7-step-desc" data-i18n-html="cs.venue.d7.step4.desc"><ul><li>3 curated suggestions based on design style.</li><li>Last-design galleries show an already-active community.</li></ul></div>
+                </div>
+                <div class="d7-step-col">
+                    <div class="d7-step-num" data-i18n="cs.venue.d7.step5.num">5. Confirm join</div>
+                    <div class="d7-step-desc" data-i18n-html="cs.venue.d7.step5.desc"><ul><li>Studio tagline and member faces before the CTA.</li></ul></div>
+                    <div class="d7-step-insight" data-i18n="cs.venue.d7.step5.insight">She's joining people, not a system.</div>
+                </div>
+                <div class="d7-step-col">
+                    <div class="d7-step-num" data-i18n="cs.venue.d7.step6.num">6. Studio home</div>
+                    <div class="d7-step-desc" data-i18n-html="cs.venue.d7.step6.desc"><ul><li>First view of Casa Bloom.</li><li>Key tiers visible.</li><li>Goal bar live.</li><li>Activity feed already moving.</li></ul></div>
+                    <div class="d7-step-insight" data-i18n-html="cs.venue.d7.step6.insight"><em>Alive on arrival.</em></div>
+                </div>
+                <div class="d7-step-col">
+                    <div class="d7-step-num" data-i18n="cs.venue.d7.step7.num">7. Back to her game</div>
+                    <div class="d7-step-desc" data-i18n-html="cs.venue.d7.step7.desc"><ul><li>No nudge. No new task.</li><li>She plays as usual — keys flow automatically.</li></ul></div>
+                    <div class="d7-step-insight" data-i18n="cs.venue.d7.step7.insight">Same loop, new meaning.</div>
+                </div>
+                <div class="d7-emotion">
+                    <div class="d7-emotion-avatar"><img src="venues/d7/avatar-1-excited.webp" alt=""></div>
+                    <span data-i18n="cs.venue.d7.emotion1">Excited</span>
+                </div>
+                <div class="d7-emotion">
+                    <div class="d7-emotion-avatar"><img src="venues/d7/avatar-2-curious.webp" alt=""></div>
+                    <span data-i18n="cs.venue.d7.emotion2">Curious</span>
+                </div>
+                <div class="d7-emotion">
+                    <div class="d7-emotion-avatar"><img src="venues/d7/avatar-3-informed.webp" alt=""></div>
+                    <span data-i18n="cs.venue.d7.emotion3">Informed</span>
+                </div>
+                <div class="d7-emotion">
+                    <div class="d7-emotion-avatar"><img src="venues/d7/avatar-4-intrigued.webp" alt=""></div>
+                    <span data-i18n="cs.venue.d7.emotion4">Intrigued</span>
+                </div>
+                <div class="d7-emotion">
+                    <div class="d7-emotion-avatar"><img src="venues/d7/avatar-5-warm.webp" alt=""></div>
+                    <span data-i18n="cs.venue.d7.emotion5">Warm</span>
+                </div>
+                <div class="d7-emotion">
+                    <div class="d7-emotion-avatar"><img src="venues/d7/avatar-6-belonging.webp" alt=""></div>
+                    <span data-i18n="cs.venue.d7.emotion6">Belonging</span>
+                </div>
+                <div class="d7-emotion">
+                    <div class="d7-emotion-avatar"><img src="venues/d7/avatar-7-settled.webp" alt=""></div>
+                    <span data-i18n="cs.venue.d7.emotion7">Settled</span>
+                </div>
+            </div>
+            </div>
         </div>
 
         <hr>
 
-        <h2>Two Currencies, Two Timelines</h2>
-        <p>The system runs on two currencies that operate on different clocks — and that distinction does most of the retention work.</p>
+        
+
+        <h2 class="reveal" data-i18n="cs.venue.h2.currencies">Two Currencies, Two Timelines</h2>
+        <p class="lead reveal reveal--delay-1" data-i18n-html="cs.venue.currencies.lead">The system runs on two currencies that <span class="muted">operate on different clocks — and that distinction</span> does most of the retention work.</p>
 
         <div class="currencies">
-            <div class="currency-card currency-weekly">
-                <div class="currency-icon">🔑</div>
-                <div class="currency-title">Weekly progression</div>
-                <div class="currency-name">Key</div>
-                <div class="currency-desc">Unlocks the weekly reward tiers: Spark → Bloom → Glow → Radiant. Resets every week. Earned automatically through normal play: submit a design (+1), complete a vote session (+1), earn a 5-star (+2).</div>
-                <div class="currency-tag">This week. Effort that matters now.</div>
+            <div class="currency-card currency-weekly reveal reveal--from-left">
+                <div class="currency-icon"><img src="venues/Key-currency.png" alt="Key currency"></div>
+                <div class="currency-title" data-i18n="cs.venue.currency.weekly.title">Weekly progression</div>
+                <div class="currency-name" data-i18n="cs.venue.currency.weekly.name">Key</div>
+                <div class="currency-desc-block">
+                    <div class="currency-desc" data-i18n="cs.venue.currency.weekly.desc1">Unlocks the weekly reward tiers:</div>
+                    <div class="currency-tiers">
+                        <span class="currency-pill">Spark</span>
+                        <span class="currency-connector"></span>
+                        <span class="currency-pill">Bloom</span>
+                        <span class="currency-connector"></span>
+                        <span class="currency-pill">Glow</span>
+                        <span class="currency-connector"></span>
+                        <span class="currency-pill">Radiant</span>
+                    </div>
+                    <div class="currency-desc" data-i18n-html="cs.venue.currency.weekly.desc2">Resets every week.<br>Earned automatically through normal play:
+                        <br> submit a design (+1),<br>complete a vote session (+1),<br>earn a 5-star (+2).</div>
+                </div>
+                <div class="currency-tag" data-i18n="cs.venue.currency.weekly.tag">This week. Effort that matters now.</div>
             </div>
-            <div class="currency-card currency-permanent">
-                <div class="currency-icon">↑</div>
-                <div class="currency-title">Permanent progression</div>
-                <div class="currency-name">Arrow</div>
-                <div class="currency-desc">Accumulates across weeks and never resets. Earned exclusively by completing the weekly collective challenge as a Studio. Each Arrow level unlocks a new shared Studio Room — permanently.</div>
-                <div class="currency-tag">Forever. Leaving means leaving behind a space she helped build.</div>
+            <div class="currency-card currency-permanent reveal reveal--from-right reveal--delay-1">
+                <div class="currency-icon"><img src="venues/arrow-currency.png" alt="Arrow currency"></div>
+                <div class="currency-title" data-i18n="cs.venue.currency.perm.title">Permanent progression</div>
+                <div class="currency-name" data-i18n="cs.venue.currency.perm.name">Arrow</div>
+                <div class="currency-desc-block">
+                    <div class="currency-desc" data-i18n-html="cs.venue.currency.perm.desc">Accumulates across weeks and never resets.<br>Earned exclusively by completing the weekly collective challenge as a Studio.<br>Each Arrow level unlocks a new shared Studio Room permanently.</div>
+                </div>
+                <div class="currency-tag" data-i18n="cs.venue.currency.perm.tag">Forever. Leaving means leaving behind a space she helped build.</div>
             </div>
-        </div>
-
-        <div class="img-slot">
-            <span class="img-slot-icon">📸</span>
-            <span class="img-slot-label">Currency diagram — Key weekly cycle vs. Arrow permanent accumulation, with Studio Room unlock progression</span>
         </div>
 
         <hr>
 
-        <h2>The D7 Discovery Flow · 7 Steps</h2>
-        <p>How does Beth first encounter her Studio? Not through a banner. Not a push notification. Through a milestone.</p>
-        <p>At Day 7, Beth has completed several chapters and been through the voting loop many times. The leaderboard just unlocked. She's reward-loop trained — red dots work on her. The trigger: <strong>10 designs submitted.</strong> Emotional peak. She's claiming a reward when the system opens a door.</p>
+        <h2 class="reveal" data-i18n="cs.venue.h2.voting">Making Anonymous Voting Feel Human</h2>
+        <p class="lead reveal reveal--delay-1" data-i18n-html="cs.venue.voting.lead">Voting in Venue is random and anonymous by design. <span class="muted">This meant the Studio feed and the voting pool are structurally separate. I couldn't build connection through votes</span>. So I built it elsewhere.</p>
 
-        <div class="flow-steps">
-            <div class="flow-step">
-                <div class="flow-step-num">1</div>
-                <div><div class="flow-step-title">Milestone moment</div><div class="flow-step-desc">Reward claimed. A brief system message appears. Emotional peak — high receptivity.</div></div>
+        <div class="voting-dark-panel reveal reveal--delay-2">
+            <div class="voting-dark-img">
+                <img src="venues/Feedback-tags-img.webp" alt="Feedback tags UI">
             </div>
-            <div class="flow-step">
-                <div class="flow-step-num">2</div>
-                <div><div class="flow-step-title">Studio reveal</div><div class="flow-step-desc">Full-screen overlay. "You're ready to join a Design Studio." <em>Maybe later</em> always visible. No pressure.</div></div>
-            </div>
-            <div class="flow-step">
-                <div class="flow-step-num">3</div>
-                <div><div class="flow-step-title">Studio intro</div><div class="flow-step-desc">Three concepts only. Warm language. No mechanics dump. Understood in under 10 seconds.</div></div>
-            </div>
-            <div class="flow-step">
-                <div class="flow-step-num">4</div>
-                <div><div class="flow-step-title">Browse Studios</div><div class="flow-step-desc">3 curated suggestions based on design style. Last-design galleries show an already-active community.</div></div>
-            </div>
-            <div class="flow-step">
-                <div class="flow-step-num">5</div>
-                <div><div class="flow-step-title">Confirm join</div><div class="flow-step-desc">Studio tagline and member faces before the CTA. She's joining people, not a system.</div></div>
-            </div>
-            <div class="flow-step">
-                <div class="flow-step-num">6</div>
-                <div><div class="flow-step-title">Studio home</div><div class="flow-step-desc">First view of Casa Bloom. Key tiers visible. Goal bar live. Activity feed already moving. <em>Alive on arrival.</em></div></div>
-            </div>
-            <div class="flow-step">
-                <div class="flow-step-num">7</div>
-                <div><div class="flow-step-title">Back to her game</div><div class="flow-step-desc">No nudge. No new task. She plays as usual — keys flow automatically. Same loop, new meaning.</div></div>
+            <div class="voting-dark-text" data-i18n-html="cs.venue.voting.tags.text">
+                <strong>Feedback tags:</strong>
+                When Beth votes, she can leave a preset tag alongside her vote. Not a score but a signal.<br>
+                For a few seconds, she's not optimizing a result.<br>
+                She's honoring someone.
             </div>
         </div>
 
-        <span class="label-coral">Emotional arc</span>
-        <div class="arc">
-            <div class="arc-step"><div class="arc-dot">1</div><div class="arc-label">Excited</div></div>
-            <div class="arc-step"><div class="arc-dot">2</div><div class="arc-label">Curious</div></div>
-            <div class="arc-step"><div class="arc-dot">3</div><div class="arc-label">Informed</div></div>
-            <div class="arc-step"><div class="arc-dot">4</div><div class="arc-label">Intrigued</div></div>
-            <div class="arc-step"><div class="arc-dot">5</div><div class="arc-label">Warm</div></div>
-            <div class="arc-step"><div class="arc-dot">6</div><div class="arc-label">Belonging</div></div>
-            <div class="arc-step"><div class="arc-dot">7</div><div class="arc-label">Settled</div></div>
+        <div class="voting-light-panel reveal reveal--delay-1">
+            <div class="voting-light-top">
+                <div class="voting-light-label" data-i18n="cs.venue.voting.gallery.label">Gallery reactions:</div>
+                <div class="voting-light-desc" data-i18n="cs.venue.voting.gallery.desc">In the Studio gallery, she can react to her mates' designs with preset feedbacks. No text. No moderation required. But suddenly, recognition is possible between people who know each other.</div>
+            </div>
+            <div class="voting-gallery-imgs">
+                <div class="voting-gallery-img"><img src="venues/Gallery-screen-1.webp" alt="Gallery screen 1"></div>
+                <div class="voting-gallery-img"><img src="venues/Gallery-screen-2.webp" alt="Gallery screen 2"></div>
+                <div class="voting-gallery-img"><img src="venues/Gallery-screen-3.webp" alt="Gallery screen 3"></div>
+            </div>
         </div>
 
-        <div class="img-slot">
-            <span class="img-slot-icon">📸</span>
-            <span class="img-slot-label">Full D7 discovery flow — all 7 steps shown as annotated wireframes</span>
+        <p class="voting-closing reveal reveal--delay-2" data-i18n-html="cs.venue.voting.closing">Zero moderation overhead. Structurally safe. Emotionally meaningful.<br>The preset palette is the design decision — not a limitation.</p>
+
+        <hr>
+
+        <h2 class="reveal" data-i18n="cs.venue.h2.milestones">Milestones · When the Studio Responds</h2>
+        <p class="lead reveal reveal--delay-1" data-i18n="cs.venue.milestones.lead">When the Studio hits a collective threshold, the space responds.</p>
+
+        <div class="milestone-tiles reveal reveal--delay-2">
+            <div class="milestone-tile milestone-tile-img">
+                <img src="venues/Milestones.webp" alt="Milestones screen">
+            </div>
+            <div class="milestone-tile milestone-tile-words">
+                <span data-i18n="cs.venue.milestone.word1">Light.</span>
+                <span data-i18n="cs.venue.milestone.word2">Subtle.</span>
+                <span data-i18n="cs.venue.milestone.word3">Shared.</span>
+            </div>
+        </div>
+
+        <p class="milestone-body reveal" data-i18n-html="cs.venue.milestone.body1">No big celebration. No individual callout. Just enough to say: <em class="milestone-em">you were part of this.</em></p>
+        <p class="milestone-body reveal reveal--delay-1" data-i18n-html="cs.venue.milestone.body2">Milestone reveal follows a <strong>Progressive Disclosure</strong> model. Rather than a single dramatic reveal that peaks and fades, the Studio room gradually comes to life as the week progresses. This produces steadier sustained engagement and avoids the emotional crash of a big reveal followed by nothing.</p>
+
+
+        <div class="table-container reveal reveal--delay-2"><table class="milestone-table">
+            <thead>
+                <tr>
+                    <th data-i18n="cs.venue.milestone.th.day">Day</th>
+                    <th data-i18n="cs.venue.milestone.th.reveal">Progressive Reveal</th>
+                    <th data-i18n="cs.venue.milestone.th.rate">Rate /10</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-i18n="cs.venue.milestone.td.d1">D1</td>
+                    <td data-i18n="cs.venue.milestone.d1">Neutral — no destination yet</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td data-i18n="cs.venue.milestone.td.d2">D2</td>
+                    <td data-i18n="cs.venue.milestone.d2">Delight — Spark unlocks unexpectedly</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td data-i18n="cs.venue.milestone.td.d3-4">D3–D4</td>
+                    <td data-i18n="cs.venue.milestone.d34">Excited/surprised — Bloom unlocks, pattern registers</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td data-i18n="cs.venue.milestone.td.d5">D5</td>
+                    <td data-i18n="cs.venue.milestone.d5">Satisfaction — Glow unlocks — surprise mechanic is now understood, this one feels earned rather than random. Quieter than D2 but deeper</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td data-i18n="cs.venue.milestone.td.d6">D6</td>
+                    <td data-i18n="cs.venue.milestone.d6">Beth senses the pattern. Something more might exist. One day left. The pull is intentional now</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td data-i18n="cs.venue.milestone.td.d7">D7</td>
+                    <td data-i18n="cs.venue.milestone.d7">Satisfied, curious about next week</td>
+                    <td>6</td>
+                </tr>
+            </tbody>
+        </table>
         </div>
 
         <hr>
 
-        <h2>Making Anonymous Voting Feel Human</h2>
-        <p>Voting in Venue is anonymous by design. Players can't choose whose work they see — the algorithm decides. This meant the Studio feed and the voting pool are structurally separate. I couldn't build connection through votes. So I built it elsewhere.</p>
-        <p><strong>Feedback tags:</strong> When Beth votes, she can leave a preset tag alongside her vote. "Great composition." "Beautiful palette." Not a score — a signal. For a few seconds, she's not optimizing a result. She's honoring someone.</p>
-        <p><strong>Gallery reactions:</strong> In the Studio gallery, she can react to her mates' designs with preset emoji responses. No text. No moderation required. But suddenly, recognition is possible between people who know each other.</p>
-
-        <div class="callout">
-            <p>Zero moderation overhead. Structurally safe. Emotionally meaningful. The preset palette is the design decision — not a limitation.</p>
-        </div>
-
-        <div class="img-slot">
-            <span class="img-slot-icon">📸</span>
-            <span class="img-slot-label">Voting UI — feedback tag selector, preset tags only, no free text field</span>
-        </div>
-
-        <hr>
-
-        <h2>Milestones · When the Studio Responds</h2>
-        <p>When the Studio hits a collective threshold, the space responds. Light. Subtle. Shared.</p>
-        <p>No big celebration. No individual callout. Just enough to say: <em>you were part of this.</em></p>
-        <p>Milestone reveal follows a <strong>Progressive Reveal</strong> model. Rather than a single dramatic reveal that peaks and fades, the Studio room gradually comes to life as the week progresses. This produces steadier sustained engagement and avoids the emotional crash of a big reveal followed by nothing.</p>
-
-        <div class="img-slot">
-            <span class="img-slot-icon">📸</span>
-            <span class="img-slot-label">Studio milestone — before/after state of a Studio room unlocking, warm ambient animation</span>
-        </div>
-
-        <hr>
-
-        <h2>Outcomes</h2>
-        <p>This is a design concept submitted for Phase 2 development evaluation, not a shipped product. But the business logic is tight.</p>
+        <h2 class="reveal" data-i18n="cs.venue.h2.outcomes">Outcomes</h2>
+        <p class="lead reveal reveal--delay-1" data-i18n-html="cs.venue.outcomes.lead">This is a design concept <span class="muted">submitted for Phase 2 development evaluation</span>, based on observed player behavior and validated assumptions.</p>
 
         <div class="outcomes">
-            <div class="outcome">
-                <span class="outcome-tag">D7</span>
-                <div class="outcome-body">The discovery flow hooks at the exact moment of <strong>peak emotional receptivity</strong>. Players return for the shared weekly goal before they've consciously decided to stay.</div>
+            <div class="outcome reveal reveal--delay-1">
+                <span class="outcome-tag" data-i18n-html="cs.venue.outcome.d7.tag">D7</span>
+                <div class="outcome-body" data-i18n-html="cs.venue.outcome.d7.body">The discovery flow hooks at the exact moment of <strong>peak emotional receptivity</strong>. Players return for the shared weekly goal before they've consciously decided to stay.</div>
             </div>
-            <div class="outcome">
-                <span class="outcome-tag">D30</span>
-                <div class="outcome-body">Arrows create <strong>identity-level attachment</strong>. A player who has contributed to three Studio room unlocks is not the same as a player with no investment. Leaving has a real, visible cost — without any pressure mechanic.</div>
+            <div class="outcome reveal reveal--delay-2">
+                <span class="outcome-tag" data-i18n-html="cs.venue.outcome.d30.tag">D30</span>
+                <div class="outcome-body" data-i18n-html="cs.venue.outcome.d30.body">Arrows create <strong>identity-level attachment</strong>. A player who has contributed to three Studio room unlocks is not the same as a player with no investment. Leaving has a real, visible cost — without any pressure mechanic.</div>
             </div>
-            <div class="outcome">
+            <div class="outcome reveal reveal--delay-3">
                 <span class="outcome-tag">Ops</span>
-                <div class="outcome-body"><strong>Zero moderation overhead.</strong> No chat. No free text. No reporting flow needed. The system is structurally incapable of producing the content that requires intervention.</div>
-            </div>
-        </div>
-
-        <div class="img-slot">
-            <span class="img-slot-icon">📸</span>
-            <span class="img-slot-label">Business case diagram — D7/D30 retention loops, how key and arrow currencies drive each</span>
-        </div>
-
-        <hr>
-
-        <h2>What I'd Do Next</h2>
-        <div class="next-items">
-            <div class="next-item">
-                <div class="next-dot"></div>
-                <div><strong>The Studio feed at low activity.</strong> When a Studio is quiet, the feed goes cold. A progressive reveal model helps, but the feed still needs a minimum viable signal even when members haven't been active. This is the main identified weakness from user testing.</div>
-            </div>
-            <div class="next-item">
-                <div class="next-dot"></div>
-                <div><strong>Feedback tag visibility.</strong> Do tags feed back visibly to the designer's profile, or do they disappear into the algorithm? This question has UX and business implications and isn't resolved yet.</div>
-            </div>
-            <div class="next-item">
-                <div class="next-dot"></div>
-                <div><strong>Permanent inventory monetization.</strong> Studio rooms unlock permanently, which creates real leaving cost. Whether that can also be a monetization surface (cosmetic Studio items, limited room decor) is a viable direction that's been deliberately parked for now.</div>
+                <div class="outcome-body" data-i18n-html="cs.venue.outcome.ops.body"><strong>Zero moderation overhead.</strong> No chat. No free text. No reporting flow needed. The system is structurally incapable of producing the content that requires intervention.</div>
             </div>
         </div>
 
         <hr>
 
-        <h2>Key Principles I'll Carry Forward</h2>
+        <h2 class="reveal" data-i18n="cs.venue.h2.next">What I'd Do Next</h2>
+        <div class="next-carousel reveal reveal--delay-1">
+            <div class="next-track">
+                <!-- Slide 1 -->
+                <div class="next-slide">
+                    <div class="next-slide-text">
+                        <p class="lead" data-i18n="cs.venue.next.1.lead">The Other feed was never built</p>
+                        <p data-i18n="cs.venue.next.1.p1">The Social tab introduces two views: My Studio's feed and Other feed; a familiar pattern of following first, then broader exploration. Beth sees designers she follows, then system-recommended ones based on style.</p>
+                        <p data-i18n="cs.venue.next.1.p2">The Phase 1 leaderboard remains as a placeholder, while the next iteration builds on the existing (but previously underused) following system.</p>
+                    </div>
+                    <div class="next-slide-img-wrap">
+                        <img src="venues/iPhone in Hands.webp" alt="Social feed mockup">
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="next-slide">
+                    <div class="next-slide-text">
+                        <p class="lead" data-i18n="cs.venue.next.2.lead">Feedback tag visibility.</p>
+                        <p data-i18n="cs.venue.next.2.p1">Do tags feed back visibly to the designer's profile, or do they disappear into the algorithm? This question has UX and business implications and isn't resolved yet.</p>
+                    </div>
+                    <div class="next-slide-img-wrap next-slide-img-blush">
+                        <img src="venues/feedback_tags_transparent.webp" alt="Feedback tags mockup" class="next-slide-img-contain" data-lang-en="venues/feedback_tags_transparent.webp" data-lang-fr="venues/feedback_tags_transparent-fr.webp">
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="next-slide">
+                    <div class="next-slide-text">
+                        <p class="lead" data-i18n="cs.venue.next.3.lead">Permanent inventory monetization.</p>
+                        <p data-i18n="cs.venue.next.3.p1">Studio rooms unlock permanently, which creates real leaving cost.</p>
+                        <p data-i18n="cs.venue.next.3.p2">Whether that can also be a monetization surface (cosmetic Studio items, limited room decor) is a viable direction that's been deliberately parked for now.</p>
+                    </div>
+                    <div class="next-slide-img-wrap">
+                        <img src="venues/iPhone X on Desk Mockup.webp" alt="Inventory mockup">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="next-pagination">
+                <span class="next-dot active" data-slide="0"></span>
+                <span class="next-dot" data-slide="1"></span>
+                <span class="next-dot" data-slide="2"></span>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2 class="reveal" data-i18n="cs.venue.h2.learned">What I've Learned</h2>
+        <div class="learned">
+            <div class="learned-row reveal reveal--from-left">
+                <div class="learned-text">
+                    <div class="lead" data-i18n="cs.venue.learned.1.title">JTBD changes the quality of every decision downstream.</div>
+                    <div class="learned-desc">
+                        <p data-i18n="cs.venue.learned.1.desc1">Breaking Beth into four moments, joining, staying, contributing, leaving, made every decision testable against a specific situation, not a vague persona.</p>
+                        <p data-i18n="cs.venue.learned.1.desc2">Each moment carries its own emotion, fear, and job. This also made the link to D7 and D30 structurally clear, turning design reasoning into a business argument stakeholders can align with.</p>
+                    </div>
+                </div>
+                <div class="learned-img">
+                    <img src="venues/JTBD-states-en.webp" alt="" data-lang-en="venues/JTBD-states-en.webp" data-lang-fr="venues/JTBD-states-fr.webp">
+                </div>
+            </div>
+            <div class="learned-row learned-row--flip reveal reveal--from-right">
+                <div class="learned-img">
+                    <img src="venues/state-of-decay.webp" alt="">
+                </div>
+                <div class="learned-text">
+                    <div class="lead" data-i18n="cs.venue.learned.2.title">Good references are systems, not screens.</div>
+                    <div class="learned-desc">
+                        <p data-i18n="cs.venue.learned.2.desc1">Looking beyond design feeds shifted the question from "how should this look?" to "what problem has already been solved at scale?" Games like Journey or Neko Atsume provided proven interaction models, not just inspiration.</p>
+                        <p data-i18n="cs.venue.learned.2.desc2">Borrowing architecture, not aesthetics, led to more confident and grounded decisions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="learned-row reveal reveal--from-left">
+                <div class="learned-text">
+                    <div class="lead" data-i18n="cs.venue.learned.3.title">AI compresses the gap between hypothesis and clarity.</div>
+                    <div class="learned-desc">
+                        <p data-i18n="cs.venue.learned.3.desc1">Using AI alongside Figma made iteration faster and more exploratory. Instead of resolving uncertainty upfront, I could build to resolve it — test, see, adjust.</p>
+                        <p data-i18n="cs.venue.learned.3.desc2">That shift reduced friction in decision-making and made the overall system sharper, from concept to final case study.</p>
+                    </div>
+                </div>
+                <div class="learned-img">
+                    <img src="venues/bot.webp" alt="">
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2 class="reveal" data-i18n="cs.venue.h2.quotes">Key Principles I'll Carry Forward</h2>
         <div class="quotes">
-            <div class="quote-item">Social mechanics should be structurally incapable of producing toxicity, not reliant on settings or moderation to prevent bad outcomes.</div>
-            <div class="quote-item">The moment you ask someone to join, you create a moment where they can say no. Design the belonging, not the ask.</div>
-            <div class="quote-item">Absence must not feel consequential. Presence should feel meaningful. Those are not the same design problem.</div>
+            <div class="quote-item reveal reveal--delay-1" data-i18n="cs.venue.quote.1">Social mechanics should be structurally incapable of producing toxicity, not reliant on settings or moderation to prevent bad outcomes.</div>
+            <div class="quote-item reveal reveal--delay-2" data-i18n="cs.venue.quote.2">The moment you ask someone to join, you create a moment where they can say no. Design the belonging, not the ask.</div>
+            <div class="quote-item reveal reveal--delay-3" data-i18n="cs.venue.quote.3">Absence must not feel consequential. Presence should feel meaningful. Those are not the same design problem.</div>
         </div>
 
         <!-- CTA -->
-        <div class="cta-block">
-            <h2>Want to see the full system?</h2>
-            <p>The complete deliverable set is available on request.</p>
+        <div class="cta-block reveal reveal--delay-1">
+            <h2 data-i18n="cs.venue.cta.h2">Want to see the full system?</h2>
+            <p data-i18n="cs.venue.cta.p">The complete deliverable set is available on request.</p>
             <div class="deliverables">
-                <span class="deliverable-tag">Full concept schema</span>
-                <span class="deliverable-tag">10-slide presentation deck</span>
-                <span class="deliverable-tag">Speaker script (EN + FR)</span>
-                <span class="deliverable-tag">D7 discovery flow spec</span>
-                <span class="deliverable-tag">User testing documentation</span>
+                <span class="deliverable-tag" data-i18n="cs.venue.cta.tag1">Full concept schema</span>
+                <span class="deliverable-tag" data-i18n="cs.venue.cta.tag2">10-slide presentation deck</span>
+                <span class="deliverable-tag" data-i18n="cs.venue.cta.tag3">D7 discovery flow spec</span>
+                <span class="deliverable-tag" data-i18n="cs.venue.cta.tag4">User testing documentation</span>
+                <span class="deliverable-tag" data-i18n="cs.venue.cta.tag5">Design decision rationale</span>
             </div>
-            <a href="mailto:jacob.radonirina@gmail.com" class="cta-btn">📩 Get in touch</a>
+            <a href="mailto:jacob.radonirina@gmail.com" class="cta-btn" data-i18n="cs.venue.cta.btn"> Get in touch</a>
         </div>
 
     </main>
@@ -1419,8 +1151,87 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </div>
 
+<!-- D7 Flow Modal -->
+<div id="d7-modal" class="d7-modal" onclick="if(event.target===this)closeD7Modal()">
+    <div class="d7-modal-inner">
+        <button class="d7-modal-close" onclick="closeD7Modal()">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L14 14M14 2L2 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <div class="d7-modal-label">The D7 Discovery Flow · 7 Steps</div>
+        <div class="d7-modal-viewport">
+            <div class="d7-modal-scale-wrap cs-venue-content">
+                <!-- grid cloned by JS -->
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
     document.getElementById("year").innerHTML = new Date().getFullYear();
+
+    // ── D7 Flow Modal ───────────────────────────────────────
+    function openD7Modal() {
+        const modal = document.getElementById('d7-modal');
+        const wrap = modal.querySelector('.d7-modal-scale-wrap');
+        if (!wrap.querySelector('.d7-grid')) {
+            const src = document.querySelector('.d7-flow-wrapper .d7-grid');
+            wrap.appendChild(src.cloneNode(true));
+        }
+        modal.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+        requestAnimationFrame(scaleD7Grid);
+    }
+
+    function scaleD7Grid() {
+        const wrap = document.querySelector('.d7-modal-scale-wrap');
+        const grid = wrap.querySelector('.d7-grid');
+        if (!grid) return;
+        grid.style.transform = '';
+        const vw = window.innerWidth * 0.88;
+        const vh = window.innerHeight * 0.75;
+        const gw = grid.scrollWidth;
+        const gh = grid.scrollHeight;
+        const scale = Math.min(vw / gw, vh / gh, 1);
+        grid.style.transform = 'scale(' + scale + ')';
+        grid.style.transformOrigin = 'top left';
+        wrap.style.width  = (gw * scale) + 'px';
+        wrap.style.height = (gh * scale) + 'px';
+    }
+
+    function closeD7Modal() {
+        document.getElementById('d7-modal').classList.remove('is-open');
+        document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeD7Modal();
+    });
+    window.addEventListener('resize', function() {
+        if (document.getElementById('d7-modal').classList.contains('is-open')) scaleD7Grid();
+    });
+
+    // ── D7 Grid drag-to-scroll ──────────────────────────────
+    (function() {
+        const wrapper = document.querySelector('.d7-flow-wrapper');
+        if (!wrapper) return;
+        let isDown = false, startX, scrollLeft;
+        wrapper.addEventListener('mousedown', function(e) {
+            isDown = true;
+            startX = e.pageX - wrapper.offsetLeft;
+            scrollLeft = wrapper.scrollLeft;
+            wrapper.style.cursor = 'grabbing';
+        });
+        window.addEventListener('mouseup', function() {
+            isDown = false;
+            wrapper.style.cursor = '';
+        });
+        wrapper.addEventListener('mousemove', function(e) {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - wrapper.offsetLeft;
+            wrapper.scrollLeft = scrollLeft - (x - startX);
+        });
+    })();
 
     // EmailJS
     emailjs.init("69fgSb-btkXkWSBtI");
@@ -1705,6 +1516,89 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             navigator.serviceWorker.register('/sw.js').then(() => {}).catch(() => {});
         });
     }
+
+    // ── Header Auto-hide ────────────────────────────────────
+    (function() {
+        const header = document.querySelector('header');
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
+        function updateHeader() {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY < 80) {
+                header.classList.remove('header--hidden');
+            } else if (currentScrollY > lastScrollY) {
+                header.classList.add('header--hidden');
+            } else {
+                header.classList.remove('header--hidden');
+            }
+            lastScrollY = currentScrollY;
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                requestAnimationFrame(updateHeader);
+                ticking = true;
+            }
+        }, { passive: true });
+
+        document.addEventListener('mousemove', function(e) {
+            if (e.clientY < 60) {
+                header.classList.remove('header--hidden');
+            }
+        });
+    })();
+
+    // ── Scroll Reveal ───────────────────────────────────────
+    (function() {
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                const isDirectional = entry.target.classList.contains('reveal--from-left') ||
+                                      entry.target.classList.contains('reveal--from-right');
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    entry.target.classList.remove('is-exiting');
+                    if (!isDirectional) observer.unobserve(entry.target);
+                } else if (isDirectional) {
+                    entry.target.classList.remove('is-visible');
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.reveal').forEach(function(el) {
+            observer.observe(el);
+        });
+    })();
+</script>
+<script>
+(function() {
+    const carousel = document.querySelector('.next-carousel');
+    if (!carousel) return;
+    const track = carousel.querySelector('.next-track');
+    const dots = carousel.querySelectorAll('.next-dot');
+    const slideCount = carousel.querySelectorAll('.next-slide').length;
+    let current = 0;
+
+    function goTo(index) {
+        if (index < 0 || index >= slideCount || index === current) return;
+        current = index;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+
+    carousel.addEventListener('click', function(e) {
+        const dot = e.target.closest('.next-dot[data-slide]');
+        if (dot) goTo(parseInt(dot.dataset.slide));
+    });
+
+    let touchStartX = 0;
+    carousel.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    carousel.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(dx) > 50) goTo(current + (dx < 0 ? 1 : -1));
+    });
+})();
 </script>
 </body>
 </html>

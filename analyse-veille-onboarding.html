@@ -1,0 +1,800 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-67D06JS6R4"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-67D06JS6R4');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PRKVLWBW');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "vjhao9vgsp");
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benchmark onboarding mobile — 66 apps analysées · Jacob Houmadi</title>
+    <meta name="description" content="Analyse de 66 apps mobiles sur leurs patterns d'onboarding : perceived value, personnalisation, paywalls. Les patterns qui reviennent chez les apps les mieux notées.">
+    <meta name="author" content="Jacob Houmadi">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jacob-houmadi.com/analyse-veille-onboarding.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jacob-houmadi.com/analyse-veille-onboarding.html">
+    <meta property="og:title" content="Benchmark onboarding mobile — 66 apps analysées · Jacob Houmadi">
+    <meta property="og:description" content="Ce que les meilleures apps font (et que les autres ratent) dans leurs premiers écrans.">
+    <meta property="og:image" content="https://jacob-houmadi.com/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cookie-consent.css">
+    <link rel="stylesheet" href="nav-mobile.css">
+    <link rel="stylesheet" href="case-study.css">
+
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Calendly -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+    <script src="translations.js" defer></script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRKVLWBW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- Cookie Consent Banner -->
+<div id="cookieConsent" class="cookie-consent" style="display: none;">
+    <div class="cookie-content">
+        <div class="cookie-text">
+            <h3 data-i18n="cookie.01">🍪 Cookies et confidentialité</h3>
+            <p data-i18n-html="cookie.02">Ce site utilise des cookies essentiels pour son fonctionnement. <a href="politique-confidentialite.html">En savoir plus</a></p>
+        </div>
+        <div class="cookie-buttons">
+            <button onclick="acceptCookies()" class="cookie-accept">Accepter</button>
+            <button onclick="refuseCookies()" class="cookie-refuse">Refuser</button>
+        </div>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header>
+    <button class="logo" onclick="window.location.href='index.html'" aria-label="Jacob Houmadi — Accueil">Jacob<span aria-hidden="true">.</span></button>
+    <nav class="desktop-nav">
+        <ul>
+            <li><button onclick="showPortfolio()" data-i18n="nav.portfolio">Portfolio</button></li>
+            <li><a href="cases-studies.html" class="nav-active" data-i18n="nav.casestudies">Traveaux</a></li>
+            <li><button onclick="openModal('offres')" data-i18n="nav.services">Offres</button></li>
+            <li><button onclick="openModal('temoignages')" data-i18n="nav.testimonials">Témoignages</button></li>
+            <li><button onclick="openModal('faq')" data-i18n="nav.faq">FAQ</button></li>
+            <li>
+                <label for="lang-select" class="sr-only">Langue / Language</label>
+                <select class="lang-select" onchange="switchLanguage(this.value)" aria-label="Sélectionner la langue">
+                    <option value="fr">FR</option>
+                    <option value="en">EN</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+</header>
+
+<!-- Menu Mobile Overlay -->
+<div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="closeMobileMenu()"></div>
+
+<!-- Menu Mobile -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobile">
+    <div class="mobile-nav-header">
+        <button class="logo-mobile"><img src="logo-jacob.png" alt="logo"></button>
+        <button class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="Fermer le menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+    </div>
+    <ul class="mobile-nav-links">
+        <li><button onclick="showPortfolio(); closeMobileMenu();" data-i18n="nav.portfolio">Portfolio</button></li>
+        <li><a href="cases-studies.html" data-i18n="nav.casestudies">Cases studies</a></li>
+        <li><button onclick="openModal('offres'); closeMobileMenu();" data-i18n="nav.services">Offres</button></li>
+        <li><button onclick="openModal('temoignages'); closeMobileMenu();" data-i18n="nav.testimonials">Témoignages</button></li>
+        <li><button onclick="openModal('faq'); closeMobileMenu();" data-i18n="nav.faq">FAQ</button></li>
+        <li>
+            <div class="mobile-lang-switcher" role="group" aria-label="Langue / Language">
+                <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')" aria-pressed="true">FR</button>
+                <button class="lang-btn" data-lang="en" onclick="setLang('en')" aria-pressed="false">EN</button>
+            </div>
+        </li>
+    </ul>
+    <div class="mobile-nav-footer">
+        <p data-i18n="mobilenav.p">Transformons votre projet ensemble</p>
+        <button onclick="scrollToLanding(); closeMobileMenu();" class="mobile-cta" data-i18n="mobilenav.cta">Me contacter</button>
+    </div>
+    <div>
+        <ul class="footer-nav-legals">
+            <li><a href="mentions-legales.html" data-i18n="footer.legal1">Mentions légales</a></li>
+            <li><a href="politique-confidentialite.html" data-i18n="footer.legal2">Politiques de confidentialité</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ── PAGE CONTENT ──────────────────────────────────────── -->
+<div class="cs-ob-content">
+
+    <div class="cs-back-link">
+        <a href="cases-studies.html" data-i18n="cs.ob.back">← Cases studies</a>
+    </div>
+
+    <!-- Hero -->
+    <div class="ob-hero">
+        <div class="ob-tag" data-i18n="cs.ob.tag">Analyse &amp; veille · UX Mobile</div>
+        <h1 data-i18n-html="cs.ob.h1">Onboarding mobile —<br>ce que <span>66 apps</span> font (bien ou mal)</h1>
+        <p class="ob-subtitle" data-i18n="cs.ob.subtitle">
+            Les patterns qui reviennent chez les apps les mieux notées, et ceux qui manquent chez les autres. Un benchmark vu à travers un regard UX.
+        </p>
+        <div class="ob-meta-bar">
+            <span data-i18n="cs.ob.meta.1">66 apps analysées</span>
+            <span class="ob-meta-dot"></span>
+            <span data-i18n="cs.ob.meta.2">16 apps ⭐⭐⭐ annotées</span>
+            <span class="ob-meta-dot"></span>
+            <span>B2C &amp; B2B</span>
+            <span class="ob-meta-dot"></span>
+            <span data-i18n="cs.ob.meta.4">Social · Finance · Health · AI · Travel &amp; +</span>
+        </div>
+    </div>
+
+    <!-- Prose content -->
+    <main class="ob-prose">
+
+        <!-- Intro -->
+        <p class="ob-intro reveal" data-i18n="cs.ob.intro">
+            Ce benchmark recense 66 apps sur leurs flux d'onboarding : ce qu'elles font en premier, comment elles justifient leur valeur, quand elles demandent des permissions. Ce qui m'intéresse ici, c'est moins le classement que les récurrences — les mêmes patterns qui reviennent chez les apps bien notées, et les mêmes absences chez les autres. Une ressource utile si vous travaillez sur l'acquisition ou la rétention early.
+        </p>
+
+        <!-- Key observations -->
+        <div class="ob-section-label reveal" data-i18n="cs.ob.label.obs">3 observations clés</div>
+
+        <div class="ob-observations">
+            <div class="ob-obs-card reveal reveal--delay-1">
+                <div class="ob-obs-num">01</div>
+                <div>
+                    <div class="ob-obs-title" data-i18n="cs.ob.obs1.title">Le perceived value précède toujours la demande</div>
+                    <div class="ob-obs-body" data-i18n="cs.ob.obs1.body">Parmi les apps ⭐⭐⭐, presque toutes montrent leur valeur avant de demander quoi que ce soit — permission, compte, ou paiement. L'ordre n'est pas anodin : quand une app demande avant d'avoir justifié sa présence, elle crée une friction à froid. Les meilleures apps ne demandent pas, elles méritent.</div>
+                </div>
+            </div>
+
+            <div class="ob-obs-card reveal reveal--delay-2">
+                <div class="ob-obs-num">02</div>
+                <div>
+                    <div class="ob-obs-title" data-i18n="cs.ob.obs2.title">"Straight to the point" domine en Travel &amp; Food</div>
+                    <div class="ob-obs-body" data-i18n="cs.ob.obs2.body">Les apps de voyage et de livraison n'ont pas besoin de vous convaincre : l'intention est déjà là à l'ouverture. Uber, Trainline, Booking, Deliveroo — tous vont droit au but. Aucun tutorial, aucun welcome screen. C'est une décision UX cohérente avec le contexte d'usage : l'utilisateur est en situation, pas en exploration.</div>
+                </div>
+            </div>
+
+            <div class="ob-obs-card reveal reveal--delay-3">
+                <div class="ob-obs-num">03</div>
+                <div>
+                    <div class="ob-obs-title" data-i18n="cs.ob.obs3.title">Claude est la seule app IA ⭐⭐⭐ — ChatGPT est à ⭐⭐</div>
+                    <div class="ob-obs-body" data-i18n="cs.ob.obs3.body">Sur les deux apps IA du benchmark, Claude obtient trois étoiles là où ChatGPT en obtient deux. La différence : Claude ne demande aucun compte avant que vous ayez compris ce que ça fait. Perceived value d'abord, friction ensuite. Un principe que peu de produits appliquent réellement, même ceux qui le formulent dans leurs guidelines.</div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Apps annotées -->
+        <div class="ob-section-label reveal" data-i18n="cs.ob.label.apps">Les 16 apps ⭐⭐⭐ — annotées</div>
+        <h2 class="reveal" data-i18n="cs.ob.h2.apps">Ce que chacune fait de remarquable</h2>
+        <p class="ob-section-intro reveal reveal--delay-1" data-i18n="cs.ob.apps.intro">
+            Parmi les 66 apps du benchmark, 16 obtiennent la note maximale. Voici pourquoi — en une phrase par app, sans jargon.
+        </p>
+
+        <!-- Filter pills -->
+        <div class="ob-filter-bar reveal">
+            <button class="ob-filter-pill ob-filter-pill--active" data-filter="all" data-i18n="cs.ob.filter.all">Tous</button>
+            <button class="ob-filter-pill" data-filter="social" data-i18n="cs.ob.filter.social">Social</button>
+            <button class="ob-filter-pill" data-filter="finance" data-i18n="cs.ob.filter.finance">Finance &amp; Santé</button>
+            <button class="ob-filter-pill" data-filter="productivite" data-i18n="cs.ob.filter.prod">Productivité</button>
+            <button class="ob-filter-pill" data-filter="wellness" data-i18n="cs.ob.filter.wellness">Wellness &amp; Éducation</button>
+            <button class="ob-filter-pill" data-filter="shopping" data-i18n="cs.ob.filter.shopping">Shopping &amp; Entertainment</button>
+            <button class="ob-filter-pill" data-filter="ia" data-i18n="cs.ob.filter.ia">IA</button>
+        </div>
+
+        <!-- Apps grid -->
+        <div class="ob-apps-grid">
+
+            <div class="ob-app-tile" data-category="social">
+                <div class="ob-app-tile-top">
+                    <span class="ob-app-tile-name">LinkedIn</span>
+                    <span class="ob-cat-badge ob-cat-badge--social" data-i18n="cs.ob.filter.social">Social</span>
+                </div>
+                <div class="ob-app-tile-annotation" data-i18n-html="cs.ob.app.linkedin">Personnalise avant de configurer. Tu construis ton profil <strong>dans</strong> l'onboarding lui-même — la valeur est immédiate, pas promise.</div>
+                <div class="ob-app-tile-footer">
+                    <div class="ob-app-tags">
+                        <span class="ob-pill" data-i18n="cs.ob.pill.personalization">Personalization</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.perceived">Perceived value</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.setup">App set up</span>
+                    </div>
+                    <div class="ob-stars">⭐⭐⭐</div>
+                </div>
+            </div>
+
+            <div class="ob-app-tile" data-category="social">
+                <div class="ob-app-tile-top">
+                    <span class="ob-app-tile-name">Yubo</span>
+                    <span class="ob-cat-badge ob-cat-badge--social" data-i18n="cs.ob.filter.social">Social</span>
+                </div>
+                <div class="ob-app-tile-annotation" data-i18n="cs.ob.app.yubo">Le tutorial n'explique pas l'interface, il explique la communauté. La différence est importante — et rare.</div>
+                <div class="ob-app-tile-footer">
+                    <div class="ob-app-tags">
+                        <span class="ob-pill" data-i18n="cs.ob.pill.tutorial">Tutorial</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.personalization">Personalization</span>
+                    </div>
+                    <div class="ob-stars">⭐⭐⭐</div>
+                </div>
+            </div>
+
+            <div class="ob-app-tile" data-category="social">
+                <div class="ob-app-tile-top">
+                    <span class="ob-app-tile-name">BeReal</span>
+                    <span class="ob-cat-badge ob-cat-badge--social" data-i18n="cs.ob.filter.social">Social</span>
+                </div>
+                <div class="ob-app-tile-annotation" data-i18n-html="cs.ob.app.bereal">L'un des rares onboardings qui justifie chaque permission <strong>avant</strong> de la demander. Aucune friction gratuite.</div>
+                <div class="ob-app-tile-footer">
+                    <div class="ob-app-tags">
+                        <span class="ob-pill" data-i18n="cs.ob.pill.notif">Notifications' permission</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.perceived">Perceived value</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.sttp">Straight to the point</span>
+                    </div>
+                    <div class="ob-stars">⭐⭐⭐</div>
+                </div>
+            </div>
+
+            <div class="ob-app-tile" data-category="social">
+                <div class="ob-app-tile-top">
+                    <span class="ob-app-tile-name">Snapchat</span>
+                    <span class="ob-cat-badge ob-cat-badge--social" data-i18n="cs.ob.filter.social">Social</span>
+                </div>
+                <div class="ob-app-tile-annotation" data-i18n="cs.ob.app.snapchat">La personnalisation crée l'attachement avant l'usage. Tu te sens déjà "chez toi" avant d'avoir envoyé quoi que ce soit.</div>
+                <div class="ob-app-tile-footer">
+                    <div class="ob-app-tags">
+                        <span class="ob-pill" data-i18n="cs.ob.pill.personalization">Personalization</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.perceived">Perceived value</span>
+                    </div>
+                    <div class="ob-stars">⭐⭐⭐</div>
+                </div>
+            </div>
+
+            <div class="ob-app-tile" data-category="finance">
+                <div class="ob-app-tile-top">
+                    <span class="ob-app-tile-name">N26</span>
+                    <span class="ob-cat-badge ob-cat-badge--finance" data-i18n="cs.ob.cat.finance">Finance &amp; Santé</span>
+                </div>
+                <div class="ob-app-tile-annotation" data-i18n-html="cs.ob.app.n26">Le paywall arrive tard, après que tu as compris ce que tu allais gérer. L'<strong>ordre</strong> de la séquence est ce qui fait la différence dans le financier.</div>
+                <div class="ob-app-tile-footer">
+                    <div class="ob-app-tags">
+                        <span class="ob-pill" data-i18n="cs.ob.pill.paywall">Subscription/Paywall</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.personalization">Personalization</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.welcome">Welcome screen</span>
+                    </div>
+                    <div class="ob-stars">⭐⭐⭐</div>
+                </div>
+            </div>
+
+            <div class="ob-app-tile" data-category="finance">
+                <div class="ob-app-tile-top">
+                    <span class="ob-app-tile-name">Flo Health</span>
+                    <span class="ob-cat-badge ob-cat-badge--finance" data-i18n="cs.ob.cat.finance">Finance &amp; Santé</span>
+                </div>
+                <div class="ob-app-tile-annotation" data-i18n="cs.ob.app.flo">Onboarding quasi médical dans le ton. La personnalisation est poussée, mais chaque question est justifiée par ce qu'elle va te donner en retour.</div>
+                <div class="ob-app-tile-footer">
+                    <div class="ob-app-tags">
+                        <span class="ob-pill" data-i18n="cs.ob.pill.personalization">Personalization</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.perceived">Perceived value</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.welcome">Welcome screen</span>
+                    </div>
+                    <div class="ob-stars">⭐⭐⭐</div>
+                </div>
+            </div>
+
+            <div class="ob-app-tile" data-category="finance">
+                <div class="ob-app-tile-top">
+                    <span class="ob-app-tile-name">Withings</span>
+                    <span class="ob-cat-badge ob-cat-badge--finance" data-i18n="cs.ob.cat.finance">Finance &amp; Santé</span>
+                </div>
+                <div class="ob-app-tile-annotation" data-i18n="cs.ob.app.withings">Sobre et précis. Aucun effet "wow", juste une configuration claire qui donne confiance dans le produit dès les premiers écrans.</div>
+                <div class="ob-app-tile-footer">
+                    <div class="ob-app-tags">
+                        <span class="ob-pill" data-i18n="cs.ob.pill.setup">App set up</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.personalization">Personalization</span>
+                    </div>
+                    <div class="ob-stars">⭐⭐⭐</div>
+                </div>
+            </div>
+
+            <div class="ob-app-tile" data-category="finance">
+                <div class="ob-app-tile-top">
+                    <span class="ob-app-tile-name">Whoop</span>
+                    <span class="ob-cat-badge ob-cat-badge--finance" data-i18n="cs.ob.cat.finance">Finance &amp; Santé</span>
+                </div>
+                <div class="ob-app-tile-annotation" data-i18n="cs.ob.app.whoop">Le tutorial est intégré au setup physique de l'objet. L'app et le hardware s'onboardent en même temps — c'est rare et bien exécuté.</div>
+                <div class="ob-app-tile-footer">
+                    <div class="ob-app-tags">
+                        <span class="ob-pill" data-i18n="cs.ob.pill.tutorial">Tutorial</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.personalization">Personalization</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.setup">App set up</span>
+                    </div>
+                    <div class="ob-stars">⭐⭐⭐</div>
+                </div>
+            </div>
+
+            <div class="ob-app-tile" data-category="productivite">
+                <div class="ob-app-tile-top">
+                    <span class="ob-app-tile-name">Opal</span>
+                    <span class="ob-cat-badge ob-cat-badge--prod" data-i18n="cs.ob.filter.prod">Productivité</span>
+                </div>
+                <div class="ob-app-tile-annotation" data-i18n="cs.ob.app.opal">Construit l'intention avant de demander l'accès. Tu as défini tes objectifs avant qu'il te demande de bloquer des apps. Séquence exemplaire.</div>
+                <div class="ob-app-tile-footer">
+                    <div class="ob-app-tags">
+                        <span class="ob-pill" data-i18n="cs.ob.pill.personalization">Personalization</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.perceived">Perceived value</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.notif">Notifications' permission</span>
+                    </div>
+                    <div class="ob-stars">⭐⭐⭐</div>
+                </div>
+            </div>
+
+            <div class="ob-app-tile" data-category="productivite">
+                <div class="ob-app-tile-top">
+                    <span class="ob-app-tile-name">Airtable</span>
+                    <span class="ob-cat-badge ob-cat-badge--prod" data-i18n="cs.ob.filter.prod">Productivité</span>
+                </div>
+                <div class="ob-app-tile-annotation" data-i18n="cs.ob.app.airtable">Montre la valeur avec un vrai cas d'usage, pas un écran de marketing. Le tutorial est un vrai projet, pas une démo.</div>
+                <div class="ob-app-tile-footer">
+                    <div class="ob-app-tags">
+                        <span class="ob-pill" data-i18n="cs.ob.pill.perceived">Perceived value</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.tutorial">Tutorial</span>
+                    </div>
+                    <div class="ob-stars">⭐⭐⭐</div>
+                </div>
+            </div>
+
+            <div class="ob-app-tile" data-category="wellness">
+                <div class="ob-app-tile-top">
+                    <span class="ob-app-tile-name">Headspace</span>
+                    <span class="ob-cat-badge ob-cat-badge--wellness" data-i18n="cs.ob.cat.wellness">Wellness</span>
+                </div>
+                <div class="ob-app-tile-annotation" data-i18n-html="cs.ob.app.headspace">Fait <strong>ressentir</strong> le produit avant de le vendre. Le paywall arrive après une session, pas avant. Du bon sens que peu d'apps appliquent réellement.</div>
+                <div class="ob-app-tile-footer">
+                    <div class="ob-app-tags">
+                        <span class="ob-pill" data-i18n="cs.ob.pill.perceived">Perceived value</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.paywall">Subscription/Paywall</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.tutorial">Tutorial</span>
+                    </div>
+                    <div class="ob-stars">⭐⭐⭐</div>
+                </div>
+            </div>
+
+            <div class="ob-app-tile" data-category="wellness">
+                <div class="ob-app-tile-top">
+                    <span class="ob-app-tile-name">Duolingo</span>
+                    <span class="ob-cat-badge ob-cat-badge--wellness" data-i18n="cs.ob.cat.wellness">Wellness</span>
+                </div>
+                <div class="ob-app-tile-annotation" data-i18n-html="cs.ob.app.duolingo">Tu joues <strong>avant</strong> de t'inscrire. L'engagement précède l'inscription — le modèle inverse de presque tout le monde, et ça fonctionne.</div>
+                <div class="ob-app-tile-footer">
+                    <div class="ob-app-tags">
+                        <span class="ob-pill" data-i18n="cs.ob.pill.personalization">Personalization</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.perceived">Perceived value</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.welcome">Welcome screen</span>
+                    </div>
+                    <div class="ob-stars">⭐⭐⭐</div>
+                </div>
+            </div>
+
+            <div class="ob-app-tile" data-category="wellness">
+                <div class="ob-app-tile-top">
+                    <span class="ob-app-tile-name">Blinkist</span>
+                    <span class="ob-cat-badge ob-cat-badge--wellness" data-i18n="cs.ob.cat.wellness">Wellness</span>
+                </div>
+                <div class="ob-app-tile-annotation" data-i18n="cs.ob.app.blinkist">La proposition de valeur est énoncée en une phrase, une fois, clairement. Puis l'onboarding personnalise. Pas de bruit, pas de répétition.</div>
+                <div class="ob-app-tile-footer">
+                    <div class="ob-app-tags">
+                        <span class="ob-pill" data-i18n="cs.ob.pill.welcome">Welcome screen</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.personalization">Personalization</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.perceived">Perceived value</span>
+                    </div>
+                    <div class="ob-stars">⭐⭐⭐</div>
+                </div>
+            </div>
+
+            <div class="ob-app-tile" data-category="shopping">
+                <div class="ob-app-tile-top">
+                    <span class="ob-app-tile-name">Zalando</span>
+                    <span class="ob-cat-badge ob-cat-badge--shopping" data-i18n="cs.ob.cat.shopping">Shopping</span>
+                </div>
+                <div class="ob-app-tile-annotation" data-i18n="cs.ob.app.zalando">Les permissions sont contextualisées par le style que tu viens de choisir. Ce n'est plus une demande — c'est une suite logique.</div>
+                <div class="ob-app-tile-footer">
+                    <div class="ob-app-tags">
+                        <span class="ob-pill" data-i18n="cs.ob.pill.notif">Notifications' permission</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.personalization">Personalization</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.welcome">Welcome screen</span>
+                    </div>
+                    <div class="ob-stars">⭐⭐⭐</div>
+                </div>
+            </div>
+
+            <div class="ob-app-tile" data-category="shopping">
+                <div class="ob-app-tile-top">
+                    <span class="ob-app-tile-name">Deezer</span>
+                    <span class="ob-cat-badge ob-cat-badge--shopping" data-i18n="cs.ob.cat.shopping">Shopping</span>
+                </div>
+                <div class="ob-app-tile-annotation" data-i18n="cs.ob.app.deezer">La personnalisation musicale remplace l'écran de bienvenue. Tu configures ton goût avant de voir une interface — c'est l'app qui s'adapte à toi, pas l'inverse.</div>
+                <div class="ob-app-tile-footer">
+                    <div class="ob-app-tags">
+                        <span class="ob-pill" data-i18n="cs.ob.pill.personalization">Personalization</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.paywall">Subscription/Paywall</span>
+                    </div>
+                    <div class="ob-stars">⭐⭐⭐</div>
+                </div>
+            </div>
+
+            <div class="ob-app-tile ob-app-tile--highlight" data-category="ia">
+                <div class="ob-app-tile-top">
+                    <span class="ob-app-tile-name">Claude</span>
+                    <span class="ob-cat-badge ob-cat-badge--ia" data-i18n="cs.ob.filter.ia">IA</span>
+                </div>
+                <div class="ob-app-tile-annotation" data-i18n="cs.ob.app.claude">Aucun compte demandé avant d'avoir compris ce que ça fait. Straight to the point, perceived value d'abord. La seule app IA ⭐⭐⭐ du benchmark — ChatGPT s'arrête à ⭐⭐.</div>
+                <div class="ob-app-tile-footer">
+                    <div class="ob-app-tags">
+                        <span class="ob-pill" data-i18n="cs.ob.pill.tutorial">Tutorial</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.perceived">Perceived value</span>
+                        <span class="ob-pill" data-i18n="cs.ob.pill.sttp">Straight to the point</span>
+                    </div>
+                    <div class="ob-stars">⭐⭐⭐</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Credit -->
+        <div class="ob-credit-box reveal">
+            <div class="ob-credit-icon">JA</div>
+            <div class="ob-credit-text" data-i18n-html="cs.ob.credit">
+                <strong>Source originale</strong> — Base de données construite par <a href="https://irradiated-hoverfly-94c.notion.site/Mobile-app-onboarding-benchmark-DB-c45f942b04f64d8290ecc188acf7df6b" target="_blank" rel="noopener">Justine Arnaud</a>, Freelance Product Manager, à partir de ses propres recherches. Les annotations et observations sont les miennes. Merci à elle pour ce travail de curation.
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-block reveal reveal--delay-1">
+            <h2 data-i18n="cs.ob.cta.h2">Vous travaillez sur un onboarding ?</h2>
+            <p data-i18n="cs.ob.cta.p">J'aide les équipes B2B à concevoir des premiers parcours clairs, cohérents avec la promesse produit — et qui convertissent.</p>
+            <a href="index.html#landing" class="cta-btn" data-i18n="cs.ob.cta.btn">Parler de votre projet →</a>
+        </div>
+
+    </main>
+</div>
+<!-- ── END PAGE CONTENT ──────────────────────────────────── -->
+
+<!-- ── MAIN CONTENT (contact) ──────────────────────────── -->
+<div class="main-content" id="landing">
+    <div class="container">
+        <div class="right-side">
+            <div class="quote">
+                <p data-i18n-html="quote.text">Je ne commence pas par Figma. <br><span>Je commence par les problèmes de votre produit.</span></p>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-label" data-i18n="stat.sector.label">Fintech</div>
+                    <div class="stat-number" data-i18n="stat.sector">SaaS · B2B</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label" data-i18n="stat.awards">Discovery</div>
+                    <div class="stat-number" data-i18n="stat.awards.label">→ Handoff</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-i18n="stat.exp">10 ans</div>
+                    <div class="stat-label" data-i18n="stat.exp.label">d'expériences</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="left-side">
+            <div class="content" id="leftcontent">
+                <h2 data-i18n-html="main.h2">Transformez votre identité de marque en <span>expérience digitale mémorable</span></h2>
+                <p class="subtitle" data-i18n="main.subtitle">Parlez-moi de votre projet. Je vous réponds sous 24h.</p>
+
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" data-i18n="form.name">Nom complet</label>
+                            <input type="text" id="name" name="name" placeholder="e.g. John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="form.email">Email professionnel</label>
+                            <input type="email" id="email" name="email" placeholder="e.g. john.doe@domain.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group" data-i18n-html="form.company">
+                            <label for="company">Nom de l'entreprise</label>
+                            <input type="text" id="company" name="company" placeholder="e.g. SpaceX">
+                        </div>
+                        <div class="form-group">
+                            <label for="website" data-i18n="form.website">Site web</label>
+                            <input type="url" id="website" name="website" placeholder="https://spacex.com">
+                        </div>
+                    </div>
+                    <div class="form-group m-tp">
+                        <label for="project" data-i18n="form.project">Votre situation</label>
+                        <select id="project" name="project" required>
+                            <option value=""           data-i18n="project.select">Sélectionnez...</option>
+                            <option value="structurer" data-i18n="project.structurer">Structurer – produit existant</option>
+                            <option value="construire" data-i18n="project.construire">Construire – from scratch ou refonte</option>
+                            <option value="renforcer"  data-i18n="project.renforcer">Renforcer – mission embarquée</option>
+                            <option value="autre"      data-i18n="project.autre">Autre à discuter</option>
+                        </select>
+                    </div>
+                    <div class="form-group m-tp" data-i18n-html="form.message">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Votre message ..."></textarea>
+                    </div>
+                    <div class="form-group privacy-check">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text" data-i18n-html="form.consent">
+                                J'accepte que mes données soient utilisées pour traiter ma demande, conformément à la
+                                <a href="politique-confidentialite.html">Politique de confidentialité</a>.
+                            </span>
+                        </label>
+                    </div>
+                    <button type="submit" id="submitBtn" class="btn-primary" data-i18n="form.submit">Démarrer la conversation →</button>
+                </form>
+            </div>
+
+            <div id="calendlyBlock" style="display:none;">
+                <div class="calendly-success-header">
+                    <h3 data-i18n="calendly.title">✅ Message envoyé, merci !</h3>
+                    <p data-i18n-html="calendly.text">Parfait, je reviens vers vous sous 24h. En attendant, <strong>réservez directement un créneau</strong>.</p>
+                </div>
+                <div class="calendly-inline-widget"
+                    data-url="https://calendly.com/jacob-radonirina/30min?hide_gdpr_banner=1&primary_color=0066ff"
+                    style="min-width:280px; height:660px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ── FOOTER ──────────────────────────────────────────── -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-text">© <span id="year"></span> Jacob HOUMADI</div>
+        <nav class="desktop-nav">
+            <ul class="footer-nav-legals">
+                <li><a href="mentions-legales.html" data-i18n="footer.legal1">Mentions légales</a></li>
+                <li><a href="politique-confidentialite.html" data-i18n="footer.legal2">Politique de confidentialité</a></li>
+            </ul>
+        </nav>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/jacob-houmadi" target="_blank" aria-label="Linkedin">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+            <a href="https://www.malt.fr/profile/jacobhoumadi" target="_blank" aria-label="Malt">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5384 3.46333C18.7268 1.65172 16.7916 2.82425 15.5805 4.03533L9.86041 9.75578L4.1397 15.4764C2.92862 16.6873 1.66101 18.5273 3.5677 20.4338C5.47439 22.3408 7.31439 21.073 8.52522 19.8619L14.2457 14.1414L19.9661 8.4211C21.1773 7.20989 22.3497 5.27468 20.5384 3.46333Z"/><path d="M9.60804 2.99443L12.0306 5.41685L14.4964 2.951C14.6638 2.7832 14.8338 2.62748 15.0048 2.48062C14.7466 1.1778 14.0032 0 12.0294 0C10.0519 0 9.30944 1.18243 9.05273 2.48807C9.23724 2.64778 9.42161 2.80787 9.60804 2.99443Z"/><path d="M14.4951 20.9888L12.0308 18.5244L9.60956 20.9454C9.4257 21.1294 9.24274 21.2975 9.06055 21.4554C9.3382 22.7835 10.124 24 12.0298 24C13.9406 24 14.7254 22.7769 15.0012 21.4446C14.8317 21.2987 14.662 21.1557 14.4951 20.9888Z"/><path d="M8.58048 8.86719H3.91012C2.19757 8.86719 0 9.40656 0 11.9683C0 13.8797 1.22342 14.6646 2.55604 14.9403C2.71382 14.7583 8.58048 8.86719 8.58048 8.86719Z"/><path d="M21.5126 8.9917C21.3647 9.16361 15.4858 15.0696 15.4858 15.0696H20.0899C21.8025 15.0696 24 14.665 24 11.9685C24 9.9913 22.818 9.24841 21.5126 8.9917Z"/><path d="M10.1108 7.33427L10.9452 6.4999L8.52418 4.07864C7.31297 2.86768 5.47322 1.59994 3.56653 3.50663C2.16838 4.90478 2.47892 6.26555 3.22053 7.37024C3.4464 7.35341 10.1108 7.33427 10.1108 7.33427Z"/><path d="M13.9496 16.6027L13.113 17.4392L15.5791 19.9051C16.7902 21.1163 18.7254 22.2886 20.5368 20.4772C21.8884 19.1254 21.5783 17.7057 20.831 16.5684C20.5905 16.5857 13.9496 16.6027 13.9496 16.6027Z"/></svg>
+            </a>
+            <a href="mailto:jacob.radonirina@gmail.com" aria-label="Email">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+
+    emailjs.init("69fgSb-btkXkWSBtI");
+
+    // ── Cookie Consent ──────────────────────────────────────
+    function checkCookieConsent() {
+        if (!localStorage.getItem('cookieConsent')) {
+            setTimeout(() => { document.getElementById('cookieConsent').style.display = 'block'; }, 1000);
+        }
+    }
+    function acceptCookies() { localStorage.setItem('cookieConsent','accepted'); document.getElementById('cookieConsent').style.display='none'; }
+    function refuseCookies() { localStorage.setItem('cookieConsent','refused');  document.getElementById('cookieConsent').style.display='none'; }
+    checkCookieConsent();
+
+    // ── Analytics ───────────────────────────────────────────
+    function trackEvent(eventName, eventParams = {}) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ 'event': eventName, ...eventParams });
+    }
+
+    // ── Modal Management ────────────────────────────────────
+    let modalTrigger = null;
+
+    function openModal(modalName) {
+        modalTrigger = document.activeElement;
+        closeAllModals();
+        const modal = document.getElementById(modalName + 'Modal');
+        if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            const closeBtn = modal.querySelector('.close-btn');
+            if (closeBtn) setTimeout(() => closeBtn.focus(), 50);
+        }
+    }
+
+    function closeModal(modalName) {
+        const modal = document.getElementById(modalName + 'Modal');
+        if (modal) modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        if (modalTrigger) { modalTrigger.focus(); modalTrigger = null; }
+    }
+
+    function closeAllModals() {
+        document.querySelectorAll('.modal.active').forEach(m => m.classList.remove('active'));
+        document.body.style.overflow = 'auto';
+    }
+
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) closeModal(event.target.id.replace('Modal',''));
+    };
+
+    // ── Mobile Menu ─────────────────────────────────────────
+    function toggleMobileMenu() {
+        document.getElementById('mobileNav').classList.contains('active') ? closeMobileMenu() : openMobileMenu();
+    }
+    function openMobileMenu() {
+        document.getElementById('mobileNav').classList.add('active');
+        document.getElementById('mobileMenuOverlay').classList.add('active');
+        document.body.style.overflow = 'hidden';
+        syncMobileLangSwitcher();
+    }
+    function closeMobileMenu() {
+        document.getElementById('mobileNav').classList.remove('active');
+        document.getElementById('mobileMenuOverlay').classList.remove('active');
+        document.body.style.overflow = 'auto';
+        document.querySelector('.mobile-menu-toggle').focus();
+    }
+    function syncMobileLangSwitcher() {
+        const currentLang = localStorage.getItem('lang') || 'fr';
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            const isActive = btn.getAttribute('data-lang') === currentLang;
+            btn.classList.toggle('active', isActive);
+            btn.setAttribute('aria-pressed', isActive.toString());
+        });
+    }
+
+    function scrollToLanding() {
+        document.getElementById('landing').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function goToContact(projectValue) {
+        closeModal('offres');
+        if (projectValue) { const s = document.getElementById('project'); if (s) s.value = projectValue; }
+        document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // ── Portfolio stub (nav button) ─────────────────────────
+    function showPortfolio() { window.location.href = 'index.html#portfolioSection'; }
+    function hidePortfolio() {}
+
+    // ── Form Submission ─────────────────────────────────────
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const templateParams = {
+            name:    document.getElementById('name').value,
+            email:   document.getElementById('email').value,
+            company: document.getElementById('company').value || 'Non renseigné',
+            website: document.getElementById('website').value || 'Non renseigné',
+            project: document.getElementById('project').value,
+            message: document.getElementById('message').value || 'Pas de message'
+        };
+        const btn = document.getElementById('submitBtn');
+        btn.classList.add('loading');
+        btn.textContent = 'Envoi en cours';
+        emailjs.send("service_xl8mfv4", "template_4gwxouq", templateParams)
+            .then(() => {
+                document.getElementById('leftcontent').style.display = 'none';
+                const calendlyBlock = document.getElementById('calendlyBlock');
+                calendlyBlock.style.display = 'block';
+                if (window.Calendly) Calendly.initInlineWidgets();
+                calendlyBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, () => {
+                btn.classList.remove('loading');
+                btn.textContent = 'Démarrer la conversation →';
+                alert('❌ Erreur d\'envoi. Écrivez-moi directement : jacob.radonirina@gmail.com');
+            });
+    });
+
+    // ── Header Auto-hide ────────────────────────────────────
+    (function() {
+        const header = document.querySelector('header');
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+        function updateHeader() {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY < 80) header.classList.remove('header--hidden');
+            else if (currentScrollY > lastScrollY) header.classList.add('header--hidden');
+            else header.classList.remove('header--hidden');
+            lastScrollY = currentScrollY;
+            ticking = false;
+        }
+        window.addEventListener('scroll', function() {
+            if (!ticking) { requestAnimationFrame(updateHeader); ticking = true; }
+        }, { passive: true });
+        document.addEventListener('mousemove', function(e) {
+            if (e.clientY < 60) header.classList.remove('header--hidden');
+        });
+    })();
+
+    // ── Scroll Reveal ───────────────────────────────────────
+    (function() {
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
+    })();
+
+    // ── App filter ──────────────────────────────────────────
+    (function() {
+        const pills = document.querySelectorAll('.ob-filter-pill');
+        const tiles = document.querySelectorAll('.ob-app-tile');
+        pills.forEach(function(pill) {
+            pill.addEventListener('click', function() {
+                pills.forEach(p => p.classList.remove('ob-filter-pill--active'));
+                pill.classList.add('ob-filter-pill--active');
+                const filter = pill.getAttribute('data-filter');
+                tiles.forEach(function(tile) {
+                    const match = filter === 'all' || tile.getAttribute('data-category') === filter;
+                    tile.classList.toggle('ob-app-tile--hidden', !match);
+                });
+            });
+        });
+    })();
+
+    // ── Service Worker ──────────────────────────────────────
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js').then(() => {}).catch(() => {});
+        });
+    }
+</script>
+</body>
+</html>

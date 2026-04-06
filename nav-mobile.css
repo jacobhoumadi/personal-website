@@ -128,6 +128,20 @@
             color: var(--primary);
         }
 
+        .mobile-nav-links a {
+            display: block;
+            padding: var(--space-md) 0;
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: var(--font-lg);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-links a:hover {
+            color: var(--primary);
+        }
+
 
         /* Footer du menu mobile */
         .mobile-nav-footer {
@@ -172,9 +186,6 @@
             .mobile-menu-toggle {
                 padding:8px;
                 display: flex;
-                background: var(--white);
-                border-radius: var(--radius-md);
-                box-shadow: var(--shadow-md);
             }
 
             header {
@@ -196,9 +207,3 @@
                 display: none !important;
             }
         }
-
-          @media (max-width: 486px) {
-            header {
-            justify-content: flex-end;
-            }
-         }
