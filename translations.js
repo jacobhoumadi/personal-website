@@ -351,6 +351,9 @@ const translations = {
     'cs.venue.cta.btn':                'Prendre contact',
 
     // ── Case Study · Benchmark Onboarding ────────
+    'casestudies.onboarding.tag':'Analyse & veille',
+    'casestudies.onboarding.title':'Onboarding mobile',
+    'casestudies.onboarding.desc':'Ce que 66 apps font (bien ou mal).',
     'cs.ob.back':           '← Travaux',
     'cs.ob.tag':            'Analyse & veille · UX Mobile',
     'cs.ob.h1':             'Onboarding mobile —<br>ce que <span>66 apps</span> font (bien ou mal)',
@@ -1225,6 +1228,9 @@ const translations = {
     'cs.venue.cta.btn':                'Get in touch',
 
     // ── Case Study · Benchmark Onboarding ────────
+     'casestudies.onboarding.tag':'Analysis & research',
+    'casestudies.onboarding.title':'Mobile onboarding',
+    'casestudies.onboarding.desc':'What 66 apps do (right or wrong)',
     'cs.ob.back':           '← Works',
     'cs.ob.tag':            'Analysis & research · UX Mobile',
     'cs.ob.h1':             'Mobile onboarding —<br>what <span>66 apps</span> do (right or wrong)',
