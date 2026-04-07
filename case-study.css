@@ -344,10 +344,10 @@
 
 /* ── SHARED LEAD ────────────────────────────────────────── */
 .cs-venue-content .lead, .cs-venue-content .next-slide>.lead {
-    font-size: clamp(17px, 4.5vw, 22px);
-    font-weight: 600;
-    color: var(--cs-ink-2);
-    line-height: 1.57;
+    font-size: clamp(17px, 4.5vw, 22px) !important;
+    font-weight: 600 !important;
+    color: var(--cs-ink-2) !important;
+    line-height: 1.57 !important;
     margin-bottom: 0;
 }
 .cs-venue-content .lead em { font-style: italic; color: #A3A3A3; }
@@ -1180,11 +1180,100 @@
     white-space: nowrap;
     margin-top: 2px;
 }
-.cs-venue-content .outcome-body { font-size: 14px; color: var(--cs-ink-3); line-height: 1.65; }
+.cs-venue-content .outcome-body { font-size: 14px; color: var(--cs-ink-2); line-height: 1.65; }
 .cs-venue-content .outcome-body strong { color: var(--cs-ink); }
 
 
-/* ── 20. NEXT STEPS CAROUSEL ────────────────────────────── */
+/* ── 20. ROLLOUT PHASES ─────────────────────────────────── */
+.cs-venue-content .venue-rollout { margin: 48px 0; }
+.cs-venue-content .venue-rollout > p { font-size: 14px; color: var(--cs-ink-2); line-height: 1.75; margin-bottom: 20px; }
+
+.cs-venue-content .venue-phases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 24px 0 20px;
+    align-items: stretch;
+}
+
+.cs-venue-content .venue-phase {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--cs-border);
+}
+.cs-venue-content .venue-phase:last-child { border-right: none; }
+
+.cs-venue-content .venue-phase-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--cs-ink);
+    margin-bottom: 10px;
+    padding: 16px;
+}
+
+.cs-venue-content .venue-phase-badge-wrap { flex-shrink: 0; }
+.cs-venue-content .venue-phase-badge-wrap--top { padding-bottom: 40px; }
+.cs-venue-content .venue-phase-badge-wrap--mid { padding-top: 40px; }
+
+.cs-venue-content .venue-phase-badge {
+    background: linear-gradient(to right, #77dbd2, #69bfcc);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 9px 13px;
+    border-radius: 100px;
+    display: inline-block;
+    width: 100%;
+}
+
+.cs-venue-content .venue-phase-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+}
+.cs-venue-content .venue-phase-content--bottom {
+    flex: 1;
+    justify-content: flex-end;
+}
+.cs-venue-content .venue-phase-content p {
+    font-size: 14px;
+    color: var(--cs-ink-3);
+    line-height: 1.75;
+    margin: 0;
+}
+.cs-venue-content .venue-phase-goal {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--cs-ink);
+    padding: 9px 12px;
+    border: 1px solid var(--cs-ink);
+    border-radius: 100px;
+    display: inline-block;
+}
+
+@media (max-width: 600px) {
+    .cs-venue-content .venue-phases { grid-template-columns: 1fr; }
+    .cs-venue-content .venue-phase {
+        border-right: none;
+        border-bottom: 1px solid var(--cs-border);
+        padding: 20px 0;
+    }
+    .cs-venue-content .venue-phase--2,
+    .cs-venue-content .venue-phase--3 { padding-left: 0; }
+    .cs-venue-content .venue-phase:last-child { border-bottom: none; }
+    .cs-venue-content .venue-phase-content { padding: 17px 0;}
+    .cs-venue-content .venue-phase-label { padding: 0px;}
+    .cs-venue-content .venue-phase-badge-wrap--top,
+    .cs-venue-content .venue-phase-badge-wrap--mid { padding: 0; }
+    .cs-venue-content .venue-phase-content--bottom { flex: unset;  padding: 17px 0;}
+}
+
+
+/* ── 22. NEXT STEPS CAROUSEL ────────────────────────────── */
 .cs-venue-content .next-carousel { margin: 32px 0; overflow: hidden; }
 .cs-venue-content .next-track { display: flex; transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 
