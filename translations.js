@@ -151,8 +151,8 @@ const translations = {
     'portfolio.silva.btn3.desc':'Composants UI réutilisables, guidelines pour le développement',
 
     'portfolio.venue.title':    'Venue · SuperBloom',
-    'portfolio.venue.role':     'Product Designer · Jeu de design d\'intérieur · 4M+ joueurs',
-    'portfolio.venue.desc':     'Venue est un jeu de design d\'intérieur avec 4M+ joueuses — qui jouaient seules ensemble.<span class="mobile-hidden"><br/> Mission : introduire une dimension sociale sans créer de pression ni de compétition.</span>',
+    'portfolio.venue.role':     'Product Designer · Jeu mobile · 4M+ joueurs',
+    'portfolio.venue.desc':     'Venue est un jeu de design d\'intérieur avec 90% de joueuses — qui jouaient seules ensemble.<span class="mobile-hidden"><br/> Mission : introduire une dimension sociale via le Design Studio, sans créer de pression ni de compétition.</span>',
     'portfolio.venue.insights': 'Réalisations clés :',
     'portfolio.venue.btn1':     'Renforcer la rétention J7–J30',
     'portfolio.venue.btn1.desc':'Design Studios collectifs ancrés dans une dynamique hebdomadaire, sans pression de performance',
@@ -1028,8 +1028,8 @@ const translations = {
     'portfolio.silva.btn3.desc':'Reusable UI components and development guidelines',
 
     'portfolio.venue.title':    'Venue · SuperBloom',
-    'portfolio.venue.role':     'Product Designer · Interior design game · 4M+ players',
-    'portfolio.venue.desc':     'Venue is an interior design game with 4M+ players — who were playing alone, together.<span class="mobile-hidden"><br/> Mission: introduce a social layer without creating pressure or competition.</span>',
+    'portfolio.venue.role':     'Product Designer · Mobile game · 4M+ players',
+    'portfolio.venue.desc':     'Venue is a interior design game with a 90% female player base who play alone, together.<span class="mobile-hidden"><br/> Mission: introduce a social layer through Design Studios without creating pressure or competition.</span>',
     'portfolio.venue.insights': 'Key achievements:',
     'portfolio.venue.btn1':     'Strengthen D7–D30 retention',
     'portfolio.venue.btn1.desc':'Design studios anchored in a weekly dynamic, with zero performance pressure',
