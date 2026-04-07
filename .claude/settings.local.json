@@ -18,7 +18,9 @@
       "Bash(python3:*)",
       "Bash(n)",
       "Bash(powershell -Command ':*)",
-      "Bash(powershell:*)"
+      "Bash(powershell:*)",
+      "WebFetch(domain:www.bryntaylor.co.uk)",
+      "Bash(grep:*)"
     ]
   }
 }

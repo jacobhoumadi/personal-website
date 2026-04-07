@@ -241,9 +241,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <ul>
                <li><button onclick="showPortfolio()" data-i18n="nav.portfolio">Portfolio</button></li>
                 <li><a href="cases-studies.html" data-i18n="nav.casestudies">Cases studies</a></li>
+                <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
                 <li><button onclick="openModal('offres')" data-i18n="nav.services">Offres</button></li>
-                <li><button onclick="openModal('temoignages')" data-i18n="nav.testimonials">Témoignages</button></li>
-                <li><button onclick="openModal('faq')" data-i18n="nav.faq">FAQ</button></li>
                 <li>
                         <label for="lang-select" class="sr-only">Langue / Language</label>
                           <select class="lang-select" onchange="switchLanguage(this.value)" aria-label="Sélectionner la langue">
@@ -251,7 +250,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <option value="en">EN</option>
                         </select>
                 </li>
-            </ul> 
+                <li><a href="#" class="nav-cta-btn" onclick="openCalendlyPopup(); return false;" data-i18n="nav.discovery">Appel découverte</a></li>
+            </ul>
         </nav>
 
         <!-- Bouton Hamburger Mobile -->
@@ -279,9 +279,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <ul class="mobile-nav-links">
                 <li><button onclick="showPortfolio(); closeMobileMenu();" data-i18n="nav.portfolio">Portfolio</button></li>
                 <li><a href="cases-studies.html" data-i18n="nav.casestudies">Cases studies</a></li>
+                <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
                 <li><button onclick="openModal('offres'); closeMobileMenu();" data-i18n="nav.services">Offres</button></li>
-                <li><button onclick="openModal('temoignages'); closeMobileMenu();" data-i18n="nav.testimonials">Témoignages</button></li>
-                <li><button onclick="openModal('faq'); closeMobileMenu();" data-i18n="nav.faq">FAQ</button></li>
+                <li><a href="#" class="nav-cta-btn" style="margin: 0.25rem 0;" onclick="openCalendlyPopup(); closeMobileMenu(); return false;" data-i18n="nav.discovery">Appel découverte</a></li>
                 <li><div class="mobile-lang-switcher" role="group" aria-label="Langue / Language">
                     <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')" aria-pressed="true" aria-label="Français">
                         FR
@@ -354,9 +354,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
                     <div class="client-logos">
-                        <p class="client-logos__label" data-i18n="logos.label">Ils m'ont fait confiance</p>
                         <div class="client-logos__row" aria-label="Logos de clients">
-                            <span><img src="logos/Logo_tango.svg"    alt="Tango"       loading="lazy" /></span>
+                            <span><img src="logos/logo-tango-normal.svg"    alt="Tango"       loading="lazy" /></span>
                             <span><img src="logos/axian_logo.png"    alt="Axian"       loading="lazy" /></span>
                             <span><img src="logos/silva_paris-1.svg" alt="Silva Paris" class="silva" loading="lazy" /></span>
                             <span><img src="logos/ergosante_logo.png" alt="Ergosante"  loading="lazy" /></span>
@@ -1179,6 +1178,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             });
         }
 
+        function openCalendlyPopup() {
+            Calendly.initPopupWidget({ url: 'https://calendly.com/jacob-radonirina/30min?hide_gdpr_banner=1&primary_color=0066ff' });
+        }
+
         // ============================================
         // SCROLL & NAVIGATION
         // ============================================
@@ -1204,11 +1207,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         function goToContact(projectValue) {
             closeModal('offres');
-            if (projectValue) {
-                const select = document.getElementById('project');
-                if (select) select.value = projectValue;
-            }
-            document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            if (projectValue) { const s = document.getElementById('project'); if (s) s.value = projectValue; }
+            const form = document.getElementById('contactForm');
+            if (!form) return;
+            requestAnimationFrame(() => {
+                document.documentElement.style.scrollSnapType = 'none';
+                requestAnimationFrame(() => {
+                    const top = form.getBoundingClientRect().top + window.scrollY - 80;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                    const restore = () => { document.documentElement.style.scrollSnapType = ''; };
+                    if ('onscrollend' in window) {
+                        window.addEventListener('scrollend', restore, { once: true });
+                    } else {
+                        setTimeout(restore, 1500);
+                    }
+                });
+            });
         }
 
         function openModal(modalName) {

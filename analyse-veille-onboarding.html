@@ -91,10 +91,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <nav class="desktop-nav">
         <ul>
             <li><button onclick="showPortfolio()" data-i18n="nav.portfolio">Portfolio</button></li>
-            <li><a href="cases-studies.html" class="nav-active" data-i18n="nav.casestudies">Traveaux</a></li>
+            <li><a href="cases-studies.html" class="nav-active" data-i18n="nav.casestudies">Travaux</a></li>
+            <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
             <li><button onclick="openModal('offres')" data-i18n="nav.services">Offres</button></li>
-            <li><button onclick="openModal('temoignages')" data-i18n="nav.testimonials">Témoignages</button></li>
-            <li><button onclick="openModal('faq')" data-i18n="nav.faq">FAQ</button></li>
             <li>
                 <label for="lang-select" class="sr-only">Langue / Language</label>
                 <select class="lang-select" onchange="switchLanguage(this.value)" aria-label="Sélectionner la langue">
@@ -102,6 +101,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <option value="en">EN</option>
                 </select>
             </li>
+            <li><a href="#" class="nav-cta-btn" onclick="openCalendlyPopup(); return false;" data-i18n="nav.discovery">Appel découverte</a></li>
         </ul>
     </nav>
     <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
@@ -126,9 +126,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <ul class="mobile-nav-links">
         <li><button onclick="showPortfolio(); closeMobileMenu();" data-i18n="nav.portfolio">Portfolio</button></li>
         <li><a href="cases-studies.html" data-i18n="nav.casestudies">Cases studies</a></li>
+        <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
         <li><button onclick="openModal('offres'); closeMobileMenu();" data-i18n="nav.services">Offres</button></li>
-        <li><button onclick="openModal('temoignages'); closeMobileMenu();" data-i18n="nav.testimonials">Témoignages</button></li>
-        <li><button onclick="openModal('faq'); closeMobileMenu();" data-i18n="nav.faq">FAQ</button></li>
+        <li><a href="#" class="nav-cta-btn" style="margin: 0.25rem 0;" onclick="openCalendlyPopup(); closeMobileMenu(); return false;" data-i18n="nav.discovery">Appel découverte</a></li>
         <li>
             <div class="mobile-lang-switcher" role="group" aria-label="Langue / Language">
                 <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')" aria-pressed="true">FR</button>
@@ -640,6 +640,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         window.dataLayer.push({ 'event': eventName, ...eventParams });
     }
 
+    function openCalendlyPopup() {
+        Calendly.initPopupWidget({ url: 'https://calendly.com/jacob-radonirina/30min?hide_gdpr_banner=1&primary_color=0066ff' });
+    }
+
     // ── Modal Management ────────────────────────────────────
     let modalTrigger = null;
 
@@ -703,7 +707,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     function goToContact(projectValue) {
         closeModal('offres');
         if (projectValue) { const s = document.getElementById('project'); if (s) s.value = projectValue; }
-        document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const form = document.getElementById('contactForm');
+        if (!form) return;
+        requestAnimationFrame(() => {
+            document.documentElement.style.scrollSnapType = 'none';
+            requestAnimationFrame(() => {
+                const top = form.getBoundingClientRect().top + window.scrollY - 80;
+                window.scrollTo({ top, behavior: 'smooth' });
+                const restore = () => { document.documentElement.style.scrollSnapType = ''; };
+                if ('onscrollend' in window) {
+                    window.addEventListener('scrollend', restore, { once: true });
+                } else {
+                    setTimeout(restore, 1500);
+                }
+            });
+        });
     }
 
     // ── Portfolio stub (nav button) ─────────────────────────
