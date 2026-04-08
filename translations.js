@@ -47,6 +47,15 @@ const translations = {
     'about.approach.v2.desc':    'Je travaille avec vos équipes, pas dans mon coin. Product, dev, marketing — je m\'adapte à votre organisation et à votre rythme.',
     'about.approach.v3.title':   'Résultats mesurables',
     'about.approach.v3.desc':    'Chaque décision de design est reliée à un objectif business. Je défends mes choix avec des données, pas des préférences esthétiques.',
+    'about.interests.h2':        'Ce qui m\'anime',
+    'about.interest.parkour':    'Parkour',
+    'about.interest.gaming':     'Jeux vidéo',
+    'about.interest.food':       'Gastronomie',
+    'about.interest.drawing':    'Dessin',
+    'about.interest.photo':      'Photographie',
+    'about.interest.agro':       'Agroforesterie',
+    'about.interest.books':      'Lecture',
+    'about.interest.madagascar': 'Madagascar',
     'about.testimonials.h2':     'Ce qu\'ils disent sur moi',
     'about.testimonials.sub':    '8 témoignages — des secteurs variés, un dénominateur commun : un travail qui compte.',
     'about.faq.h2':              'FAQ',
@@ -972,6 +981,15 @@ const translations = {
     'about.approach.v2.desc':    'I work with your teams, not in a silo. Product, dev, marketing — I adapt to your organisation and your pace.',
     'about.approach.v3.title':   'Measurable results',
     'about.approach.v3.desc':    'Every design decision is tied to a business goal. I back my choices with data, not aesthetic preferences.',
+    'about.interests.h2':        'What drives me',
+    'about.interest.parkour':    'Parkour',
+    'about.interest.gaming':     'Gaming',
+    'about.interest.food':       'Gastronomy',
+    'about.interest.drawing':    'Drawing',
+    'about.interest.photo':      'Photography',
+    'about.interest.agro':       'Agroforestry',
+    'about.interest.books':      'Reading',
+    'about.interest.madagascar': 'Madagascar',
     'about.testimonials.h2':     'What they say about me',
     'about.testimonials.sub':    '8 testimonials — diverse sectors, one common thread: work that matters.',
     'about.faq.h2':              'FAQ',
@@ -1892,6 +1910,13 @@ function switchLanguage(lang) {
     const key = el.getAttribute('data-i18n-html');
     const t   = translations[lang][key];
     if (t) el.innerHTML = t;
+  });
+
+  // ── Attribut data-tooltip ──────────────────────
+  document.querySelectorAll('[data-i18n-tooltip]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-tooltip');
+    const t   = translations[lang][key];
+    if (t) el.setAttribute('data-tooltip', t);
   });
 
   // ── Sélecteur de langue ────────────────────────

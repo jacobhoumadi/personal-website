@@ -393,6 +393,8 @@
         .about-logos-marquee-wrapper {
             position: relative;
             overflow: hidden;
+            max-width: 1100px;
+            margin:0 auto;
         }
 
         .about-logos-marquee-wrapper::before,
@@ -445,10 +447,15 @@
             height: 55px;
         }
 
+        .about-logos-set img.SuperBloom{
+            height: 35px;
+        }
 
 
-        /* Approach */
-        .about-approach {
+
+
+        /* Interests */
+        .about-interests {
             padding: var(--space-3xl) 0;
         }
 
@@ -459,45 +466,31 @@
             margin-bottom: var(--space-xl);
         }
 
-        .about-values-grid {
+        .about-interests-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-xl);
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-sm);
         }
 
-        .about-value {
-            padding: var(--space-lg);
-            border: 1px solid rgba(0,0,0,0.08);
+        .about-interest-card {
+            position: relative;
+            aspect-ratio: 1;
             border-radius: var(--radius-xl);
-            background: var(--white);
-            transition: box-shadow 0.2s, transform 0.2s;
+            overflow: hidden;
+            display: block;
+            text-decoration: none;
+            background: var(--dark);
         }
 
-        .about-value:hover {
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-4px);
+        .about-interest-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.45s ease, filter 0.45s ease;
         }
 
-        .about-value-num {
-            font-size: var(--font-xs);
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            color: var(--primary);
-            margin-bottom: var(--space-sm);
-        }
 
-        .about-value-title {
-            font-size: var(--font-lg);
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: var(--space-sm);
-        }
-
-        .about-value-desc {
-            font-size: var(--font-base);
-            line-height: 1.7;
-            color: var(--text-gray);
-        }
 
         /* Testimonials */
         .about-testimonials {
@@ -731,7 +724,7 @@
         }
 
         .about-cta-h2 {
-            font-size: var(--font-3xl);
+            font-size: var(--font-2xl);
             font-weight: 800;
             color: var(--dark);
             margin-bottom: var(--space-md);
@@ -837,8 +830,8 @@
             .about-faq-mini-cta {
                 max-width: 400px;
             }
-            .about-values-grid {
-                grid-template-columns: 1fr;
+            .about-interests-grid {
+                grid-template-columns: repeat(2, 1fr);
                 gap: var(--space-md);
             }
             .about-testimonials-grid {
@@ -847,6 +840,16 @@
             .about-stats {
                 flex-wrap: wrap;
                 gap: var(--space-lg);
+            }
+            
+            .about-logos-set img {
+                height: 32px;
+            }
+            .about-logos-set img.silva {
+                height: 43px;
+            }
+            .about-logos-set img.SuperBloom{
+                 height: 28px;
             }
         }
 
@@ -863,6 +866,16 @@
             .about-footer-inner {
                 flex-direction: column;
                 align-items: flex-start;
+            }
+
+            .about-logos-set img {
+                height: 22px;
+            }
+            .about-logos-set img.silva {
+                height: 32px;
+            }
+            .about-logos-set img.SuperBloom{
+                 height: 20px;
             }
         }
 

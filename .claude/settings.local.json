@@ -20,7 +20,9 @@
       "Bash(powershell -Command ':*)",
       "Bash(powershell:*)",
       "WebFetch(domain:www.bryntaylor.co.uk)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "WebFetch(domain:www.pexels.com)",
+      "WebSearch"
     ]
   }
 }

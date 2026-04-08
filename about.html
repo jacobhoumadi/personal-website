@@ -66,6 +66,41 @@
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
     <script src="translations.js" defer></script>
+
+    <style>
+        /* ── MOUSE TOOLTIP ── */
+        .img-tooltip {
+            position: fixed;
+            background: var(--primary, #111);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 6px;
+            pointer-events: none;
+            z-index: 9999;
+            max-width: 180px;
+            opacity: 0;
+            transform: translateY(6px);
+            transition: opacity 0.25s ease, transform 0.25s ease;
+            white-space: nowrap;
+        }
+        .img-tooltip.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ── REVEAL ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.55s ease, transform 0.55s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body class="about-page">
 <!-- Google Tag Manager (noscript) -->
@@ -165,7 +200,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="about-hero-left">
                     <p class="about-hero-intro" data-i18n="about.hero.intro">Je suis Jacob — Senior Product Designer freelance avec 10 ans d'expérience en Fintech, SaaS et identité de marque.</p>
                     <div class="about-hero-photo">
-                        <img src="jacob.webp" alt="Jacob Houmadi, Senior Product Designer" loading="eager">
+                        <img src="Captures/jacob-lemur.webp" alt="Jacob Houmadi, Senior Product Designer" loading="eager">
                     </div>
                 </div>
 
@@ -196,11 +231,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     <!-- ── LOGOS ─────────────────────────────────────────── -->
-    <section class="about-logos">
+    <section class="about-logos reveal">
         <div class="about-logos-marquee-wrapper">
             <div class="about-logos-track" id="logosTrack">
                 <div class="about-logos-set">
-                    <img src="logos/superbloom-logo-final-rgb.webp" alt="SuperBloom"       loading="lazy">
+                    <img src="logos/superbloom-logo-final-rgb.webp" alt="SuperBloom"    class="SuperBloom"   loading="lazy">
                     <img src="logos/logo-tango-normal.svg" alt="Tango"       loading="lazy">
                     <img src="logos/axian_logo.png"        alt="Axian"       loading="lazy">
                     <img src="logos/silva_paris-1.svg"     alt="Silva Paris" class="silva" loading="lazy">
@@ -209,7 +244,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <img src="logos/Logo-nexta.svg"        alt="Nexta"       class="silva" loading="lazy">
                 </div>
                 <div class="about-logos-set" aria-hidden="true">
-                    <img src="logos/superbloom-logo-final-rgb.webp" alt="SuperBloom"       loading="lazy">
+                    <img src="logos/superbloom-logo-final-rgb.webp" alt="SuperBloom"     class="SuperBloom"   loading="lazy">
                     <img src="logos/axian_logo.png"        alt="" loading="lazy">
                     <img src="logos/silva_paris-1.svg"     alt="" class="silva" loading="lazy">
                     <img src="logos/ergosante_logo.png"    alt="" loading="lazy">
@@ -220,28 +255,82 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 
-    <!-- ── APPROACH ──────────────────────────────────────── -->
-    <section class="about-approach">
+    <!-- ── INTERESTS ─────────────────────────────────────── -->
+    <section class="about-interests reveal">
         <div class="about-wrapper">
-            <h2 class="about-section-h2" data-i18n="about.approach.h2">Comment je travaille</h2>
-            <div class="about-values-grid">
+            <h2 class="about-section-h2" data-i18n="about.interests.h2">Ce qui m'anime</h2>
+            <div class="about-interests-grid">
 
-                <div class="about-value">
-                    <div class="about-value-num">01</div>
-                    <div class="about-value-title" data-i18n="about.approach.v1.title">Problèmes d'abord</div>
-                    <p class="about-value-desc" data-i18n="about.approach.v1.desc">Je ne commence pas par Figma. Je commence par comprendre vos utilisateurs, vos contraintes et votre business. Les pixels viennent après.</p>
+                <div class="about-interest-card">
+                    <img
+                        src="Captures/parkour.png"
+                        alt="Parkour"
+                        loading="lazy"
+                        data-i18n-tooltip="about.interest.parkour"
+                        data-tooltip="Parkour">
                 </div>
 
-                <div class="about-value">
-                    <div class="about-value-num">02</div>
-                    <div class="about-value-title" data-i18n="about.approach.v2.title">Collaboration réelle</div>
-                    <p class="about-value-desc" data-i18n="about.approach.v2.desc">Je travaille avec vos équipes, pas dans mon coin. Product, dev, marketing — je m'adapte à votre organisation et à votre rythme.</p>
+                <div class="about-interest-card">
+                    <img
+                        src="https://images.pexels.com/photos/139038/pexels-photo-139038.jpeg"
+                        alt="Jeux vidéo"
+                        loading="lazy"
+                        data-i18n-tooltip="about.interest.gaming"
+                        data-tooltip="Jeux vidéo">
                 </div>
 
-                <div class="about-value">
-                    <div class="about-value-num">03</div>
-                    <div class="about-value-title" data-i18n="about.approach.v3.title">Résultats mesurables</div>
-                    <p class="about-value-desc" data-i18n="about.approach.v3.desc">Chaque décision de design est reliée à un objectif business. Je défends mes choix avec des données, pas des préférences esthétiques.</p>
+                <div class="about-interest-card">
+                    <img
+                        src="https://images.pexels.com/photos/32525175/pexels-photo-32525175.jpeg"
+                        alt="Gastronomie"
+                        loading="lazy"
+                        data-i18n-tooltip="about.interest.food"
+                        data-tooltip="Gastronomie">
+                </div>
+
+                <div class="about-interest-card">
+                    <img
+                        src="jacob-dessin.png"
+                        alt="Dessin"
+                        loading="lazy"
+                        data-i18n-tooltip="about.interest.drawing"
+                        data-tooltip="Dessin">
+                </div>
+
+                <div class="about-interest-card">
+                    <img
+                        src="Captures/photography.webp"
+                        alt="Photographie"
+                        loading="lazy"
+                        data-i18n-tooltip="about.interest.photo"
+                        data-tooltip="Photographie">
+                </div>
+
+                <div class="about-interest-card">
+                    <img
+                        src="jacob-jardinier.jpg"
+                        alt="Agroforesterie"
+                        loading="lazy"
+                        data-i18n-tooltip="about.interest.agro"
+                        data-tooltip="Agroforesterie">
+                </div>
+
+                <div class="about-interest-card">
+                    <img
+                        src="https://images.pexels.com/photos/34269408/pexels-photo-34269408.jpeg"
+                        alt="Lecture"
+                        loading="lazy"
+                        data-i18n-tooltip="about.interest.books"
+                        data-tooltip="Lecture">
+                </div>
+
+                <div class="about-interest-card">
+                    <img
+                        src="https://images.pexels.com/photos/10879824/pexels-photo-10879824.jpeg"
+                        alt="Madagascar"
+                        loading="lazy"
+                        data-i18n-tooltip="about.interest.madagascar"
+                        data-tooltip="Madagascar">
                 </div>
 
             </div>
@@ -249,10 +338,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     <!-- ── TESTIMONIALS ──────────────────────────────────── -->
-    <section class="about-testimonials">
+    <section class="about-testimonials reveal">
         <div class="about-wrapper">
             <h2 class="about-section-h2" data-i18n="about.testimonials.h2">Ce que disent mes clients</h2>
-            <p class="about-testimonials-sub" data-i18n="about.testimonials.sub">8 témoignages — des secteurs variés, un dénominateur commun : un travail qui compte.</p>
 
             <div class="about-testimonials-grid">
 
@@ -357,7 +445,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     <!-- ── FAQ ──────────────────────────────────────────── -->
-    <section class="about-faq">
+    <section class="about-faq reveal">
         <div class="about-wrapper">
             <div class="about-faq-inner">
 
@@ -444,7 +532,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     <!-- ── CTA ──────────────────────────────────────────── -->
-    <section class="about-cta">
+    <section class="about-cta reveal">
         <div class="about-wrapper">
             <div class="about-cta-inner">
                 <h2 class="about-cta-h2" data-i18n="about.cta.h2">Parlons de votre projet</h2>
@@ -457,6 +545,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
 </main>
+
+<!-- MOUSE TOOLTIP -->
+<div class="img-tooltip" id="imgTooltip"></div>
 
 <!-- ── PORTFOLIO PANEL ───────────────────────────────── -->
 <div class="portfolio-section" id="portfolioSection" tabindex="-1">
@@ -1010,6 +1101,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
         lastScrollY = window.scrollY;
     });
+
+    // ── MOUSE TOOLTIP ──────────────────────────────────────
+    const tooltip = document.getElementById('imgTooltip');
+    let mouseX = 0, mouseY = 0, lerpX = 0, lerpY = 0;
+    const LERP = 0.12;
+
+    document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
+
+    (function animateTooltip() {
+        if (tooltip.classList.contains('visible')) {
+            lerpX += (mouseX - lerpX) * LERP;
+            lerpY += (mouseY - lerpY) * LERP;
+            const tw = tooltip.offsetWidth, th = tooltip.offsetHeight;
+            const vw = window.innerWidth, vh = window.innerHeight;
+            let left = lerpX - tw / 2;
+            let top  = lerpY + 20;
+            if (left < 8) left = 8;
+            if (left + tw > vw - 8) left = vw - tw - 8;
+            if (top + th > vh - 8) top = lerpY - th - 12;
+            tooltip.style.left = left + 'px';
+            tooltip.style.top  = top  + 'px';
+        }
+        requestAnimationFrame(animateTooltip);
+    })();
+
+    function bindTooltips() {
+        document.querySelectorAll('[data-tooltip]').forEach(el => {
+            el.addEventListener('mouseenter', e => {
+                lerpX = e.clientX; lerpY = e.clientY;
+                tooltip.textContent = el.dataset.tooltip;
+                tooltip.classList.add('visible');
+            });
+            el.addEventListener('mouseleave', () => tooltip.classList.remove('visible'));
+        });
+    }
+    bindTooltips();
+
+    // ── REVEAL ON SCROLL ───────────────────────────────────
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 </script>
 </body>
 </html>
