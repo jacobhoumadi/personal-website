@@ -441,6 +441,10 @@
             transition: opacity 0.3s;
         }
 
+        .about-logos-set img.silva{
+            height: 55px;
+        }
+
 
 
         /* Approach */
