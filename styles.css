@@ -509,9 +509,8 @@
         }
 
         .about-testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-lg);
+            columns: 2;
+            column-gap: var(--space-lg);
         }
 
         .about-testimonial-card {
@@ -523,6 +522,8 @@
             flex-direction: column;
             gap: var(--space-sm);
             transition: box-shadow 0.2s;
+            break-inside: avoid;
+            margin-bottom: var(--space-lg);
         }
 
         .about-testimonial-card:hover {
@@ -835,7 +836,7 @@
                 gap: var(--space-md);
             }
             .about-testimonials-grid {
-                grid-template-columns: 1fr;
+                columns: 1;
             }
             .about-stats {
                 flex-wrap: wrap;

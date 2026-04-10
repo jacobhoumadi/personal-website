@@ -57,7 +57,7 @@ const translations = {
     'about.interest.books':      'Lecture',
     'about.interest.madagascar': 'Madagascar',
     'about.testimonials.h2':     'Ce qu\'ils disent sur moi',
-    'about.testimonials.sub':    '8 témoignages — des secteurs variés, un dénominateur commun : un travail qui compte.',
+    'about.testimonials.sub':    '9 témoignages — des secteurs variés, un dénominateur commun : un travail qui compte.',
     'about.faq.h2':              'FAQ',
     'about.faq.sub':             'Tout ce que vous voulez savoir avant de démarrer.',
     'about.faq.cta.title':       'Encore des questions ?',
@@ -495,6 +495,9 @@ const translations = {
 
     // ── Modal · Témoignages ───────────────────────
     'modal.testimonials.title': 'Témoignages',
+    'testimonial.carmen.text': '"Dès le début, Jacob a su s\'approprier un mécanisme de jeu complexe et construire une solution élégante autour. Stratégique dans ses décisions, il a su exceller à chaque étape. Peu de designers sont capables de s\'immerger aussi rapidement dans un produit, ses utilisateurs et ses données pour créer une expérience de bout en bout qui transforme vraiment le jeu pour ses 4 millions d\'utilisateurs. (En seulement 2 semaines !!)"',
+    'testimonial.carmen.name': 'Carmen Rincon',
+    'testimonial.carmen.role': 'Design Founder · Yummy Design | Labs',
     'testimonial.1.text': '"J\'ai collaboré avec Jacob en tant qu\'analyste développeur frontend, et ce fut un réel plaisir de l\'avoir dans l\'équipe. Toujours accessible et à l\'écoute, il sait se tenir au courant des dernières nouveautés et propose régulièrement de nouvelles idées innovantes. Il comprend très bien les enjeux techniques que l\'on peut rencontrer et sait en tenir compte pour concilier au mieux les besoins métier et les réalités de développement. Jacob est un atout précieux que je recommande chaleureusement."',
     'testimonial.1.name': 'Théo',
     'testimonial.1.role': 'Analyste Développeur',
@@ -991,7 +994,7 @@ const translations = {
     'about.interest.books':      'Reading',
     'about.interest.madagascar': 'Madagascar',
     'about.testimonials.h2':     'What they say about me',
-    'about.testimonials.sub':    '8 testimonials — diverse sectors, one common thread: work that matters.',
+    'about.testimonials.sub':    '9 testimonials — diverse sectors, one common thread: work that matters.',
     'about.faq.h2':              'FAQ',
     'about.faq.sub':             'Everything you want to know before getting started.',
     'about.faq.cta.title':       'Still have questions?',
@@ -1429,6 +1432,9 @@ const translations = {
 
     // ── Modal · Testimonials ──────────────────────
     'modal.testimonials.title': 'Testimonials',
+    'testimonial.carmen.text': '"From the very beginning, Jacob was able to take a complex gaming mechanism experience and build a beautiful solution around it. He was strategic in his decisions, and a top performer in each phase. Not many designers can get onboarded into a product, its users, the data & create an end-to-end experience that will improve the game drastically for its 4M users. (In just 2 weeks!!)"',
+    'testimonial.carmen.name': 'Carmen Rincon',
+    'testimonial.carmen.role': 'Design Founder · Yummy Design | Labs',
     'testimonial.1.text': '"I collaborated with Jacob as a frontend developer analyst, and it was a real pleasure to have him on the team. Always approachable and attentive, he keeps up with the latest developments and regularly proposes innovative ideas. He has a great understanding of technical challenges and knows how to balance business needs with development realities. Jacob is a valuable asset I wholeheartedly recommend."',
     'testimonial.1.name': 'Théo',
     'testimonial.1.role': 'Developer Analyst',
