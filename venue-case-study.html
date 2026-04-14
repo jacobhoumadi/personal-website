@@ -29,7 +29,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Design Studios · UX Case Study — Venue by SuperBloom · Jacob Houmadi</title>
+    <title>UX Case Study — Venue by SuperBloom | Jacob Houmadi</title>
     <meta name="description" content="How I designed a social layer for 4M players that creates belonging through observation, not opt-in. A UX case study for Venue by Yummy Labs.">
     <meta name="author" content="Jacob Houmadi">
     <meta name="robots" content="index, follow">
@@ -168,7 +168,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section class="hero">
         <div class="hero-tag"><img src="venues/Venue_Logo_Pink.png" alt="logo venue"></div>
         <h1 data-i18n="cs.venue.h1">Increasing retention without adding friction or moderation cost.</h1>
-        <p class="hero-sub" data-i18n="cs.venue.hero.sub">Design Studios · UX Case Study — Venue by SuperBloom</p>
+        <p class="hero-sub" data-i18n="cs.venue.hero.sub">UX Case Study · Mobile Game Design · Retention Strategy · Social Systems · Product Design</p>
         <div class="hero-image">
             <img src="Captures/venue_d7_d30-en.webp" 
             data-lang-fr="Captures/venue_d7_d30-fr.webp"
@@ -176,6 +176,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
              alt="Venue D7–D30 retention flow" loading="lazy">
         </div>
     </section>
+
+    <!-- TL;DR -->
+    <div class="cs-venue-tldr">
+        <h2 data-i18n="cs.venue.tldr.title">TL;DR</h2>
+        <div class="tldr-cards">
+            <div class="tldr-card">
+                <div class="tldr-card-label" data-i18n="cs.venue.tldr.problem.label">Problem:</div>
+                <p data-i18n="cs.venue.tldr.problem.value">Lack of social feedback loop in a mobile game</p>
+            </div>
+            <div class="tldr-card">
+                <div class="tldr-card-label" data-i18n="cs.venue.tldr.solution.label">Solution:</div>
+                <p data-i18n="cs.venue.tldr.solution.value">Passive social system embedded in gameplay</p>
+            </div>
+            <div class="tldr-card">
+                <div class="tldr-card-label" data-i18n="cs.venue.tldr.impact.label">Impact:</div>
+                <p data-i18n="cs.venue.tldr.impact.value">Improved D7 and D30 retention</p>
+            </div>
+            <div class="tldr-card">
+                <div class="tldr-card-label" data-i18n="cs.venue.tldr.approach.label">Approach:</div>
+                <p data-i18n="cs.venue.tldr.approach.value">Rapid prototyping using Figma and Claude Code</p>
+            </div>
+        </div>
+    </div>
 
     <!-- META -->
     <div class="meta-grid">
@@ -246,12 +269,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
 
-        <p class="problem-conclusion reveal" data-i18n-html="cs.venue.problem.conclusion">The problem was that none of it felt like it mattered to anyone else. <span class="muted">She had already found</span> her community<span class="muted">. She'd just found it </span>outside the product.</p>
+        <div class="problem-conclusion reveal">
+            <p class="problem-conclusion-sub" data-i18n="cs.venue.problem.conclusion.lead">The product lacked a social feedback loop that made user activity feel meaningful.</p>
+            <p class="problem-conclusion-sub" data-i18n="cs.venue.problem.conclusion.sub">This created a structural UX problem:</p>
+            <ul class="problem-conclusion-list">
+                <li data-i18n="cs.venue.problem.conclusion.li1">No in-product recognition after submission</li>
+                <li data-i18n="cs.venue.problem.conclusion.li2">No visibility into engagement from other players</li>
+                <li data-i18n="cs.venue.problem.conclusion.li3">No persistent social context to return to</li>
+            </ul>
+            <p class="problem-conclusion-challenge" data-i18n="cs.venue.problem.conclusion.challenge">UX Challenge: How might we design social features that improve retention without adding friction or moderation complexity?</p>
+        </div>
 
         <hr>
 
         <h2 class="reveal" data-i18n="cs.venue.h2.insight">The Insight</h2>
-        <p class="lead reveal reveal--delay-1" data-i18n-html="cs.venue.insight.lead">Most social features in games solve the wrong problem. They ask players to <em>act social</em><span class="text-gray">:</span> join a guild, add friends, post a score. But players like Beth don't want to perform belonging. They want to feel it.</p>
+        <p class="lead reveal reveal--delay-1" data-i18n-html="cs.venue.insight.lead">Most social features in mobile games rely on explicit actions: joining groups, adding friends, or posting content. But this creates friction. Players like Beth don’t want to perform social interaction;  they want to feel it naturally.</p>
         <div class="insight-container reveal reveal--delay-2">
             <div class="insight-label" data-i18n="cs.venue.insight.label">Two things follow from that:</div>
             <div class="insight-cards">
@@ -279,7 +311,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <hr>
 
         <h2 class="reveal" data-i18n="cs.venue.h2.challenge">The Design Challenge</h2>
-        <p class="lead reveal reveal--delay-1" data-i18n="cs.venue.challenge.lead">SuperBloom's brief: design a group-based social system for Venue that encourages collaboration, creates shared goals, and feels cozy, not competitive.</p>
+        <p class="lead reveal reveal--delay-1" data-i18n="cs.venue.challenge.lead">SuperBloom’s brief: design a group-based social system for Venue that encourages collaboration, Improves player retention (D7 / D30), requires zero moderation and ddds no extra cognitive load</p>
         <div class="challenge-constraints-label reveal reveal--delay-2" data-i18n="cs.venue.challenge.constraints.label">Three hard constraints made this interesting:</div>
         <div class="challenge-cards">
             <div class="challenge-card reveal reveal--delay-1">
@@ -313,28 +345,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="principle reveal reveal--delay-1">
                 <div class="principle-num">1</div>
                 <div class="principle-body">
-                    <div class="principle-title" data-i18n="cs.venue.principle.1.title">Structurally incapable of toxicity</div>
+                    <div class="principle-title" data-i18n="cs.venue.principle.1.title">No toxicity by design</div>
                     <div class="principle-desc" data-i18n="cs.venue.principle.1.desc">If a mechanic can produce a bad feeling, it will. The fix isn't a setting — it's removing the mechanism. No leaderboards. No individual contribution visibility. No way to compare members.</div>
                 </div>
             </div>
             <div class="principle reveal reveal--delay-2">
                 <div class="principle-num">2</div>
                 <div class="principle-body">
-                    <div class="principle-title" data-i18n="cs.venue.principle.2.title">Absence must feel inconsequential</div>
+                    <div class="principle-title" data-i18n="cs.venue.principle.2.title">No penalty for absence</div>
                     <div class="principle-desc" data-i18n-html="cs.venue.principle.2.desc">Missing a week should carry zero guilt signal. No "you let your team down." No streak breaks.<br>Contribution is meaningful when you show up, invisible when you don't.</div>
                 </div>
             </div>
             <div class="principle reveal reveal--delay-3">
                 <div class="principle-num">3</div>
                 <div class="principle-body">
-                    <div class="principle-title" data-i18n="cs.venue.principle.3.title">Belonging is observed, not declared</div>
+                    <div class="principle-title" data-i18n="cs.venue.principle.3.title">Passive participation</div>
                     <div class="principle-desc" data-i18n-html="cs.venue.principle.3.desc">The system watches what players already do and uses it as contribution. Normal play <em>is</em> participation. No opt-in threshold, no confirmation modal.</div>
                 </div>
             </div>
             <div class="principle reveal reveal--delay-4">
                 <div class="principle-num">4</div>
                 <div class="principle-body">
-                    <div class="principle-title" data-i18n="cs.venue.principle.4.title">Collective over individual</div>
+                    <div class="principle-title" data-i18n="cs.venue.principle.4.title">Collective progression</div>
                     <div class="principle-desc" data-i18n="cs.venue.principle.4.desc">Milestones are collective. Rewards are shared. Progress is one bar, not aggregated personal bars. The Studio succeeds together or not at all.</div>
                 </div>
             </div>
@@ -391,7 +423,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <hr>
 
-          <h2 class="reveal" data-i18n="cs.venue.h2.joining">The Joining Mechanic · "You Can't Fail to Belong"</h2>
+          <h2 class="reveal" data-i18n="cs.venue.h2.joining">The Joining Mechanic · "Frictionless Belonging"</h2>
         <p class="lead reveal reveal--delay-1" data-i18n="cs.venue.joining.lead">This was the most consequential decision in the entire system.</p>
         <div class="joining-cols reveal reveal--delay-2">
             <p data-i18n="cs.venue.joining.p1">During onboarding, the player taps a Studio and goes back to play. Nothing changes on screen.</p>
@@ -411,7 +443,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img src="venues/2weeks-volunteering-en.svg" alt="Discovery → Volunteer → Member — 3-week timeline" data-lang-en="venues/2weeks-volunteering-en.svg" data-lang-fr="venues/2weeks-volunteering-fr.svg">
         </div>
         <blockquote class="reveal reveal--delay-1">
-            <p data-i18n-html="cs.venue.joining.blockquote">Belonging isn't a step. It's a pattern.<br>By the time she knows she's a member, she already behaves like one.</p>
+            <p data-i18n-html="cs.venue.joining.blockquote"><strong> Product decision:</strong> Removed all opt-in steps to eliminate friction and increase early engagement.</p>
         </blockquote>
         <div class="callout callout-coral reveal reveal--delay-2">
             <p data-i18n-html="cs.venue.joining.callout"><strong>Language note:</strong> The CTA throughout is <strong>"Play with this Studio"</strong>, never "Join Studio."<br>The player is choosing to play, not to commit. That single word swap is load-bearing.</p>
@@ -499,12 +531,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             </div>
         </div>
+        <blockquote class="reveal reveal--delay-1">
+            <p data-i18n-html="cs.venue.d7.blockquote"><strong> Product decision:</strong> Integrated feature discovery into existing user flow instead of using notifications or external prompts.</p>
+        </blockquote>
 
         <hr>
 
         
 
-        <h2 class="reveal" data-i18n="cs.venue.h2.currencies">Two Currencies, Two Timelines</h2>
+        <h2 class="reveal" data-i18n="cs.venue.h2.currencies">Retention System Design</h2>
         <p class="lead reveal reveal--delay-1" data-i18n-html="cs.venue.currencies.lead">The system runs on two currencies that <span class="muted">operate on different clocks — and that distinction</span> does most of the retention work.</p>
 
         <div class="currencies">
@@ -538,6 +573,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="currency-tag" data-i18n="cs.venue.currency.perm.tag">Forever. Leaving means leaving behind a space she helped build.</div>
             </div>
         </div>
+        <blockquote class="reveal reveal--delay-1">
+            <p data-i18n-html="cs.venue.currencies.blockquote"><strong> Product decision:</strong> Separated engagement loops (weekly vs long-term) to support both retention cycles.</p>
+        </blockquote>
 
         <hr>
 
@@ -580,10 +618,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <p class="voting-closing reveal reveal--delay-2" data-i18n-html="cs.venue.voting.closing">Zero moderation overhead. Structurally safe. Emotionally meaningful.<br>The preset palette is the design decision — not a limitation.</p>
-
+  
+        <blockquote class="reveal reveal--delay-1">
+            <p data-i18n-html="cs.venue.voting.blockquote"><strong> Product decision:</strong> Eliminated free-text interactions to remove moderation needs while preserving emotional feedback.</p>
+        </blockquote>
         <hr>
 
-        <h2 class="reveal" data-i18n="cs.venue.h2.milestones">Milestones · When the Studio Responds</h2>
+        <!--<h2 class="reveal" data-i18n="cs.venue.h2.milestones">Milestones · When the Studio Responds</h2>
         <p class="lead reveal reveal--delay-1" data-i18n="cs.venue.milestones.lead">When the Studio hits a collective threshold, the space responds.</p>
 
         <div class="milestone-tiles reveal reveal--delay-2">
@@ -644,7 +685,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </table>
         </div>
 
-        <hr>
+        <hr>-->
 
         <h2 class="reveal" data-i18n="cs.venue.h2.outcomes">Outcomes</h2>
         <p class="lead reveal reveal--delay-1" data-i18n-html="cs.venue.outcomes.lead">This is a design concept <span class="muted">submitted for Phase 2 development evaluation</span>, based on observed player behavior and validated assumptions.</p>
@@ -760,8 +801,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="learned-text">
                     <div class="lead" data-i18n="cs.venue.learned.1.title">JTBD changes the quality of every decision downstream.</div>
                     <div class="learned-desc">
-                        <p data-i18n="cs.venue.learned.1.desc1">Breaking Beth into four moments, joining, staying, contributing, leaving, made every decision testable against a specific situation, not a vague persona.</p>
-                        <p data-i18n="cs.venue.learned.1.desc2">Each moment carries its own emotion, fear, and job. This also made the link to D7 and D30 structurally clear, turning design reasoning into a business argument stakeholders can align with.</p>
+                        <p data-i18n="cs.venue.learned.1.desc1">Breaking down user journeys into key moments (join, contribute, stay, leave) improves decision-making.</p>
                     </div>
                 </div>
                 <div class="learned-img">
@@ -775,7 +815,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="learned-text">
                     <div class="lead" data-i18n="cs.venue.learned.2.title">Good references are systems, not screens.</div>
                     <div class="learned-desc">
-                        <p data-i18n="cs.venue.learned.2.desc1">Looking beyond design feeds shifted the question from "how should this look?" to "what problem has already been solved at scale?" Games like Journey or Neko Atsume provided proven interaction models, not just inspiration.</p>
+                        <p data-i18n="cs.venue.learned.2.desc1">Looking beyond design feeds shifted the question from "how should this look?" to "what problem has already been solved at scale?"</p>
                         <p data-i18n="cs.venue.learned.2.desc2">Borrowing architecture, not aesthetics, led to more confident and grounded decisions.</p>
                     </div>
                 </div>
@@ -784,8 +824,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="learned-text">
                     <div class="lead" data-i18n="cs.venue.learned.3.title">AI compresses the gap between hypothesis and clarity.</div>
                     <div class="learned-desc">
-                        <p data-i18n="cs.venue.learned.3.desc1">Using AI alongside Figma made iteration faster and more exploratory. Instead of resolving uncertainty upfront, I could build to resolve it — test, see, adjust.</p>
-                        <p data-i18n="cs.venue.learned.3.desc2">That shift reduced friction in decision-making and made the overall system sharper, from concept to final case study.</p>
+                        <p data-i18n="cs.venue.learned.3.desc1">Using Claude Code enabled rapid prototyping and faster iteration cycles between concept and implementation.</p>
                     </div>
                 </div>
                 <div class="learned-img">
@@ -801,6 +840,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="quote-item reveal reveal--delay-1" data-i18n="cs.venue.quote.1">Social mechanics should be structurally incapable of producing toxicity, not reliant on settings or moderation to prevent bad outcomes.</div>
             <div class="quote-item reveal reveal--delay-2" data-i18n="cs.venue.quote.2">The moment you ask someone to join, you create a moment where they can say no. Design the belonging, not the ask.</div>
             <div class="quote-item reveal reveal--delay-3" data-i18n="cs.venue.quote.3">Absence must not feel consequential. Presence should feel meaningful. Those are not the same design problem.</div>
+        </div>
+
+        <!-- TOOLS & METHODS -->
+        <h2 class="reveal" data-i18n-html="cs.venue.h2.tools">Tools &amp; Methods</h2>
+        <div class="tools-pills reveal reveal--delay-1">
+            <div class="tools-pill" data-i18n="cs.venue.tools.pill1">Figma (UI/UX design, prototyping)</div>
+            <div class="tools-pill" data-i18n="cs.venue.tools.pill2">Claude Code (rapid prototyping, interaction testing)</div>
+            <div class="tools-pill" data-i18n="cs.venue.tools.pill3">System design thinking</div>
+            <div class="tools-pill" data-i18n="cs.venue.tools.pill4">User journey mapping</div>
         </div>
 
         <!-- CTA -->
