@@ -77,6 +77,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     padding: var(--space-sm);
     max-width: fit-content;
 }
+
+.chap-logo{width:180px;height:auto;display:block;margin-top: 10px;margin-bottom:10px;opacity:0.75;}
 .subtext {
   font-size: var(--font-sm); line-height: 1.78; font-weight: 300;
 }
@@ -92,6 +94,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .period-figure svg { max-height: 50px; width: auto; }
 .period-figure.first{justify-content: space-between;padding:0 20px;}
 
+
+/* Desktop: logo dans sa propre rangée de grille (col gauche), sl-right s'étend sur les deux rangées */
+@media (min-width: 769px) {
+  .has-logo {
+    grid-template-rows: auto 1fr;
+  }
+  .has-logo > .chap-logo { grid-column: 1; grid-row: 1; align-self: center; margin-bottom: 8px; }
+  .has-logo > .sl-left   { grid-column: 1; grid-row: 2; }
+  .has-logo > .sl-right  { grid-column: 2; grid-row: 1 / 3; }
+}
+
+/* Mobile: order 0 par défaut → logo avant sl-right (1) et sl-left (2) */
 
 /* ── CASE STUDY HEADER (Axian/Tango) ── */
 .case-header-v2 { margin-bottom: 20px; }
@@ -633,7 +647,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- 07 · AXIAN CONTEXT -->
   <section class="slide" data-i="6">
     <div class="slide-num-wm">07</div>
-    <div class="split-row" style="flex:1;min-height:0">
+    <div class="split-row has-logo" style="flex:1;min-height:0">
+      <img src="logos/axian_logo.png" alt="Axian" class="chap-logo a">
       <div class="sl-left">
         <div class="chapter a" data-t="axian.chapter">Chapter III · Axian Group · 2018–2023</div>
         <h2 class="headline headline--md a" data-t="axian.h2">We weren't hired <br class="mobile-hidden">to join a team.<br><span class="blue">We built one.</span></h2>
@@ -664,7 +679,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- 8 · AFRIXIAN -->
   <section class="slide" data-i="7">
     <div class="slide-num-wm">08</div>
-    <div class="split-row" style="flex:1;min-height:0">
+    <div class="split-row has-logo" style="flex:1;min-height:0">
+      <img src="logos/axian_logo.png" alt="Axian" class="chap-logo a">
       <div class="sl-left">
         <div class="chapter a" data-t="afrix.chapter">Chapter III · Axian Group · The breakthrough</div>
         <h2 class="headline headline--lg a" data-t="afrix.h2"><span class="blue">Afrixian.</span> <br  class="mobile-hidden">Not borrowed. <br  class="mobile-hidden">Found.</h2>
@@ -688,7 +704,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- 9 · THE LEAP -->
   <section class="slide" data-i="8">
       <div class="slide-num-wm">09</div>
-      <div class="split-row" style="flex:1;min-height:0">
+      <div class="split-row has-logo" style="flex:1;min-height:0">
+          <img src="logos/axian_logo.png" alt="Axian" class="chap-logo a">
           <div class="sl-left">
             <div class="chapter a" data-t="leap.chapter">Chapter III · The Leap</div>
             <h2 class="headline headline--lg a" data-t="leap.h2">I applied <br class="mobile-hidden">from Madagascar.<br><span class="blue">Told them I was <br  class="mobile-hidden">already moving.</span></h2>
@@ -720,7 +737,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="slide" data-i="9">
     <div class="slide-num-wm">09</div>
 
-    <div class="split-row" style="flex:1;min-height:0">
+    <div class="split-row has-logo" style="flex:1;min-height:0">
+      <img src="logos/logo-tango-normal.svg" alt="Tango" class="chap-logo a">
       <div class="sl-left">
        <div class="chapter a" data-t="tango.chapter">Chapter III · Tango Luxembourg · 2024–2025</div>
       <h2 class="headline headline--md a" data-t="tango.h2">Two schools.<br><span class="blue">One dashboard</span></h2>
@@ -760,7 +778,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    <!-- 11 · TANGO DECISION -->
   <section class="slide" data-i="10">
     <div class="slide-num-wm">11</div>
-    <div class="split-row" style="flex:1;min-height:0">
+    <div class="split-row has-logo" style="flex:1;min-height:0">
+      <img src="logos/logo-tango-normal.svg" alt="Tango" class="chap-logo a">
       <div class="sl-left">
         <div class="chapter a" data-t="tangod.chapter">Chapter III · Tango Luxembourg · The decision</div>
         <h2 class="headline headline--lg a" data-t="tangod.h2">Open. <br class="mobile-hidden">Scan.<br class="mobile-hidden"><span class="blue">Understand.</span></h2>
@@ -778,9 +797,73 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
  
-  <!-- 12 · COMMUNITY — I show up for them -->
- <section class="slide slide--community" data-i="11">
-  <div class="slide-num-wm">12</div>
+  <!-- 12 · VENUE CONTEXT -->
+  <section class="slide" data-i="11">
+    <div class="slide-num-wm">12</div>
+    <div class="split-row has-logo" style="flex:1;min-height:0">
+      <img src="logos/superbloom-logo-final-rgb.webp" alt="Venue" class="chap-logo a">
+      <div class="sl-left">
+        <div class="chapter a" data-t="venue.chapter">Chapter IV · Venue · SuperBloom · 2025</div>
+        <h2 class="headline headline--md a" data-t="venue.h2">4M players.<br>No one to share<br><span class="blue">the win with.</span></h2>
+        <div class="case-meta-inline a">
+          <span class="case-tag">Product Design</span>
+          <span class="case-tag">UX Research</span>
+          <span class="case-tag">Mobile Game</span>
+        </div>
+        <div class="stats a">
+          <div><div class="stat-num">2.5</div><div class="stat-label" data-t="venue.s1">Week sprint</div></div>
+          <div><div class="stat-num">33k+</div><div class="stat-label" data-t="venue.s2">Facebook community</div></div>
+          <div><div class="stat-num">D7–D30</div><div class="stat-label" data-t="venue.s3">Retention goal</div></div>
+        </div>
+        <p class="subtext subtext--sm a" style="margin-top:16px" data-t="venue.p1">The game had strong daily loops. Players designed rooms, voted on each other's work, collected rewards. But when they wanted to <strong>feel something</strong> — share a result, see if anyone noticed — the game had nothing to offer. So they went to Facebook.</p>
+      </div>
+      <div class="sl-right">
+        <div class="axian-entry-grid-2">
+          <div class="eg-cell span-full">
+            <img src="venues/Venue_brief-en.webp"
+          data-lang-en="venues/Venue_brief-en.webp"
+          data-lang-fr="venues/Venue_brief-fr.webp"
+          data-lang-mg="venues/Venue_brief-fr.webp"
+          alt="" data-t="tooltip.venue.brief">
+          </div>
+          <div class="eg-cell">
+            <img src="venues/venue-facebook.jpeg" alt="" data-t="tooltip.venue.facebook">
+          </div>
+          
+        </div>
+      </div>
+        
+    </div>
+  </section>
+
+  <!-- 13 · VENUE OUTCOME -->
+  <section class="slide" data-i="12">
+    <div class="slide-num-wm">13</div>
+    <div class="split-row has-logo" style="flex:1;min-height:0">
+      <img src="logos/superbloom-logo-final-rgb.webp" alt="Venue" class="chap-logo a">
+      <div class="sl-left">
+        <div class="chapter a" data-t="venue.d.chapter">Chapter IV · Venue · The design</div>
+        <h2 class="headline headline--lg a" data-t="venue.d.h2">Belonging through<br><span class="blue">observation.</span><br class="mobile-hidden">Not opt-in.</h2>
+        <div class="stats a">
+          <div><div class="stat-num">Top sprinter</div><div class="stat-label" data-t="venue.d.s1">Recognition</div></div>
+        </div>
+        <p class="subtext subtext--sm a" style="margin-top:12px" data-t="venue.d.p1">The solution wasn't a social network. It was a layer that made activity <strong>visible without requiring it.</strong></p>
+        <p class="subtext subtext--sm a" style="margin-top:10px" data-t="venue.d.p2">Passive presence, shared context, ambient belonging — the kind of connection that doesn't ask anything of you until you're ready.</p>
+        <div class="blockquote a" style="margin-top:16px" data-t="venue.d.blockquote">The product lacked belonging. We didn't add a feature. <strong>We added a reason to stay.</strong></div>
+      </div>
+       <div class="sl-right">
+        <div class="axian-entry-grid-2">
+           <div class="eg-cell span-full"><img src="venues/Final-presentation.gif" alt="" data-t="tooltip.venue.presentation"></div>
+          <div class="eg-cell"><img src="Top-Sprinter.webp" alt="" data-t="tooltip.venue.sprinter"></div>
+        </div>
+          
+      </div>
+    </div>
+  </section>
+
+  <!-- 14 · COMMUNITY — I show up for them -->
+ <section class="slide slide--community" data-i="13">
+  <div class="slide-num-wm">14</div>
   <div class="split-row" style="flex:1;min-height:0">
 
     <div class="sl-left">
@@ -870,8 +953,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
   <!-- LAST · CTA -->
-  <section class="slide slide--cta" data-i="12">
-    <div class="slide-num-wm">13</div>
+  <section class="slide slide--cta" data-i="14">
+    <div class="slide-num-wm">15</div>
     <h2 class="cta-headline a" data-t="cta.h2">I might doubt myself.<br>I don't <span class="blue">let go.</span></h2>
 
     <div class="cta-sub a" style="max-width:520px;margin:0 auto 32px;text-align:center;" data-t="cta.sub1">
@@ -882,7 +965,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="cta-sub a" data-t="cta.sub2">10 years building. 3 years away from home. <br> <strong>I know what I'm made of.</strong></p>
     <div class="cta-btns a">
       <a href="https://calendly.com/jacob-radonirina/30min" class="btn btn-primary" data-t="cta.btn1">Book a call →</a>
-      <a href="https://jacob-houmadi.com" class="btn btn-outline">Portfolio</a>
+      <a href="https://jacob-houmadi.com/cases-studies" class="btn btn-outline">Portfolio</a>
       <a href="/cdn-cgi/l/email-protection#c2a8a3a1ada0ecb0a3a6adacabb0abaca382a5afa3abaeeca1adaf" class="btn btn-outline" data-t="cta.btn3">Email</a>
     </div>
     <p class="cta-footer a" data-t="cta.footer">jacob-houmadi.com · Hayange, France · <span style="color:#16A34A">●</span> Available now</p>
@@ -904,9 +987,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 /* ── i18n ── */
 const SLIDE_TITLES_I18N = {
-  en: ['Jacob Houmadi','My Journey','Two People','Localhost','How I Think','Singularity','Axian — Context','Afrixian','The Leap','Tango — Context','Tango — Outcome','Community','CTA'],
-  fr: ['Jacob Houmadi','Mon histoire','Deux Personnes','Localhost','Comment Je Pense','Singularité','Axian — Contexte','Afrixian','Le Grand Saut','Tango — Contexte','Tango — La Décision','Actions communautaires','CTA'],
-  mg: ['Jacob Houmadi','Ny Tantarako','Olona Roa','Localhost','Ny Fisainako','Ny mampiavaka ahy','Axian — Tontolon\'asa','Afrixian','Ilay vikina','Tango — Tontolon\'asa','Tango — Fanapahan-kevitra','Asa sosialy','Fanasàna anao']
+  en: ['Jacob Houmadi','My Journey','Two People','Localhost','How I Think','Singularity','Axian — Context','Afrixian','The Leap','Tango — Context','Tango — Outcome','Venue — Context','Venue — Outcome','Community','CTA'],
+  fr: ['Jacob Houmadi','Mon histoire','Deux Personnes','Localhost','Comment Je Pense','Singularité','Axian — Contexte','Afrixian','Le Grand Saut','Tango — Contexte','Tango — La Décision','Venue — Contexte','Venue — Résultat','Actions communautaires','CTA'],
+  mg: ['Jacob Houmadi','Ny Tantarako','Olona Roa','Localhost','Ny Fisainako','Ny mampiavaka ahy','Axian — Tontolon\'asa','Afrixian','Ilay vikina','Tango — Tontolon\'asa','Tango — Fanapahan-kevitra','Venue — Tontolon\'asa','Venue — Vokatra','Asa sosialy','Fanasàna anao']
 };
 
 
@@ -1185,8 +1268,10 @@ const SLIDE_TITLES = [
   {num:'09',title:'The Leap',bg:'',thumb:'Thumbnail-9.webp'},
   {num:'10',title:'Tango — Context',bg:'',thumb:'Thumbnail-10.webp'},
   {num:'11',title:'Tango — Outcome',bg:'',thumb:'Thumbnail-11.webp'},
-  {num:'12',title:'Community',bg:'',thumb:'Thumbnail-6.webp'},
-  {num:'13',title:'CTA',bg:'',thumb:'Thumbnail-13.webp'}
+  {num:'12',title:'Venue — Context',bg:'',thumb:'Thumbnail-12-1.webp'},
+  {num:'13',title:'Venue — Outcome',bg:'',thumb:'Thumbnail-13-1.webp'},
+  {num:'14',title:'Community',bg:'',thumb:'Thumbnail-6.webp'},
+  {num:'15',title:'CTA',bg:'',thumb:'Thumbnail-15.webp'}
 ];
 const dropdown = document.getElementById('dropdown');
 SLIDE_TITLES.forEach((s,i) => {
