@@ -119,7 +119,6 @@
 .cs-venue-content .hero-image img {
     margin: 0 auto;
     border-radius: var(--cs-r-md);
-    box-shadow: var(--cs-shadow-md);
     position: relative;
     z-index: 1;
 }
@@ -2151,4 +2150,1210 @@
     @media (max-width: 420px) {
         .ob-apps-grid { grid-template-columns: 1fr; }
     }
+}
+
+
+/* ==========================================================
+   TANGO CASE STUDY — cs-tango modifier
+   ========================================================== */
+
+/* ── Tango color tokens ─────────────────────────────────── */
+.cs-tango {
+    --cs-accent:      #1d6fff;
+    --cs-accent-bg:   #eef4ff;
+    --cs-ink:         #1a1714;
+    --cs-ink-4:       #9e9894;
+    --cs-ink-5:       #174075;
+}
+
+/* Hero image — dark bg to match Tango brand */
+.cs-tango-hero-img {
+    background: #03437F !important;
+}
+.cs-tango-hero-img img {
+    max-height: 420px;
+    width: auto;
+    margin: 0 auto;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Back link hover — blue instead of coral */
+.cs-tango .cs-back-link a:hover { color: var(--cs-accent); }
+
+/* ── Password wall ─────────────────────────────────────── */
+.pw-wall {
+    max-width: var(--cs-max);
+    margin: 0 auto 80px;
+    padding: 0 24px;
+}
+
+.pw-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 20px;
+    padding: 48px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+}
+
+.pw-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+}
+
+.pw-sub {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #888;
+    margin: 0 0 28px;
+}
+
+.pw-field-wrap {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.pw-input {
+    width: 100%;
+    background: #f5f5f7;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 14px 17px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    color: #1a1714;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.pw-input::placeholder {
+    color: #757575;
+    letter-spacing: 0.1em;
+}
+.pw-input:focus {
+    border-color: #1d6fff;
+    box-shadow: 0 0 0 3px rgba(29,111,255,0.12);
+}
+.pw-input--shake {
+    animation: pw-shake 0.4s ease;
+    border-color: #e05252 !important;
+}
+
+@keyframes pw-shake {
+    0%,100% { transform: translateX(0); }
+    20%      { transform: translateX(-6px); }
+    40%      { transform: translateX(6px); }
+    60%      { transform: translateX(-4px); }
+    80%      { transform: translateX(4px); }
+}
+
+.pw-error {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #e05252;
+    margin: 0 0 12px;
+    align-self: flex-start;
+}
+
+.pw-btn {
+    width: 100%;
+    background: #1d6fff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 13px 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 4px;
+    margin-bottom: 24px;
+}
+.pw-btn:hover { background: #1558d6; }
+.pw-btn:active { transform: scale(0.98); }
+
+.pw-back {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12.5px;
+    color: #888;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.pw-back:hover { color: #1d6fff; }
+
+/* ── Tango content extras ─────────────────────────────── */
+.cs-tango .cs-full-img {
+    max-width: var(--cs-max);
+    margin: 0 auto 32px;
+    padding: 0 24px;
+}
+.cs-tango .cs-full-img img {
+    width: 100%;
+    border-radius: var(--cs-r-lg);
+    box-shadow: var(--cs-shadow-md);
+}
+
+.cs-tango .cs-img-grid {
+    max-width: var(--cs-max);
+    margin: 0 auto 48px;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+.cs-tango .cs-img-grid-item img {
+    width: 100%;
+    border-radius: var(--cs-r-md);
+    box-shadow: var(--cs-shadow-sm);
+    display: block;
+}
+.cs-tango .cs-img-caption {
+    font-size: 11px;
+    color: var(--cs-ink-4);
+    text-align: center;
+    margin: 6px 0 0;
+    font-weight: 500;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+    .pw-card { padding: 32px 24px 28px; }
+    .cs-tango .cs-img-grid { grid-template-columns: 1fr; }
+    .cs-tango .cs-full-img { padding: 0 16px; }
+}
+
+
+/* ── Stats bar ──────────────────────────────────────────── */
+.cs-tango-statsbar {
+    max-width: var(--cs-max);
+    margin: 0 auto 48px;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.cs-tango-stat {
+    background: #fff;
+    padding: 22px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    border-right: 1px solid #e5e5e5;
+}
+.cs-tango-stat:last-child { border-right: none; }
+.cs-tango-stat-value {
+    font-size: 26px;
+    font-weight: 700;
+    color: #005ca9;
+    line-height: 1;
+    letter-spacing: -0.01em;
+}
+.cs-tango-stat-label {
+    font-size: 11.5px;
+    color: #888;
+    text-align: center;
+}
+
+/* ── Section structure ──────────────────────────────────── */
+.cs-tango-section {
+    max-width: var(--cs-max);
+    padding: 0 24px;
+}
+.cs-tango-section-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #1d6fff;
+    margin-bottom: 10px;
+}
+.cs-tango-section-title {
+    font-size: clamp(22px, 4vw, 28px);
+    font-weight: 700;
+    color: #174075;
+    letter-spacing: -0.02em;
+    margin: 0 0 16px;
+    padding: 0;
+    margin-top: 0 !important;
+    max-width: none;
+}
+.cs-tango-section-intro {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.75;
+    margin-bottom: 28px;
+    padding: 0;
+    max-width: none;
+}
+
+/* ── Context 2×2 grid ───────────────────────────────────── */
+.cs-tango-context-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+.cs-tango-context-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    padding: 22px;
+}
+.cs-tango-context-card-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #005ca9;
+    margin-bottom: 8px;
+}
+.cs-tango-context-card p {
+    font-size: 13.5px;
+    color: #444;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ── NDA banner ─────────────────────────────────────────── */
+.cs-tango-nda-banner {
+    max-width: var(--cs-max);
+    margin: 0 auto 48px;
+    padding: 14px 20px;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: var(--cs-r-md);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 12.5px;
+    color: #78350f;
+    line-height: 1.6;
+}
+.cs-tango-nda-banner p { margin: 0; }
+.cs-tango-nda-icon { flex-shrink: 0; font-size: 14px; margin-top: 1px; }
+
+/* ── Quote ──────────────────────────────────────────────── */
+.cs-tango-quote {
+    max-width: var(--cs-max);
+    margin: 0 auto 32px;
+    padding: 20px 28px;
+    border-left: 3px solid var(--cs-accent, #1d6fff);
+    font-size: 16px;
+    font-style: italic;
+    color: var(--cs-ink-2);
+    background: var(--cs-accent-bg, #eef4ff);
+    border-radius: 0 var(--cs-r-md) var(--cs-r-md) 0;
+}
+
+/* ── Users pin-scroll layout ─────────────────────────────── */
+.cs-tango-users-pin {
+    position: relative;
+    height: 300vh;
+    max-width: 872px;
+    margin: 0 auto;
+    z-index: 1;
+}
+.cs-tango-users-pin-inner {
+    position: sticky;
+    top: 75px;
+    background: #fff;
+    overflow: hidden;
+}
+.cs-tango-users-pin-content {
+    max-width: var(--cs-max, 872px);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.cs-tango-users-layout {
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    gap: 48px;
+    align-items: start;
+    margin: 32px 0 0;
+}
+.cs-tango-users-img-col {
+    position: relative;
+}
+.cs-tango-users-img-col img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: var(--cs-shadow-md);
+    transition: opacity 0.18s ease;
+    display: block;
+}
+
+/* Steps list */
+.cs-tango-users-steps {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 8px;
+}
+/* Vertical connector line */
+.cs-tango-users-steps::before {
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: 28px;
+    bottom: 28px;
+    width: 1px;
+    background: #e5e5e5;
+    z-index: 0;
+}
+
+.cs-tango-users-step {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 24px 0;
+    position: relative;
+}
+.cs-tango-users-step-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+.cs-tango-users-step-body {
+    padding-top: 6px;
+    opacity: 0.38;
+    transition: opacity 0.3s ease;
+}
+.cs-tango-users-step.is-active .cs-tango-users-step-body { opacity: 1; }
+
+/* Mobile inline image */
+.cs-tango-users-step-mobile-img {
+    display: none;
+}
+@media (max-width: 768px) {
+    .cs-tango-users-step-mobile-img {
+        display: block;
+        height: 30vh;
+        overflow: hidden;
+        border-radius: 10px;
+        margin-top: 12px;
+        margin-left: 58px; /* aligne avec le body (dot 38px + gap 20px) */
+    }
+    .cs-tango-users-step-mobile-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        display: block;
+    }
+}
+
+/* Dot */
+.cs-tango-users-dot {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1.5px solid #c8d8f0;
+    background: #f5faff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1a1714;
+    z-index: 1;
+    position: relative;
+    transition: background 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.cs-tango-users-step.is-active .cs-tango-users-dot {
+    background: #005ca9;
+    border-color: #005ca9;
+    color: #fff;
+}
+
+.cs-tango-users-step-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 6px;
+    line-height: 1.6;
+}
+.cs-tango-users-step-body p {
+    font-size: 13.5px;
+    color: #444;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ── Problem cards ──────────────────────────────────────── */
+.cs-tango-problem-cards {
+    max-width: var(--cs-max);
+    margin: 0 auto 40px;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+.cs-tango-problem-card {
+    background: #fff8f8;
+    border: 1px solid #fee2e2;
+    border-radius: var(--cs-r-lg);
+    padding: 20px 18px;
+}
+.cs-tango-problem-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #991b1b;
+    margin-bottom: 8px;
+}
+.cs-tango-problem-card p {
+    font-size: 13px;
+    color: var(--cs-ink-2);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ── Practices ──────────────────────────────────────────── */
+.cs-tango-practices {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    margin-bottom: 48px;
+}
+.cs-tango-practice-row {
+    display: grid;
+    grid-template-columns: 0.6fr 0.4fr;
+    gap: 80px;
+    align-items: center;
+}
+.cs-tango-practice-row--reverse {
+    grid-template-columns: 0.4fr 0.6fr;
+}
+.cs-tango-practice-row--reverse .cs-tango-practice-img { order: -1; }
+.cs-tango-practice-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.cs-tango-practice-num {
+    font-size: 11.5px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: #005ca9;
+}
+.cs-tango-practice-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111;
+    margin: 0;
+    line-height: 1.6;
+}
+.cs-tango-practice-text p {
+    font-size: 13px;
+    color: #444;
+    margin: 0;
+    line-height: 1.65;
+}
+.cs-tango-practice-text ul {
+    font-size: 13px;
+    color: #444;
+    margin: 4px 0;
+    padding-left: 20px;
+    line-height: 1.65;
+}
+.cs-tango-practice-img {
+    border-radius: 18px;
+    overflow: hidden;
+}
+.cs-tango-practice-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-position: left;
+}
+.cs-tango-practice-img--light {
+    background: #f5faff;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cs-tango-full-img {
+    background: #F5F5F7;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--cs-r-lg);
+}
+
+/* ── Deliverables ───────────────────────────────────────── */
+.cs-tango-deliverables {
+    max-width: var(--cs-max);
+    margin: 0 auto 40px;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.cs-tango-deliverable {
+    padding: 24px 20px;
+    border: 1px solid var(--cs-border);
+    border-radius: var(--cs-r-lg);
+    background: #fff;
+}
+.cs-tango-deliverable-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--cs-ink);
+    margin-bottom: 10px;
+}
+.cs-tango-deliverable p {
+    font-size: 13px;
+    color: var(--cs-ink-2);
+    margin: 0;
+    line-height: 1.65;
+}
+
+/* ── Full-width image ───────────────────────────────────── */
+.cs-tango-full-img {
+    max-width: var(--cs-max);
+    margin: 0 auto 32px;
+    padding: 24px;
+}
+.cs-tango-full-img img {
+    width: 100%;
+    border-radius: var(--cs-r-lg);
+}
+
+/* ── Project spotlights ─────────────────────────────────── */
+.cs-tango-spotlights {
+    max-width: var(--cs-max);
+    margin: 0 auto 48px;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--cs-border);
+    border-radius: var(--cs-r-xl);
+    overflow: hidden;
+}
+.cs-tango-spotlight {
+    display: flex;
+    gap: 24px;
+    padding: 28px 28px;
+    border-bottom: 1px solid var(--cs-border);
+    align-items: flex-start;
+}
+.cs-tango-spotlight:last-child { border-bottom: none; }
+.cs-tango-spotlight-num {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--cs-accent, #1d6fff);
+    letter-spacing: 0.08em;
+    flex-shrink: 0;
+    padding-top: 3px;
+    width: 24px;
+}
+.cs-tango-spotlight-body { flex: 1; }
+.cs-tango-spotlight-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--cs-ink);
+    margin-bottom: 8px;
+}
+.cs-tango-spotlight-body p {
+    font-size: 13px;
+    color: var(--cs-ink-2);
+    margin: 0;
+    line-height: 1.65;
+}
+
+/* ── Accordion spotlights ───────────────────────────────── */
+.cs-tango-acc {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 48px;
+}
+.cs-tango-acc-item {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.cs-tango-acc-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 18px 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 16px;
+    text-align: left;
+    transition: background 0.15s;
+}
+.cs-tango-acc-header:hover { background: #fafafa; }
+.cs-tango-acc-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.cs-tango-acc-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+.cs-tango-acc-icon--blue   { background: #eff6ff; }
+.cs-tango-acc-icon--pink   { background: #fff0f5; }
+.cs-tango-acc-icon--purple { background: #f5f3ff; }
+.cs-tango-acc-icon--green  { background: #f0fdf4; }
+.cs-tango-acc-icon--orange { background: #fff7ed; }
+.cs-tango-acc-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--cs-ink, #0f1b2d);
+    line-height: 1.4;
+}
+.cs-tango-acc-sub {
+    font-size: 12px;
+    color: var(--cs-ink-2, #4a5568);
+    margin-top: 2px;
+    line-height: 1.4;
+}
+.cs-tango-acc-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+.cs-tango-acc-tag {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: #f1f1f1;
+    color: #666;
+    white-space: nowrap;
+}
+.cs-tango-acc-tag--high { background: #fff0f0; color: #c0392b; }
+.cs-tango-acc-tag--med  { background: #fffbe6; color: #856404; }
+.cs-tango-acc-chevron {
+    font-size: 11px;
+    color: #aaa;
+    transition: transform 0.25s;
+    flex-shrink: 0;
+}
+.cs-tango-acc-item.is-open .cs-tango-acc-chevron { transform: rotate(180deg); }
+
+/* Body — hidden by default, shown with max-height transition */
+.cs-tango-acc-body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.28s ease;
+    border-top: 0px solid #e5e5e5;
+}
+.cs-tango-acc-item.is-open .cs-tango-acc-body {
+    grid-template-rows: 1fr;
+    border-top-width: 1px;
+}
+.cs-tango-acc-body-inner {
+    overflow: hidden;
+    padding: 0 22px;
+}
+.cs-tango-acc-item.is-open .cs-tango-acc-body-inner {
+    padding: 18px 22px 22px;
+}
+.cs-tango-acc-body-inner p {
+    font-size: 13px;
+    color: #444;
+    line-height: 1.75;
+    margin: 0 0 16px;
+}
+.cs-tango-acc-body-inner ul {
+    font-size: 12.5px;
+    color: #444;
+    line-height: 1.65;
+    padding-left: 18px;
+    margin: 6px 0 0;
+}
+.cs-tango-acc-body-inner li { margin-bottom: 3px; }
+
+/* Before / After grid */
+.cs-tango-acc-ba {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+.cs-tango-acc-bac {
+    background: #f8f8f8;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 14px 16px;
+}
+.cs-tango-acc-bal {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+}
+.cs-tango-acc-bal--before { color: #c0392b; }
+.cs-tango-acc-bal--after  { color: #1d6fff; }
+
+/* Outcome box */
+.cs-tango-acc-outcome {
+    background: #eef4ff;
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 12.5px;
+    color: #174075;
+    line-height: 1.65;
+    margin-top: 4px;
+}
+.cs-tango-acc-sub-heading {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--cs-ink, #0f1b2d);
+    margin: 16px 0 8px;
+}
+
+/* ── Results ────────────────────────────────────────────── */
+.cs-tango-results {
+    max-width: var(--cs-max);
+    margin: 0 auto 48px;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.cs-tango-result {
+    background: var(--cs-accent-bg, #eef4ff);
+    border-radius: var(--cs-r-lg);
+    padding: 24px 22px;
+}
+.cs-tango-result-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--cs-accent, #1d6fff);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 10px;
+}
+.cs-tango-result p {
+    font-size: 13px;
+    color: var(--cs-ink-2);
+    margin: 0;
+    line-height: 1.65;
+}
+
+/* ── CTA button ─────────────────────────────────────────── */
+.cs-tango-cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: var(--cs-accent, #1d6fff);
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 32px;
+    border-radius: var(--cs-r-lg);
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.1s;
+}
+.cs-tango-cta-btn:hover { background: #1558d6; }
+.cs-tango-cta-btn:active { transform: scale(0.98); }
+
+/* ── h3 in Tango prose ──────────────────────────────────── */
+.cs-tango .prose h3 {
+    font-size: clamp(18px, 3vw, 22px);
+    font-weight: 700;
+    color: var(--cs-ink);
+    letter-spacing: -0.02em;
+    margin: 40px auto 14px;
+    margin-top: 0;
+    max-width: var(--cs-max);
+}
+
+/* ── Approach section ───────────────────────────────────── */
+.cs-tango-approach-examples {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 36px 0 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 12px;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    scrollbar-width: thin;
+    scrollbar-color:  rgb(0 92 169) transparent;
+}
+.cs-tango-approach-examples::-webkit-scrollbar { height: 4px; }
+.cs-tango-approach-examples::-webkit-scrollbar-track { background: transparent; }
+.cs-tango-approach-examples::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.25); border-radius: 2px; }
+.cs-tango-approach-examples.is-dragging { cursor: grabbing; scroll-snap-type: none; }
+.cs-tango-approach-example {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+}
+.cs-tango-approach-example-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--cs-ink, #0f1b2d);
+}
+.cs-tango-approach-musthave {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #fff;
+    width: 100%;
+}
+.cs-tango-approach-musthave--blue    { background: #005ca9; }
+.cs-tango-approach-musthave--darkblue { background: #003d74; }
+.cs-tango-approach-list {
+    font-size: 14px;
+    color: #3d3733;
+    line-height: 1.75;
+    padding-left: 20px;
+    margin: 0;
+}
+.cs-tango-approach-nicetohaves {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    align-items: start;
+}
+.cs-tango-approach-nth {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: var(--nth-offset, 0px);
+}
+.cs-tango-approach-nth-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 13px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    width: 100%;
+}
+.cs-tango-approach-nth-pill--lime { background: #bcfc32; color: #005ca9; }
+.cs-tango-approach-nth-pill--pink { background: #d8127e; color: #fff; }
+.cs-tango-approach-nth p {
+    font-size: 13px;
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 4px;
+}
+.cs-tango-approach-legend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 16px;
+    border: 1px solid #1a1714;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #1a1714;
+    background: #fff;
+    margin-top: 8px;
+    margin-bottom: 32px;
+    box-sizing: border-box;
+}
+.cs-tango-quote--lime {
+    border-left-color: #bcfc32 !important;
+}
+
+/* ── Résultat concret card ──────────────────────────────── */
+.cs-tango-concret-card {
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 32px 0 28px;
+}
+.cs-tango-concret-card-inner {
+    padding: 20px 24px 0;
+}
+.cs-tango-concret-sub-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+    margin-bottom: 12px;
+}
+.cs-tango-concret-body {
+    font-size: 13.5px;
+    color: #444;
+    line-height: 1.75;
+    margin: 0 0 24px;
+    max-width: 680px;
+}
+
+/* Before → After visual */
+.cs-tango-concret-visual {
+    padding: 8px 0 24px;
+}
+.cs-tango-concret-visual img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Stats bar */
+.cs-tango-concret-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #e5e5e5;
+}
+.cs-tango-concret-stat {
+    background: #fff;
+    padding: 14px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+.cs-tango-concret-stat-value {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1d6fff;
+    text-align: center;
+}
+.cs-tango-concret-stat-label {
+    font-size: 11px;
+    color: #444;
+    text-align: center;
+}
+
+/* ── Section title XL variant ───────────────────────────── */
+.cs-tango-section-title--xl {
+    font-size: clamp(28px, 5.5vw, 44px);
+    line-height: 1.12;
+}
+
+/* ── Subsection (label + h3 + body) ─────────────────────── */
+.cs-tango-subsection {
+    margin-top: 48px;
+    margin-bottom: 32px;
+}
+.cs-tango-subsection-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #005ca9;
+    margin-bottom: 10px;
+}
+.cs-tango-subsection-title {
+    font-size: clamp(18px, 2.8vw, 22px);
+    font-weight: 700;
+    color: var(--cs-ink, #0f1b2d);
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+    line-height: 1.3;
+}
+.cs-tango-subsection-body {
+    font-size: 14px;
+    color: var(--cs-ink-2, #4a5568);
+    line-height: 1.7;
+    max-width: 620px;
+}
+.cs-tango-emphasis {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--cs-ink, #0f1b2d);
+}
+
+/* ── Situation problem cards ─────────────────────────────── */
+.cs-tango-situation-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+    margin-bottom: 40px;
+}
+.cs-tango-situation-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.cs-tango-situation-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #BCFC32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.cs-tango-situation-icon svg {
+    color: #fff;
+    fill: none;
+    stroke: currentColor;
+}
+.cs-tango-situation-card-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--cs-ink, #0f1b2d);
+    line-height: 1.35;
+}
+.cs-tango-situation-card p {
+    font-size: 13px;
+    color: var(--cs-ink-2, #4a5568);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ── Platform screenshots row ───────────────────────────── */
+.cs-tango-screens {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+    margin-bottom: 48px;
+}
+.cs-tango-screen {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.cs-tango-screen-frame {
+    border-radius: 12px;
+    overflow: hidden;
+    height: 400px;
+    object-position: bottom;
+}
+.cs-tango-screen-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-position: top;
+}
+.cs-tango-screen-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cs-ink-2, #4a5568);
+    text-align: center;
+    letter-spacing: 0.04em;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .cs-tango-situation-cards    { grid-template-columns: 1fr; }
+    .cs-tango-screens            { grid-template-columns: 1fr; }
+    .cs-tango-approach-example     { flex: 0 0 88%; }
+    .cs-tango-concret-stats        { grid-template-columns: 1fr; }
+    .cs-tango-approach-nicetohaves { grid-template-columns: 1fr; }
+    .cs-tango-approach-nth       { padding-top: 0 !important; }
+    .cs-tango-users-pin     { height: auto; }
+    .cs-tango-users-pin-inner { position: relative; }
+    .cs-tango-users-layout  { grid-template-columns: 1fr; }
+    .cs-tango-users-img-col { display: none; }
+    .cs-tango-users-step    { opacity: 1; }
+    .cs-tango-problem-cards { grid-template-columns: 1fr; }
+    .cs-tango-practice-row  { grid-template-columns: 1fr; gap: 32px; }
+    .cs-tango-practice-row--reverse .cs-tango-practice-img { order: 0; }
+    .cs-tango-deliverables  { grid-template-columns: 1fr; }
+    .cs-tango-results       { grid-template-columns: 1fr; }
+    .cs-tango-spotlight     { padding: 20px; }
+    .cs-tango-context-grid  { grid-template-columns: 1fr; }
+    .cs-tango-section       { padding: 32px 16px; }
+}
+@media (max-width: 480px) {
+    .cs-tango-nda-banner    { padding: 12px 16px; }
+    .cs-tango-quote         { padding: 16px 20px; font-size: 14px; }
+    .cs-tango-full-img      { padding: 0 16px; }
+    .cs-tango-spotlights    { border-radius: var(--cs-r-lg); }
+    .cs-tango-statsbar      { grid-template-columns: 1fr; border-radius: 12px; padding: 0; }
+    .cs-tango-stat          { border-right: none; border-bottom: 1px solid #e5e5e5; }
+    .cs-tango-stat:last-child { border-bottom: none; }
+}
+
+/* ── Tango spacing fixes ─────────────────────────────────── */
+
+/* The second cs-venue-content block (after users-pin) doesn't need header clearance */
+.cs-tango-users-pin + .cs-venue-content.cs-tango {
+    padding-top: 0;
+}
+
+/* Sections inside .prose already inherit 24px horizontal padding — remove the double padding */
+.cs-venue-content.cs-tango .prose .cs-tango-section {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Same fix for statsbar, deliverables, results and full-img inside prose */
+.cs-venue-content.cs-tango .prose .cs-tango-statsbar,
+.cs-venue-content.cs-tango .prose .cs-tango-deliverables,
+.cs-venue-content.cs-tango .prose .cs-tango-results,
+.cs-venue-content.cs-tango{
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Standalone h2s (05 · 06 · 07) — hr handles top spacing, no extra margin needed */
+.cs-venue-content.cs-tango .prose h2 {
+    margin-top: 0;
+}
+
+/* Mobile — restore sensible padding after the overrides above */
+@media (max-width: 768px) {
+    .cs-venue-content.cs-tango .prose .cs-tango-section {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}
 

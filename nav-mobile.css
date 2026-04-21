@@ -130,7 +130,7 @@
 
         .mobile-nav-links a {
             display: block;
-            padding: var(--space-md) 0;
+            padding: var(--space-md) 21px;
             color: var(--dark);
             text-decoration: none;
             font-weight: 600;

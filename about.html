@@ -129,7 +129,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li><button onclick="showPortfolio()" data-i18n="nav.portfolio">Portfolio</button></li>
             <li><a href="cases-studies.html" data-i18n="nav.casestudies">Travaux</a></li>
             <li><a href="about.html" class="nav-active" data-i18n="nav.about">À propos</a></li>
-            <li><button onclick="openModal('offres')" data-i18n="nav.services">Offres</button></li>
             <li>
                 <label for="lang-select" class="sr-only">Langue / Language</label>
                 <select class="lang-select" onchange="switchLanguage(this.value)" aria-label="Sélectionner la langue">
@@ -167,7 +166,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><button onclick="showPortfolio(); closeMobileMenu();" data-i18n="nav.portfolio">Portfolio</button></li>
         <li><a href="cases-studies.html" data-i18n="nav.casestudies">Travaux</a></li>
         <li><a href="about.html" class="nav-active" data-i18n="nav.about">À propos</a></li>
-        <li><button onclick="openModal('offres'); closeMobileMenu();" data-i18n="nav.services">Offres</button></li>
         <li>
             <div class="mobile-lang-switcher" role="group" aria-label="Langue / Language">
                 <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')" aria-pressed="true" aria-label="Français">FR</button>
@@ -176,8 +174,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </li>
     </ul>
     <div class="mobile-nav-footer">
-        <p data-i18n="mobilenav.p">Transformons votre projet ensemble</p>
-        <a href="#" class="mobile-cta" onclick="openCalendlyPopup(); closeMobileMenu(); return false;" data-i18n="nav.discovery">Appel découverte</a>
+        <p data-i18n="mobilenav.p">Disponible pour discuter des opportunités</p>
+        <a href="#" class="mobile-cta" onclick="openCalendlyPopup(); closeMobileMenu(); return false;" data-i18n="nav.discovery">Fixer un RDV</a>
     </div>
     <div>
         <ul class="footer-nav-legals">
@@ -206,9 +204,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <!-- Colonne droite : histoire + stats -->
                 <div class="about-hero-right">
-                    <p class="about-hero-p" data-i18n="about.hero.p1">J'ai commencé ma carrière à Madagascar, au sein d'Axian Group — l'un des plus grands groupes panafricains, actif dans les télécoms, l'énergie et la fintech. Pendant 5 ans, j'ai piloté la refonte complète de l'identité visuelle du groupe, unifié 5 secteurs sous une marque commune, et contribué à 4 prix internationaux aux Creatives 974 Awards.</p>
-                    <p class="about-hero-p" data-i18n="about.hero.p2">J'ai ensuite rejoint Tango, l'opérateur télécom leader au Luxembourg. J'y ai conçu l'expérience utilisateur de l'app mobile (gestion des offres, fidélisation, paiements) et du site e-commerce — en maintenant une cohérence totale entre les deux plateformes à travers un design system partagé.</p>
-                    <p class="about-hero-p" data-i18n="about.hero.p3">Aujourd'hui en freelance, je travaille avec des PME et startups B2B pour construire des interfaces qui ont du sens — UX rigoureuse, identité cohérente, résultats mesurables. Mon dernier projet : Venue (Yummy Labs / Superbloom), un jeu mobile à 4M+ joueurs, récompensé Top Sprinter en mars 2026.</p>
+                    <p class="about-hero-p" data-i18n="about.hero.p1">J'ai commencé ma carrière à Madagascar, au sein d'Axian Group, l'un des plus grands groupes panafricains, actif dans les télécoms, l'énergie et la fintech. Pendant 5 ans, j'ai piloté la refonte complète de l'identité visuelle du groupe, unifié 5 secteurs sous une marque commune, et contribué à 4 prix internationaux aux Creatives 974 Awards.</p>
+                    <p class="about-hero-p" data-i18n="about.hero.p2">J'ai ensuite rejoint Tango, l'opérateur télécom leader au Luxembourg. J'y ai conçu l'expérience utilisateur de l'app mobile (gestion des offres, fidélisation, paiements) et du site e-commerce en maintenant une cohérence totale entre les deux plateformes à travers un design system partagé.</p>
+                    <p class="about-hero-p" data-i18n="about.hero.p3">Mon dernier projet : Venue (Yummy Labs / Superbloom), un jeu mobile à 4M+ joueurs, récompensé Top Sprinter en mars 2026.</p>
 
                     <div class="about-stats">
                         <div class="about-stat">
@@ -218,10 +216,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="about-stat">
                             <span class="about-stat-value" data-i18n="about.stats.countries">3 pays</span>
                             <span class="about-stat-label" data-i18n="about.stats.countries.label">Madagascar · Luxembourg · France</span>
-                        </div>
-                        <div class="about-stat">
-                            <span class="about-stat-value" data-i18n="about.stats.focus">SaaS · Fintech</span>
-                            <span class="about-stat-label" data-i18n="about.stats.focus.label">Secteurs de prédilection</span>
                         </div>
                     </div>
                 </div>
@@ -460,101 +454,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 
-    <!-- ── FAQ ──────────────────────────────────────────── -->
-    <section class="about-faq reveal">
-        <div class="about-wrapper">
-            <div class="about-faq-inner">
-
-                <!-- Colonne gauche : titre + mini CTA -->
-                <div class="about-faq-left">
-                    <h2 class="about-section-h2" data-i18n="about.faq.h2">FAQ</h2>
-                    <p class="about-faq-sub" data-i18n="about.faq.sub">Tout ce que vous voulez savoir avant de démarrer.</p>
-
-                </div>
-
-                <!-- Colonne droite : items accordéon pill-cards -->
-                <div class="about-faq-right">
-                    <div class="about-faq-list">
-
-                        <div class="about-faq-item">
-                            <button class="about-faq-question" onclick="toggleAboutFaq(this)" aria-expanded="false">
-                                <span data-i18n="faq.q1">Quelle est la différence entre les deux offres ?</span>
-                                <svg class="about-faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-                            </button>
-                            <div class="about-faq-answer" data-i18n-html="faq.a1"></div>
-                        </div>
-
-                        <div class="about-faq-item">
-                            <button class="about-faq-question" onclick="toggleAboutFaq(this)" aria-expanded="false">
-                                <span data-i18n="faq.q2">Fais-tu également le développement ?</span>
-                                <svg class="about-faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-                            </button>
-                            <div class="about-faq-answer" data-i18n="faq.a2"></div>
-                        </div>
-
-                        <div class="about-faq-item">
-                            <button class="about-faq-question" onclick="toggleAboutFaq(this)" aria-expanded="false">
-                                <span data-i18n="faq.q3">Quels livrables vais-je recevoir ?</span>
-                                <svg class="about-faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-                            </button>
-                            <div class="about-faq-answer" data-i18n-html="faq.a3"></div>
-                        </div>
-
-                        <div class="about-faq-item">
-                            <button class="about-faq-question" onclick="toggleAboutFaq(this)" aria-expanded="false">
-                                <span data-i18n="faq.q4">Combien de révisions sont incluses ?</span>
-                                <svg class="about-faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-                            </button>
-                            <div class="about-faq-answer" data-i18n="faq.a4"></div>
-                        </div>
-
-                        <div class="about-faq-item">
-                            <button class="about-faq-question" onclick="toggleAboutFaq(this)" aria-expanded="false">
-                                <span data-i18n="faq.q5">Comment se passe le paiement ?</span>
-                                <svg class="about-faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-                            </button>
-                            <div class="about-faq-answer" data-i18n-html="faq.a5"></div>
-                        </div>
-
-                        <div class="about-faq-item">
-                            <button class="about-faq-question" onclick="toggleAboutFaq(this)" aria-expanded="false">
-                                <span data-i18n="faq.q6">Travailles-tu avec des clients internationaux ?</span>
-                                <svg class="about-faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-                            </button>
-                            <div class="about-faq-answer" data-i18n="faq.a6"></div>
-                        </div>
-
-                        <div class="about-faq-item">
-                            <button class="about-faq-question" onclick="toggleAboutFaq(this)" aria-expanded="false">
-                                <span data-i18n="faq.q7">Proposes-tu un accompagnement après la livraison ?</span>
-                                <svg class="about-faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-                            </button>
-                            <div class="about-faq-answer" data-i18n="faq.a7"></div>
-                        </div>
-
-                        <div class="about-faq-item">
-                            <button class="about-faq-question" onclick="toggleAboutFaq(this)" aria-expanded="false">
-                                <span data-i18n="faq.q8">Quels secteurs d'activité connais-tu le mieux ?</span>
-                                <svg class="about-faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-                            </button>
-                            <div class="about-faq-answer" data-i18n="faq.a8"></div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
     <!-- ── CTA ──────────────────────────────────────────── -->
     <section class="about-cta reveal">
         <div class="about-wrapper">
             <div class="about-cta-inner">
-                <h2 class="about-cta-h2" data-i18n="about.cta.h2">Parlons de votre projet</h2>
-                <p class="about-cta-p" data-i18n="about.cta.p">Vous avez un produit à construire ou à améliorer ? Réservez un appel de 30 minutes — gratuit, sans engagement.</p>
+                <h2 class="about-cta-h2" data-i18n="about.cta.h2">Disponible pour discuter des opportunités</h2>
                 <a href="https://calendly.com/jacob-radonirina/30min" target="_blank" rel="noopener" class="about-cta-btn" data-i18n="about.cta.btn">
-                    Prendre rdv gratuitement →
+                    Voir mes disponibilités
                 </a>
             </div>
         </div>
@@ -768,17 +675,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/jacob-houmadi" target="_blank" title="LinkedIn" aria-label="Linkedin">
                         <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg>
-                    </a>
-                    <a href="https://www.malt.fr/profile/jacobhoumadi" target="_blank" aria-label="Malt">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20.5384 3.46333C18.7268 1.65172 16.7916 2.82425 15.5805 4.03533L9.86041 9.75578L4.1397 15.4764C2.92862 16.6873 1.66101 18.5273 3.5677 20.4338C5.47439 22.3408 7.31439 21.073 8.52522 19.8619L14.2457 14.1414L19.9661 8.4211C21.1773 7.20989 22.3497 5.27468 20.5384 3.46333Z"></path>
-                            <path d="M9.60804 2.99443L12.0306 5.41685L14.4964 2.951C14.6638 2.7832 14.8338 2.62748 15.0048 2.48062C14.7466 1.1778 14.0032 0 12.0294 0C10.0519 0 9.30944 1.18243 9.05273 2.48807C9.23724 2.64778 9.42161 2.80787 9.60804 2.99443Z"></path>
-                            <path d="M14.4951 20.9888L12.0308 18.5244L9.60956 20.9454C9.4257 21.1294 9.24274 21.2975 9.06055 21.4554C9.3382 22.7835 10.124 24 12.0298 24C13.9406 24 14.7254 22.7769 15.0012 21.4446C14.8317 21.2987 14.662 21.1557 14.4951 20.9888Z"></path>
-                            <path d="M8.58048 8.86719H3.91012C2.19757 8.86719 0 9.40656 0 11.9683C0 13.8797 1.22342 14.6646 2.55604 14.9403C2.71382 14.7583 8.58048 8.86719 8.58048 8.86719Z"></path>
-                            <path d="M21.5126 8.9917C21.3647 9.16361 15.4858 15.0696 15.4858 15.0696H20.0899C21.8025 15.0696 24 14.665 24 11.9685C24 9.9913 22.818 9.24841 21.5126 8.9917Z"></path>
-                            <path d="M10.1108 7.33427L10.9452 6.4999L8.52418 4.07864C7.31297 2.86768 5.47322 1.59994 3.56653 3.50663C2.16838 4.90478 2.47892 6.26555 3.22053 7.37024C3.4464 7.35341 10.1108 7.33427 10.1108 7.33427Z"></path>
-                            <path d="M13.9496 16.6027L13.113 17.4392L15.5791 19.9051C16.7902 21.1163 18.7254 22.2886 20.5368 20.4772C21.8884 19.1254 21.5783 17.7057 20.831 16.5684C20.5905 16.5857 13.9496 16.6027 13.9496 16.6027Z"></path>
-                        </svg>
                     </a>
                     <a href="https://www.behance.net/jacobhoumadi" target="_blank" aria-label="Behance">
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -93,7 +93,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li><button onclick="showPortfolio()" data-i18n="nav.portfolio">Portfolio</button></li>
             <li><a href="cases-studies.html" class="nav-active" data-i18n="nav.casestudies">Travaux</a></li>
             <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
-            <li><button onclick="openModal('offres')" data-i18n="nav.services">Offres</button></li>
             <li>
                 <label for="lang-select" class="sr-only">Langue / Language</label>
                 <select class="lang-select" onchange="switchLanguage(this.value)" aria-label="Sélectionner la langue">
@@ -127,7 +126,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><button onclick="showPortfolio(); closeMobileMenu();" data-i18n="nav.portfolio">Portfolio</button></li>
         <li><a href="cases-studies.html" data-i18n="nav.casestudies">Cases studies</a></li>
         <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
-        <li><button onclick="openModal('offres'); closeMobileMenu();" data-i18n="nav.services">Offres</button></li>
         <li><a href="#" class="nav-cta-btn" style="margin: 0.25rem 0;" onclick="openCalendlyPopup(); closeMobileMenu(); return false;" data-i18n="nav.discovery">Appel découverte</a></li>
         <li>
             <div class="mobile-lang-switcher" role="group" aria-label="Langue / Language">
@@ -137,7 +135,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </li>
     </ul>
     <div class="mobile-nav-footer">
-        <p data-i18n="mobilenav.p">Transformons votre projet ensemble</p>
+        <p data-i18n="mobilenav.p">Disponible pour discuter des opportunités</p>
         <button onclick="scrollToLanding(); closeMobileMenu();" class="mobile-cta" data-i18n="mobilenav.cta">Me contacter</button>
     </div>
     <div>
@@ -533,64 +531,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h2 data-i18n-html="main.h2">Transformez votre identité de marque en <span>expérience digitale mémorable</span></h2>
                 <p class="subtitle" data-i18n="main.subtitle">Parlez-moi de votre projet. Je vous réponds sous 24h.</p>
 
-                <form id="contactForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name" data-i18n="form.name">Nom complet</label>
-                            <input type="text" id="name" name="name" placeholder="e.g. John Doe" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" data-i18n="form.email">Email professionnel</label>
-                            <input type="email" id="email" name="email" placeholder="e.g. john.doe@domain.com" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group" data-i18n-html="form.company">
-                            <label for="company">Nom de l'entreprise</label>
-                            <input type="text" id="company" name="company" placeholder="e.g. SpaceX">
-                        </div>
-                        <div class="form-group">
-                            <label for="website" data-i18n="form.website">Site web</label>
-                            <input type="url" id="website" name="website" placeholder="https://spacex.com">
-                        </div>
-                    </div>
-                    <div class="form-group m-tp">
-                        <label for="project" data-i18n="form.project">Votre situation</label>
-                        <select id="project" name="project" required>
-                            <option value=""           data-i18n="project.select">Sélectionnez...</option>
-                            <option value="structurer" data-i18n="project.structurer">Structurer – produit existant</option>
-                            <option value="construire" data-i18n="project.construire">Construire – from scratch ou refonte</option>
-                            <option value="renforcer"  data-i18n="project.renforcer">Renforcer – mission embarquée</option>
-                            <option value="autre"      data-i18n="project.autre">Autre à discuter</option>
-                        </select>
-                    </div>
-                    <div class="form-group m-tp" data-i18n-html="form.message">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Votre message ..."></textarea>
-                    </div>
-                    <div class="form-group privacy-check">
-                        <label class="checkbox-label">
-                            <input type="checkbox" id="privacy" name="privacy" required>
-                            <span class="checkmark"></span>
-                            <span class="checkbox-text" data-i18n-html="form.consent">
-                                J'accepte que mes données soient utilisées pour traiter ma demande, conformément à la
-                                <a href="politique-confidentialite.html">Politique de confidentialité</a>.
-                            </span>
-                        </label>
-                    </div>
-                    <button type="submit" id="submitBtn" class="btn-primary" data-i18n="form.submit">Démarrer la conversation →</button>
-                </form>
             </div>
 
-            <div id="calendlyBlock" style="display:none;">
-                <div class="calendly-success-header">
-                    <h3 data-i18n="calendly.title">✅ Message envoyé, merci !</h3>
-                    <p data-i18n-html="calendly.text">Parfait, je reviens vers vous sous 24h. En attendant, <strong>réservez directement un créneau</strong>.</p>
-                </div>
-                <div class="calendly-inline-widget"
-                    data-url="https://calendly.com/jacob-radonirina/30min?hide_gdpr_banner=1&primary_color=0066ff"
-                    style="min-width:280px; height:660px;"></div>
-            </div>
+            <div class="calendly-inline-widget"
+                data-url="https://calendly.com/jacob-radonirina/30min?hide_gdpr_banner=1&primary_color=0066ff"
+                style="min-width:280px; height:660px;"></div>
         </div>
     </div>
 </div>
@@ -608,9 +553,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="social-links">
             <a href="https://www.linkedin.com/in/jacob-houmadi" target="_blank" aria-label="Linkedin">
                 <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-            </a>
-            <a href="https://www.malt.fr/profile/jacobhoumadi" target="_blank" aria-label="Malt">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5384 3.46333C18.7268 1.65172 16.7916 2.82425 15.5805 4.03533L9.86041 9.75578L4.1397 15.4764C2.92862 16.6873 1.66101 18.5273 3.5677 20.4338C5.47439 22.3408 7.31439 21.073 8.52522 19.8619L14.2457 14.1414L19.9661 8.4211C21.1773 7.20989 22.3497 5.27468 20.5384 3.46333Z"/><path d="M9.60804 2.99443L12.0306 5.41685L14.4964 2.951C14.6638 2.7832 14.8338 2.62748 15.0048 2.48062C14.7466 1.1778 14.0032 0 12.0294 0C10.0519 0 9.30944 1.18243 9.05273 2.48807C9.23724 2.64778 9.42161 2.80787 9.60804 2.99443Z"/><path d="M14.4951 20.9888L12.0308 18.5244L9.60956 20.9454C9.4257 21.1294 9.24274 21.2975 9.06055 21.4554C9.3382 22.7835 10.124 24 12.0298 24C13.9406 24 14.7254 22.7769 15.0012 21.4446C14.8317 21.2987 14.662 21.1557 14.4951 20.9888Z"/><path d="M8.58048 8.86719H3.91012C2.19757 8.86719 0 9.40656 0 11.9683C0 13.8797 1.22342 14.6646 2.55604 14.9403C2.71382 14.7583 8.58048 8.86719 8.58048 8.86719Z"/><path d="M21.5126 8.9917C21.3647 9.16361 15.4858 15.0696 15.4858 15.0696H20.0899C21.8025 15.0696 24 14.665 24 11.9685C24 9.9913 22.818 9.24841 21.5126 8.9917Z"/><path d="M10.1108 7.33427L10.9452 6.4999L8.52418 4.07864C7.31297 2.86768 5.47322 1.59994 3.56653 3.50663C2.16838 4.90478 2.47892 6.26555 3.22053 7.37024C3.4464 7.35341 10.1108 7.33427 10.1108 7.33427Z"/><path d="M13.9496 16.6027L13.113 17.4392L15.5791 19.9051C16.7902 21.1163 18.7254 22.2886 20.5368 20.4772C21.8884 19.1254 21.5783 17.7057 20.831 16.5684C20.5905 16.5857 13.9496 16.6027 13.9496 16.6027Z"/></svg>
             </a>
             <a href="mailto:jacob.radonirina@gmail.com" aria-label="Email">
                 <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>

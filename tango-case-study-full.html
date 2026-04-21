@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-67D06JS6R4"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-67D06JS6R4');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PRKVLWBW');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "vjhao9vgsp");
+    </script>
+    <!-- End Microsoft Clarity -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tango Design System — Case Study Complet | Jacob Houmadi</title>
+    <meta name="description" content="Case study NDA — Tango Design System. Comment j'ai unifié trois plateformes digitales sous un système de design commun en 18 mois, en solo, sans big bang.">
+    <meta name="author" content="Jacob Houmadi">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cookie-consent.css">
+    <link rel="stylesheet" href="nav-mobile.css">
+    <link rel="stylesheet" href="case-study.css">
+
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- Calendly -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+    <script src="translations.js" defer></script>
+</head>
+<body>
+<!-- Auth guard: redirect to password page if not authenticated -->
+<script>
+(function () {
+    var TANGO_TTL = 7 * 24 * 60 * 60 * 1000;
+    var data = localStorage.getItem('tango_unlocked');
+    var ok = false;
+    if (data) { try { ok = (Date.now() - JSON.parse(data)) < TANGO_TTL; } catch (e) {} }
+    if (!ok) window.location.replace('tango-case-study.html');
+})();
+</script>
+<!-- Auto-logout after 15 minutes of inactivity -->
+<script>
+(function () {
+    var INACTIVITY_MS = 15 * 60 * 1000;
+    var timer;
+    function logout() {
+        localStorage.removeItem('tango_unlocked');
+        window.location.replace('tango-case-study.html');
+    }
+    function reset() {
+        clearTimeout(timer);
+        timer = setTimeout(logout, INACTIVITY_MS);
+    }
+    ['mousemove', 'mousedown', 'keydown', 'touchstart', 'scroll', 'click'].forEach(function (ev) {
+        document.addEventListener(ev, reset, { passive: true });
+    });
+    reset();
+})();
+</script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRKVLWBW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- Cookie Consent Banner -->
+<div id="cookieConsent" class="cookie-consent" style="display: none;">
+    <div class="cookie-content">
+        <div class="cookie-text">
+            <h3 data-i18n="cookie.01">🍪 Cookies et confidentialité</h3>
+            <p data-i18n-html="cookie.02">Ce site utilise des cookies essentiels pour son fonctionnement (formulaire de contact via EmailJS). Aucun cookie publicitaire ou de tracking. <a href="politique-confidentialite.html">En savoir plus</a></p>
+        </div>
+        <div class="cookie-buttons">
+            <button onclick="acceptCookies()" class="cookie-accept" data-i18n="cookie.accept">Accepter</button>
+            <button onclick="refuseCookies()" class="cookie-refuse" data-i18n="cookie.refuse">Refuser</button>
+        </div>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header>
+    <button class="logo" onclick="window.location.href='index.html'" aria-label="Jacob Houmadi — Accueil">Jacob<span aria-hidden="true">.</span></button>
+    <nav class="desktop-nav">
+        <ul>
+            <li><button onclick="showPortfolio()" data-i18n="nav.portfolio">Portfolio</button></li>
+            <li><a href="cases-studies.html" class="nav-active" data-i18n="nav.casestudies">Cases studies</a></li>
+            <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+            <li>
+                <label for="lang-select" class="sr-only">Langue / Language</label>
+                <select class="lang-select" onchange="switchLanguage(this.value)" aria-label="Sélectionner la langue">
+                    <option value="fr">FR</option>
+                    <option value="en">EN</option>
+                </select>
+            </li>
+            <li><a href="#" class="nav-cta-btn" onclick="openCalendlyPopup(); return false;" data-i18n="nav.discovery">Appel découverte</a></li>
+        </ul>
+    </nav>
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+</header>
+
+<!-- Menu Mobile Overlay -->
+<div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="closeMobileMenu()"></div>
+
+<!-- Menu Mobile -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobile">
+    <div class="mobile-nav-header">
+        <button class="logo-mobile"><img src="logo-jacob.png" alt="logo"></button>
+        <button class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="Fermer le menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+    </div>
+    <ul class="mobile-nav-links">
+        <li><button onclick="showPortfolio(); closeMobileMenu();" data-i18n="nav.portfolio">Portfolio</button></li>
+        <li><a href="cases-studies.html" class="nav-active" data-i18n="nav.casestudies">Cases studies</a></li>
+        <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+        <li><a href="#" class="nav-cta-btn" style="margin: 0.25rem 0;" onclick="openCalendlyPopup(); closeMobileMenu(); return false;" data-i18n="nav.discovery">Appel découverte</a></li>
+        <li>
+            <div class="mobile-lang-switcher" role="group" aria-label="Langue / Language">
+                <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')" aria-pressed="true" aria-label="Français">FR</button>
+                <button class="lang-btn" data-lang="en" onclick="setLang('en')" aria-pressed="false" aria-label="English">EN</button>
+            </div>
+        </li>
+    </ul>
+    <div class="mobile-nav-footer">
+        <p data-i18n="mobilenav.p">Transformons votre projet ensemble</p>
+        <button onclick="document.getElementById('landing').scrollIntoView({behavior:'smooth'}); closeMobileMenu();" class="mobile-cta" data-i18n="mobilenav.cta">Me contacter</button>
+    </div>
+    <div>
+        <ul class="footer-nav-legals">
+            <li><a href="mentions-legales.html" data-i18n="footer.legal1">Mentions légales</a></li>
+            <li><a href="politique-confidentialite.html" data-i18n="footer.legal2">Politiques de confidentialités</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ── CASE STUDY CONTENT ──────────────────────────────── -->
+<div class="cs-venue-content cs-tango">
+
+    <div class="cs-back-link">
+        <a href="cases-studies.html" data-i18n="cs.tango.back">← Travaux</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-tag" style="width: auto; margin-bottom: 28px;">
+            <img src="logos/logo-tango-normal.svg" alt="Tango" style="height: 30px; width: auto;">
+        </div>
+        <h1 data-i18n-html="cs.tango.hero.h1">Unifier trois plateformes.<br>Bâtir le système qui tient.</h1>
+        <p class="hero-sub" data-i18n="cs.tango.hero.sub">Tango Design System — Fév 2024 — Août 2025</p>
+        <div class="hero-image cs-tango-hero-img">
+            <img src="Captures/tango-mobile-mockup-2.png" alt="Tango Mobile App Identity" loading="lazy">
+        </div>
+    </section>
+
+    <!-- NDA BANNER -->
+    <div class="cs-tango-nda-banner reveal">
+        <span class="cs-tango-nda-icon">⚠️</span>
+        <p data-i18n="cs.tango.nda.text">Ce case study est partagé sous NDA. Les captures et métriques visibles sont publiques ou anonymisées. Les données internes, fonctionnalités non lancées et informations financières ont été omises.</p>
+    </div>
+
+    <!-- TL;DR -->
+    <div class="cs-venue-tldr">
+        <h2 class="reveal" data-i18n="cs.tango.tldr.h2">TL;DR</h2>
+        <div class="tldr-cards">
+            <div class="tldr-card reveal reveal--delay-1">
+                <div class="tldr-card-label" data-i18n="cs.tango.tldr.card1.label">Problème :</div>
+                <p data-i18n="cs.tango.tldr.card1.p">Trois plateformes, trois identités visuelles, aucun langage commun. La dette design s'accumulait à chaque livraison.</p>
+            </div>
+            <div class="tldr-card reveal reveal--delay-2">
+                <div class="tldr-card-label" data-i18n="cs.tango.tldr.card2.label">Solution :</div>
+                <p data-i18n="cs.tango.tldr.card2.p">Design system unifié construit progressivement, en parallèle des urgences produit — sans big bang, sans bloquer les équipes.</p>
+            </div>
+            <div class="tldr-card reveal reveal--delay-3">
+                <div class="tldr-card-label" data-i18n="cs.tango.tldr.card3.label">Impact :</div>
+                <p data-i18n="cs.tango.tldr.card3.p">Cohérence visuelle sur 3 plateformes. Identité de marque unifiée. Implémentation fluide sur les projets suivants.</p>
+            </div>
+            <div class="tldr-card reveal reveal--delay-4">
+                <div class="tldr-card-label" data-i18n="cs.tango.tldr.card4.label">Approche :</div>
+                <p data-i18n="cs.tango.tldr.card4.p">Itérations courtes, feedback dev structuré, anticipation des composants à revamper avant que les projets les forcent.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- META -->
+    <div class="meta-grid">
+        <div class="meta-item">
+            <div class="meta-label" data-i18n="cs.tango.meta.project.label">PROJECT</div>
+            <div class="meta-value" data-i18n="cs.tango.meta.project.value">MyTango App · tango.lu · Customer Self-Care Portal</div>
+        </div>
+        <div class="meta-item">
+            <div class="meta-label" data-i18n="cs.tango.meta.role.label">ROLE</div>
+            <div class="meta-value" data-i18n="cs.tango.meta.role.value">Sole Product Designer — UX, UI &amp; Design System</div>
+        </div>
+        <div class="meta-item">
+            <div class="meta-label" data-i18n="cs.tango.meta.company.label">COMPANY</div>
+            <div class="meta-value" data-i18n="cs.tango.meta.company.value">Tango Luxembourg (Telecom internet &amp; mobile)</div>
+        </div>
+        <div class="meta-item">
+            <div class="meta-label" data-i18n="cs.tango.meta.constraint.label">CONSTRAINT</div>
+            <div class="meta-value" data-i18n="cs.tango.meta.constraint.value">Système considéré comme "fini" par 2 agences · Priorités produit non négociables · Seul designer</div>
+        </div>
+        <div class="meta-item">
+            <div class="meta-label" data-i18n="cs.tango.meta.deliverables.label">DELIVERABLES</div>
+            <div class="meta-value" data-i18n="cs.tango.meta.deliverables.value">Design system · Composants "Evolution" · Tokens unifiés · Specs handoff · Slide decks projet</div>
+        </div>
+        <div class="meta-item">
+            <div class="meta-label" data-i18n="cs.tango.meta.period.label">PERIOD</div>
+            <div class="meta-value" data-i18n="cs.tango.meta.period.value">Fév 2024 — Août 2025 · 1 an 7 mois</div>
+        </div>
+    </div>
+
+    <!-- PROSE -->
+    <main class="prose">
+
+        <!-- STATS BAR -->
+        <div class="cs-tango-statsbar reveal">
+            <div class="cs-tango-stat">
+                <div class="cs-tango-stat-value">3</div>
+                <div class="cs-tango-stat-label" data-i18n="cs.tango.stats.s1.label">plateformes unifiées</div>
+            </div>
+            <div class="cs-tango-stat">
+                <div class="cs-tango-stat-value">+30–40%</div>
+                <div class="cs-tango-stat-label" data-i18n="cs.tango.stats.s2.label">vélocité dev</div>
+            </div>
+            <div class="cs-tango-stat">
+                <div class="cs-tango-stat-value">+30%</div>
+                <div class="cs-tango-stat-label" data-i18n="cs.tango.stats.s3.label">satisfaction users</div>
+            </div>
+        </div>
+
+        <!-- 01 · CONTEXT -->
+        <div class="cs-tango-section">
+            <div class="cs-tango-section-label reveal" data-i18n="cs.tango.s01.label">01 · Contexte</div>
+            <h2 class="cs-tango-section-title reveal reveal--delay-1" data-i18n="cs.tango.s01.h2">Seul designer. Trois produits. Simultanément.</h2>
+            <p class="cs-tango-section-intro reveal reveal--delay-2" data-i18n-html="cs.tango.s01.intro">Tango est l'opérateur télécom mobile et internet leader au Luxembourg.<br>Objectif : internaliser le design pour briser la dépendance aux agences externes et livrer sur 3 plateformes en parallèle.</p>
+            <div class="cs-tango-context-grid">
+                <div class="cs-tango-context-card reveal reveal--delay-1">
+                    <div class="cs-tango-context-card-label" data-i18n="cs.tango.s01.card1.label">Mon rôle</div>
+                    <p data-i18n="cs.tango.s01.card1.p">Product Designer intégré dans une équipe cross-fonctionnelle — PMs, ingénieurs, analystes CX. Responsable de l'UX mobile, de l'expérience web et de la gouvernance du design system.</p>
+                </div>
+                <div class="cs-tango-context-card reveal reveal--delay-2">
+                    <div class="cs-tango-context-card-label" data-i18n="cs.tango.s01.card2.label">Point de départ</div>
+                    <p data-i18n="cs.tango.s01.card2.p">3 fichiers Figma de 2 agences différentes. Aucun token partagé. Aucune gouvernance de composants. Aucun standard de handoff. Chaque plateforme avait sa propre logique visuelle.</p>
+                </div>
+                <div class="cs-tango-context-card reveal reveal--delay-3">
+                    <div class="cs-tango-context-card-label" data-i18n="cs.tango.s01.card3.label">Scope</div>
+                    <p data-i18n="cs.tango.s01.card3.p">MyTango App (mobile) · tango.lu (e-commerce) · Customer Self-Care Portal · Design system transverse aux 3 produits.</p>
+                </div>
+                <div class="cs-tango-context-card reveal reveal--delay-4">
+                    <div class="cs-tango-context-card-label" data-i18n="cs.tango.s01.card4.label">Méthode</div>
+                    <p data-i18n="cs.tango.s01.card4.p">Agile. Ateliers cross-fonctionnels hebdomadaires. Itérations basées sur les données CX, retours App Store et reviews stakeholders.</p>
+                </div>
+            </div>
+        </div>
+ <hr>
+        <!-- 02 · UTILISATEURS — pin scroll -->
+        </main>
+    </div><!-- /cs-venue-content -->
+
+    <div class="cs-tango-users-pin" id="users-pin">
+        <div class="cs-tango-users-pin-inner">
+            <div class="cs-tango-users-pin-content">
+                <div class="cs-tango-section-label" data-i18n="cs.tango.s02.label">02 · Utilisateurs</div>
+                <h2 class="cs-tango-section-title" data-i18n-html="cs.tango.s02.h2">Une particularité Tango.<br>Deux types d'utilisateurs.</h2>
+                <p class="cs-tango-section-intro" data-i18n="cs.tango.s02.intro">Chaque feature designée devait fonctionner pour deux profils aux droits et aux comportements fondamentalement différents. Ignorer cette dualité, c'est livrer un produit qui casse en production.</p>
+
+                <div class="cs-tango-users-layout">
+                    <!-- Image gauche -->
+                    <div class="cs-tango-users-img-col">
+                        <img id="users-img" src="Tango/masterline-own-account.webp"  data-lang-en="Tango/masterline-own-account-en.webp"  data-lang-fr="Tango/masterline-own-account.webp" alt="Aperçu interface utilisateur" loading="lazy">
+                    </div>
+
+                    <!-- Steps droite -->
+                    <div class="cs-tango-users-steps">
+                        <div class="cs-tango-users-step is-active" data-img="Tango/masterline-own-account.webp">
+                            <div class="cs-tango-users-step-header">
+                                <div class="cs-tango-users-dot">1</div>
+                                <div class="cs-tango-users-step-body">
+                                    <div class="cs-tango-users-step-title" data-i18n="cs.tango.s02.step1.title">Masterline</div>
+                                    <p data-i18n="cs.tango.s02.step1.p">Compte principal avec droits complets sur le compte. Nécessite une authentication. Chaque flow critique est conçu autour de lui en premier.</p>
+                                </div>
+                            </div>
+                            <div class="cs-tango-users-step-mobile-img">
+                                <img src="Tango/masterline-own-account.webp" data-lang-fr="Tango/masterline-own-account.webp" data-lang-en="Tango/masterline-own-account-en.webp" alt="Masterline — interface" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="cs-tango-users-step" data-img="Tango/masterline-sub-account.webp">
+                            <div class="cs-tango-users-step-header">
+                                <div class="cs-tango-users-dot">1 bis</div>
+                                <div class="cs-tango-users-step-body">
+                                    <div class="cs-tango-users-step-title" data-i18n="cs.tango.s02.step1bis.title">Masterline vue subscriber</div>
+                                    <p data-i18n="cs.tango.s02.step1bis.p">Compte principal lorsqu'il opère sur un compte rattaché.</p>
+                                </div>
+                            </div>
+                            <div class="cs-tango-users-step-mobile-img">
+                                <img src="Tango/masterline-sub-account.webp" data-lang-fr="Tango/masterline-sub-account.webp" data-lang-en="Tango/masterline-sub-account-en.webp" alt="Masterline vue subscriber" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="cs-tango-users-step" data-img="Tango/Subscriber-own-account.webp">
+                            <div class="cs-tango-users-step-header">
+                                <div class="cs-tango-users-dot">2</div>
+                                <div class="cs-tango-users-step-body">
+                                    <div class="cs-tango-users-step-title" data-i18n="cs.tango.s02.step2.title">Subscriber</div>
+                                    <p data-i18n="cs.tango.s02.step2.p">Compte rattaché avec droits restreints. Chaque feature nécessite une version Subscriber — avec ses propres contraintes d'affichage et de permission.</p>
+                                </div>
+                            </div>
+                            <div class="cs-tango-users-step-mobile-img">
+                                <img src="Tango/Subscriber-own-account.webp" data-lang-fr="Tango/Subscriber-own-account.webp" data-lang-en="Tango/Subscriber-own-account-en.webp" alt="Subscriber — interface" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Impact card -->
+                <div class="cs-tango-context-card" style="margin-top: 32px;">
+                    <div class="cs-tango-context-card-label" data-i18n="cs.tango.s02.impact.label">Impact sur le design</div>
+                    <p data-i18n="cs.tango.s02.impact.p">Chaque écran, chaque flow, chaque composant devait être pensé deux fois. Quelle information est pertinente, quelle action est autorisée, quel message d'erreur s'affiche, et comment transitionner proprement entre les deux états. Cette dualité est présente dans chacun des projets ci-dessous.</p>
+                </div>
+            </div>
+        </div>
+    </div><!-- /users-pin -->
+
+    <div class="cs-venue-content cs-tango">
+    <main class="prose">
+
+        <!-- 03 · DESIGN SYSTEM — SITUATION -->
+        <hr>
+        <div class="cs-tango-section">
+            <div class="cs-tango-section-label reveal" data-i18n="cs.tango.s03.label">03 · Design System</div>
+            <h2 class="cs-tango-section-title cs-tango-section-title--xl reveal reveal--delay-1" data-i18n-html="cs.tango.s03.h2">Construire le système<br>en jonglant les urgences.</h2>
+            <p class="cs-tango-section-intro reveal reveal--delay-2" data-i18n="cs.tango.s03.intro">Le design system ne s'est pas construit en une fois. Il s'est construit malgré les priorités produit, progressivement, méthodiquement, feature après feature.</p>
+
+            <!-- SITUATION -->
+            <div class="cs-tango-subsection reveal">
+                <div class="cs-tango-subsection-label" data-i18n="cs.tango.s03.sit.label">Situation</div>
+                <h3 class="cs-tango-subsection-title" data-i18n="cs.tango.s03.sit.h3">Trois produits. Trois identités. Zéro cohérence.</h3>
+                <p class="cs-tango-subsection-body" data-i18n-html="cs.tango.s03.sit.body">Tango avait investi dans trois plateformes distinctes, conçues à des moments différents par des équipes différentes. Le résultat visible : des codes couleurs disparates, des dégradés propres à chaque produit, des tokens qui ne se parlaient pas. Le problème remontait jusqu'au management sous une forme simple — <em class="cs-tango-emphasis">"c'est pas le bon bleu."</em></p>
+            </div>
+
+            <!-- 3 cartes problème avec icônes -->
+            <div class="cs-tango-situation-cards">
+                <div class="cs-tango-situation-card reveal">
+                    <div class="cs-tango-situation-icon">
+                        <img src="Tango/color-icon.webp" alt="">
+                    </div>
+                    <div class="cs-tango-situation-card-title" data-i18n="cs.tango.s03.card1.title">Couleurs non unifiées</div>
+                    <p data-i18n="cs.tango.s03.card1.p">Chaque plateforme avait ses propres valeurs de couleur. Un même bleu Tango existait en 3 variations selon l'endroit.</p>
+                </div>
+                <div class="cs-tango-situation-card reveal reveal--delay-1">
+                    <div class="cs-tango-situation-icon">
+                       <img src="Tango/gradient-icon.webp" alt="">
+                    </div>
+                    <div class="cs-tango-situation-card-title" data-i18n="cs.tango.s03.card2.title">Dégradés propres au site</div>
+                    <p data-i18n="cs.tango.s03.card2.p">Le site web utilisait un dégradé de couleur absent des autres produits — visuellement incohérent, jamais challengé.</p>
+                </div>
+                <div class="cs-tango-situation-card reveal reveal--delay-2">
+                    <div class="cs-tango-situation-icon">
+                       <img src="Tango/token-icon.webp" alt="">
+                    </div>
+                    <div class="cs-tango-situation-card-title" data-i18n="cs.tango.s03.card3.title">Tokens non partagés</div>
+                    <p data-i18n="cs.tango.s03.card3.p">Les équipes dev de l'app et du site travaillaient en silos. Aucun token commun, donc aucune source de vérité partagée.</p>
+                </div>
+            </div>
+
+            <!-- Screenshots 3 plateformes -->
+            <div class="cs-tango-screens reveal">
+                <div class="cs-tango-screen">
+                    <div class="cs-tango-screen-frame">
+                        <img src="Tango/identite-webselfcare-responsive.webp" data-lang-fr="Tango/identite-webselfcare-responsive.webp" data-lang-en="Tango/identite-webselfcare-responsive-en.webp" alt="Customer Self-Care Portal" loading="lazy">
+                    </div>
+                    <div class="cs-tango-screen-label" data-i18n="cs.tango.s03.screen1.label">Customer Self-Care</div>
+                </div>
+                <div class="cs-tango-screen">
+                    <div class="cs-tango-screen-frame">
+                        <img src="Tango/identite-mobile-app.webp" data-lang-fr="Tango/identite-mobile-app.webp" data-lang-en="Tango/identite-mobile-app-en.webp" alt="MyTango App" loading="lazy">
+                    </div>
+                    <div class="cs-tango-screen-label" data-i18n="cs.tango.s03.screen2.label">MyTango App</div>
+                </div>
+                <div class="cs-tango-screen">
+                    <div class="cs-tango-screen-frame">
+                        <img src="Tango/identite-website-responsive.webp" data-lang-fr="Tango/identite-website-responsive.webp" data-lang-en="Tango/identite-website-responsive-en.webp" alt="tango.lu" loading="lazy">
+                    </div>
+                    <div class="cs-tango-screen-label" data-i18n="cs.tango.s03.screen3.label">tango.lu</div>
+                </div>
+            </div>
+
+            <!-- Résistance -->
+            <div class="cs-tango-subsection reveal">
+                <div class="cs-tango-subsection-label" data-i18n="cs.tango.s03.res.label">Résistance</div>
+                <h3 class="cs-tango-subsection-title" data-i18n="cs.tango.s03.res.h3">Le système était "fini". Deux agences l'avaient dit.</h3>
+                <p class="cs-tango-subsection-body" data-i18n="cs.tango.s03.res.body">La première résistance était positionnelle. Le design system était considéré comme livré. Proposer de le retravailler revenait à remettre en question un investissement déjà validé. Il fallait une démonstration, pas un débat.</p>
+            </div>
+
+             <div class="cs-tango-full-img reveal">
+                <img src="Tango/design-system-fini-transparent.webp" data-lang-fr="Tango/design-system-fini-transparent.webp" data-lang-en="Tango/design-system-fini-transparent-en.webp" alt="Slides — Documentation projet Tango" loading="lazy">
+                </div>
+        </div>
+
+        <hr>
+
+        <!-- 04 · APPROCHE -->
+        <div class="cs-tango-section">
+            <div class="cs-tango-section-label reveal" data-i18n="cs.tango.s04.label">04 · Approche</div>
+            <h2 class="cs-tango-section-title cs-tango-section-title--xl reveal reveal--delay-1" data-i18n-html="cs.tango.s04.h2">Pas de big bang.<br>Une première brique visible.</h2>
+            <p class="cs-tango-section-intro reveal reveal--delay-2" data-i18n="cs.tango.s04.intro">J'ai commencé par un changement précis et argumenté : supprimer le dégradé de couleur sur le site web. Une fois validé, ça a ouvert la conversation sur l'unification plus large. Le reste s'est construit de la même façon — une itération courte, un composant consolidé, un token aligné — sans jamais arrêter les livraisons en cours.</p>
+
+            <div class="reveal">
+            <div class="cs-tango-approach-examples">
+                <!-- Exemple 1 : Website home page revamp -->
+                <div class="cs-tango-approach-example">
+                    <div class="cs-tango-approach-example-title" data-i18n="cs.tango.s04.eg1.title">e.g Website home page revamp</div>
+                    <div class="cs-tango-approach-musthave cs-tango-approach-musthave--blue" data-i18n="cs.tango.s04.mh">MUST HAVE</div>
+                    <ul class="cs-tango-approach-list">
+                        <li data-i18n="cs.tango.s04.eg1.li1">Refondre le menu de navigation</li>
+                        <li data-i18n="cs.tango.s04.eg1.li2">Améliorer l'expérience de navigation du smartphones du mois</li>
+                        <li data-i18n="cs.tango.s04.eg1.li3">Réduire les espacements pour augmenter la visibilité des éléments sous-exposés</li>
+                    </ul>
+                    <div class="cs-tango-approach-nicetohaves">
+                        <div class="cs-tango-approach-nth" style="--nth-offset: 0px">
+                            <div class="cs-tango-approach-nth-pill cs-tango-approach-nth-pill--lime" data-i18n="cs.tango.s04.nth">NICE TO HAVE*</div>
+                            <p data-i18n="cs.tango.s04.eg1.nth1">Supprimer le dégradé</p>
+                        </div>
+                        <div class="cs-tango-approach-nth" style="--nth-offset: 28px">
+                            <div class="cs-tango-approach-nth-pill cs-tango-approach-nth-pill--lime" data-i18n="cs.tango.s04.nth">NICE TO HAVE*</div>
+                            <p data-i18n="cs.tango.s04.eg1.nth2">Unifier la logique de couleur des CTA</p>
+                        </div>
+                        <div class="cs-tango-approach-nth" style="--nth-offset: 48px">
+                            <div class="cs-tango-approach-nth-pill cs-tango-approach-nth-pill--lime" data-i18n="cs.tango.s04.nth">NICE TO HAVE*</div>
+                            <p data-i18n="cs.tango.s04.eg1.nth3">Revoir les tokens des cards pour gagner en espacement</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Exemple 2 : Enjoy stratégie de redirection -->
+                <div class="cs-tango-approach-example">
+                    <div class="cs-tango-approach-example-title" data-i18n="cs.tango.s04.eg2.title">e.g Enjoy stratégie de redirection</div>
+                    <div class="cs-tango-approach-musthave cs-tango-approach-musthave--darkblue" data-i18n="cs.tango.s04.mh">MUST HAVE</div>
+                    <ul class="cs-tango-approach-list">
+                        <li data-i18n="cs.tango.s04.eg2.li1">Designer un jeu 100% win</li>
+                        <li data-i18n="cs.tango.s04.eg2.li2">Quizz en fin de jeu avec redirection</li>
+                    </ul>
+                    <div class="cs-tango-approach-nicetohaves">
+                        <div class="cs-tango-approach-nth" style="--nth-offset: 0px">
+                            <div class="cs-tango-approach-nth-pill cs-tango-approach-nth-pill--pink" data-i18n="cs.tango.s04.nth">NICE TO HAVE*</div>
+                            <p data-i18n="cs.tango.s04.eg2.nth1">Supprimer le dégradé</p>
+                        </div>
+                        <div class="cs-tango-approach-nth" style="--nth-offset: 40px">
+                            <div class="cs-tango-approach-nth-pill cs-tango-approach-nth-pill--pink" data-i18n="cs.tango.s04.nth">NICE TO HAVE*</div>
+                            <p data-i18n="cs.tango.s04.eg2.nth2">Supprimer le CTA rose propre à Enjoy</p>
+                        </div>
+                        <div class="cs-tango-approach-nth" style="--nth-offset: 52px">
+                            <div class="cs-tango-approach-nth-pill cs-tango-approach-nth-pill--pink" data-i18n="cs.tango.s04.nth">NICE TO HAVE*</div>
+                            <p data-i18n="cs.tango.s04.eg2.nth3">Avoir une mini charte des images de lots à uploader</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <div class="cs-tango-approach-legend reveal" data-i18n="cs.tango.s04.legend">* ITÉRATION COURTE, UN COMPOSANT CONSOLIDÉ, UN TOKEN ALIGNÉ</div>
+
+            <blockquote class="cs-tango-quote cs-tango-quote--lime reveal" data-i18n="cs.tango.s04.quote">"Je n'ai pas demandé du temps pour refaire le design system. J'ai utilisé chaque mission comme une occasion de poser une brique propre."</blockquote>
+        </div>
+
+        <hr>
+
+        <!-- PRACTICES -->
+        <h3 class="reveal" style="font-size: clamp(16px, 2.5vw, 18px); font-weight: 700; color: #174075; letter-spacing: -0.01em; margin: 0 0 40px;" data-i18n="cs.tango.practices.h3">Trois pratiques qui ont tenu dans la durée.</h3>
+
+        <div class="cs-tango-practices">
+            <!-- 01 · Feedback dev structuré -->
+            <div class="cs-tango-practice-row reveal">
+                <div class="cs-tango-practice-text">
+                    <div class="cs-tango-practice-num">01</div>
+                    <div class="cs-tango-practice-title" data-i18n="cs.tango.pr01.title">Feedback dev structuré</div>
+                    <p data-i18n="cs.tango.pr01.p1">Les développeurs traités comme des utilisateurs du système. Un channel Slack dédié pour remonter les frictions en temps réel. Après chaque composant livré : 3 questions en async :</p>
+                    <ul>
+                        <li data-i18n="cs.tango.pr01.li1">qu'est-ce qui t'a bloqué ?</li>
+                        <li data-i18n="cs.tango.pr01.li2">qu'est-ce qui était clair ?</li>
+                        <li data-i18n="cs.tango.pr01.li3">qu'est-ce qui manquait ?</li>
+                    </ul>
+                    <p data-i18n="cs.tango.pr01.p2">Session de synthèse en fin de quarter.</p>
+                </div>
+                <div class="cs-tango-practice-img">
+                    <img src="Tango/slack-dev-feedback.webp" data-lang-fr="Tango/slack-dev-feedback.webp" data-lang-en="Tango/slack-dev-feedback-en.webp" alt="Channel Slack design-system-feedback" loading="lazy">
+                </div>
+            </div>
+
+            <!-- 02 · Mémoire projet dans Figma -->
+            <div class="cs-tango-practice-row cs-tango-practice-row--reverse reveal">
+                <div class="cs-tango-practice-img">
+                    <img src="Tango/memoire-projet.webp" alt="Mémoire projet dans Figma" loading="lazy">
+                </div>
+                <div class="cs-tango-practice-text">
+                    <div class="cs-tango-practice-num">02</div>
+                    <div class="cs-tango-practice-title" data-i18n="cs.tango.pr02.title">Mémoire projet dans Figma</div>
+                    <p data-i18n="cs.tango.pr02.p1">Certains projets disparaissaient des priorités pendant des semaines, puis revenaient avec des incompréhensions. Pour chaque projet en veille : un slide deck Figma comprenant les décisions prises, raisons, contraintes non résolues.</p>
+                    <p data-i18n="cs.tango.pr02.p2">Quand le projet revenait, l'équipe avait un point de reprise.</p>
+                </div>
+            </div>
+
+            <!-- 03 · Handoff comme co-construction -->
+            <div class="cs-tango-practice-row reveal">
+                <div class="cs-tango-practice-text">
+                    <div class="cs-tango-practice-num">03</div>
+                    <div class="cs-tango-practice-title" data-i18n="cs.tango.pr03.title">Handoff comme co-construction</div>
+                    <p data-i18n="cs.tango.pr03.p">Chaque composant livré avec ses specs complètes et des annotations. On vérifiait ensemble que l'implémentation correspondait à l'intention et que les notes soient suffisamment claires.</p>
+                </div>
+                <div class="cs-tango-practice-img cs-tango-practice-img--light">
+                    <img src="Tango/Annotation-icon.webp" alt="Specs et annotations handoff" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- RÉSULTAT CONCRET -->
+        <div class="cs-tango-section">
+            <div class="cs-tango-section-label reveal" data-i18n="cs.tango.concret.label">Résultat concret</div>
+            <h2 class="cs-tango-section-title cs-tango-section-title--xl reveal reveal--delay-1" data-i18n="cs.tango.concret.h2">Anticiper. Pour que le prochain projet soit facile à livrer.</h2>
+            <p class="cs-tango-section-intro reveal reveal--delay-2" data-i18n="cs.tango.concret.intro">J'ai anticipé les composants, incohérents avec l'identité de marque, qui allaient devoir être revampés. Je les ai traités sans attendre qu'un projet les force.</p>
+
+            <div class="cs-tango-concret-card reveal">
+                <div class="cs-tango-concret-card-inner">
+                    <div class="cs-tango-concret-sub-label" data-i18n="cs.tango.concret.sub">Cas concret — Refonte Enjoy</div>
+                    <p class="cs-tango-concret-body" data-i18n="cs.tango.concret.body">Quand Enjoy est revenue sur la table, j'avais déjà anticipé les incohérences visuelles de la section. J'ai posé le besoin de cohérence avec les couleurs et l'identité globale et toute l'identité d'Enjoy a été revue dans le même mouvement. L'implémentation a été facile parce que le design system avait déjà la flexibilité nécessaire pour absorber ce changement.</p>
+
+                    <!-- Before → After visual -->
+                    <div class="cs-tango-concret-visual">
+                        <img src="Tango/enjoy-before-after.webp" data-lang-fr="Tango/enjoy-before-after.webp" data-lang-en="Tango/enjoy-before-after-en.webp" alt="Enjoy — avant / après refonte identité" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Stats bar -->
+                <div class="cs-tango-concret-stats">
+                    <div class="cs-tango-concret-stat">
+                        <div class="cs-tango-concret-stat-value" data-i18n="cs.tango.concret.stat1.value">Anticipé</div>
+                        <div class="cs-tango-concret-stat-label" data-i18n="cs.tango.concret.stat1.label">avant la demande</div>
+                    </div>
+                    <div class="cs-tango-concret-stat">
+                        <div class="cs-tango-concret-stat-value" data-i18n="cs.tango.concret.stat2.value">Cohérent</div>
+                        <div class="cs-tango-concret-stat-label" data-i18n="cs.tango.concret.stat2.label">avec l'identité globale</div>
+                    </div>
+                    <div class="cs-tango-concret-stat">
+                        <div class="cs-tango-concret-stat-value" data-i18n="cs.tango.concret.stat3.value">Fluide</div>
+                        <div class="cs-tango-concret-stat-label" data-i18n="cs.tango.concret.stat3.label">à implémenter</div>
+                    </div>
+                </div>
+            </div>
+
+            <blockquote class="cs-tango-quote cs-tango-quote--lime reveal" data-i18n-html="cs.tango.concret.quote"><em>Decision produit :</em> chaque projet est une occasion de poser une brique propre dans le système, sans bloquer les livraisons en cours.</blockquote>
+        </div>
+
+        <hr>
+
+        <!-- 05 · WHAT WAS BUILT -->
+        <h2 class="reveal" data-i18n="cs.tango.s05.h2">05 · Ce qui a été construit.</h2>
+
+        <div class="cs-tango-deliverables reveal">
+            <div class="cs-tango-deliverable">
+                <div class="cs-tango-deliverable-title" data-i18n="cs.tango.s05.d1.title">Architecture composants</div>
+                <p data-i18n="cs.tango.s05.d1.p">10+ composants "Evolution" avec états complets, variantes et annotations accessibilité — réutilisables sur les 3 plateformes.</p>
+            </div>
+            <div class="cs-tango-deliverable">
+                <div class="cs-tango-deliverable-title" data-i18n="cs.tango.s05.d2.title">Tokens unifiés</div>
+                <p data-i18n="cs.tango.s05.d2.p">Couleurs, espacements, typographies et radius alignés entre les trois produits. Le "bon bleu" enfin défini et documenté comme source de vérité.</p>
+            </div>
+            <div class="cs-tango-deliverable">
+                <div class="cs-tango-deliverable-title" data-i18n="cs.tango.s05.d3.title">Gouvernance &amp; specs</div>
+                <p data-i18n="cs.tango.s05.d3.p">Conventions de nommage, workflow de contribution et standards de handoff définis et documentés pour l'équipe engineering.</p>
+            </div>
+        </div>
+
+        <div class="cs-tango-full-img reveal">
+            <img src="Captures/Tango.lu-design-system-fr.webp" data-lang-fr="Captures/Tango.lu-design-system-fr.webp" data-lang-en="Captures/Tango.lu-design-system-en.webp" alt="Slides — Documentation projet Tango" loading="lazy">
+        </div>
+
+        <div class="problem-conclusion reveal">
+            <p class="problem-conclusion-sub" data-i18n="cs.tango.s05.conclusion">Au bout de plusieurs mois, les trois plateformes partageaient enfin un langage visuel commun. Pas parce qu'on avait lancé un grand projet de refonte — mais parce que chaque livraison avait été traitée comme une occasion de construire quelque chose qui tienne.</p>
+        </div>
+
+        <hr>
+
+        <!-- 06 · PROJECT SPOTLIGHTS -->
+        <h2 class="reveal" data-i18n="cs.tango.s06.h2">06 · Project Spotlights</h2>
+        <p class="lead reveal reveal--delay-1" data-i18n="cs.tango.s06.lead">Cinq chantiers distincts, chacun avec ses propres contraintes — et la dualité Masterline/Subscriber en filigrane à chaque fois.</p>
+
+        <div class="cs-tango-acc reveal">
+
+            <!-- 01 · Shop in-app -->
+            <div class="cs-tango-acc-item" id="acc1">
+                <button class="cs-tango-acc-header" onclick="toggleAcc('acc1')" aria-expanded="false">
+                    <div class="cs-tango-acc-left">
+                        <div>
+                            <div class="cs-tango-acc-title" data-i18n="cs.tango.acc1.title">Refonte du Shop in-app</div>
+                            <div class="cs-tango-acc-sub" data-i18n="cs.tango.acc1.sub">Repenser l'expérience d'achat directement dans l'app mobile</div>
+                        </div>
+                    </div>
+                    <div class="cs-tango-acc-right">
+                        <span class="cs-tango-acc-tag" data-i18n="cs.tango.acc.tag.mobile">Mobile</span>
+                        <span class="cs-tango-acc-tag cs-tango-acc-tag--high" data-i18n="cs.tango.acc.tag.high">Complexité haute</span>
+                        <span class="cs-tango-acc-chevron">▼</span>
+                    </div>
+                </button>
+                <div class="cs-tango-acc-body">
+                    <div class="cs-tango-acc-body-inner">
+                        <p data-i18n="cs.tango.acc1.p">Le shop in-app est un point de conversion critique — c'est là que les utilisateurs gèrent leurs options, renouvellent leur forfait ou achètent des extras. La version existante manquait de clarté dans la présentation des offres et créait de la friction avant même l'étape de paiement.</p>
+                        <div class="cs-tango-acc-ba">
+                            <div class="cs-tango-acc-bac">
+                                <div class="cs-tango-acc-bal cs-tango-acc-bal--before" data-i18n="cs.tango.acc.label.problem">Problème</div>
+                                <ul>
+                                    <li data-i18n="cs.tango.acc1.prob.li1">Hiérarchie d'offres peu claire</li>
+                                    <li data-i18n="cs.tango.acc1.prob.li2">Masterline et Subscriber voyaient les mêmes options — sans filtrage par droits</li>
+                                    <li data-i18n="cs.tango.acc1.prob.li3">Parcours d'achat multi-étapes sans indication de progression</li>
+                                    <li data-i18n="cs.tango.acc1.prob.li4">États d'erreur absents ou génériques</li>
+                                </ul>
+                            </div>
+                            <div class="cs-tango-acc-bac">
+                                <div class="cs-tango-acc-bal cs-tango-acc-bal--after" data-i18n="cs.tango.acc.label.approach">Approche</div>
+                                <ul>
+                                    <li data-i18n="cs.tango.acc1.appr.li1">Restructuration de l'architecture par niveau d'utilisateur</li>
+                                    <li data-i18n="cs.tango.acc1.appr.li2">Affichage conditionnel selon le profil (Masterline vs Subscriber)</li>
+                                    <li data-i18n="cs.tango.acc1.appr.li3">Indicateur de progression visible à chaque étape</li>
+                                    <li data-i18n="cs.tango.acc1.appr.li4">États d'erreur spécifiques avec messages actionnables</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cs-tango-acc-outcome" data-i18n="cs.tango.acc1.outcome">Parcours validé et implémenté. La distinction Masterline/Subscriber est désormais traduite visuellement à chaque étape — l'utilisateur comprend ce qu'il peut faire et pourquoi.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 02 · Bitdefender -->
+            <div class="cs-tango-acc-item" id="acc2">
+                <button class="cs-tango-acc-header" onclick="toggleAcc('acc2')" aria-expanded="false">
+                    <div class="cs-tango-acc-left">
+                        <div>
+                            <div class="cs-tango-acc-title" data-i18n="cs.tango.acc2.title">Parcours d'activation Bitdefender</div>
+                            <div class="cs-tango-acc-sub" data-i18n="cs.tango.acc2.sub">Rendre compréhensible une offre sécurité complexe avec plusieurs partenaires</div>
+                        </div>
+                    </div>
+                    <div class="cs-tango-acc-right">
+                        <span class="cs-tango-acc-tag" data-i18n="cs.tango.acc.tag.mobile">Mobile</span>
+                        <span class="cs-tango-acc-tag cs-tango-acc-tag--high" data-i18n="cs.tango.acc.tag.high">Complexité haute</span>
+                        <span class="cs-tango-acc-chevron">▼</span>
+                    </div>
+                </button>
+                <div class="cs-tango-acc-body">
+                    <div class="cs-tango-acc-body-inner">
+                        <p data-i18n="cs.tango.acc2.p">L'offre Bitdefender impliquait plusieurs partenaires techniques, des cas d'usage distincts selon le type d'appareil, et des contraintes business non modifiables. Le défi : rendre ce parcours compréhensible sans simplifier à outrance.</p>
+                        <div class="cs-tango-acc-ba">
+                            <div class="cs-tango-acc-bac">
+                                <div class="cs-tango-acc-bal cs-tango-acc-bal--before" data-i18n="cs.tango.acc.label.problem">Problème</div>
+                                <ul>
+                                    <li data-i18n="cs.tango.acc2.prob.li1">Offre multi-partenaires difficile à expliquer en 3 écrans</li>
+                                    <li data-i18n="cs.tango.acc2.prob.li2">Cas d'usage différents selon le device</li>
+                                    <li data-i18n="cs.tango.acc2.prob.li3">Contraintes CX et légales non négociables</li>
+                                    <li data-i18n="cs.tango.acc2.prob.li4">Risque de confusion entre activation et achat</li>
+                                </ul>
+                            </div>
+                            <div class="cs-tango-acc-bac">
+                                <div class="cs-tango-acc-bal cs-tango-acc-bal--after" data-i18n="cs.tango.acc.label.approach">Approche</div>
+                                <ul>
+                                    <li data-i18n="cs.tango.acc2.appr.li1">Constraint mapping en amont</li>
+                                    <li data-i18n="cs.tango.acc2.appr.li2">Design incrémental : un cas d'usage à la fois, validé avant le suivant</li>
+                                    <li data-i18n="cs.tango.acc2.appr.li3">Ateliers de validation cross-fonctionnels (product, CX, legal, tech)</li>
+                                    <li data-i18n="cs.tango.acc2.appr.li4">Documentation Figma du parcours pour les équipes non-design</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cs-tango-acc-outcome" data-i18n="cs.tango.acc2.outcome">Parcours complet maquetté et validé unanimement par management, CX et équipes techniques. Complexité absorbée côté design — invisible côté utilisateur.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 03 · Enjoy -->
+            <div class="cs-tango-acc-item" id="acc3">
+                <button class="cs-tango-acc-header" onclick="toggleAcc('acc3')" aria-expanded="false">
+                    <div class="cs-tango-acc-left">
+                        <div>
+                            <div class="cs-tango-acc-title" data-i18n="cs.tango.acc3.title">Refonte du jeu Enjoy</div>
+                            <div class="cs-tango-acc-sub" data-i18n="cs.tango.acc3.sub">Réengager les utilisateurs via le principal driver de trafic de l'app</div>
+                        </div>
+                    </div>
+                    <div class="cs-tango-acc-right">
+                        <span class="cs-tango-acc-tag" data-i18n="cs.tango.acc.tag.mobile">Mobile</span>
+                        <span class="cs-tango-acc-tag cs-tango-acc-tag--med" data-i18n="cs.tango.acc.tag.med">Complexité moyenne</span>
+                        <span class="cs-tango-acc-chevron">▼</span>
+                    </div>
+                </button>
+                <div class="cs-tango-acc-body">
+                    <div class="cs-tango-acc-body-inner">
+                        <p data-i18n="cs.tango.acc3.p">Enjoy est la mécanique de gamification intégrée à MyTango — roue de la fortune, récompenses, challenges. C'est le principal moteur d'ouvertures récurrentes. La version existante était visuellement datée et le parcours manquait de clarté.</p>
+                        <div class="cs-tango-acc-ba">
+                            <div class="cs-tango-acc-bac">
+                                <div class="cs-tango-acc-bal cs-tango-acc-bal--before" data-i18n="cs.tango.acc.label.problem">Problème</div>
+                                <ul>
+                                    <li data-i18n="cs.tango.acc3.prob.li1">Mécanique de jeu peu lisible à la première utilisation</li>
+                                    <li data-i18n="cs.tango.acc3.prob.li2">Récompenses pas assez visibles ni mémorisables</li>
+                                    <li data-i18n="cs.tango.acc3.prob.li3">Expérience identique Masterline/Subscriber malgré des droits différents</li>
+                                    <li data-i18n="cs.tango.acc3.prob.li4">Visuels datés ne reflétant plus le design system</li>
+                                </ul>
+                            </div>
+                            <div class="cs-tango-acc-bac">
+                                <div class="cs-tango-acc-bal cs-tango-acc-bal--after" data-i18n="cs.tango.acc.label.approach">Approche</div>
+                                <ul>
+                                    <li data-i18n="cs.tango.acc3.appr.li1">Audit UX de l'existant + benchmark jeux in-app similaires</li>
+                                    <li data-i18n="cs.tango.acc3.appr.li2">Refonte de la hiérarchie visuelle — récompense au premier plan</li>
+                                    <li data-i18n="cs.tango.acc3.appr.li3">Intégration dans le design system "Evolution"</li>
+                                    <li data-i18n="cs.tango.acc3.appr.li4">Adaptation du parcours selon le profil utilisateur</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cs-tango-acc-outcome" data-i18n="cs.tango.acc3.outcome">Trafic qualifié maintenu, note App Store améliorée pendant la période. La mécanique Enjoy contribue directement à la hausse de satisfaction globale observée.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 04 · Démarches -->
+            <div class="cs-tango-acc-item" id="acc4">
+                <button class="cs-tango-acc-header" onclick="toggleAcc('acc4')" aria-expanded="false">
+                    <div class="cs-tango-acc-left">
+                        <div>
+                            <div class="cs-tango-acc-title" data-i18n="cs.tango.acc4.title">Refonte des Démarches in-app</div>
+                            <div class="cs-tango-acc-sub" data-i18n="cs.tango.acc4.sub">Simplifier un hub de services complexes avec une logique de droits stricte</div>
+                        </div>
+                    </div>
+                    <div class="cs-tango-acc-right">
+                        <span class="cs-tango-acc-tag" data-i18n="cs.tango.acc.tag.mobile">Mobile</span>
+                        <span class="cs-tango-acc-tag cs-tango-acc-tag--high" data-i18n="cs.tango.acc.tag.high">Complexité haute</span>
+                        <span class="cs-tango-acc-chevron">▼</span>
+                    </div>
+                </button>
+                <div class="cs-tango-acc-body">
+                    <div class="cs-tango-acc-body-inner">
+                        <p data-i18n="cs.tango.acc4.p">Les Démarches regroupent toutes les actions de gestion du compte — changement d'offre, gestion des lignes, portabilité, résiliation. Chaque action a ses propres règles de droit, et la distinction Masterline/Subscriber y est la plus critique.</p>
+                        <div class="cs-tango-acc-ba">
+                            <div class="cs-tango-acc-bac">
+                                <div class="cs-tango-acc-bal cs-tango-acc-bal--before" data-i18n="cs.tango.acc.label.problem">Problème</div>
+                                <ul>
+                                    <li data-i18n="cs.tango.acc4.prob.li1">Hub surchargé — trop d'actions au même niveau de hiérarchie</li>
+                                    <li data-i18n="cs.tango.acc4.prob.li2">Subscriber voyait des actions qu'il ne pouvait pas effectuer</li>
+                                    <li data-i18n="cs.tango.acc4.prob.li3">Messages d'erreur génériques quand les droits insuffisants</li>
+                                    <li data-i18n="cs.tango.acc4.prob.li4">Aucune indication du statut d'une démarche en cours</li>
+                                </ul>
+                            </div>
+                            <div class="cs-tango-acc-bac">
+                                <div class="cs-tango-acc-bal cs-tango-acc-bal--after" data-i18n="cs.tango.acc.label.approach">Approche</div>
+                                <ul>
+                                    <li data-i18n="cs.tango.acc4.appr.li1">Cartographie complète de toutes les démarches × profils</li>
+                                    <li data-i18n="cs.tango.acc4.appr.li2">Affichage conditionnel strict selon les droits</li>
+                                    <li data-i18n="cs.tango.acc4.appr.li3">Messages explicatifs quand une action est bloquée (et pourquoi)</li>
+                                    <li data-i18n="cs.tango.acc4.appr.li4">Indicateurs de statut pour les démarches en cours</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cs-tango-acc-outcome" data-i18n="cs.tango.acc4.outcome">Architecture validée. La logique de droits est désormais traduite en UX — pas juste en règles backend. Réduction des contacts support liés à des actions bloquées sans explication.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 05 · Dashboard + Funnel -->
+            <div class="cs-tango-acc-item" id="acc5">
+                <button class="cs-tango-acc-header" onclick="toggleAcc('acc5')" aria-expanded="false">
+                    <div class="cs-tango-acc-left">
+                        <div>
+                            <div class="cs-tango-acc-title" data-i18n="cs.tango.acc5.title">Dashboard &amp; Funnel tango.lu</div>
+                            <div class="cs-tango-acc-sub" data-i18n="cs.tango.acc5.sub">Dashboard consommation mobile + refonte du funnel d'achat web</div>
+                        </div>
+                    </div>
+                    <div class="cs-tango-acc-right">
+                        <span class="cs-tango-acc-tag" data-i18n="cs.tango.acc5.tag">Mobile + Web</span>
+                        <span class="cs-tango-acc-tag cs-tango-acc-tag--med" data-i18n="cs.tango.acc.tag.med">Complexité moyenne</span>
+                        <span class="cs-tango-acc-chevron">▼</span>
+                    </div>
+                </button>
+                <div class="cs-tango-acc-body">
+                    <div class="cs-tango-acc-body-inner">
+                        <p data-i18n="cs.tango.acc5.p">Deux projets traités en parallèle : la refonte du dashboard de consommation mobile — source de feedbacks négatifs récurrents sur l'App Store — et la simplification du funnel d'achat web.</p>
+                        <strong class="cs-tango-acc-sub-heading" data-i18n="cs.tango.acc5.sh1">Dashboard mobile</strong>
+                        <div class="cs-tango-acc-ba">
+                            <div class="cs-tango-acc-bac">
+                                <div class="cs-tango-acc-bal cs-tango-acc-bal--before" data-i18n="cs.tango.acc.label.before">Avant</div>
+                                <ul>
+                                    <li data-i18n="cs.tango.acc5.dash.before.li1">Jauges multiples superposées (forfait, roaming, report, saisonnier)</li>
+                                    <li data-i18n="cs.tango.acc5.dash.before.li2">Aucune hiérarchie — tout au même niveau visuel</li>
+                                    <li data-i18n="cs.tango.acc5.dash.before.li3">Incompréhensible pour l'utilisateur moyen</li>
+                                    <li data-i18n="cs.tango.acc5.dash.before.li4">Feedbacks négatifs récurrents App Store</li>
+                                </ul>
+                            </div>
+                            <div class="cs-tango-acc-bac">
+                                <div class="cs-tango-acc-bal cs-tango-acc-bal--after" data-i18n="cs.tango.acc.label.after">Après</div>
+                                <ul>
+                                    <li data-i18n="cs.tango.acc5.dash.after.li1">Switch unique entre types de données</li>
+                                    <li data-i18n="cs.tango.acc5.dash.after.li2">Données primaires en avant, détails à la demande</li>
+                                    <li data-i18n="cs.tango.acc5.dash.after.li3">Interface aérée et lisible</li>
+                                    <li data-i18n="cs.tango.acc5.dash.after.li4">Validé unanimement — product, CX, management</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <strong class="cs-tango-acc-sub-heading" data-i18n="cs.tango.acc5.sh2">Funnel tango.lu</strong>
+                        <div class="cs-tango-acc-ba">
+                            <div class="cs-tango-acc-bac">
+                                <div class="cs-tango-acc-bal cs-tango-acc-bal--before" data-i18n="cs.tango.acc.label.before">Avant</div>
+                                <ul>
+                                    <li data-i18n="cs.tango.acc5.funnel.before.li1">Configurateur d'offre visuellement enfoui</li>
+                                    <li data-i18n="cs.tango.acc5.funnel.before.li2">USPs sous-exposés, sans ancre</li>
+                                    <li data-i18n="cs.tango.acc5.funnel.before.li3">Taux élevé de faux clics sur le CTA principal</li>
+                                </ul>
+                            </div>
+                            <div class="cs-tango-acc-bac">
+                                <div class="cs-tango-acc-bal cs-tango-acc-bal--after" data-i18n="cs.tango.acc.label.after">Après</div>
+                                <ul>
+                                    <li data-i18n="cs.tango.acc5.funnel.after.li1">Section dédiée par offre avec configuration exposée</li>
+                                    <li data-i18n="cs.tango.acc5.funnel.after.li2">USPs surfacés avec description + ancre</li>
+                                    <li data-i18n="cs.tango.acc5.funnel.after.li3">Comparaison claire entre offres — validé et implémenté</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <!-- 07 · RESULTS -->
+        <h2 class="reveal" data-i18n="cs.tango.s07.h2">07 · Ce qui a réellement changé.</h2>
+        <p class="lead reveal reveal--delay-1" data-i18n="cs.tango.s07.lead">Le design system était devenu l'infrastructure sur laquelle tout le reste tournait.</p>
+
+        <div class="cs-tango-results">
+            <div class="cs-tango-result reveal">
+                <div class="cs-tango-result-title" data-i18n="cs.tango.s07.r1.title">Décision d'internalisation</div>
+                <p data-i18n="cs.tango.s07.r1.p">Mon recrutement faisait partie d'une décision plus large d'internaliser le design et de réduire la dépendance aux agences externes. J'ai contribué à rendre cette décision viable.</p>
+            </div>
+            <div class="cs-tango-result reveal reveal--delay-1">
+                <div class="cs-tango-result-title" data-i18n="cs.tango.s07.r2.title">Vélocité dev</div>
+                <p data-i18n="cs.tango.s07.r2.p">Les équipes dev avançaient plus vite. Le handoff était non ambigu. Zéro improvisation à l'implémentation. Signal partagé en fin de projet par l'équipe engineering.</p>
+            </div>
+            <div class="cs-tango-result reveal reveal--delay-2">
+                <div class="cs-tango-result-title" data-i18n="cs.tango.s07.r3.title">Satisfaction utilisateurs</div>
+                <p data-i18n="cs.tango.s07.r3.p">Note App Store améliorée durant la période, corrélée aux refontes UX mobile.</p>
+            </div>
+            <div class="cs-tango-result reveal reveal--delay-3">
+                <div class="cs-tango-result-title" data-i18n="cs.tango.s07.r4.title">Cohérence à l'échelle</div>
+                <p data-i18n="cs.tango.s07.r4.p">Pour la première fois, trois plateformes partageaient un langage visuel commun. Les nouvelles features pouvaient s'appuyer sur une fondation fiable.</p>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="problem-conclusion reveal" style="text-align: center; margin-top: 48px;">
+            <p class="problem-conclusion-sub" data-i18n="cs.tango.cta.p">Ce case study est partagé sous NDA. Contactez-moi pour un walkthrough complet en appel.</p>
+            <a href="#" onclick="openCalendlyPopup(); return false;" class="cs-tango-cta-btn" data-i18n="cs.tango.cta.btn">Planifier un appel →</a>
+        </div>
+
+    </main>
+
+</div>
+
+<!-- Users pin-scroll — scroll-driven step activation -->
+<script>
+(function () {
+    var pin   = document.getElementById('users-pin');
+    var steps = document.querySelectorAll('.cs-tango-users-step');
+    var img   = document.getElementById('users-img');
+    if (!pin || !steps.length || !img) return;
+
+    if (window.matchMedia('(max-width: 872px)').matches) return;
+
+    var currentIdx = 0;
+
+    function activate(idx) {
+        if (idx === currentIdx && steps[idx].classList.contains('is-active')) return;
+        currentIdx = idx;
+        steps.forEach(function (s, i) { s.classList.toggle('is-active', i === idx); });
+        var nextSrc = steps[idx].dataset.img;
+        if (img.dataset.current === nextSrc) return;
+        img.style.opacity = '0';
+        setTimeout(function () {
+            img.src = nextSrc;
+            img.dataset.current = nextSrc;
+            img.style.opacity = '1';
+        }, 180);
+    }
+
+    function onScroll() {
+        var rect     = pin.getBoundingClientRect();
+        var scrolled = -rect.top + 80;
+        var range    = rect.height - window.innerHeight;
+        var t        = Math.max(0, Math.min(1, scrolled / range));
+        var idx      = Math.min(steps.length - 1, Math.floor(t * steps.length));
+        activate(idx);
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+})();
+</script>
+
+<!-- Scroll reveal -->
+<script>
+(function () {
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+            if (e.isIntersecting) {
+                e.target.classList.add('is-visible');
+                observer.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(function (el) {
+        observer.observe(el);
+    });
+})();
+</script>
+
+<!-- Shared nav/cookie scripts -->
+<script>
+/* ── Accordion — one open at a time ─────────────────────── */
+function toggleAcc(id) {
+    var items = document.querySelectorAll('.cs-tango-acc-item');
+    var target = document.getElementById(id);
+    var isOpen = target.classList.contains('is-open');
+    items.forEach(function (item) {
+        item.classList.remove('is-open');
+        item.querySelector('.cs-tango-acc-header').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+        target.classList.add('is-open');
+        target.querySelector('.cs-tango-acc-header').setAttribute('aria-expanded', 'true');
+    }
+}
+
+function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'accepted');
+    document.getElementById('cookieConsent').style.display = 'none';
+}
+function refuseCookies() {
+    localStorage.setItem('cookieConsent', 'refused');
+    document.getElementById('cookieConsent').style.display = 'none';
+}
+(function () {
+    if (!localStorage.getItem('cookieConsent')) {
+        setTimeout(function () { document.getElementById('cookieConsent').style.display = 'flex'; }, 1500);
+    }
+})();
+
+function toggleMobileMenu() {
+    var nav = document.getElementById('mobileNav');
+    var overlay = document.getElementById('mobileMenuOverlay');
+    var isOpen = nav.classList.toggle('is-open');
+    overlay.classList.toggle('is-visible', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    document.querySelector('.mobile-menu-toggle').setAttribute('aria-expanded', isOpen);
+}
+function closeMobileMenu() {
+    document.getElementById('mobileNav').classList.remove('is-open');
+    document.getElementById('mobileMenuOverlay').classList.remove('is-visible');
+    document.body.style.overflow = '';
+    document.querySelector('.mobile-menu-toggle').setAttribute('aria-expanded', 'false');
+}
+function showPortfolio() { window.location.href = 'index.html#portfolio'; }
+function openModal() { window.location.href = 'index.html'; }
+function openCalendlyPopup() {
+    if (window.Calendly) Calendly.initPopupWidget({ url: 'https://calendly.com/jacob-houmadi' });
+}
+function setLang(lang) {
+    localStorage.setItem('lang', lang);
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+        btn.setAttribute('aria-pressed', btn.dataset.lang === lang ? 'true' : 'false');
+    });
+    var select = document.querySelector('.lang-select');
+    if (select) select.value = lang;
+    if (typeof applyTranslations === 'function') applyTranslations(lang);
+}
+function switchLanguage(lang) { setLang(lang); }
+(function () {
+    var saved = localStorage.getItem('lang') || 'fr';
+    var select = document.querySelector('.lang-select');
+    if (select) select.value = saved;
+    document.addEventListener('DOMContentLoaded', function () {
+        if (typeof applyTranslations === 'function') applyTranslations(saved);
+    });
+})();
+</script>
+
+<!-- ── FOOTER ──────────────────────────────────────────── -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-text">© <span id="year"></span> Jacob HOUMADI</div>
+        <nav class="desktop-nav">
+            <ul class="footer-nav-legals">
+                <li><a href="mentions-legales.html" data-i18n="footer.legal1">Mentions légales</a></li>
+                <li><a href="politique-confidentialite.html" data-i18n="footer.legal2">Politique de confidentialité</a></li>
+            </ul>
+        </nav>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/jacob-houmadi" target="_blank" title="LinkedIn" aria-label="Linkedin">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+            <a href="https://www.behance.net/jacobhoumadi" target="_blank" aria-label="Behance">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 11.4462C18.1846 11.7231 18.3692 12 18.4615 12.4615H15.5077C15.5077 12.3692 15.5077 12.1846 15.6 12C15.6923 11.8154 15.6923 11.7231 15.8769 11.5385C15.9692 11.3538 16.1538 11.2615 16.3385 11.1692C16.5231 11.0769 16.8 10.9846 17.0769 10.9846C17.4462 11.0769 17.8154 11.1692 18 11.4462ZM9.50769 10.8C9.69231 10.6154 9.87692 10.3385 9.87692 9.96923C9.87692 9.78462 9.87692 9.6 9.78462 9.41538C9.69231 9.32308 9.6 9.13846 9.50769 9.13846C9.41538 9.04615 9.23077 9.04615 9.04615 8.95385H6.64615V11.0769H8.67692C8.95385 11.0769 9.23077 10.9846 9.50769 10.8ZM8.76923 12.3692H6.64615V14.8615H8.76923C8.95385 14.8615 9.13846 14.8615 9.32308 14.7692C9.50769 14.7692 9.69231 14.6769 9.78462 14.5846C9.87692 14.4923 10.0615 14.4 10.1538 14.2154C10.2462 14.0308 10.2462 13.8462 10.2462 13.6615C10.2462 13.2 10.1538 12.8308 9.87692 12.6462C9.6 12.4615 9.23077 12.3692 8.76923 12.3692ZM24 4.52308V19.4769C24 21.9692 21.9692 24 19.4769 24H4.52308C2.03077 24 0 21.9692 0 19.4769V4.52308C0 2.03077 2.03077 0 4.52308 0H19.4769C21.9692 0 24 2.03077 24 4.52308ZM15.1385 8.86154H18.8308V7.93846H15.1385V8.86154ZM12.1846 13.8462C12.1846 13.2923 12.0923 12.8308 11.8154 12.3692C11.5385 12 11.1692 11.7231 10.6154 11.5385C10.9846 11.3538 11.3538 11.0769 11.5385 10.8C11.7231 10.5231 11.8154 10.1538 11.8154 9.69231C11.8154 9 11.7231 8.95385 11.6308 8.58462C11.4462 8.30769 11.2615 8.03077 11.0769 7.93846C10.8 7.75385 10.5231 7.66154 10.1538 7.56923C9.69231 7.38462 9.32308 7.38462 8.86154 7.38462H4.61538V16.4308H9.04615C9.41538 16.4308 9.87692 16.3385 10.2462 16.2462C10.6154 16.1538 10.9846 15.9692 11.2615 15.7846C11.5385 15.6 11.8154 15.3231 12 14.9538C12.0923 14.6769 12.1846 14.3077 12.1846 13.8462ZM15.5077 13.5692H20.2154C20.2154 13.0154 20.2154 12.5538 20.1231 12.0923C20.0308 11.6308 19.8462 11.1692 19.5692 10.8923C19.2923 10.5231 18.9231 10.2462 18.5538 10.0615C18.0923 9.87692 17.6308 9.69231 17.0769 9.69231C16.6154 9.69231 16.1538 9.78462 15.6923 9.96923C15.3231 10.1538 14.9538 10.4308 14.5846 10.7077C14.3077 10.9846 14.0308 11.3538 13.9385 11.8154C13.7538 12.2769 13.6615 12.7385 13.6615 13.2C13.6615 13.8923 13.7538 14.2154 13.9385 14.5846C14.1231 15.0462 14.3077 15.4154 14.5846 15.6923C14.8615 15.9692 15.2308 16.2462 15.6 16.4308C16.0615 16.6154 16.5231 16.7077 16.9846 16.7077C17.7231 16.7077 18.3692 16.5231 18.9231 16.1538C19.4769 15.7846 19.8462 15.2308 20.1231 14.4923H18.5538C18.4615 14.6769 18.3692 14.8615 18.0923 15.0462C17.8154 15.2308 17.5385 15.3231 17.1692 15.3231C16.7077 15.3231 16.2462 15.2308 15.9692 14.9538C15.6923 14.5846 15.5077 14.1231 15.5077 13.5692Z"/></svg>
+            </a>
+            <a href="mailto:jacob.radonirina@gmail.com" title="Email" aria-label="Email">
+                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </a>
+        </div>
+    </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+<!-- Drag-to-scroll for approach examples -->
+<script>
+(function () {
+    var el = document.querySelector('.cs-tango-approach-examples');
+    if (!el) return;
+    var startX, startScroll, dragging = false;
+    el.addEventListener('mousedown', function (e) {
+        dragging = true;
+        startX = e.pageX - el.offsetLeft;
+        startScroll = el.scrollLeft;
+        el.classList.add('is-dragging');
+    });
+    document.addEventListener('mouseup', function () {
+        dragging = false;
+        el.classList.remove('is-dragging');
+    });
+    el.addEventListener('mousemove', function (e) {
+        if (!dragging) return;
+        e.preventDefault();
+        var x = e.pageX - el.offsetLeft;
+        el.scrollLeft = startScroll - (x - startX);
+    });
+    el.addEventListener('mouseleave', function () {
+        dragging = false;
+        el.classList.remove('is-dragging');
+    });
+})();
+</script>
+
+<!-- Provisional logout button (testing only) 
+<button onclick="localStorage.removeItem('tango_unlocked'); window.location.href='tango-case-study.html';"
+        style="position:fixed; bottom:20px; right:20px; z-index:9999; background:#ff3b30; color:#fff; border:none; padding:8px 14px; border-radius:8px; font-size:12px; cursor:pointer; font-family:inherit;">
+    🔓 Se déloguer (test)
+</button> -->
+</body>
+</html>

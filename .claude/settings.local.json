@@ -24,7 +24,11 @@
       "WebFetch(domain:www.pexels.com)",
       "WebSearch",
       "mcp__claude_ai_Figma__get_screenshot",
-      "mcp__claude_ai_Figma__get_metadata"
+      "mcp__claude_ai_Figma__get_metadata",
+      "mcp__figma-desktop__get_metadata",
+      "Bash(node *)",
+      "mcp__figma-desktop__get_design_context",
+      "mcp__figma-desktop__get_screenshot"
     ]
   }
 }
