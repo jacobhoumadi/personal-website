@@ -2149,8 +2149,7 @@
 
     @media (max-width: 420px) {
         .ob-apps-grid { grid-template-columns: 1fr; }
-    }
-}
+        }
 
 
 /* ==========================================================
