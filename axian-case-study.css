@@ -1,0 +1,813 @@
+/* ==========================================================
+   AXIAN — Case Study stylesheet
+   Extends .cs-venue-content (case-study.css)
+   Modifier class: .cs-axian
+   ========================================================== */
+
+
+/* ── TOKEN OVERRIDES ────────────────────────────────────── */
+.cs-venue-content.cs-axian {
+    --cs-coral:       #D30F3F;
+    --cs-coral-light: #F4B8C5;
+    --cs-coral-bg:    #FBF0F3;
+    --cs-ink:         #151c43;
+    --cs-ink-2:       #251F5E;
+    --cs-ink-3:       #514D82;
+    --cs-ink-4:       #8E8BB4;
+    --cs-border:      #E2E1EF;
+    --cs-surface:     #F2F1F9;
+}
+
+
+/* ── HEADER STRIP ───────────────────────────────────────── */
+.cs-axian .ax-header-strip {
+    max-width: var(--cs-max);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.cs-axian .ax-header-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.cs-axian .ax-partner-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cs-ink-4);
+}
+.cs-axian .ax-partner-name {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--cs-ink);
+}
+.cs-axian .ax-dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--cs-ink-4);
+    flex-shrink: 0;
+}
+.cs-axian .ax-read-time {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--cs-ink-4);
+    letter-spacing: 0.04em;
+}
+.cs-axian .ax-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+.cs-axian .ax-tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--cs-ink-3);
+    background: var(--cs-surface);
+    border-radius: 20px;
+    padding: 4px 10px;
+    border: 1px solid var(--cs-border);
+}
+
+
+/* ── HEADLINE ───────────────────────────────────────────── */
+.cs-axian .ax-headline {
+    max-width: var(--cs-max);
+    margin: 0 auto;
+    padding: 21px 24px 26px;
+}
+.cs-axian .ax-headline .ax-type-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cs-coral);
+    margin-bottom: 20px;
+    display: block;
+}
+.cs-axian .ax-headline h1 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(32px, 5.5vw, 56px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--cs-ink);
+    max-width: 720px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/* ── ATMOSPHERIC ────────────────────────────────────────── */
+.cs-axian .ax-atmospheric {
+    width: 560px;
+    margin: 40Px auto;
+    position: relative;
+    height: clamp(280px, 45vw, 520px);
+    overflow: hidden;
+}
+.cs-axian .ax-atmospheric img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 24px;
+}
+
+
+/* ── AT A GLANCE ────────────────────────────────────────── */
+.cs-axian .ax-glance {
+    max-width: var(--cs-max);
+    margin: 64px auto 0;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 48px;
+}
+.cs-axian .ax-glance-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cs-coral);
+    margin-bottom: 12px;
+}
+.cs-axian .ax-glance-text, .cs-axian .ax-glance-mission {
+    font-size: clamp(14px, 2.2vw, 15px);
+    font-weight: 400;
+    color: var(--cs-ink-2);
+    line-height: 1.75;
+    margin: 0;
+}
+@media (max-width: 600px) {
+    .cs-axian .ax-glance { grid-template-columns: 1fr; gap: 32px; }
+}
+
+
+/* ── KEY INSIGHT ────────────────────────────────────────── */
+.cs-axian .ax-insight {
+    max-width: var(--cs-max);
+    margin: 72px auto 0;
+    padding: 0 24px;
+}
+.cs-axian .ax-insight-inner {
+    border-left: 3px solid var(--cs-coral);
+    padding: 8px 0 8px 32px;
+}
+.cs-axian .ax-insight-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cs-coral);
+    margin-bottom: 16px;
+}
+.cs-axian .ax-insight-quote {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(20px, 4vw, 28px);
+    font-weight: 500;
+    color: var(--cs-ink);
+    line-height: 1.4;
+    font-style: italic;
+    margin: 0;
+}
+
+
+/* ── SECTION DIVIDER ────────────────────────────────────── */
+.cs-axian .ax-divider {
+    max-width: var(--cs-max);
+    margin: 72px auto;
+    padding: 0 24px;
+}
+.cs-axian .ax-divider hr {
+    border: none;
+    border-top: 1px solid var(--cs-border);
+    margin: 0;
+}
+
+
+/* ── SECTION WRAPPER ────────────────────────────────────── */
+.cs-axian .ax-section {
+    max-width: var(--cs-max);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+.cs-axian .ax-section-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cs-coral);
+    margin-bottom: 16px;
+    display: block;
+}
+.cs-axian .ax-section h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(22px, 4vw, 34px);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: var(--cs-ink);
+    line-height: 1.2;
+    margin: 0 0 20px;
+}
+.cs-axian .ax-section p {
+    font-size: clamp(14px, 2.2vw, 15px);
+    color: var(--cs-ink-2);
+    line-height: 1.75;
+    margin-bottom: 16px;
+}
+.cs-axian .ax-section p:last-child { margin-bottom: 0; }
+
+
+/* ── TWO BLOCKERS ───────────────────────────────────────── */
+.cs-axian .ax-blockers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 36px;
+}
+.cs-axian .ax-blocker {
+    background: var(--cs-surface);
+    border-radius: var(--cs-r-lg);
+    padding: 32px 28px;
+    border: 1px solid var(--cs-border);
+}
+.cs-axian .ax-blocker-num {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cs-coral);
+    margin-bottom: 12px;
+}
+.cs-axian .ax-blocker-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: var(--light-gray);
+    margin-bottom: 16px;
+}
+.cs-axian .ax-blocker-icon svg {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+}
+.cs-axian .ax-blocker-title {
+    font-size: clamp(16px, 2.8vw, 19px);
+    font-weight: 700;
+    color: var(--cs-ink);
+    line-height: 1.3;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+}
+.cs-axian .ax-blocker p {
+    font-size: 14px;
+    color: var(--cs-ink-3);
+    line-height: 1.7;
+    margin: 0;
+}
+@media (max-width: 560px) {
+    .cs-axian .ax-blockers { grid-template-columns: 1fr; }
+}
+
+
+/* ── IMAGE SLOTS ────────────────────────────────────────── */
+.cs-axian .ax-img-contained {
+    max-width: var(--cs-max);
+    margin: 40px auto;
+    padding: 0 24px;
+}
+.cs-axian .ax-img-contained img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--cs-r-lg);
+    display: block;
+}
+.cs-axian .ax-img-caption {
+    font-size: 12px;
+    color: var(--cs-ink-4);
+    text-align: center;
+    margin-top: 10px;
+    letter-spacing: 0.03em;
+}
+
+
+/* ── DESIGN SYSTEM CARDS ────────────────────────────────── */
+.cs-axian .ax-ds-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 32px;
+}
+.cs-axian .ax-ds-card {
+    background: var(--cs-surface);
+    border: 1px solid var(--cs-border);
+    border-radius: var(--cs-r-lg);
+    padding: 32px 28px;
+}
+.cs-axian .ax-ds-card-icon {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cs-coral);
+    margin-bottom: 12px;
+}
+.cs-axian .ax-ds-card-title {
+    font-size: clamp(16px, 2.8vw, 20px);
+    font-weight: 700;
+    color: var(--cs-ink);
+    line-height: 1.3;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+}
+.cs-axian .ax-ds-card p {
+    font-size: 14px;
+    color: var(--cs-ink-3);
+    line-height: 1.7;
+    margin: 0;
+}
+.cs-axian .ax-ds-card-wide {
+    grid-column: 1 / -1;
+    background: var(--cs-coral-bg);
+}
+.cs-axian .ax-ds-card-wide .ax-ds-card-icon { color: var(--cs-coral); }
+.cs-axian .ax-ds-card-wide .ax-ds-card-title { color: var(--cs-ink); }
+.cs-axian .ax-ds-card-wide p { color: var(--cs-ink-3); }
+
+.cs-axian .ax-entities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+}
+.cs-axian .ax-entity-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+}
+.cs-axian .ax-entity-pill:first-child img {
+    height: 28px;
+}
+
+.cs-axian .ax-entity-pill img{
+    height: 36px;
+    width: auto;
+    display: block;
+}
+
+.cs-axian .ax-entity-pill span {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cs-ink);
+}
+/* ── DS TOP ROW (Palette 60% · Typo 40%) ───────────────── */
+.cs-axian .ax-ds-top-row {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 12px;
+}
+.cs-axian .ax-ds-top-row .ax-ds-card:first-child { flex: 3; }
+.cs-axian .ax-ds-top-row .ax-ds-card:last-child  { flex: 1; }
+
+/* Color swatches */
+.cs-axian .ax-color-swatches {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+}
+.cs-axian .ax-color-swatch {
+    flex: 1;
+    height: 88px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 8px 10px;
+    gap: 2px;
+    color: white;
+    min-width: 0;
+}
+.cs-axian .ax-swatch-name {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cs-axian .ax-swatch-hex {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Typography specimen */
+.cs-axian .ax-typo-specimen {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 12px;
+    gap: 6px;
+}
+.cs-axian .ax-typo-aa {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(64px, 8vw, 96px);
+    font-weight: 700;
+    color: var(--cs-ink);
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+.cs-axian .ax-typo-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--cs-ink-3);
+    letter-spacing: 0.06em;
+}
+
+@media (max-width: 560px) {
+    .cs-axian .ax-ds-grid { grid-template-columns: 1fr; }
+    .cs-axian .ax-ds-card-wide { grid-column: auto; }
+    .cs-axian .ax-ds-top-row { flex-direction: column; }
+}
+
+
+/* ── LAPTOP MOCKUP ──────────────────────────────────────── */
+.cs-axian .ax-laptop-wrap {
+    max-width: var(--cs-max);
+    margin: 48px auto 0;
+    padding: 80px 16px;
+}
+.cs-axian .ax-laptop {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.cs-axian .ax-laptop-frame {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+}
+.cs-axian .ax-laptop-screen {
+    position: absolute;
+    top: 2.8%;
+    left: 10%;
+    right: 10%;
+    bottom: 57px;
+    z-index: 1;
+    overflow: hidden;
+    background: #000;
+    border-radius: 2px;
+}
+
+/* ── CAROUSEL ───────────────────────────────────────────── */
+.cs-axian .ax-carousel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.cs-axian .ax-carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+.cs-axian .ax-carousel-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+}
+.cs-axian .ax-carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+.cs-axian .ax-carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+.cs-axian .ax-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--cs-border);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s, transform 0.2s;
+}
+.cs-axian .ax-dot--active {
+    background: var(--cs-coral);
+    transform: scale(1.3);
+}
+
+
+/* ── ICONOGRAPHY MARQUEE (scroll-driven) ────────────────── */
+.cs-axian .ax-iconography-section {
+    overflow: hidden;
+    max-width: var(--cs-max);
+    margin: 0 auto;
+}
+.cs-axian .ax-icons-marquee {
+    width: 100%;
+    overflow: hidden;
+}
+.cs-axian .ax-icons-track {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 16px 32px;
+    width: max-content;
+    will-change: transform;
+}
+.cs-axian .ax-icons-track img {
+    height: 160px;
+    width: auto;
+    display: block;
+    flex-shrink: 0;
+}
+@media (max-width: 640px) {
+    .cs-axian .ax-icons-track { gap: 40px; }
+    .cs-axian .ax-icons-track img { height: 110px; }
+}
+
+
+/* ── DELIVERABLES ───────────────────────────────────────── */
+.cs-axian .ax-deliverables {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+}
+.cs-axian .ax-deliverable {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--cs-border);
+}
+.cs-axian .ax-deliverable-num {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 700;
+    color: var(--cs-coral);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 56px;
+    opacity: 0.5;
+}
+
+
+.cs-axian .ax-deliverable:last-child {
+    border-bottom: none;
+}
+.cs-axian .ax-deliverable-body { padding-top: 4px; }
+.cs-axian .ax-deliverable-title {
+    font-size: clamp(16px, 2.8vw, 20px);
+    font-weight: 700;
+    color: var(--cs-ink);
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+    margin-bottom: 8px;
+}
+.cs-axian .ax-deliverable p {
+    font-size: 14px;
+    color: var(--cs-ink-3);
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* ── OUTCOMES ───────────────────────────────────────────── */
+.cs-axian .ax-outcomes {
+    background: var(--cs-ink);
+    border-radius: var(--cs-r-xl);
+    padding: 48px 40px;
+    margin-top: 32px;
+}
+.cs-axian .ax-outcomes-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cs-coral);
+    margin-bottom: 28px;
+}
+.cs-axian .ax-outcomes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.cs-axian .ax-outcomes-list li {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    font-size: clamp(14px, 2.2vw, 16px);
+    font-weight: 400;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.55;
+}
+.cs-axian .ax-outcomes-list li::before {
+    content: '→';
+    color: var(--cs-coral);
+    font-weight: 700;
+    flex-shrink: 0;
+}
+.cs-axian .ax-outcomes-award {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(211,15,63,0.12);
+    border: 1px solid rgba(211,15,63,0.25);
+    border-radius: 40px;
+    padding: 4px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--cs-coral);
+    margin-bottom: 24px;
+    margin-top: -4px;
+}
+@media (max-width: 560px) {
+    .cs-axian .ax-outcomes { padding: 36px 24px; }
+}
+
+
+/* ── CTA FOOTER ─────────────────────────────────────────── */
+.cs-axian .ax-cta {
+    max-width: var(--cs-max);
+    margin: 72px auto 0;
+    padding: 0 24px 80px;
+    text-align: center;
+}
+.cs-axian .ax-cta p {
+    font-size: clamp(14px, 2.2vw, 15px);
+    color: var(--cs-ink-3);
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+.cs-axian .ax-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--cs-ink);
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 40px;
+    padding: 14px 28px;
+    transition: opacity 0.2s, transform 0.15s;
+}
+.cs-axian .ax-cta-btn:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+
+/* ── SOCIAL MEDIA DA — CASCADE ──────────────────────────── */
+.cs-axian .ax-social-cascade-wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: var(--cs-max);
+    margin: 48px auto 0;
+    padding: 0 24px;
+}
+
+.cs-axian .ax-social-phone-card {
+    flex: 1;
+    text-align: center;
+}
+.cs-axian .ax-social-phone-card:first-child {
+    position: sticky;
+    top: 110px;
+    align-self: flex-start;
+}
+.cs-axian .ax-social-phone-card--mid {
+    margin-top: 200px;
+    position: sticky;
+    top: 110px;
+    align-self: flex-start;
+}
+.cs-axian .ax-social-phone-card--last {
+    margin-top: 400px;
+}
+
+/* Cascade fade-in */
+.cs-axian .ax-cascade-card {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.75s ease, transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.cs-axian .ax-cascade-card.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.cs-axian .ax-social-phone-card .ax-social-phone {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+.cs-axian .ax-phone-frame {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+}
+.cs-axian .ax-phone-screen {
+    position: absolute;
+    top: 0.5%;
+    left: 6%;
+    right: 5%;
+    bottom: 0.5%;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 38px;
+    background: #fff;
+}
+.cs-axian .ax-phone-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+.cs-axian .ax-phone-screen .ax-screen-gif {
+    position: absolute;
+    width: 168px;
+    height: auto;
+    transform: translateX(21%) translateY(112%);
+    border-radius: 11px;
+    object-fit: scale-down;
+    object-position: top center;
+    z-index: 1;
+}
+
+.cs-axian .ax-social-phone-label {
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cs-ink-4);
+    margin-top: 14px;
+}
+
+/* ── Mobile ─────────────────────────────────────────────── */
+@media (max-width: 680px) {
+    .cs-axian .ax-social-cascade-wrap {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .cs-axian .ax-social-phone-card {
+        width: 65%;
+    }
+    .cs-axian .ax-social-phone-card:first-child,
+    .cs-axian .ax-social-phone-card--mid {
+        position: static;
+    }
+    .cs-axian .ax-social-phone-card--mid,
+    .cs-axian .ax-social-phone-card--last {
+        margin-top: 0;
+    }
+    .cs-axian .ax-cascade-card {
+        opacity: 1;
+        transform: none;
+    }
+}

@@ -28,7 +28,8 @@
       "mcp__figma-desktop__get_metadata",
       "Bash(node *)",
       "mcp__figma-desktop__get_design_context",
-      "mcp__figma-desktop__get_screenshot"
+      "mcp__figma-desktop__get_screenshot",
+      "WebFetch(domain:www.carmen-elena.space)"
     ]
   }
 }

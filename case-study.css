@@ -94,19 +94,38 @@
     margin-bottom: 32px;
 }
 .cs-venue-content .hero h1 {
+    font-family: 'Bricolage Grotesque', sans-serif;
     font-size: clamp(36px, 6vw, 60px);
-    font-weight: 600;
-    line-height: 1.2;
+    font-weight: 700;
+    line-height: 1.1;
     letter-spacing: -0.03em;
     color: var(--cs-ink);
     max-width: 680px;
-    margin: 0 auto 14px;
+    margin: 0 auto 20px;
 }
 .cs-venue-content .hero-sub {
     font-size: 14px;
     color: var(--cs-ink-4);
     font-weight: 400;
     margin-bottom: 48px;
+}
+.cs-venue-content .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 40px;
+}
+.cs-venue-content .cs-tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--cs-ink-3);
+    background: var(--cs-surface);
+    border-radius: 20px;
+    padding: 4px 10px;
+    border: 1px solid var(--cs-border);
 }
 .cs-venue-content .hero-image {
     background: var(--cs-coral-bg);
@@ -147,6 +166,7 @@
     padding: 0 24px;
 }
 .cs-venue-content .cs-venue-tldr h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
     font-size: clamp(20px, 5.5vw, 26px);
     font-weight: 700;
     color: var(--cs-ink);
@@ -219,6 +239,7 @@
     margin: 64px 0;
 }
 .cs-venue-content .prose h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
     font-size: clamp(20px, 5.5vw, 26px);
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -1440,7 +1461,7 @@
     background: radial-gradient(circle, rgba(132,201,201,0.15), transparent 70%);
     pointer-events: none;
 }
-.cs-venue-content .cta-block h2 { color: white; font-size: clamp(20px, 5.5vw, 26px); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 14px; position: relative; z-index: 1; }
+.cs-venue-content .cta-block h2 { font-family: 'Bricolage Grotesque', sans-serif; color: white; font-size: clamp(20px, 5.5vw, 26px); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 14px; position: relative; z-index: 1; }
 .cs-venue-content .cta-block p { color: rgba(255,255,255,0.55); font-size: 14px; margin-bottom: 32px; position: relative; z-index: 1; }
 .cs-venue-content .deliverables { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 36px; position: relative; z-index: 1; }
 .cs-venue-content .deliverable-tag {
@@ -2410,6 +2431,7 @@
     border: 1px solid #e5e5e5;
     border-radius: 14px;
     padding: 22px;
+    z-index: 2;
 }
 .cs-tango-context-card-label {
     font-size: 11px;
@@ -2457,41 +2479,34 @@
     border-radius: 0 var(--cs-r-md) var(--cs-r-md) 0;
 }
 
-/* ── Users pin-scroll layout ─────────────────────────────── */
-.cs-tango-users-pin {
-    position: relative;
-    height: 300vh;
-    max-width: 872px;
-    margin: 0 auto;
-    z-index: 1;
-}
-.cs-tango-users-pin-inner {
-    position: sticky;
-    top: 75px;
+/* ── Users sticky-phone section ─────────────────────────── */
+.cs-tango-users-section {
     background: #fff;
-    overflow: hidden;
 }
-.cs-tango-users-pin-content {
+.cs-tango-users-section-inner {
     max-width: var(--cs-max, 872px);
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 24px 80px;
+}
+.cs-tango-users-section-header {
+    padding: 48px 0 56px;
 }
 
 .cs-tango-users-layout {
     display: grid;
-    grid-template-columns: 270px 1fr;
-    gap: 48px;
+    grid-template-columns: 260px 1fr;
+    gap: 64px;
     align-items: start;
-    margin: 32px 0 0;
 }
 .cs-tango-users-img-col {
-    position: relative;
+    position: sticky;
+    top: 80px;
+    align-self: start;
 }
 .cs-tango-users-img-col img {
     width: 100%;
     border-radius: 20px;
     box-shadow: var(--cs-shadow-md);
-    transition: opacity 0.18s ease;
     display: block;
 }
 
@@ -2500,64 +2515,32 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 0;
-    padding-top: 8px;
 }
-/* Vertical connector line */
+/* Vertical line */
 .cs-tango-users-steps::before {
     content: '';
     position: absolute;
     left: 18px;
-    top: 28px;
+    top: 228px;
     bottom: 28px;
     width: 1px;
-    background: #e5e5e5;
+    background: #dde6f0;
     z-index: 0;
 }
 
 .cs-tango-users-step {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    padding: 24px 0;
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    gap: 0 24px;
+    padding: 80px 0;
+    opacity: 0.3;
+    transition: opacity 0.4s ease;
     position: relative;
 }
-.cs-tango-users-step-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    width: 100%;
-}
-.cs-tango-users-step-body {
-    padding-top: 6px;
-    opacity: 0.38;
-    transition: opacity 0.3s ease;
-}
-.cs-tango-users-step.is-active .cs-tango-users-step-body { opacity: 1; }
+.cs-tango-users-step:first-child { padding-top: 193px }
+.cs-tango-users-step.is-active   { opacity: 1; }
 
-/* Mobile inline image */
-.cs-tango-users-step-mobile-img {
-    display: none;
-}
-@media (max-width: 768px) {
-    .cs-tango-users-step-mobile-img {
-        display: block;
-        height: 30vh;
-        overflow: hidden;
-        border-radius: 10px;
-        margin-top: 12px;
-        margin-left: 58px; /* aligne avec le body (dot 38px + gap 20px) */
-    }
-    .cs-tango-users-step-mobile-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: top;
-        display: block;
-    }
-}
-
-/* Dot */
+/* Dot badge */
 .cs-tango-users-dot {
     flex-shrink: 0;
     width: 38px;
@@ -2568,32 +2551,62 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 11px;
+    font-weight: 700;
     color: #1a1714;
     z-index: 1;
     position: relative;
+    align-self: flex-start;
     transition: background 0.3s, border-color 0.3s, color 0.3s;
 }
-
 .cs-tango-users-step.is-active .cs-tango-users-dot {
     background: #005ca9;
     border-color: #005ca9;
     color: #fff;
 }
 
-.cs-tango-users-step-title {
-    font-size: 17px;
-    font-weight: 700;
-    color: #444;
-    margin-bottom: 6px;
-    line-height: 1.6;
+/* Content column */
+.cs-tango-users-step-content {
+    padding-top: 6px;
 }
-.cs-tango-users-step-body p {
-    font-size: 13.5px;
-    color: #444;
-    line-height: 1.65;
+
+.cs-tango-users-step-title {
+    font-size: clamp(15px, 2.5vw, 18px);
+    font-weight: 700;
+    color: #1a1714;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    margin: 0 0 14px;
+}
+.cs-tango-users-step-content p {
+    font-size: clamp(14px, 2.2vw, 15px);
+    color: #555;
+    line-height: 1.75;
     margin: 0;
+    max-width: 380px;
+}
+
+/* Mobile inline image */
+.cs-tango-users-step-mobile-img {
+    display: none;
+    grid-column: 1 / -1;
+}
+@media (max-width: 768px) {
+    .cs-tango-users-step-mobile-img {
+        display: block;
+        height: 30vh;
+        overflow: hidden;
+        border-radius: 12px;
+        margin-top: 20px;
+        margin-left: 62px;
+    }
+    .cs-tango-users-step-mobile-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        display: block;
+    }
 }
 
 /* ── Problem cards ──────────────────────────────────────── */
@@ -3292,8 +3305,6 @@
     .cs-tango-concret-stats        { grid-template-columns: 1fr; }
     .cs-tango-approach-nicetohaves { grid-template-columns: 1fr; }
     .cs-tango-approach-nth       { padding-top: 0 !important; }
-    .cs-tango-users-pin     { height: auto; }
-    .cs-tango-users-pin-inner { position: relative; }
     .cs-tango-users-layout  { grid-template-columns: 1fr; }
     .cs-tango-users-img-col { display: none; }
     .cs-tango-users-step    { opacity: 1; }
@@ -3318,9 +3329,12 @@
 
 /* ── Tango spacing fixes ─────────────────────────────────── */
 
-/* The second cs-venue-content block (after users-pin) doesn't need header clearance */
-.cs-tango-users-pin + .cs-venue-content.cs-tango {
+.cs-tango-users-section + .cs-venue-content.cs-tango {
     padding-top: 0;
+}
+
+.cs-tango-users-impact {
+    margin-top: 64px;
 }
 
 /* Sections inside .prose already inherit 24px horizontal padding — remove the double padding */
@@ -3353,6 +3367,19 @@
     .cs-venue-content.cs-tango .prose .cs-tango-section {
         padding-top: 32px;
         padding-bottom: 32px;
+    }
+
+    
+    .cs-tango-users-step:first-child{
+        padding-top:0;
+    }
+
+    .cs-tango-users-step{
+        padding: 0;
+    }
+
+    .cs-tango-users-steps::before{
+        top: 0;
     }
 }
 

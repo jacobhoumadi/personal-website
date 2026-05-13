@@ -183,7 +183,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <img src="logos/logo-tango-normal.svg" alt="Tango" style="height: 30px; width: auto;">
         </div>
         <h1 data-i18n-html="cs.tango.hero.h1">Unifier trois plateformes.<br>Bâtir le système qui tient.</h1>
-        <p class="hero-sub" data-i18n="cs.tango.hero.sub">Tango Design System — Fév 2024 — Août 2025</p>
+        <div class="hero-tags">
+            <span class="cs-tag">Design System</span>
+            <span class="cs-tag">Design Tokens</span>
+            <span class="cs-tag">Multi-plateforme</span>
+            <span class="cs-tag">Fév 2024 – Août 2025</span>
+        </div>
         <div class="hero-image cs-tango-hero-img">
             <img src="Captures/tango-mobile-mockup-2.png" alt="Tango Mobile App Identity" loading="lazy">
         </div>
@@ -294,68 +299,69 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </main>
     </div><!-- /cs-venue-content -->
 
-    <div class="cs-tango-users-pin" id="users-pin">
-        <div class="cs-tango-users-pin-inner">
-            <div class="cs-tango-users-pin-content">
+    <div class="cs-tango-users-section" id="users-pin">
+        <div class="cs-tango-users-section-inner">
+
+            <!-- Header -->
+            <div class="cs-tango-users-section-header">
                 <div class="cs-tango-section-label" data-i18n="cs.tango.s02.label">02 · Utilisateurs</div>
                 <h2 class="cs-tango-section-title" data-i18n-html="cs.tango.s02.h2">Une particularité Tango.<br>Deux types d'utilisateurs.</h2>
                 <p class="cs-tango-section-intro" data-i18n="cs.tango.s02.intro">Chaque feature designée devait fonctionner pour deux profils aux droits et aux comportements fondamentalement différents. Ignorer cette dualité, c'est livrer un produit qui casse en production.</p>
+            </div>
 
-                <div class="cs-tango-users-layout">
-                    <!-- Image gauche -->
-                    <div class="cs-tango-users-img-col">
-                        <img id="users-img" src="Tango/masterline-own-account.webp"  data-lang-en="Tango/masterline-own-account-en.webp"  data-lang-fr="Tango/masterline-own-account.webp" alt="Aperçu interface utilisateur" loading="lazy">
-                    </div>
+            <!-- Grid: phone sticky gauche + steps qui scrollent droite -->
+            <div class="cs-tango-users-layout">
 
-                    <!-- Steps droite -->
-                    <div class="cs-tango-users-steps">
-                        <div class="cs-tango-users-step is-active" data-img="Tango/masterline-own-account.webp">
-                            <div class="cs-tango-users-step-header">
-                                <div class="cs-tango-users-dot">1</div>
-                                <div class="cs-tango-users-step-body">
-                                    <div class="cs-tango-users-step-title" data-i18n="cs.tango.s02.step1.title">Masterline</div>
-                                    <p data-i18n="cs.tango.s02.step1.p">Compte principal avec droits complets sur le compte. Nécessite une authentication. Chaque flow critique est conçu autour de lui en premier.</p>
-                                </div>
-                            </div>
-                            <div class="cs-tango-users-step-mobile-img">
-                                <img src="Tango/masterline-own-account.webp" data-lang-fr="Tango/masterline-own-account.webp" data-lang-en="Tango/masterline-own-account-en.webp" alt="Masterline — interface" loading="lazy">
-                            </div>
-                        </div>
-                        <div class="cs-tango-users-step" data-img="Tango/masterline-sub-account.webp">
-                            <div class="cs-tango-users-step-header">
-                                <div class="cs-tango-users-dot">1 bis</div>
-                                <div class="cs-tango-users-step-body">
-                                    <div class="cs-tango-users-step-title" data-i18n="cs.tango.s02.step1bis.title">Masterline vue subscriber</div>
-                                    <p data-i18n="cs.tango.s02.step1bis.p">Compte principal lorsqu'il opère sur un compte rattaché.</p>
-                                </div>
-                            </div>
-                            <div class="cs-tango-users-step-mobile-img">
-                                <img src="Tango/masterline-sub-account.webp" data-lang-fr="Tango/masterline-sub-account.webp" data-lang-en="Tango/masterline-sub-account-en.webp" alt="Masterline vue subscriber" loading="lazy">
-                            </div>
-                        </div>
-                        <div class="cs-tango-users-step" data-img="Tango/Subscriber-own-account.webp">
-                            <div class="cs-tango-users-step-header">
-                                <div class="cs-tango-users-dot">2</div>
-                                <div class="cs-tango-users-step-body">
-                                    <div class="cs-tango-users-step-title" data-i18n="cs.tango.s02.step2.title">Subscriber</div>
-                                    <p data-i18n="cs.tango.s02.step2.p">Compte rattaché avec droits restreints. Chaque feature nécessite une version Subscriber — avec ses propres contraintes d'affichage et de permission.</p>
-                                </div>
-                            </div>
-                            <div class="cs-tango-users-step-mobile-img">
-                                <img src="Tango/Subscriber-own-account.webp" data-lang-fr="Tango/Subscriber-own-account.webp" data-lang-en="Tango/Subscriber-own-account-en.webp" alt="Subscriber — interface" loading="lazy">
-                            </div>
-                        </div>
-                    </div>
+                <div class="cs-tango-users-img-col">
+                    <img id="users-img" src="Tango/masterline-own-account.webp" data-lang-en="Tango/masterline-own-account-en.webp" data-lang-fr="Tango/masterline-own-account.webp" alt="Aperçu interface utilisateur" loading="lazy">
                 </div>
 
-                <!-- Impact card -->
-                <div class="cs-tango-context-card" style="margin-top: 32px;">
-                    <div class="cs-tango-context-card-label" data-i18n="cs.tango.s02.impact.label">Impact sur le design</div>
-                    <p data-i18n="cs.tango.s02.impact.p">Chaque écran, chaque flow, chaque composant devait être pensé deux fois. Quelle information est pertinente, quelle action est autorisée, quel message d'erreur s'affiche, et comment transitionner proprement entre les deux états. Cette dualité est présente dans chacun des projets ci-dessous.</p>
+                <div class="cs-tango-users-steps">
+
+                    <div class="cs-tango-users-step is-active" data-img="Tango/masterline-own-account.webp">
+                        <span class="cs-tango-users-dot">1</span>
+                        <div class="cs-tango-users-step-content">
+                            <div class="cs-tango-users-step-title" data-i18n="cs.tango.s02.step1.title">Masterline</div>
+                            <p data-i18n="cs.tango.s02.step1.p">Compte principal avec droits complets sur le compte. Nécessite une authentication. Chaque flow critique est conçu autour de lui en premier.</p>
+                        </div>
+                        <div class="cs-tango-users-step-mobile-img">
+                            <img src="Tango/masterline-own-account.webp" data-lang-fr="Tango/masterline-own-account.webp" data-lang-en="Tango/masterline-own-account-en.webp" alt="Masterline — interface" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="cs-tango-users-step" data-img="Tango/masterline-sub-account.webp">
+                        <span class="cs-tango-users-dot">1 bis</span>
+                        <div class="cs-tango-users-step-content">
+                            <div class="cs-tango-users-step-title" data-i18n="cs.tango.s02.step1bis.title">Masterline vue subscriber</div>
+                            <p data-i18n="cs.tango.s02.step1bis.p">Compte principal lorsqu'il opère sur un compte rattaché.</p>
+                        </div>
+                        <div class="cs-tango-users-step-mobile-img">
+                            <img src="Tango/masterline-sub-account.webp" data-lang-fr="Tango/masterline-sub-account.webp" data-lang-en="Tango/masterline-sub-account-en.webp" alt="Masterline vue subscriber" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="cs-tango-users-step" data-img="Tango/Subscriber-own-account.webp">
+                        <span class="cs-tango-users-dot">2</span>
+                        <div class="cs-tango-users-step-content">
+                            <div class="cs-tango-users-step-title" data-i18n="cs.tango.s02.step2.title">Subscriber</div>
+                            <p data-i18n="cs.tango.s02.step2.p">Compte rattaché avec droits restreints. Chaque feature nécessite une version Subscriber — avec ses propres contraintes d'affichage et de permission.</p>
+                        </div>
+                        <div class="cs-tango-users-step-mobile-img">
+                            <img src="Tango/Subscriber-own-account.webp" data-lang-fr="Tango/Subscriber-own-account.webp" data-lang-en="Tango/Subscriber-own-account-en.webp" alt="Subscriber — interface" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Impact card alignée avec les steps -->
+                    <div class="cs-tango-context-card cs-tango-users-impact">
+                        <div class="cs-tango-context-card-label" data-i18n="cs.tango.s02.impact.label">Impact sur le design</div>
+                        <p data-i18n="cs.tango.s02.impact.p">Chaque écran, chaque flow, chaque composant devait être pensé deux fois. Quelle information est pertinente, quelle action est autorisée, quel message d'erreur s'affiche, et comment transitionner proprement entre les deux états. Cette dualité est présente dans chacun des projets ci-dessous.</p>
+                    </div>
+
                 </div>
             </div>
+
         </div>
-    </div><!-- /users-pin -->
+    </div><!-- /users-section -->
 
     <div class="cs-venue-content cs-tango">
     <main class="prose">
@@ -894,43 +900,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </div>
 
-<!-- Users pin-scroll — scroll-driven step activation -->
+<!-- Users section — sticky phone, IntersectionObserver step activation -->
 <script>
 (function () {
-    var pin   = document.getElementById('users-pin');
     var steps = document.querySelectorAll('.cs-tango-users-step');
     var img   = document.getElementById('users-img');
-    if (!pin || !steps.length || !img) return;
+    if (!steps.length || !img) return;
 
-    if (window.matchMedia('(max-width: 872px)').matches) return;
+    if (window.matchMedia('(max-width: 768px)').matches) return;
 
-    var currentIdx = 0;
+    var currentIdx = -1;
 
     function activate(idx) {
-        if (idx === currentIdx && steps[idx].classList.contains('is-active')) return;
+        if (idx === currentIdx) return;
         currentIdx = idx;
         steps.forEach(function (s, i) { s.classList.toggle('is-active', i === idx); });
         var nextSrc = steps[idx].dataset.img;
-        if (img.dataset.current === nextSrc) return;
-        img.style.opacity = '0';
-        setTimeout(function () {
-            img.src = nextSrc;
-            img.dataset.current = nextSrc;
-            img.style.opacity = '1';
-        }, 180);
+        if (!nextSrc || img.dataset.current === nextSrc) return;
+        img.src = nextSrc;
+        img.dataset.current = nextSrc;
     }
 
-    function onScroll() {
-        var rect     = pin.getBoundingClientRect();
-        var scrolled = -rect.top + 80;
-        var range    = rect.height - window.innerHeight;
-        var t        = Math.max(0, Math.min(1, scrolled / range));
-        var idx      = Math.min(steps.length - 1, Math.floor(t * steps.length));
-        activate(idx);
-    }
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                var idx = Array.from(steps).indexOf(entry.target);
+                if (idx !== -1) activate(idx);
+            }
+        });
+    }, {
+        rootMargin: '-35% 0px -45% 0px',
+        threshold: 0
+    });
 
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
+    steps.forEach(function (step) { observer.observe(step); });
+    activate(0);
 })();
 </script>
 
