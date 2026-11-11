@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-67D06JS6R4"></script>
@@ -29,8 +29,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>UX Case Study — Venue by SuperBloom | Jacob Houmadi</title>
-    <meta name="description" content="How I designed a social layer for 4M players that creates belonging through observation, not opt-in. A UX case study for Venue by Yummy Labs.">
+    <title>Venue · Design Studios, étude de cas rétention | Jacob Houmadi</title>
+    <meta name="description" content="Étude de cas Venue (Superbloom) : concevoir une couche sociale qui soutient la rétention J7 / J30 d’un jeu mobile, sans contenu à modérer. Lead UX &amp; Product Designer, Top Sprinter 2026.">
     <meta name="author" content="Jacob Houmadi">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://jacob-houmadi.com/venue-case-study.html">
@@ -39,10 +39,10 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jacob-houmadi.com/venue-case-study.html">
-    <meta property="og:title" content="Increasing retention without adding friction — Venue UX Case Study · Jacob Houmadi">
-    <meta property="og:description" content="How I designed a social layer for 4M players that creates belonging through observation, not opt-in.">
+    <meta property="og:title" content="Donner aux joueurs une raison de revenir chaque semaine · Venue · Jacob Houmadi">
+    <meta property="og:description" content="Design Studios : une couche sociale intégrée à Venue pour soutenir la rétention J7 / J30, sans modération.">
     <meta property="og:image" content="https://jacob-houmadi.com/og-image.jpg">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:locale" content="fr_FR">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -61,6 +61,7 @@
     <link rel="stylesheet" href="cookie-consent.css">
     <link rel="stylesheet" href="nav-mobile.css">
     <link rel="stylesheet" href="case-study.css">
+    <link rel="stylesheet" href="venue-case-study.css">
 
     <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -95,9 +96,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <button class="logo" onclick="window.location.href='index.html'" aria-label="Jacob Houmadi — Accueil">Jacob<span aria-hidden="true">.</span></button>
     <nav class="desktop-nav">
         <ul>
-            <li><button onclick="showPortfolio()" data-i18n="nav.portfolio">Portfolio</button></li>
-            <li><a href="cases-studies.html" class="nav-active" data-i18n="nav.casestudies">Cases studies</a></li>
-            <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+            <li><a href="index.html#travaux" data-i18n="nav.casestudies">Travaux</a></li>
+                <li><a href="index.html#a-propos" data-i18n="nav.about">À propos</a></li>
+                <li><a href="index.html#temoignages" data-i18n="nav.testimonials">Témoignages</a></li>
             <li>
                 <label for="lang-select" class="sr-only">Langue / Language</label>
                 <select class="lang-select" onchange="switchLanguage(this.value)" aria-label="Sélectionner la langue">
@@ -105,7 +106,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <option value="en">EN</option>
                 </select>
             </li>
-            <li><a href="#" class="nav-cta-btn" onclick="openCalendlyPopup(); return false;" data-i18n="nav.discovery">Appel découverte</a></li>
+            <li><a href="https://www.linkedin.com/in/jacob-houmadi" target="_blank" rel="noopener" class="nav-linkedin" aria-label="LinkedIn (nouvel onglet)"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a></li>
+                <li><a href="#" class="nav-cta-btn" onclick="openCalendlyPopup(); return false;" data-i18n="nav.discovery">Contactez-moi</a></li>
         </ul>
     </nav>
 
@@ -123,7 +125,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Menu Mobile -->
 <nav class="mobile-nav" id="mobileNav" aria-label="Navigation mobile">
     <div class="mobile-nav-header">
-        <button class="logo-mobile"><img src="logo-jacob.png" alt="logo"></button>
+        <button class="logo-mobile"><img src="Logo-jacob.png" alt="logo"></button>
         <button class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="Fermer le menu">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -132,10 +134,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </button>
     </div>
     <ul class="mobile-nav-links">
-        <li><button onclick="showPortfolio(); closeMobileMenu();" data-i18n="nav.portfolio">Portfolio</button></li>
-        <li><a href="cases-studies.html" class="nav-active" data-i18n="nav.casestudies">Cases studies</a></li>
-        <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
-        <li><a href="#" class="nav-cta-btn" style="margin: 0.25rem 0;" onclick="openCalendlyPopup(); closeMobileMenu(); return false;" data-i18n="nav.discovery">Appel découverte</a></li>
+        <li><a href="index.html#travaux" data-i18n="nav.casestudies">Travaux</a></li>
+                <li><a href="index.html#a-propos" data-i18n="nav.about">À propos</a></li>
+                <li><a href="index.html#temoignages" data-i18n="nav.testimonials">Témoignages</a></li>
+                <li><a href="https://www.linkedin.com/in/jacob-houmadi" target="_blank" rel="noopener" class="nav-linkedin nav-linkedin--mobile"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg><span>LinkedIn</span></a></li>
         <li>
             <div class="mobile-lang-switcher" role="group" aria-label="Langue / Language">
                 <button class="lang-btn active" data-lang="fr" onclick="setLang('fr')" aria-pressed="true" aria-label="Français">FR</button>
@@ -145,7 +147,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </ul>
     <div class="mobile-nav-footer">
         <p data-i18n="mobilenav.p">Transformons votre projet ensemble</p>
-        <button onclick="document.getElementById('landing').scrollIntoView({behavior:'smooth'}); closeMobileMenu();" class="mobile-cta" data-i18n="mobilenav.cta">Me contacter</button>
+        <button onclick="openCalendlyPopup(); closeMobileMenu();" class="mobile-cta" data-i18n="mobilenav.cta">Contactez-moi</button>
     </div>
     <div>
         <ul class="footer-nav-legals">
@@ -156,747 +158,208 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </nav>
 
 <!-- ── CASE STUDY CONTENT ──────────────────────────────── -->
-<div class="cs-venue-content">
-
-    <div class="cs-back-link">
-        <a href="cases-studies.html" data-i18n="cs.venue.back">← Cases studies</a>
-    </div>
-
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-tag"><img src="venues/Venue_Logo_Pink.png" alt="logo venue"></div>
-        <h1 data-i18n="cs.venue.h1">Increasing retention without adding friction or moderation cost.</h1>
-        <div class="hero-tags">
-            <span class="cs-tag">UX Case Study</span>
-            <span class="cs-tag">Mobile Game Design</span>
-            <span class="cs-tag">Retention Strategy</span>
-            <span class="cs-tag">Social Systems</span>
-            <span class="cs-tag">Product Design</span>
-        </div>
-        <div class="hero-image">
-            <img src="Captures/venue_d7_d30-en.webp" 
-            data-lang-fr="Captures/venue_d7_d30-fr.webp"
-            data-lang-en="Captures/venue_d7_d30-en.webp"
-             alt="Venue D7–D30 retention flow" loading="lazy">
-        </div>
-    </section>
-
-    <!-- TL;DR -->
-    <div class="cs-venue-tldr">
-        <h2 data-i18n="cs.venue.tldr.title">TL;DR</h2>
-        <div class="tldr-cards">
-            <div class="tldr-card">
-                <div class="tldr-card-label" data-i18n="cs.venue.tldr.problem.label">Problem:</div>
-                <p data-i18n="cs.venue.tldr.problem.value">Lack of social feedback loop in a mobile game</p>
-            </div>
-            <div class="tldr-card">
-                <div class="tldr-card-label" data-i18n="cs.venue.tldr.solution.label">Solution:</div>
-                <p data-i18n="cs.venue.tldr.solution.value">Passive social system embedded in gameplay</p>
-            </div>
-            <div class="tldr-card">
-                <div class="tldr-card-label" data-i18n="cs.venue.tldr.impact.label">Impact:</div>
-                <p data-i18n="cs.venue.tldr.impact.value">Improved D7 and D30 retention</p>
-            </div>
-            <div class="tldr-card">
-                <div class="tldr-card-label" data-i18n="cs.venue.tldr.approach.label">Approach:</div>
-                <p data-i18n="cs.venue.tldr.approach.value">Rapid prototyping using Figma and Claude Code</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- META -->
-    <div class="meta-grid">
-        <div class="meta-item">
-            <div class="meta-label" data-i18n="cs.venue.meta.project.label">Project</div>
-            <div class="meta-value" data-i18n="cs.venue.meta.project.value">Venue, Design Studios (Phase 2 Social)</div>
-        </div>
-        <div class="meta-item">
-            <div class="meta-label" data-i18n="cs.venue.meta.role.label">Role</div>
-            <div class="meta-value" data-i18n="cs.venue.meta.role.value">Lead UX &amp; Product Designer</div>
-        </div>
-        <div class="meta-item">
-            <div class="meta-label" data-i18n="cs.venue.meta.studio.label">Studio</div>
-            <div class="meta-value" data-i18n="cs.venue.meta.studio.value">Yummy Labs in partnership with Superbloom</div>
-        </div>
-        <div class="meta-item">
-            <div class="meta-label" data-i18n="cs.venue.meta.deliv.label">Deliverables</div>
-            <div class="meta-value" data-i18n="cs.venue.meta.deliv.value">Concept system · Discovery flow · Interaction model · Presentation deck</div>
-        </div>
-        <div class="meta-item">
-            <div class="meta-label" data-i18n="cs.venue.meta.constraint.label">Constraint</div>
-            <div class="meta-value" data-i18n="cs.venue.meta.constraint.value">2 week sprint</div>
-        </div>
-        <div class="meta-item">
-            <div class="meta-label" data-i18n="cs.venue.meta.recog.label">Recognition</div>
-            <div class="meta-value" data-i18n="cs.venue.meta.recog.value">Top Sprinter, March 2026</div>
-        </div>
-    </div>
-
-    <!-- PROSE -->
-    <main class="prose">
-
-        <!-- BETH PERSONA CARD -->
-        <div class="persona-card reveal">
-            <div class="persona-photo">
-               <img src="venues/beth.webp" alt="Beth">
-            </div>
-            <div class="persona-info">
-                <div class="persona-username-pill">
-                    <div class="persona-avatar">
-                        <div class="img-slot" style="margin:0;padding:0;border:none;background:none;width:44px;height:44px;border-radius:50%;"><img src="venues/avatar-beth.jpg" alt=""></div>
-                    </div>
-                    <span class="persona-username">Its_Beth 🐬</span>
-                </div>
-                <div class="persona-stats">
-                    <div class="persona-stat" data-i18n="cs.venue.persona.stat1">20h in game</div>
-                    <div class="persona-stat" data-i18n="cs.venue.persona.stat2">600 designs</div>
-                    <div class="persona-stat" data-i18n="cs.venue.persona.stat3">Lvl 12</div>
-                    <div class="persona-stat" data-i18n="cs.venue.persona.stat4">Minimalism style</div>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="reveal" data-i18n="cs.venue.h2.problem">The Problem</h2>
-        <p class="lead reveal reveal--delay-1" data-i18n="cs.venue.problem.lead">Every night, Beth closes Venue and opens Facebook.</p>
-        <p class="reveal reveal--delay-2" data-i18n-html="cs.venue.problem.p1">She's been playing for months. She designs rooms, submits them to be voted on, collects rewards. She's engaged. She's good at it. But when she wants to <em>feel something</em> — to share a result, to see if anyone noticed — the game has nothing to offer. So she goes elsewhere.</p>
-        <p class="reveal reveal--delay-3" data-i18n="cs.venue.problem.p2">The problem wasn't low engagement.</p>
-        <div class="problem-stats reveal reveal--delay-4">
-            <div class="problem-stats-label" data-i18n="cs.venue.problem.stats.label">Venue had :</div>
-            <div class="problem-stats-value" data-i18n="cs.venue.problem.stats.value">4M+ downloads — 90% female player base — strong daily loops.</div>
-        </div>
-        <div class="problem-images">
-            <div class="problem-img-left reveal reveal--from-left">
-                <img src="venues/Venue-app-store.webp" alt="Venue on the App Store and Google Play">
-            </div>
-            <div class="problem-img-right reveal reveal--from-right reveal--delay-1">
-                <img src="venues/venue-facebook-capture.png" alt="Venue Facebook community group">
-            </div>
-        </div>
-
-        <div class="problem-conclusion reveal">
-            <p class="problem-conclusion-sub" data-i18n="cs.venue.problem.conclusion.lead">The product lacked a social feedback loop that made user activity feel meaningful.</p>
-            <p class="problem-conclusion-sub" data-i18n="cs.venue.problem.conclusion.sub">This created a structural UX problem:</p>
-            <ul class="problem-conclusion-list">
-                <li data-i18n="cs.venue.problem.conclusion.li1">No in-product recognition after submission</li>
-                <li data-i18n="cs.venue.problem.conclusion.li2">No visibility into engagement from other players</li>
-                <li data-i18n="cs.venue.problem.conclusion.li3">No persistent social context to return to</li>
-            </ul>
-            <p class="problem-conclusion-challenge" data-i18n="cs.venue.problem.conclusion.challenge">UX Challenge: How might we design social features that improve retention without adding friction or moderation complexity?</p>
-        </div>
-
-        <hr>
-
-        <h2 class="reveal" data-i18n="cs.venue.h2.insight">The Insight</h2>
-        <p class="lead reveal reveal--delay-1" data-i18n-html="cs.venue.insight.lead">Most social features in mobile games rely on explicit actions: joining groups, adding friends, or posting content. But this creates friction. Players like Beth don’t want to perform social interaction;  they want to feel it naturally.</p>
-        <div class="insight-container reveal reveal--delay-2">
-            <div class="insight-label" data-i18n="cs.venue.insight.label">Two things follow from that:</div>
-            <div class="insight-cards">
-                <div class="insight-card">
-                    <div class="insight-card-header">
-                        <img src="venues/icons/icon-preregistered.svg" class="insight-icon" alt="" width="28" height="28">
-                        <div class="insight-card-title" data-i18n="cs.venue.insight.card1.title">Low cognition load</div>
-                    </div>
-                    <div class="insight-card-desc">
-                        <p data-i18n-html="cs.venue.insight.card1.desc"><strong>The moment you ask someone to join, you create a moment where they can say no.</strong> Opt-in mechanics are opt-out risks. Every explicit step leaks.</p>
-                    </div>
-                </div>
-                <div class="insight-card">
-                    <div class="insight-card-header">
-                        <img src="venues/icons/icon-chat-x-solid.svg" class="insight-icon" alt="" width="28" height="28">
-                        <div class="insight-card-title" data-i18n="cs.venue.insight.card2.title">No moderation required</div>
-                    </div>
-                    <div class="insight-card-desc">
-                        <p data-i18n="cs.venue.insight.card2.desc">Social mechanics that rely on moderation or settings to stay non-toxic will eventually fail. Toxicity needs to be structurally impossible, not just manageable.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <hr>
-
-        <h2 class="reveal" data-i18n="cs.venue.h2.challenge">The Design Challenge</h2>
-        <p class="lead reveal reveal--delay-1" data-i18n="cs.venue.challenge.lead">SuperBloom’s brief: design a group-based social system for Venue that encourages collaboration, Improves player retention (D7 / D30), requires zero moderation and ddds no extra cognitive load</p>
-        <div class="challenge-constraints-label reveal reveal--delay-2" data-i18n="cs.venue.challenge.constraints.label">Three hard constraints made this interesting:</div>
-        <div class="challenge-cards">
-            <div class="challenge-card reveal reveal--delay-1">
-                <img src="venues/icons/icon-card-random.svg" class="challenge-icon" alt="" width="53" height="53">
-                <div class="challenge-card-title" data-i18n="cs.venue.challenge.card1.title">Anonymous voting</div>
-                <p data-i18n="cs.venue.challenge.card1.desc">Players can't choose whose work they see</p>
-            </div>
-            <div class="challenge-card reveal reveal--delay-2">
-                <img src="venues/icons/icon-controller-solid.svg" class="challenge-icon" alt="" width="53" height="53">
-                <div class="challenge-card-title" data-i18n="cs.venue.challenge.card2.title">Casual play</div>
-                <p data-i18n="cs.venue.challenge.card2.desc">No tolerance for extra homework</p>
-            </div>
-            <div class="challenge-card reveal reveal--delay-3">
-                <img src="venues/icons/icon-chat-off.svg" class="challenge-icon" alt="" width="53" height="53">
-                <div class="challenge-card-title" data-i18n="cs.venue.challenge.card3.title">No chat</div>
-                <p data-i18n="cs.venue.challenge.card3.desc">no text, no moderation overhead.</p>
-            </div>
-        </div>
-        <div class="guild-war-frame reveal reveal--delay-4">
-            <div class="guild-war-quote">
-                <p data-i18n-html="cs.venue.challenge.quote">This is not a "guild war" system.<br>This is a creative collective.</p>
-            </div>
-        </div>
-
-        <hr>
-
-        <h2 class="reveal" data-i18n="cs.venue.h2.principles">Design Principles</h2>
-        <p class="lead reveal reveal--delay-1" data-i18n="cs.venue.principles.lead">Before touching a single screen, I defined four non-negotiables that every mechanic had to pass.</p>
-
-        <div class="principles">
-            <div class="principle reveal reveal--delay-1">
-                <div class="principle-num">1</div>
-                <div class="principle-body">
-                    <div class="principle-title" data-i18n="cs.venue.principle.1.title">No toxicity by design</div>
-                    <div class="principle-desc" data-i18n="cs.venue.principle.1.desc">If a mechanic can produce a bad feeling, it will. The fix isn't a setting — it's removing the mechanism. No leaderboards. No individual contribution visibility. No way to compare members.</div>
-                </div>
-            </div>
-            <div class="principle reveal reveal--delay-2">
-                <div class="principle-num">2</div>
-                <div class="principle-body">
-                    <div class="principle-title" data-i18n="cs.venue.principle.2.title">No penalty for absence</div>
-                    <div class="principle-desc" data-i18n-html="cs.venue.principle.2.desc">Missing a week should carry zero guilt signal. No "you let your team down." No streak breaks.<br>Contribution is meaningful when you show up, invisible when you don't.</div>
-                </div>
-            </div>
-            <div class="principle reveal reveal--delay-3">
-                <div class="principle-num">3</div>
-                <div class="principle-body">
-                    <div class="principle-title" data-i18n="cs.venue.principle.3.title">Passive participation</div>
-                    <div class="principle-desc" data-i18n-html="cs.venue.principle.3.desc">The system watches what players already do and uses it as contribution. Normal play <em>is</em> participation. No opt-in threshold, no confirmation modal.</div>
-                </div>
-            </div>
-            <div class="principle reveal reveal--delay-4">
-                <div class="principle-num">4</div>
-                <div class="principle-body">
-                    <div class="principle-title" data-i18n="cs.venue.principle.4.title">Collective progression</div>
-                    <div class="principle-desc" data-i18n="cs.venue.principle.4.desc">Milestones are collective. Rewards are shared. Progress is one bar, not aggregated personal bars. The Studio succeeds together or not at all.</div>
-                </div>
-            </div>
-        </div>
-
-        <hr>
-
-        <h2 class="reveal" data-i18n="cs.venue.h2.solution">The Solution · Design Studios</h2>
-        <p class="lead reveal reveal--delay-1" data-i18n="cs.venue.solution.lead1">Design Studios is a passive community membership system embedded in Venue's existing game loop.</p>
-        <p class="lead reveal reveal--delay-2" data-i18n="cs.venue.solution.lead2">Players contribute to a shared Studio by playing normally</p>
-        <div class="solution-loop reveal reveal--delay-3">
-            <div class="solution-loop-image">
-                <img src="venues/beth-playing.webp" alt="Beth playing">
-            </div>
-            <div class="solution-loop-pills">
-                <div class="solution-pill solution-pill-teal" data-i18n="cs.venue.solution.pill1">submitting designs</div>
-                <div class="solution-connector"></div>
-                <div class="solution-pill solution-pill-teal" data-i18n="cs.venue.solution.pill2">voting</div>
-                <div class="solution-connector"></div>
-                <div class="solution-pill solution-pill-teal" data-i18n="cs.venue.solution.pill3">completing chapters</div>
-                <div class="solution-connector"></div>
-                <div class="solution-pill solution-pill-outline" data-i18n="cs.venue.solution.pill4">Shared goal</div>
-            </div>
-        </div>
-        <p class="solution-no-new reveal" data-i18n="cs.venue.solution.no-new">No new behaviour required.</p>
-        <p class="reveal" data-i18n="cs.venue.solution.p1">Each Studio has 10–20 members matched on design aesthetic, a shared weekly goal, a Studio Room that grows as the Studio levels up, and a collective gallery where members' submitted designs appear for each other.</p>
-        <div class="solution-panels">
-            <div class="solution-panel solution-panel-image reveal reveal--from-left">
-                <img src="venues/Social_popup.png" alt="Casa Bloom studio — matching screen">
-            </div>
-            <div class="solution-panel solution-panel-text reveal reveal--from-right reveal--delay-1">
-                <p data-i18n-html="cs.venue.solution.panel.text">The Studio is named and curated.<br>Ours: <strong>Casa Bloom 🌸</strong></p>
-            </div>
-        </div>
-
-        <hr>
-
-        <h2 class="reveal" data-i18n="cs.venue.h2.precedents">These constraints aren't new.</h2>
-        <p class="lead reveal reveal--delay-1" data-i18n="cs.venue.precedents.lead">The best games already solved them, just never combined them.</p>
-        <div class="precedents-grid">
-            <div class="precedent-card reveal reveal--delay-1">
-                <div class="precedent-title">State of Decay 2</div>
-                <span class="precedent-tag" data-i18n="cs.venue.precedent.1.tag">The volunteering state</span>
-            </div>
-            <div class="precedent-card reveal reveal--delay-2">
-                <div class="precedent-title">Journey</div>
-                <span class="precedent-tag" data-i18n="cs.venue.precedent.2.tag">No toxicity by architecture</span>
-            </div>
-            <div class="precedent-card reveal reveal--delay-3">
-                <div class="precedent-title">Neko Atsume</div>
-                <span class="precedent-tag" data-i18n="cs.venue.precedent.3.tag">Absence without guilt</span>
-            </div>
-        </div>
-
-        <hr>
-
-          <h2 class="reveal" data-i18n="cs.venue.h2.joining">The Joining Mechanic · "Frictionless Belonging"</h2>
-        <p class="lead reveal reveal--delay-1" data-i18n="cs.venue.joining.lead">This was the most consequential decision in the entire system.</p>
-        <div class="joining-cols reveal reveal--delay-2">
-            <p data-i18n="cs.venue.joining.p1">During onboarding, the player taps a Studio and goes back to play. Nothing changes on screen.</p>
-            <p data-i18n="cs.venue.joining.p2">But behind the scenes she knows, everything she already does starts contributing to something shared.</p>
-        </div>
-        <div class="joining-images">
-            <div class="joining-img joining-img-left reveal reveal--from-left">
-                <img src="venues/Social_popup_2.png" alt="Play with this Studio — onboarding modal">
-            </div>
-            <div class="joining-img joining-img-right reveal reveal--from-right reveal--delay-1">
-                   <img src="venues/joigning-mechanic-croped.png" alt="Play with this Studio — onboarding modal">
-            </div>
-        </div>
-        <p class="reveal" data-i18n="cs.venue.joining.p3">In the first two weeks, Beth is technically a volunteer. She contributes without changing anything she already does, without label, expectation, or visibility.</p>
-        <p class="reveal" data-i18n="cs.venue.joining.p4">After two weekly cycles, the transition happens automatically. A quiet status line change appears in her Studio view.</p>
-        <div class="joining-timeline reveal reveal--delay-1">
-            <img src="venues/2weeks-volunteering-en.svg" alt="Discovery → Volunteer → Member — 3-week timeline" data-lang-en="venues/2weeks-volunteering-en.svg" data-lang-fr="venues/2weeks-volunteering-fr.svg">
-        </div>
-        <blockquote class="reveal reveal--delay-1">
-            <p data-i18n-html="cs.venue.joining.blockquote"><strong> Product decision:</strong> Removed all opt-in steps to eliminate friction and increase early engagement.</p>
-        </blockquote>
-        <div class="callout callout-coral reveal reveal--delay-2">
-            <p data-i18n-html="cs.venue.joining.callout"><strong>Language note:</strong> The CTA throughout is <strong>"Play with this Studio"</strong>, never "Join Studio."<br>The player is choosing to play, not to commit. That single word swap is load-bearing.</p>
-        </div>
-
-       
-
-        <hr>
-
-      
-
-         <h2 class="reveal" data-i18n="cs.venue.h2.d7">The D7 Discovery Flow · 7 Steps</h2>
-        <p class="lead reveal reveal--delay-1" data-i18n-html="cs.venue.d7.lead">How does Beth first encounter her Studio? <span class="muted"> Not through a banner. Not a push notification.</span> Through a milestone.</p>
-        <p class="reveal reveal--delay-2" data-i18n="cs.venue.d7.p1">At Day 7, Beth has completed several chapters and been through the voting loop many times. The leaderboard just unlocked. She's reward-loop trained — red dots work on her. </p>
-        <p class="d7-trigger reveal reveal--delay-3" data-i18n-html="cs.venue.d7.trigger">The trigger: <br/><strong>10 designs submitted.</strong> Emotional peak. She's claiming a reward when the system opens a door.</p>
-        <div class="d7-flow-outer reveal reveal--delay-1">
-            <button class="d7-expand-btn" onclick="openD7Modal()" title="View full flow">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 1.5H12.5V5.5M12.5 1.5L7.5 6.5M5.5 12.5H1.5V8.5M1.5 12.5L6.5 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span data-i18n="cs.venue.d7.expand">Expand</span>
-            </button>
-            <div class="d7-flow-wrapper">
-            <div class="d7-grid">
-                <div class="d7-step-col">
-                    <div class="d7-step-num" data-i18n="cs.venue.d7.step1.num">1. Milestone moment</div>
-                    <div class="d7-step-desc" data-i18n-html="cs.venue.d7.step1.desc"><ul><li>Reward claimed.</li><li>A brief system message appears.</li></ul></div>
-                    <div class="d7-step-insight" data-i18n="cs.venue.d7.step1.insight">Emotional peak — high receptivity.</div>
-                </div>
-                <div class="d7-step-col">
-                    <div class="d7-step-num" data-i18n="cs.venue.d7.step2.num">2. Studio reveal</div>
-                    <div class="d7-step-desc" data-i18n-html="cs.venue.d7.step2.desc"><ul><li>Full-screen overlay.</li><li>"You're ready to join a Design Studio."</li></ul></div>
-                    <div class="d7-step-insight" data-i18n="cs.venue.d7.step2.insight">Maybe later always visible. No pressure.</div>
-                </div>
-                <div class="d7-step-col">
-                    <div class="d7-step-num" data-i18n="cs.venue.d7.step3.num">3. Studio intro</div>
-                    <div class="d7-step-desc" data-i18n-html="cs.venue.d7.step3.desc"><ul><li>Three concepts only.</li><li>Warm language.</li><li>No mechanics dump.</li></ul></div>
-                    <div class="d7-step-insight" data-i18n="cs.venue.d7.step3.insight">Understood in under 10 seconds.</div>
-                </div>
-                <div class="d7-step-col">
-                    <div class="d7-step-num" data-i18n="cs.venue.d7.step4.num">4. Browse Studios</div>
-                    <div class="d7-step-desc" data-i18n-html="cs.venue.d7.step4.desc"><ul><li>3 curated suggestions based on design style.</li><li>Last-design galleries show an already-active community.</li></ul></div>
-                </div>
-                <div class="d7-step-col">
-                    <div class="d7-step-num" data-i18n="cs.venue.d7.step5.num">5. Confirm join</div>
-                    <div class="d7-step-desc" data-i18n-html="cs.venue.d7.step5.desc"><ul><li>Studio tagline and member faces before the CTA.</li></ul></div>
-                    <div class="d7-step-insight" data-i18n="cs.venue.d7.step5.insight">She's joining people, not a system.</div>
-                </div>
-                <div class="d7-step-col">
-                    <div class="d7-step-num" data-i18n="cs.venue.d7.step6.num">6. Studio home</div>
-                    <div class="d7-step-desc" data-i18n-html="cs.venue.d7.step6.desc"><ul><li>First view of Casa Bloom.</li><li>Key tiers visible.</li><li>Goal bar live.</li><li>Activity feed already moving.</li></ul></div>
-                    <div class="d7-step-insight" data-i18n-html="cs.venue.d7.step6.insight"><em>Alive on arrival.</em></div>
-                </div>
-                <div class="d7-step-col">
-                    <div class="d7-step-num" data-i18n="cs.venue.d7.step7.num">7. Back to her game</div>
-                    <div class="d7-step-desc" data-i18n-html="cs.venue.d7.step7.desc"><ul><li>No nudge. No new task.</li><li>She plays as usual — keys flow automatically.</li></ul></div>
-                    <div class="d7-step-insight" data-i18n="cs.venue.d7.step7.insight">Same loop, new meaning.</div>
-                </div>
-                <div class="d7-emotion">
-                    <div class="d7-emotion-avatar"><img src="venues/d7/avatar-1-excited.webp" alt=""></div>
-                    <span data-i18n="cs.venue.d7.emotion1">Excited</span>
-                </div>
-                <div class="d7-emotion">
-                    <div class="d7-emotion-avatar"><img src="venues/d7/avatar-2-curious.webp" alt=""></div>
-                    <span data-i18n="cs.venue.d7.emotion2">Curious</span>
-                </div>
-                <div class="d7-emotion">
-                    <div class="d7-emotion-avatar"><img src="venues/d7/avatar-3-informed.webp" alt=""></div>
-                    <span data-i18n="cs.venue.d7.emotion3">Informed</span>
-                </div>
-                <div class="d7-emotion">
-                    <div class="d7-emotion-avatar"><img src="venues/d7/avatar-4-intrigued.webp" alt=""></div>
-                    <span data-i18n="cs.venue.d7.emotion4">Intrigued</span>
-                </div>
-                <div class="d7-emotion">
-                    <div class="d7-emotion-avatar"><img src="venues/d7/avatar-5-warm.webp" alt=""></div>
-                    <span data-i18n="cs.venue.d7.emotion5">Warm</span>
-                </div>
-                <div class="d7-emotion">
-                    <div class="d7-emotion-avatar"><img src="venues/d7/avatar-6-belonging.webp" alt=""></div>
-                    <span data-i18n="cs.venue.d7.emotion6">Belonging</span>
-                </div>
-                <div class="d7-emotion">
-                    <div class="d7-emotion-avatar"><img src="venues/d7/avatar-7-settled.webp" alt=""></div>
-                    <span data-i18n="cs.venue.d7.emotion7">Settled</span>
-                </div>
-            </div>
-            </div>
-        </div>
-        <blockquote class="reveal reveal--delay-1">
-            <p data-i18n-html="cs.venue.d7.blockquote"><strong> Product decision:</strong> Integrated feature discovery into existing user flow instead of using notifications or external prompts.</p>
-        </blockquote>
-
-        <hr>
-
-        
-
-        <h2 class="reveal" data-i18n="cs.venue.h2.currencies">Retention System Design</h2>
-        <p class="lead reveal reveal--delay-1" data-i18n-html="cs.venue.currencies.lead">The system runs on two currencies that <span class="muted">operate on different clocks — and that distinction</span> does most of the retention work.</p>
-
-        <div class="currencies">
-            <div class="currency-card currency-weekly reveal reveal--from-left">
-                <div class="currency-icon"><img src="venues/Key-currency.png" alt="Key currency"></div>
-                <div class="currency-title" data-i18n="cs.venue.currency.weekly.title">Weekly progression</div>
-                <div class="currency-name" data-i18n="cs.venue.currency.weekly.name">Key</div>
-                <div class="currency-desc-block">
-                    <div class="currency-desc" data-i18n="cs.venue.currency.weekly.desc1">Unlocks the weekly reward tiers:</div>
-                    <div class="currency-tiers">
-                        <span class="currency-pill">Spark</span>
-                        <span class="currency-connector"></span>
-                        <span class="currency-pill">Bloom</span>
-                        <span class="currency-connector"></span>
-                        <span class="currency-pill">Glow</span>
-                        <span class="currency-connector"></span>
-                        <span class="currency-pill">Radiant</span>
-                    </div>
-                    <div class="currency-desc" data-i18n-html="cs.venue.currency.weekly.desc2">Resets every week.<br>Earned automatically through normal play:
-                        <br> submit a design (+1),<br>complete a vote session (+1),<br>earn a 5-star (+2).</div>
-                </div>
-                <div class="currency-tag" data-i18n="cs.venue.currency.weekly.tag">This week. Effort that matters now.</div>
-            </div>
-            <div class="currency-card currency-permanent reveal reveal--from-right reveal--delay-1">
-                <div class="currency-icon"><img src="venues/arrow-currency.png" alt="Arrow currency"></div>
-                <div class="currency-title" data-i18n="cs.venue.currency.perm.title">Permanent progression</div>
-                <div class="currency-name" data-i18n="cs.venue.currency.perm.name">Arrow</div>
-                <div class="currency-desc-block">
-                    <div class="currency-desc" data-i18n-html="cs.venue.currency.perm.desc">Accumulates across weeks and never resets.<br>Earned exclusively by completing the weekly collective challenge as a Studio.<br>Each Arrow level unlocks a new shared Studio Room permanently.</div>
-                </div>
-                <div class="currency-tag" data-i18n="cs.venue.currency.perm.tag">Forever. Leaving means leaving behind a space she helped build.</div>
-            </div>
-        </div>
-        <blockquote class="reveal reveal--delay-1">
-            <p data-i18n-html="cs.venue.currencies.blockquote"><strong> Product decision:</strong> Separated engagement loops (weekly vs long-term) to support both retention cycles.</p>
-        </blockquote>
-
-        <hr>
-
-        <h2 class="reveal" data-i18n="cs.venue.h2.voting">Making Anonymous Voting Feel Human</h2>
-        <p class="lead reveal reveal--delay-1" data-i18n-html="cs.venue.voting.lead">Voting in Venue is random and anonymous by design. <span class="muted">This meant the Studio feed and the voting pool are structurally separate. I couldn't build connection through votes</span>. So I built it elsewhere.</p>
-
-        <div class="voting-dark-panel reveal reveal--delay-2">
-            <div class="voting-dark-img">
-                <img src="venues/Feedback-tags-img.webp" alt="Feedback tags UI">
-            </div>
-            <div class="voting-dark-text" data-i18n-html="cs.venue.voting.tags.text">
-                <strong>Feedback tags:</strong>
-                When Beth votes, she can leave a preset tag alongside her vote. Not a score but a signal.<br>
-                For a few seconds, she's not optimizing a result.<br>
-                She's honoring someone.
-            </div>
-        </div>
-
-        <div class="voting-light-panel reveal reveal--delay-1">
-            <div class="voting-light-top">
-                <div class="voting-light-label" data-i18n="cs.venue.voting.gallery.label">Gallery reactions:</div>
-                <div class="voting-light-desc" data-i18n="cs.venue.voting.gallery.desc">In the Studio gallery, she can react to her mates' designs with preset feedbacks. No text. No moderation required. But suddenly, recognition is possible between people who know each other.</div>
-            </div>
-            <div class="voting-gallery-wrapper">
-                <div class="voting-gallery-imgs">
-                    <div class="voting-gallery-img"><img src="venues/Gallery-screen-1.webp" alt="Gallery screen 1"></div>
-                    <div class="voting-gallery-img"><img src="venues/Gallery-screen-2.webp" alt="Gallery screen 2"></div>
-                    <div class="voting-gallery-img"><img src="venues/Gallery-screen-3.webp" alt="Gallery screen 3"></div>
-                </div>
-                <div class="voting-gallery-controls">
-                    <button class="vg-btn vg-btn--prev" aria-label="Previous">&#8592;</button>
-                    <div class="vg-dots">
-                        <span class="vg-dot vg-dot--active" data-index="0"></span>
-                        <span class="vg-dot" data-index="1"></span>
-                        <span class="vg-dot" data-index="2"></span>
-                    </div>
-                    <button class="vg-btn vg-btn--next" aria-label="Next">&#8594;</button>
-                </div>
-            </div>
-        </div>
-
-        <p class="voting-closing reveal reveal--delay-2" data-i18n-html="cs.venue.voting.closing">Zero moderation overhead. Structurally safe. Emotionally meaningful.<br>The preset palette is the design decision — not a limitation.</p>
-  
-        <blockquote class="reveal reveal--delay-1">
-            <p data-i18n-html="cs.venue.voting.blockquote"><strong> Product decision:</strong> Eliminated free-text interactions to remove moderation needs while preserving emotional feedback.</p>
-        </blockquote>
-        <hr>
-
-        <!--<h2 class="reveal" data-i18n="cs.venue.h2.milestones">Milestones · When the Studio Responds</h2>
-        <p class="lead reveal reveal--delay-1" data-i18n="cs.venue.milestones.lead">When the Studio hits a collective threshold, the space responds.</p>
-
-        <div class="milestone-tiles reveal reveal--delay-2">
-            <div class="milestone-tile milestone-tile-img">
-                <img src="venues/Milestones.webp" alt="Milestones screen">
-            </div>
-            <div class="milestone-tile milestone-tile-words">
-                <span data-i18n="cs.venue.milestone.word1">Light.</span>
-                <span data-i18n="cs.venue.milestone.word2">Subtle.</span>
-                <span data-i18n="cs.venue.milestone.word3">Shared.</span>
-            </div>
-        </div>
-
-        <p class="milestone-body reveal" data-i18n-html="cs.venue.milestone.body1">No big celebration. No individual callout. Just enough to say: <em class="milestone-em">you were part of this.</em></p>
-        <p class="milestone-body reveal reveal--delay-1" data-i18n-html="cs.venue.milestone.body2">Milestone reveal follows a <strong>Progressive Disclosure</strong> model. Rather than a single dramatic reveal that peaks and fades, the Studio room gradually comes to life as the week progresses. This produces steadier sustained engagement and avoids the emotional crash of a big reveal followed by nothing.</p>
-
-
-        <div class="table-container reveal reveal--delay-2"><table class="milestone-table">
-            <thead>
-                <tr>
-                    <th data-i18n="cs.venue.milestone.th.day">Day</th>
-                    <th data-i18n="cs.venue.milestone.th.reveal">Progressive Reveal</th>
-                    <th data-i18n="cs.venue.milestone.th.rate">Rate /10</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td data-i18n="cs.venue.milestone.td.d1">D1</td>
-                    <td data-i18n="cs.venue.milestone.d1">Neutral — no destination yet</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td data-i18n="cs.venue.milestone.td.d2">D2</td>
-                    <td data-i18n="cs.venue.milestone.d2">Delight — Spark unlocks unexpectedly</td>
-                    <td>8</td>
-                </tr>
-                <tr>
-                    <td data-i18n="cs.venue.milestone.td.d3-4">D3–D4</td>
-                    <td data-i18n="cs.venue.milestone.d34">Excited/surprised — Bloom unlocks, pattern registers</td>
-                    <td>7</td>
-                </tr>
-                <tr>
-                    <td data-i18n="cs.venue.milestone.td.d5">D5</td>
-                    <td data-i18n="cs.venue.milestone.d5">Satisfaction — Glow unlocks — surprise mechanic is now understood, this one feels earned rather than random. Quieter than D2 but deeper</td>
-                    <td>7</td>
-                </tr>
-                <tr>
-                    <td data-i18n="cs.venue.milestone.td.d6">D6</td>
-                    <td data-i18n="cs.venue.milestone.d6">Beth senses the pattern. Something more might exist. One day left. The pull is intentional now</td>
-                    <td>7</td>
-                </tr>
-                <tr>
-                    <td data-i18n="cs.venue.milestone.td.d7">D7</td>
-                    <td data-i18n="cs.venue.milestone.d7">Satisfied, curious about next week</td>
-                    <td>6</td>
-                </tr>
-            </tbody>
-        </table>
-        </div>
-
-        <hr>-->
-
-        <h2 class="reveal" data-i18n="cs.venue.h2.outcomes">Outcomes</h2>
-        <p class="lead reveal reveal--delay-1" data-i18n-html="cs.venue.outcomes.lead">This is a design concept <span class="muted">submitted for Phase 2 development evaluation</span>, based on observed player behavior and validated assumptions.</p>
-
-        <div class="outcomes">
-            <div class="outcome reveal reveal--delay-1">
-                <span class="outcome-tag" data-i18n-html="cs.venue.outcome.d7.tag">D7</span>
-                <div class="outcome-body" data-i18n-html="cs.venue.outcome.d7.body">The discovery flow hooks at the exact moment of <strong>peak emotional receptivity</strong>. Players return for the shared weekly goal before they've consciously decided to stay.</div>
-            </div>
-            <div class="outcome reveal reveal--delay-2">
-                <span class="outcome-tag" data-i18n-html="cs.venue.outcome.d30.tag">D30</span>
-                <div class="outcome-body" data-i18n-html="cs.venue.outcome.d30.body">Arrows create <strong>identity-level attachment</strong>. A player who has contributed to three Studio room unlocks is not the same as a player with no investment. Leaving has a real, visible cost — without any pressure mechanic.</div>
-            </div>
-            <div class="outcome reveal reveal--delay-3">
-                <span class="outcome-tag">Ops</span>
-                <div class="outcome-body" data-i18n-html="cs.venue.outcome.ops.body"><strong>Zero moderation overhead.</strong> No chat. No free text. No reporting flow needed. The system is structurally incapable of producing the content that requires intervention.</div>
-            </div>
-        </div>
-
-        <hr>
-
-        <!-- ── ROLLOUT ────────────────────────────────────────── -->
-        <div class="venue-rollout">
-            <h2 class="reveal" data-i18n="cs.venue.h2.rollout">How This Would Roll Out</h2>
-            <p class="lead reveal reveal--delay-1" data-i18n="cs.venue.rollout.lead">This system wasn't designed to be shipped all at once.</p>
-            <p class="reveal reveal--delay-2" data-i18n="cs.venue.rollout.body">It's structured to be introduced progressively; each phase validating a different layer of the experience before adding complexity.</p>
-            <div class="venue-phases reveal reveal--delay-2">
-                <div class="venue-phase venue-phase--1">
-                    <div class="venue-phase-label" data-i18n="cs.venue.phase1.label">Phase 1</div>
-                    <div class="venue-phase-badge-wrap venue-phase-badge-wrap--top">
-                        <div class="venue-phase-badge" data-i18n="cs.venue.phase1.badge">Validate belonging (D7)</div>
-                    </div>
-                    <div class="venue-phase-content">
-                        <p data-i18n="cs.venue.phase1.desc">Start with lightweight Studio assignment and passive contribution.</p>
-                        <div class="venue-phase-goal" data-i18n="cs.venue.phase1.goal">Test shared progress · Early retention</div>
-                    </div>
-                </div>
-                <div class="venue-phase venue-phase--2">
-                    <div class="venue-phase-label" data-i18n="cs.venue.phase2.label">Phase 2</div>
-                    <div class="venue-phase-badge-wrap venue-phase-badge-wrap--mid">
-                        <div class="venue-phase-badge" data-i18n="cs.venue.phase2.badge">Deepen engagement</div>
-                    </div>
-                    <div class="venue-phase-content venue-phase-content--bottom">
-                        <p data-i18n="cs.venue.phase2.desc">Introduce reactions and gallery visibility.</p>
-                        <div class="venue-phase-goal" data-i18n="cs.venue.phase2.goal">Increase contribution frequency</div>
-                    </div>
-                </div>
-                <div class="venue-phase venue-phase--3">
-                    <div class="venue-phase-label" data-i18n="cs.venue.phase3.label">Phase 3</div>
-                    <div class="venue-phase-badge-wrap venue-phase-badge-wrap--top">
-                        <div class="venue-phase-badge" data-i18n="cs.venue.phase3.badge">Build long-term attachment (D30)</div>
-                    </div>
-                    <div class="venue-phase-content venue-phase-content--bottom">
-                        <p data-i18n="cs.venue.phase3.desc">Add persistent progression (Studio rooms, Arrow system).</p>
-                        <div class="venue-phase-goal" data-i18n="cs.venue.phase3.goal">Create identity · Long-term retention</div>
-                    </div>
-                </div>
-            </div>
-            <p class="reveal reveal--delay-3" data-i18n="cs.venue.rollout.closing">Each phase builds on the previous one, turning a design concept into a measurable system.</p>
-        </div>
-
-        <hr>
-
-        <h2 class="reveal" data-i18n="cs.venue.h2.next">What I'd Do Next</h2>
-        <div class="next-carousel reveal reveal--delay-1">
-            <div class="next-track">
-                <!-- Slide 1 -->
-                <div class="next-slide">
-                    <div class="next-slide-text">
-                        <p class="lead" data-i18n="cs.venue.next.1.lead">The Other feed was never built</p>
-                        <p data-i18n="cs.venue.next.1.p1">The Social tab introduces two views: My Studio's feed and Other feed; a familiar pattern of following first, then broader exploration. Beth sees designers she follows, then system-recommended ones based on style.</p>
-                        <p data-i18n="cs.venue.next.1.p2">The Phase 1 leaderboard remains as a placeholder, while the next iteration builds on the existing (but previously underused) following system.</p>
-                    </div>
-                    <div class="next-slide-img-wrap">
-                        <img src="venues/iPhone in Hands.webp" alt="Social feed mockup">
-                    </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="next-slide">
-                    <div class="next-slide-text">
-                        <p class="lead" data-i18n="cs.venue.next.2.lead">Feedback tag visibility.</p>
-                        <p data-i18n="cs.venue.next.2.p1">Do tags feed back visibly to the designer's profile, or do they disappear into the algorithm? This question has UX and business implications and isn't resolved yet.</p>
-                    </div>
-                    <div class="next-slide-img-wrap next-slide-img-blush">
-                        <img src="venues/feedback_tags_transparent.webp" alt="Feedback tags mockup" class="next-slide-img-contain" data-lang-en="venues/feedback_tags_transparent.webp" data-lang-fr="venues/feedback_tags_transparent-fr.webp">
-                    </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="next-slide">
-                    <div class="next-slide-text">
-                        <p class="lead" data-i18n="cs.venue.next.3.lead">Permanent inventory monetization.</p>
-                        <p data-i18n="cs.venue.next.3.p1">Studio rooms unlock permanently, which creates real leaving cost.</p>
-                        <p data-i18n="cs.venue.next.3.p2">Whether that can also be a monetization surface (cosmetic Studio items, limited room decor) is a viable direction that's been deliberately parked for now.</p>
-                    </div>
-                    <div class="next-slide-img-wrap">
-                        <img src="venues/iPhone X on Desk Mockup.webp" alt="Inventory mockup">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="next-pagination">
-                <span class="next-dot active" data-slide="0"></span>
-                <span class="next-dot" data-slide="1"></span>
-                <span class="next-dot" data-slide="2"></span>
-            </div>
-        </div>
-
-        <hr>
-
-        <h2 class="reveal" data-i18n="cs.venue.h2.learned">What I've Learned</h2>
-        <div class="learned">
-            <div class="learned-row reveal reveal--from-left">
-                <div class="learned-text">
-                    <div class="lead" data-i18n="cs.venue.learned.1.title">JTBD changes the quality of every decision downstream.</div>
-                    <div class="learned-desc">
-                        <p data-i18n="cs.venue.learned.1.desc1">Breaking down user journeys into key moments (join, contribute, stay, leave) improves decision-making.</p>
-                    </div>
-                </div>
-                <div class="learned-img">
-                    <img src="venues/JTBD-states-en.webp" alt="" data-lang-en="venues/JTBD-states-en.webp" data-lang-fr="venues/JTBD-states-fr.webp">
-                </div>
-            </div>
-            <div class="learned-row learned-row--flip reveal reveal--from-right">
-                <div class="learned-img">
-                    <img src="venues/state-of-decay.webp" alt="">
-                </div>
-                <div class="learned-text">
-                    <div class="lead" data-i18n="cs.venue.learned.2.title">Good references are systems, not screens.</div>
-                    <div class="learned-desc">
-                        <p data-i18n="cs.venue.learned.2.desc1">Looking beyond design feeds shifted the question from "how should this look?" to "what problem has already been solved at scale?"</p>
-                        <p data-i18n="cs.venue.learned.2.desc2">Borrowing architecture, not aesthetics, led to more confident and grounded decisions.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="learned-row reveal reveal--from-left">
-                <div class="learned-text">
-                    <div class="lead" data-i18n="cs.venue.learned.3.title">AI compresses the gap between hypothesis and clarity.</div>
-                    <div class="learned-desc">
-                        <p data-i18n="cs.venue.learned.3.desc1">Using Claude Code enabled rapid prototyping and faster iteration cycles between concept and implementation.</p>
-                    </div>
-                </div>
-                <div class="learned-img">
-                    <img src="venues/bot.webp" alt="">
-                </div>
-            </div>
-        </div>
-
-        <hr>
-
-        <h2 class="reveal" data-i18n="cs.venue.h2.quotes">Key Principles I'll Carry Forward</h2>
-        <div class="quotes">
-            <div class="quote-item reveal reveal--delay-1" data-i18n="cs.venue.quote.1">Social mechanics should be structurally incapable of producing toxicity, not reliant on settings or moderation to prevent bad outcomes.</div>
-            <div class="quote-item reveal reveal--delay-2" data-i18n="cs.venue.quote.2">The moment you ask someone to join, you create a moment where they can say no. Design the belonging, not the ask.</div>
-            <div class="quote-item reveal reveal--delay-3" data-i18n="cs.venue.quote.3">Absence must not feel consequential. Presence should feel meaningful. Those are not the same design problem.</div>
-        </div>
-
-        <!-- TOOLS & METHODS -->
-        <h2 class="reveal" data-i18n-html="cs.venue.h2.tools">Tools &amp; Methods</h2>
-        <div class="tools-pills reveal reveal--delay-1">
-            <div class="tools-pill" data-i18n="cs.venue.tools.pill1">Figma (UI/UX design, prototyping)</div>
-            <div class="tools-pill" data-i18n="cs.venue.tools.pill2">Claude Code (rapid prototyping, interaction testing)</div>
-            <div class="tools-pill" data-i18n="cs.venue.tools.pill3">System design thinking</div>
-            <div class="tools-pill" data-i18n="cs.venue.tools.pill4">User journey mapping</div>
-        </div>
-
-        <!-- CTA -->
-        <div class="cta-block reveal reveal--delay-1">
-            <h2 data-i18n="cs.venue.cta.h2">Want to see the full system?</h2>
-            <p data-i18n="cs.venue.cta.p">The complete deliverable set is available on request.</p>
-            <div class="deliverables">
-                <span class="deliverable-tag" data-i18n="cs.venue.cta.tag1">Full concept schema</span>
-                <span class="deliverable-tag" data-i18n="cs.venue.cta.tag2">10-slide presentation deck</span>
-                <span class="deliverable-tag" data-i18n="cs.venue.cta.tag3">D7 discovery flow spec</span>
-                <span class="deliverable-tag" data-i18n="cs.venue.cta.tag4">User testing documentation</span>
-                <span class="deliverable-tag" data-i18n="cs.venue.cta.tag5">Design decision rationale</span>
-            </div>
-            <a href="mailto:jacob.radonirina@gmail.com" class="cta-btn" data-i18n="cs.venue.cta.btn"> Get in touch</a>
-        </div>
-
-    </main>
-
+<main class="vcs" id="main">
+<section class="c-hero" id="top">
+<a class="back" data-i18n-html="vcs.001" href="index.html#travaux">← Travaux</a>
+<img alt="Venue" class="c-logo" height="48" src="venues/Venue_Logo_Pink.png" width="120"/>
+<span class="eyebrow" data-i18n-html="vcs.002">ÉTUDE DE CAS · RÉTENTION · JEU MOBILE</span>
+<h1 data-i18n-html="vcs.003">Donner aux joueurs une raison de revenir chaque semaine.</h1>
+<p class="lead" data-i18n-html="vcs.004">Venue, développé par Superbloom, est un jeu mobile de décoration où plus de 800 000 joueuses actives chaque mois créent des pièces et votent pour celles des autres. Le défi à relever en un sprint de 2 semaines : comment leur donner une vraie raison de revenir, sans leur ajouter de tâches supplémentaires ?</p>
+<dl class="meta">
+<div><dt data-i18n-html="vcs.005">Mon rôle</dt><dd>Lead UX &amp; Product Designer</dd></div>
+<div><dt data-i18n-html="vcs.006">Problème produit</dt><dd data-i18n-html="vcs.007">Une dimension sociale trop faible dans le jeu</dd></div>
+<div><dt data-i18n-html="vcs.008">Objectif business</dt><dd data-i18n-html="vcs.009">Soutenir la rétention J7 / J30</dd></div>
+<div><dt data-i18n-html="vcs.010">Méthodes</dt><dd data-i18n-html="vcs.011">Design sprint de 2 semaines : interviews, journey map, benchmark, tests en live</dd></div>
+</dl>
+<figure class="c-visual rv"><img alt="Parcours de rétention de Venue, du jour 7 au jour 30" height="1125" src="Captures/venue_d7_d30-fr.webp" data-lang-fr="Captures/venue_d7_d30-fr.webp" data-lang-en="Captures/venue_d7_d30-en.webp" width="1214"/></figure>
+</section>
+<section class="c-sec">
+<div class="c-grid2">
+<div class="rv"><span class="eyebrow" data-i18n-html="vcs.012">EN BREF</span><h2 data-i18n-html="vcs.013">Les joueuses recherchaient une interaction sociale : comment en faire un levier de rétention ?</h2></div>
+<div class="rv">
+<p class="big" data-i18n-html="vcs.014">Les joueuses créaient et votaient, mais ces interactions ne construisaient pas de lien social entre elles. Leur activité avait une valeur individuelle dans le jeu, sans devenir une expérience collective.</p>
+<p data-i18n-html="vcs.015">Durant les deux semaines, mon rôle n’était pas d’inventer des « fonctionnalités sociales ». Il s’agissait de concevoir une couche sociale qui renforce la rétention <em>sans changer le comportement de base qui fonctionnait déjà</em>.</p>
 </div>
+</div>
+</section>
+<section class="c-sec alt">
+<div class="rv"><span class="eyebrow" data-i18n-html="vcs.016">01 · LE PROBLÈME PRODUIT</span><h2 data-i18n-html="vcs.017">Des joueurs impliqués dans leurs créations, en quête de reconnaissance.</h2></div>
+<div class="c-grid2">
+<div class="rv">
+<p data-i18n-html="vcs.018">Venue est un <strong>jeu mobile de décoration d’intérieur</strong> : les joueurs y aménagent des pièces, soumettent leurs créations et votent pour celles des autres. Le jeu comptait déjà <strong>plus de 4 millions de téléchargements sur les stores</strong>, une communauté majoritairement féminine et des habitudes de jeu quotidiennes bien installées.</p>
+<p data-i18n-html="vcs.019">Les retours collectés par Superbloom (groupe Facebook de 30 000 membres, sondages, avis sur les stores) montraient que les joueuses voulaient <strong>plus de social</strong>. L’audit du jeu et les tests avec des joueuses l’ont précisé : elles s’impliquaient dans leurs créations et voulaient <strong>se sentir valorisées dans leurs choix</strong>. Quand elles votaient à leur tour, elles voulaient que leur vote ait du sens.</p>
+</div>
+<blockquote class="quote rv" data-i18n-html="vcs.020">« Le problème n’était pas un manque d’engagement. Il manquait au produit une boucle de retour social qui donne du sens à l’activité des joueurs. »<cite>— Brief de Superbloom</cite></blockquote>
+</div>
+</section>
+<section class="c-sec">
+<div class="rv"><span class="eyebrow" data-i18n-html="vcs.021">02 · BESOINS ET EXIGENCES</span><h2 data-i18n-html="vcs.022">Ce que les joueuses attendent de l’expérience.</h2></div>
+<p class="c-note rv" data-i18n-html="vcs.023">L’analyse de l’expérience existante et du persona Beth a permis de distinguer les besoins à satisfaire des exigences à respecter pour concevoir une nouvelle expérience sociale.</p>
+<div class="req">
+<div class="req-col rv"><span class="eyebrow" data-i18n-html="vcs.024">BESOINS DU PERSONA : BETH</span><ul>
+<li data-i18n-html="vcs.025">Beth a besoin de <strong>reconnaître la boucle de jeu</strong> qu’elle connaît déjà : créer, soumettre, voter.</li>
+<li data-i18n-html="vcs.026">Elle a besoin de savoir qu’elle peut <strong>continuer à jouer à son rythme</strong>, sans obligation, comme avant.</li>
+<li data-i18n-html="vcs.027">Elle a besoin de savoir que <strong>quelqu’un a apprécié sa création</strong>.</li>
+<li data-i18n-html="vcs.028">Elle a besoin de savoir que <strong>son vote a du sens pour la personne</strong> qui reçoit son appréciation.</li>
+</ul></div>
+<div class="req-col org rv"><span class="eyebrow" data-i18n-html="vcs.029">EXIGENCES ORGANISATIONNELLES</span><ul>
+<li data-i18n-html="vcs.030">Le nouveau mécanisme ne doit générer <strong>aucun contenu à modérer</strong> : ni chat, ni commentaire libre.</li>
+<li data-i18n-html="vcs.031">Il doit s’appuyer sur les <strong>mécaniques existantes</strong> (soumission, vote, chapitres).</li>
+<li data-i18n-html="vcs.032">Il ne doit introduire <strong>ni classement ni compétition</strong> entre joueuses.</li>
+<li data-i18n-html="vcs.033">Il ne doit pas <strong>alourdir l’interface</strong>, pensée pour une audience très large.</li>
+</ul></div>
+</div>
+<div aria-label="Boucle de jeu existante : créer une décoration, la soumettre au vote, voter à son tour. Valeur sociale manquante : la reconnaissance. Objectif business : rétention J7 / J30." class="sv rv" role="img">
+<div class="fit sv-loopw" data-w="540"><div class="sv-loop">
+<svg aria-hidden="true" fill="none" stroke="#1A1714" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 540 420"><circle cx="215" cy="215" r="160"></circle><path d="M347.7 139.9L360 147.4L362.2 133.1"></path><path d="M47 220L55 208L63 220"></path></svg>
+<span class="sv-c" data-i18n-html="vcs.034">Boucle<br>de jeu</span>
+<img alt="" class="sv-th" height="84" src="venues/cs/sv-room.webp" style="left:0;top:16px" width="104"/>
+<img alt="" class="sv-items" height="33" src="venues/cs/sv-items.png" style="left:0;top:104px" width="104"/>
+<div class="sv-card" style="left:120px;top:22px"><b data-i18n-html="vcs.035">Comportement existant</b><strong data-i18n-html="vcs.036">Créer une décoration</strong></div>
+<img alt="" class="sv-th" height="92" src="venues/cs/sv-submit.webp" style="left:230px;top:168px" width="68"/>
+<span class="sv-ok" style="left:253px;top:268px"><svg fill="none" height="13" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.2" viewbox="0 0 24 24" width="13"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+<div class="sv-card" style="left:312px;top:172px"><b data-i18n-html="vcs.037">Comportement existant</b><strong data-i18n-html="vcs.038">Soumettre au vote</strong></div>
+<img alt="" class="sv-th" height="56" src="venues/cs/sv-d2.webp" style="left:52px;top:298px" width="56"/>
+<img alt="" class="sv-th" height="56" src="venues/cs/sv-d1.webp" style="left:52px;top:360px" width="56"/>
+<div class="sv-card" style="left:120px;top:322px"><b data-i18n-html="vcs.039">Comportement existant</b><strong data-i18n-html="vcs.040">Voter à son tour</strong></div>
+</div></div>
+<div aria-hidden="true" class="sv-link"><svg fill="none" stroke="#EF9180" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 72 16"><path d="M4 8H64" stroke-dasharray="4 5"></path><path d="M58 2L66 8L58 14"></path></svg></div>
+<div class="sv-side">
+<div class="sv-card miss"><b data-i18n-html="vcs.041">Valeur sociale manquante</b><strong data-i18n-html="vcs.042">Reconnaissance</strong></div>
+<div aria-hidden="true" class="sv-down"><svg fill="none" stroke="#B4513F" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 16 36"><path d="M8 3V31"></path><path d="M2 25L8 32L14 25"></path></svg></div>
+<div class="sv-card goal"><b data-i18n-html="vcs.043">Objectif business</b><strong data-i18n-html="vcs.044">Rétention J7 / J30</strong></div>
+</div>
+</div>
+</section>
+<section class="c-sec">
+<div class="c-split">
+<figure class="shot rv"><img alt="Proposition d’un Design Studio : « Jouer avec ce Studio »" height="1065" loading="lazy" src="venues/cs/studio-popup.webp" width="750"/></figure>
+<div class="rv">
+<span class="eyebrow" data-i18n-html="vcs.045">03 · LA SOLUTION</span>
+<h2 data-i18n-html="vcs.046">Design Studios : une nouvelle couche sociale intégrée au jeu.</h2>
+<p data-i18n-html="vcs.047">Pour combler la valeur manquante, la reconnaissance, j’ai conçu le <strong>Design Studio</strong> : un petit groupe de 10 à 20 joueuses réunies autour d’un même style de décoration.</p>
+<p data-i18n-html="vcs.048">Ce format permet de créer un groupe à taille humaine, avec un intérêt commun comme premier point de connexion. Les joueuses font progresser leur Studio grâce à leurs actions habituelles, sans avoir à adopter de nouvelles tâches.</p>
+<p data-i18n-html="vcs.049">Pour que la joueuse s’intègre à ce mécanisme à chaque étape (découverte, adhésion, routine), j’ai analysé ses besoins psychologiques et cartographié son parcours dans une user journey map.</p>
+<div class="tags"><span data-i18n-html="vcs.050">Feedback social</span><span data-i18n-html="vcs.051">Motivation intrinsèque</span><span data-i18n-html="vcs.052">Onboarding contextuel</span><span data-i18n-html="vcs.053">Charge cognitive faible</span></div>
+</div>
+</div>
+</section>
+<section class="c-sec">
+<div class="c-split fb rev">
+<div class="rv">
+<span class="eyebrow" data-i18n-html="vcs.054">LA VALEUR MANQUANTE</span>
+<h2 data-i18n-html="vcs.055">Faire de chaque vote une occasion de reconnaissance.</h2>
+<p data-i18n-html="vcs.056">Le système de vote devait répondre à deux attentes : permettre à celle qui vote de savoir que son appréciation compte, et donner à celle qui reçoit un vote une indication sur ce qui a été apprécié dans sa création.</p>
+<p data-i18n-html="vcs.057">J’ai intégré des <strong>retours prédéfinis</strong> (composition, couleurs, lumière, matières) directement dans le parcours de vote et dans une nouvelle galerie accessible depuis le Studio. La joueuse peut ainsi exprimer ce qu’elle a apprécié, tandis que celle qui reçoit le retour comprend mieux ce qui a retenu l’attention.</p>
+<p data-i18n-html="vcs.058">Mais le vote reste une interaction éphémère. La galerie donne une autre dimension à ces échanges : les créations des membres restent accessibles dans le Studio. Chacune peut y revenir, découvrir les réalisations des autres et leur laisser un retour.</p>
+</div>
+<figure class="shot rv"><img alt="Écran de vote avec des retours présélectionnés : « Qu’avez-vous apprécié ? »" height="974" loading="lazy" src="venues/cs/vote-feedback.webp" width="750"/></figure>
+</div>
+<figure class="c-reel rv"><video aria-label="Comparaison avant / après du système de vote" controls="" loop="" muted="" playsinline="" poster="venues/cs/reel-vote-poster.jpg" preload="metadata" src="venues/cs/reel-vote.mp4"></video><figcaption data-i18n-html="vcs.059">Avant / après : le système de vote. À gauche le jeu original, à droite le prototype avec les retours présélectionnés.</figcaption></figure>
+</section>
+<section class="c-sec">
+<div class="c-split rev">
+<div class="rv">
+<span class="eyebrow" data-i18n-html="vcs.060">04 · DESIGN D’INTERACTION</span>
+<h2 data-i18n-html="vcs.061">Fonctionnalité clé : une intégration tout en subtilité.</h2>
+<p data-i18n-html="vcs.062">L’adhésion constitue un moment décisif : une invitation trop engageante pourrait freiner une joueuse comme Beth, qui vient avant tout pour se détendre. J’ai donc conçu cette entrée comme un prolongement naturel de l’expérience, avec une invitation à « Jouer avec ce Studio » plutôt qu’à « Rejoindre » un groupe.</p>
+<p data-i18n-html="vcs.063">L’invitation apparaît après une étape importante du jeu, lorsque la joueuse est déjà familiarisée avec ses mécaniques.</p>
+</div>
+<figure class="shot rv"><img alt="Onboarding : « Jouer avec ce studio » au lieu de « rejoindre »" height="1125" loading="lazy" src="Captures/venue_onboarding-fr.webp" data-lang-fr="Captures/venue_onboarding-fr.webp" data-lang-en="Captures/venue_onboarding-en.webp" width="1214"/></figure>
+</div>
+</section>
+<section class="c-sec">
+<div class="rv">
+<span class="eyebrow" data-i18n-html="vcs.064">05 · LE MÉCANISME DE RÉTENTION</span>
+<h2 data-i18n-html="vcs.065">Deux mécaniques pour transformer les actions individuelles en expérience collective.</h2>
+<p class="c-note" data-i18n-html="vcs.066">Pour faire revenir les joueurs, deux mécaniques prennent le relais l’une de l’autre : la première donne au joueur une raison de revenir dès la première semaine (J7), la seconde l’attache à son groupe dans la durée (J30).</p>
+</div>
+<div class="lr">
+<div class="lr-row">
+<div class="lr-txt rv"><img alt="" height="43" src="venues/cs/key.png" width="40"/><span class="lk" data-i18n-html="vcs.067">Horizon court terme (J7) · Besoin psychologique : contribuer</span><h3 data-i18n-html="vcs.068">Chaque action habituelle contribue à un défi collectif hebdomadaire</h3><p data-i18n-html="vcs.069">Une fois membre d’un Design Studio, la joueuse sait que ce qu’elle fait au quotidien profite désormais à son groupe. En créant, en soumettant ou en votant, elle gagne des clés, qui font avancer le défi de la semaine et donnent accès à une récompense commune.</p></div>
+<div aria-hidden="true" class="lr-pan"><svg class="lr-deco" fill="none" preserveaspectratio="xMidYMid slice" viewbox="0 0 600 460"><path d="M130 0V372H600" stroke="#fff" stroke-width="3"></path><path d="M130 372L40 460" stroke="#fff" stroke-width="3"></path></svg><img alt="" class="lr-img wk" height="477" loading="lazy" src="venues/cs/weekly-challenge.webp" width="566"/></div>
+</div>
+<div class="lr-row rev">
+<div aria-hidden="true" class="lr-pan dark"><svg class="lr-deco" fill="none" preserveaspectratio="xMidYMid slice" viewbox="0 0 600 460"><path d="M470 0V400H0" stroke="#fff" stroke-width="3"></path><path d="M0 40L140 0" stroke="#fff" stroke-width="3"></path><path d="M470 400L560 460" stroke="#fff" stroke-width="3"></path></svg><img alt="" class="lr-img sh" height="1062" loading="lazy" src="venues/cs/shared-space.webp" width="760"/></div>
+<div class="lr-txt rv"><img alt="" height="42" src="venues/cs/arrow.png" width="42"/><span class="lk" data-i18n-html="vcs.070">Horizon long terme (J30) · Besoin psychologique : appartenance</span><h3 data-i18n-html="vcs.071">Construire une salle ensemble</h3><p data-i18n-html="vcs.072">Chaque Studio possède une salle qui évolue avec le niveau du groupe. Chaque membre la décore à son style, et toutes les décorations sont réunies dans une galerie visible par tous. Avec le temps, le style de chacune devient une identité que le groupe reconnaît. Le niveau suivant se déverrouille avec une flèche, la récompense obtenue en réussissant le défi hebdomadaire. La progression du Studio devient ainsi le résultat visible de leurs contributions.</p></div>
+</div>
+</div>
+<figure class="c-reel rv"><video aria-label="Comparaison avant / après de la boucle de jeu et des récompenses" controls="" loop="" muted="" playsinline="" poster="venues/cs/reel-loop-poster.jpg" preload="metadata" src="venues/cs/reel-loop.mp4"></video><figcaption data-i18n-html="vcs.073">Avant / après : la boucle de jeu et les récompenses. À gauche le jeu original, à droite le prototype des Design Studios.</figcaption></figure>
+</section>
+<section class="c-sec alt">
+<div class="rv"><span class="eyebrow" data-i18n-html="vcs.074">06 · CE QUE CE PROJET DÉMONTRE</span><h2 data-i18n-html="vcs.075">Ma contribution : le système, pas seulement les écrans.</h2></div>
+<div class="c-tiles">
+<article class="c-tile rv"><span class="k" data-i18n-html="vcs.076">Vision produit</span><h3 data-i18n-html="vcs.077">Relier le problème utilisateur à l’objectif business</h3><p data-i18n-html="vcs.078">J’ai traduit une demande de fonctionnalités sociales en un problème de reconnaissance et de rétention.</p></article>
+<article class="c-tile g rv"><span class="k" data-i18n-html="vcs.079">Systèmes UX</span><h3 data-i18n-html="vcs.080">Concevoir une expérience qui évolue dans le temps</h3><p data-i18n-html="vcs.081">J’ai relié découverte, adhésion, contribution et progression dans un même système.</p></article>
+<article class="c-tile rv"><span class="k" data-i18n-html="vcs.082">Design par les contraintes</span><h3 data-i18n-html="vcs.083">Faire des contraintes des règles de conception</h3><p data-i18n-html="vcs.084">J’ai conçu des interactions sociales compatibles avec l’architecture actuelle du jeu et l’absence de modération.</p></article>
+</div>
+<div class="rm rv">
+<span class="eyebrow" data-i18n-html="vcs.085">COMMENT J’AI STRUCTURÉ LES 2 SEMAINES</span>
+<div class="rm-gs">
+<div class="rm-g" style="--n:4"><span class="rm-wk" data-i18n-html="vcs.086">Semaine 1</span><ol class="rm-l"><li data-i18n-html="vcs.087"><i></i><b>Jour 1</b><strong>Onboarding et discovery</strong><small>Familiarisation avec le sujet, collecte des éléments, préparation du premier interview</small></li><li data-i18n-html="vcs.088"><i></i><b>Jour 2</b><strong>Mapping</strong><small>Persona et user journey map</small></li><li data-i18n-html="vcs.089"><i></i><b>Jour 3</b><strong>Benchmark</strong><small>Ceux qui ont déjà résolu un problème proche, puis premier interview avec des joueuses</small></li><li data-i18n-html="vcs.090"><i></i><b>Jours 4 et 5</b><strong>Prototypes</strong><small>Parcours et prototype interactif</small></li></ol></div>
+<div class="rm-g" style="--n:3"><span class="rm-wk" data-i18n-html="vcs.091">Semaine 2</span><ol class="rm-l"><li data-i18n-html="vcs.092"><i></i><b>Jours 6 et 7</b><strong>Live review</strong><small>Tests en direct avec des joueuses</small></li><li data-i18n-html="vcs.093"><i></i><b>Jours 8 et 9</b><strong>Documentation</strong><small>Annotations et specs pour l’équipe</small></li><li data-i18n-html="vcs.094"><i></i><b>Jour 10</b><strong>Présentation finale</strong><small>Storytelling du projet</small></li></ol></div>
+</div>
+</div>
+</section>
+<section class="c-sec">
+<div class="rv"><span class="eyebrow" data-i18n-html="vcs.095">07 · PLAN DE MESURE</span><h2 data-i18n-html="vcs.096">Ce que je validerais ensuite.</h2></div>
+<div aria-label="Plan de mesure" class="c-table rv" role="table">
+<div class="r" role="row"><div data-i18n-html="vcs.097" role="cell">Activation / découverte</div><div data-i18n-html="vcs.098" role="cell">Les joueurs découvrent-ils les Studios à l’étape prévue, et en comprennent-ils assez vite l’intérêt pour y entrer ?</div></div>
+<div class="r" role="row"><div data-i18n-html="vcs.099" role="cell">Rétention à court terme</div><div data-i18n-html="vcs.100" role="cell">La participation à un Studio change-t-elle la rétention J7 par rapport à des joueurs engagés comparables ?</div></div>
+<div class="r" role="row"><div data-i18n-html="vcs.101" role="cell">Rétention à long terme</div><div data-i18n-html="vcs.102" role="cell">La progression collective dans la durée contribue-t-elle à la rétention J30 ou à une participation hebdomadaire répétée ?</div></div>
+<div class="r" role="row"><div data-i18n-html="vcs.103" role="cell">Résultat opérationnel</div><div data-i18n-html="vcs.104" role="cell">Le système tient-il la contrainte de zéro modération en usage réel ?</div></div>
+</div>
+<p class="c-small rv" data-i18n-html="vcs.105">Note : il s’agissait d’un concept de design de phase 2, destiné à être évalué par l’équipe de développement. Les résultats ci-dessus sont donc des objectifs de validation, pas des résultats mesurés en production.</p>
+</section>
+<section class="c-sec alt">
+<div class="c-grid2">
+<div class="rv"><span class="eyebrow" data-i18n-html="vcs.106">08 · CE QUE J’EN RETIENS</span><h2 data-i18n-html="vcs.107">Partir du résultat. Puis concevoir le comportement.</h2></div>
+<div class="rv">
+<p data-i18n-html="vcs.108">Les meilleures décisions sont venues du fait de définir le problème utilisateur et business avant les mécaniques : quand les joueurs ont besoin de reconnaissance, quel effort ils sont prêts à fournir, et ce que le produit peut supporter sans risque.</p>
+<p data-i18n-html="vcs.109">Mon rôle est passé de la conception d’« écrans sociaux » à la conception d’un <strong>système de rétention</strong> construit autour des comportements existants.</p>
+</div>
+</div>
+<p class="c-credits rv" data-i18n-html="vcs.110">Lead UX &amp; Product Designer · Yummy Labs × Superbloom · Sprint de 2 semaines · Top Sprinter, mars 2026</p>
+</section>
+<section aria-label="Planches du projet : user journey map, persona et écrans" class="c-gallery">
+<div class="rv"><h2 class="g-title" data-i18n-html="vcs.111">Quelques éléments de conception qui ont guidé le projet.</h2></div>
+<div class="g-duo">
+<div class="fit rv" data-w="620"><div class="pm">
+<div class="pm-hero"><img alt="" src="venues/cs/beth.webp"/><div><span>PERSONA</span><b>Beth</b><i data-i18n-html="vcs.112">@Its_Beth · 34 ans · joue le soir</i></div></div>
+<p class="pm-q" data-i18n-html="vcs.113">« Chaque soir, Beth ferme Venue et ouvre Facebook. »</p>
+<div class="pm-stats"><div data-i18n-html="vcs.114"><b>20 h</b>de jeu</div><div data-i18n-html="vcs.115"><b>600</b>créations</div><div data-i18n-html="vcs.116"><b>Niv. 12</b>niveau joueur</div><div data-i18n-html="vcs.117"><b>Minimaliste</b>style préféré</div></div>
+<div class="pm-cols"><div><h5 data-i18n-html="vcs.118">Objectifs</h5><ul><li data-i18n-html="vcs.119">Voir ses créations appréciées</li><li data-i18n-html="vcs.120">Que ses votes comptent</li><li data-i18n-html="vcs.121">Un groupe qui partage son style</li></ul></div><div><h5>Frustrations</h5><ul><li data-i18n-html="vcs.122">Aucun retour après un vote</li><li data-i18n-html="vcs.123">Pas de lien avec les autres</li><li data-i18n-html="vcs.124">Va chercher ailleurs la reconnaissance</li></ul></div></div>
+<h5>Motivations</h5>
+<div class="pm-bars"><span data-i18n-html="vcs.125">Reconnaissance</span><i style="--v:90%"></i><span data-i18n-html="vcs.126">Créativité</span><i style="--v:85%"></i><span data-i18n-html="vcs.127">Appartenance</span><i style="--v:75%"></i><span data-i18n-html="vcs.128">Compétition</span><i style="--v:20%"></i></div>
+<h5 data-i18n-html="vcs.129">Personnalité</h5>
+<div class="pm-sl"><span data-i18n-html="vcs.130">Introvertie</span><i style="--v:35%"></i><span data-i18n-html="vcs.131">Extravertie</span><span data-i18n-html="vcs.132">Joueuse casual</span><i style="--v:30%"></i><span>Hardcore</span></div>
+</div></div>
+<div class="g-photo rv"><img alt="Beth qui joue à Venue le soir" height="927" loading="lazy" src="venues/cs/beth-playing.webp" width="600"/><img alt="" height="952" loading="lazy" src="venues/cs/fig-studio-home.webp" width="440"/><img alt="" height="952" loading="lazy" src="venues/cs/fig-feedback.webp" width="440"/></div>
+</div>
+<div class="fit rv" data-w="1536"><div class="jm">
+<div class="jm-top"><span>USER JOURNEY MAP</span><b data-i18n-html="vcs.133">Beth · Découverte du Design Studio · J7</b><i data-i18n-html="vcs.134">Déclencheur : 10<sup>e</sup> création soumise</i></div>
+<div class="jm-grid">
+<div class="jm-lab"></div><div class="jm-row jm-phs"><div class="jm-ph" data-i18n-html="vcs.135" style="grid-column:span 1;background:#ffe1d6">Avant</div><div class="jm-ph" data-i18n-html="vcs.136" style="grid-column:span 3;background:#FDF0ED">Découverte</div><div class="jm-ph" data-i18n-html="vcs.137" style="grid-column:span 2;background:#e6f6ee">Adhésion</div><div class="jm-ph" style="grid-column:span 1;background:#fff3cc">Routine</div></div>
+<div class="jm-lab" data-i18n-html="vcs.138">Étapes</div><div class="jm-row"><div class="jm-step" data-i18n-html="vcs.139"><b>01</b>Le moment clé</div><div class="jm-step" data-i18n-html="vcs.140"><b>02</b>La révélation</div><div class="jm-step" data-i18n-html="vcs.141"><b>03</b>La présentation</div><div class="jm-step" data-i18n-html="vcs.142"><b>04</b>Le choix</div><div class="jm-step" data-i18n-html="vcs.143"><b>05</b>La confirmation</div><div class="jm-step" data-i18n-html="vcs.144"><b>06</b>L’arrivée</div><div class="jm-step" data-i18n-html="vcs.145"><b>07</b>Le retour au jeu</div></div>
+<div class="jm-lab">Actions</div><div class="jm-row"><div class="jm-c"><span class="jm-st" data-i18n-html="vcs.146">Récompense obtenue, message système</span></div><div class="jm-c"><span class="jm-st" data-i18n-html="vcs.147">Écran « Rejoindre un Design Studio »</span></div><div class="jm-c"><span class="jm-st" data-i18n-html="vcs.148">Trois idées, ton chaleureux</span></div><div class="jm-c"><span class="jm-st" data-i18n-html="vcs.149">3 Studios proposés selon son style</span></div><div class="jm-c"><span class="jm-st" data-i18n-html="vcs.150">Slogan et visages des membres</span></div><div class="jm-c"><span class="jm-st" data-i18n-html="vcs.151">Découverte de Casa Bloom</span></div><div class="jm-c"><span class="jm-st" data-i18n-html="vcs.152">Elle joue comme avant</span></div></div>
+<div class="jm-lab" data-i18n-html="vcs.153">Points de contact</div><div class="jm-row jm-tp"><div class="jm-c"><img alt="" src="venues/cs/fig-rewards.webp"/></div><div class="jm-c"><img alt="" src="venues/cs/fig-vote-reward.webp"/></div><div class="jm-c"><img alt="" src="venues/cs/fig-studio-welcome.webp"/></div><div class="jm-c"><img alt="" src="venues/cs/fig-studio-match.webp"/></div><div class="jm-c"><img alt="" src="venues/cs/fig-choice-shaped.webp"/></div><div class="jm-c"><img alt="" src="venues/cs/fig-studio-home.webp"/></div><div class="jm-c"><img alt="" src="venues/cs/fig-vote.webp"/></div></div>
+<div class="jm-lab" data-i18n-html="vcs.154">Pensées</div><div class="jm-row"><div class="jm-c"><span class="jm-bub" data-i18n-html="vcs.155">« Encore une récompense ! »</span></div><div class="jm-c"><span class="jm-bub" data-i18n-html="vcs.156">« Un Studio ? C’est quoi ? »</span></div><div class="jm-c"><span class="jm-bub" data-i18n-html="vcs.157">« OK, je comprends vite »</span></div><div class="jm-c"><span class="jm-bub" data-i18n-html="vcs.158">« Celui-là me ressemble »</span></div><div class="jm-c"><span class="jm-bub" data-i18n-html="vcs.159">« Je rejoins des gens »</span></div><div class="jm-c"><span class="jm-bub" data-i18n-html="vcs.160">« C’est vivant ici »</span></div><div class="jm-c"><span class="jm-bub" data-i18n-html="vcs.161">« Mes parties comptent »</span></div></div>
+<div class="jm-lab" data-i18n-html="vcs.162">Émotions</div><div class="jm-row jm-emo"><svg height="150" viewbox="0 0 1330 150" width="1330"><line class="jm-mid" x1="0" x2="1330" y1="75.0" y2="75.0"></line><polyline points="95,35 285,57 475,72 665,59 855,48 1045,30 1235,44"></polyline></svg><img alt="" class="jm-av" src="venues/cs/emo-1.webp" style="left:73px;top:13px"/><img alt="" class="jm-av" src="venues/cs/emo-2.webp" style="left:263px;top:35px"/><img alt="" class="jm-av" src="venues/cs/emo-3.webp" style="left:453px;top:50px"/><img alt="" class="jm-av" src="venues/cs/emo-4.webp" style="left:643px;top:37px"/><img alt="" class="jm-av" src="venues/cs/emo-5.webp" style="left:833px;top:26px"/><img alt="" class="jm-av" src="venues/cs/emo-6.webp" style="left:1023px;top:8px"/><img alt="" class="jm-av" src="venues/cs/emo-7.webp" style="left:1213px;top:22px"/></div>
+<div class="jm-lab" data-i18n-html="vcs.163">Opportunités</div><div class="jm-row"><div class="jm-c"><span class="jm-op" data-i18n-html="vcs.164">Ancrer la découverte sur un pic émotionnel</span></div><div class="jm-c"><span class="jm-op" data-i18n-html="vcs.165">Toujours laisser « Plus tard »</span></div><div class="jm-c"><span class="jm-op" data-i18n-html="vcs.166">Moins de 10 secondes pour comprendre</span></div><div class="jm-c"><span class="jm-op" data-i18n-html="vcs.167">Montrer une communauté déjà active</span></div><div class="jm-c"><span class="jm-op" data-i18n-html="vcs.168">Bouton « Jouer avec ce Studio »</span></div><div class="jm-c"><span class="jm-op" data-i18n-html="vcs.169">Objectif et activité visibles dès l’arrivée</span></div><div class="jm-c"><span class="jm-op" data-i18n-html="vcs.170">Aucune tâche en plus</span></div></div>
+</div>
+</div></div>
+<div class="g-grid rv"><div class="g-row"><img alt="Niveau 5 : les Design Studios se débloquent" height="952" loading="lazy" src="venues/cs/fig-unlock.webp" width="440"/><img alt="Trois Studios proposés selon son style" height="952" loading="lazy" src="venues/cs/fig-studio-match.webp" width="440"/><img alt="Accueil dans le Studio Casa Bloom" height="952" loading="lazy" src="venues/cs/fig-studio-welcome.webp" width="440"/><img alt="Défi hebdomadaire du Studio" height="952" loading="lazy" src="venues/cs/fig-studio-challenge.webp" width="440"/><img alt="Page du Studio et sa contribution" height="952" loading="lazy" src="venues/cs/fig-studio-home.webp" width="440"/><img alt="Salle partagée du Studio" height="952" loading="lazy" src="venues/cs/fig-shared-room.webp" width="440"/></div><div class="g-row"><img alt="Chapitres du jeu" height="952" loading="lazy" src="venues/cs/fig-chapters.webp" width="440"/><img alt="Vote entre deux décorations, avec les notes des joueuses" height="952" loading="lazy" src="venues/cs/fig-vote-cards.webp" width="440"/><img alt="Vote avec retours présélectionnés : « What did you enjoy? »" height="952" loading="lazy" src="venues/cs/fig-vote-enjoy.webp" width="440"/><img alt="Retours présélectionnés sur une création" height="952" loading="lazy" src="venues/cs/fig-feedback.webp" width="440"/></div><div class="g-row"><img alt="Palier franchi par le Studio" height="952" loading="lazy" src="venues/cs/fig-studio-milestone.webp" width="440"/><img alt="Studio prêt à passer au niveau suivant" height="952" loading="lazy" src="venues/cs/fig-studio-ready.webp" width="440"/><img alt="Le choix de la joueuse fait avancer le Studio" height="952" loading="lazy" src="venues/cs/fig-choice-shaped.webp" width="440"/><img alt="Récompense de vote" height="952" loading="lazy" src="venues/cs/fig-vote-reward.webp" width="440"/><img alt="Récupération des récompenses" height="952" loading="lazy" src="venues/cs/fig-rewards.webp" width="440"/></div></div>
+</section>
+
+<section class="c-next">
+  <a class="c-next-link" href="index.html#travaux" data-i18n="vcs.next">Voir les autres travaux →</a>
+</section>
+</main>
 <!-- ── END CASE STUDY CONTENT ──────────────────────────── -->
 
 <!-- ── MAIN CONTENT (contact) ──────────────────────────── -->
 <div class="main-content" id="landing">
-    <div class="container">
-
-        <div class="right-side">
-            <div class="quote">
-                <p data-i18n-html="quote.text">Je ne commence pas par Figma. <br><span>Je commence par les problèmes de votre produit.</span></p>
-            </div>
-        </div>
-
-        <div class="left-side">
-            <div class="content" id="leftcontent">
-                <h2 data-i18n-html="main.h2">Pour les équipes B2B qui ont perdu du temps avec des <span>designers qui n'ont pas compris le produit.</span></h2>
-                <p class="subtitle" data-i18n="main.subtitle">Parlez-moi de votre projet. Je vous réponds sous 24h avec une proposition personnalisée.</p>
-
-            </div>
-
-            <div class="calendly-inline-widget"
-                data-url="https://calendly.com/jacob-radonirina/30min?hide_gdpr_banner=1&primary_color=0066ff"
-                style="min-width:280px; height:660px;"></div>
-        </div>
-
-    </div>
+    
 </div>
 
 <!-- ── FOOTER ──────────────────────────────────────────── -->
@@ -923,134 +386,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </footer>
 
-<!-- ── PORTFOLIO SECTION ─────────────────────────────────── -->
-<div class="portfolio-section" id="portfolioSection" tabindex="-1">
-    <button class="portfolio-close" id="portfolioClose" onclick="hidePortfolio()" aria-label="Fermer le portfolio">×</button>
-    <div class="portfolio-container" id="portfolioContainer">
 
-        <!-- Card 0 · Venue -->
-        <div class="portfolio-card" data-index="0">
-            <div class="portfolio-right">
-                <div class="portfolio-image" id="venue-1" style="background:#FEDED7;"><img src="Captures/venue_d7_d30-fr.webp" data-lang-en="Captures/venue_d7_d30-en.webp" data-lang-fr="Captures/venue_d7_d30-fr.webp" alt="Venue D7-D30" loading="lazy"/></div>
-                <div class="portfolio-image hidden" id="venue-2" style="background:#FDCBC2;"><img src="Captures/venue_onboarding-fr.webp" data-lang-en="Captures/venue_onboarding-en.webp" data-lang-fr="Captures/venue_onboarding-fr.webp" alt="Venue onboarding" loading="lazy"/></div>
-            </div>
-            <div class="portfolio-left">
-                <div>
-                    <h3 data-i18n="portfolio.venue.title">Venue · SuperBloom</h3>
-                    <p class="role" data-i18n="portfolio.venue.role">Product Designer · Jeu de design d'intérieur · 4M+ joueurs</p>
-                    <p data-i18n-html="portfolio.venue.desc">Venue est un jeu de design d'intérieur avec 4M+ joueurs.<span class="mobile-hidden"><br/>Mission : introduire une dimension sociale sans créer de pression ni de compétition.</span></p>
-                </div>
-                <div class="portfolio-insights">
-                    <h4 data-i18n="portfolio.venue.insights">Réalisations clés :</h4>
-                    <button class="insight-btn active" onclick="switchImage(this,'venue-1')"><h6 data-i18n="portfolio.venue.btn1">Renforcer la rétention J7–J30</h6><span data-i18n="portfolio.venue.btn1.desc">Design Studios collectifs ancrés dans une dynamique hebdomadaire</span></button>
-                    <button class="insight-btn" onclick="switchImage(this,'venue-2')"><h6 data-i18n="portfolio.venue.btn2">Réduire la friction d'engagement</h6><span data-i18n="portfolio.venue.btn2.desc">Explorer sans s'engager, partir sans culpabiliser</span></button>
-                    <button class="insight-btn"><h6 data-i18n="portfolio.venue.btn3">Créer des interactions sans modération</h6><span data-i18n="portfolio.venue.btn3.desc">Système de réactions guidées</span></button>
-                    <button class="insight-btn"><h6 data-i18n="portfolio.venue.btn4">Intégrer des moments émotionnels</h6><span data-i18n="portfolio.venue.btn4.desc">Récompenses collectives intégrées dans l'expérience</span></button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Card 1 · Tango.lu E-Commerce -->
-        <div class="portfolio-card" data-index="1">
-            <div class="portfolio-right">
-                <div class="portfolio-image" id="tangoweb-1"><img src="Captures/Tango.lu-offre-avant-fr.webp" data-lang-en="Captures/Tango.lu-offre-avant-en.webp" data-lang-fr="Captures/Tango.lu-offre-avant-fr.webp" alt="Tango offre avant" loading="lazy"/></div>
-                <div class="portfolio-image hidden" id="tangoweb-2" style="background:linear-gradient(135deg,#667eea,#764ba2);"><img src="Captures/Tango.lu-offre-apres-fr.webp" data-lang-en="Captures/Tango.lu-offre-apres-en.webp" data-lang-fr="Captures/Tango.lu-offre-apres-fr.webp" alt="Tango offre après"/></div>
-                <div class="portfolio-image hidden" id="tangoweb-3" style="background:linear-gradient(135deg,#667eea,#764ba2);"><img src="Captures/Tango.lu-parcour-simplifie-fr.webp" data-lang-en="Captures/Tango.lu-parcour-simplifie-en.webp" data-lang-fr="Captures/Tango.lu-parcour-simplifie-fr.webp" alt="Tango parcours"/></div>
-                <div class="portfolio-image hidden" id="tangoweb-4" style="background:linear-gradient(135deg,#667eea,#667eea);"><img src="Captures/Tango.lu-design-system-fr.webp" data-lang-en="Captures/Tango.lu-design-system-en.webp" data-lang-fr="Captures/Tango.lu-design-system-fr.webp" alt="Tango design system"/></div>
-            </div>
-            <div class="portfolio-left">
-                <div>
-                    <h3 data-i18n="portfolio.tango_web.title">Tango.lu E-Commerce</h3>
-                    <p class="role" data-i18n="portfolio.tango_web.role">UX/UI Designer · Opérateur télécom Luxembourg</p>
-                    <p data-i18n-html="portfolio.tango_web.desc">Le site web Tango.lu est la principale porte d'entrée pour l'acquisition.<span class="mobile-hidden"><br/>Mission : optimiser le funnel d'achat.</span></p>
-                </div>
-                <div class="portfolio-insights">
-                    <h4 data-i18n="portfolio.tango_web.insights">Réalisations clés :</h4>
-                    <button class="insight-btn active" onclick="switchImage(this,'tangoweb-1')"><h6 data-i18n="portfolio.tango_web.btn1">Page offre AVANT</h6><span data-i18n="portfolio.tango_web.btn1.desc">Sous-expositions observées</span></button>
-                    <button class="insight-btn" onclick="switchImage(this,'tangoweb-2')"><h6 data-i18n="portfolio.tango_web.btn2">Page offre APRÈS</h6><span data-i18n="portfolio.tango_web.btn2.desc">Comparaison facilitée</span></button>
-                    <button class="insight-btn" onclick="switchImage(this,'tangoweb-3')"><h6 data-i18n="portfolio.tango_web.btn3">Optimiser le parcours</h6><span data-i18n="portfolio.tango_web.btn3.desc">Clarification des étapes clés</span></button>
-                    <button class="insight-btn" onclick="switchImage(this,'tangoweb-4')"><h6 data-i18n="portfolio.tango_web.btn4">Cohérence cross-plateforme</h6><span data-i18n="portfolio.tango_web.btn4.desc">Design system partagé avec l'app mobile</span></button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Card 2 · MyTango Mobile App -->
-        <div class="portfolio-card" data-index="2">
-            <div class="portfolio-right">
-                <div class="portfolio-image" id="mytango-4" style="background:linear-gradient(135deg,#4facfe,#00f2fe);"><img src="Captures/Tango-parcours-simplifie-fr.webp" data-lang-en="Captures/Tango-parcours-simplifie-en.webp" data-lang-fr="Captures/Tango-parcours-simplifie-fr.webp" alt="Tango parcours simplifié" loading="lazy"/></div>
-                <div class="portfolio-image hidden" id="mytango-2" style="background:linear-gradient(135deg,#667eea,#764ba2);"><img src="Captures/MyTango-note-hausse-fr.webp" data-lang-en="Captures/MyTango-note-hausse-en.webp" data-lang-fr="Captures/MyTango-note-hausse-fr.webp" alt="MyTango note hausse"/></div>
-            </div>
-            <div class="portfolio-left">
-                <div>
-                    <h3 data-i18n="portfolio.tango_app.title">MyTango Mobile App</h3>
-                    <h4 class="role" data-i18n="portfolio.tango_app.role">UX/UI Designer · Opérateur télécom Luxembourg</h4>
-                    <p data-i18n-html="portfolio.tango_app.desc">Tango est un opérateur télécom luxembourgeois.<span class="mobile-hidden"><br/>Mission : refondre l'expérience de l'app mobile.</span></p>
-                </div>
-                <div class="portfolio-insights">
-                    <h4 data-i18n="portfolio.tango_app.insights">Réalisations clés :</h4>
-                    <button class="insight-btn active" onclick="switchImage(this,'mytango-4')"><h6 data-i18n="portfolio.tango_app.btn3">Simplifier une offre complexe</h6><span data-i18n="portfolio.tango_app.btn3.desc">Activation intuitive</span></button>
-                    <button class="insight-btn" onclick="switchImage(this,'mytango-2')"><h6 data-i18n="portfolio.tango_app.btn4">Améliorer la satisfaction</h6><span data-i18n="portfolio.tango_app.btn4.desc">Note App Store améliorée</span></button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Card 3 · Axian Group -->
-        <div class="portfolio-card" data-index="3">
-            <div class="portfolio-right">
-                <div class="portfolio-image" id="axian-1" style="background:#D30F3F;"><img src="Captures/Axian-vision-business-fr.webp" data-lang-en="Captures/Axian-vision-business-en.webp" data-lang-fr="Captures/Axian-vision-business-fr.webp" alt="Axian vision business" loading="lazy"/></div>
-                <div class="portfolio-image hidden" id="axian-2" style="background:#D30F3F;"><img src="Captures/Axian-unification-ecosysteme-fr.webp" data-lang-en="Captures/Axian-unification-ecosysteme-en.webp" data-lang-fr="Captures/Axian-unification-ecosysteme-fr.webp" alt="Axian écosystème"/></div>
-                <div class="portfolio-image hidden" id="axian-3" style="background:#C0CAD1;"><img src="Captures/Axian-refonte-corporate-fr.webp" data-lang-en="Captures/Axian-refonte-corporate-en.webp" data-lang-fr="Captures/Axian-refonte-corporate-fr.webp" alt="Axian refonte"/></div>
-                <div class="portfolio-image hidden" id="axian-4" style="background:#151D42;"><img src="Captures/Axian-4-prix-creative-fr.webp" data-lang-en="Captures/Axian-4-prix-creative-en.webp" data-lang-fr="Captures/Axian-4-prix-creative-fr.webp" alt="Axian prix"/></div>
-            </div>
-            <div class="portfolio-left">
-                <div>
-                    <h3 data-i18n="portfolio.axian.title">Axian Group</h3>
-                    <p class="role" data-i18n="portfolio.axian.role">Digital Designer · Grand Groupe Panafricain</p>
-                    <p data-i18n-html="portfolio.axian.desc">Axian Group est l'un des plus grands groupes panafricains.<span class="mobile-hidden"><br/>5 ans en tant que Digital Designer.</span></p>
-                </div>
-                <div class="portfolio-insights">
-                    <h4 data-i18n="portfolio.tango_app.insights">Réalisations clés :</h4>
-                    <button class="insight-btn active" onclick="switchImage(this,'axian-1')"><h6 data-i18n="portfolio.axian.btn1">Incarner la vision business</h6><span data-i18n="portfolio.axian.btn1.desc">Identité culturelle "Afrixian"</span></button>
-                    <button class="insight-btn" onclick="switchImage(this,'axian-2')"><h6 data-i18n="portfolio.axian.btn2">Unifier l'écosystème</h6><span data-i18n="portfolio.axian.btn2.desc">5 secteurs sous une identité commune</span></button>
-                    <button class="insight-btn" onclick="switchImage(this,'axian-3')"><h6 data-i18n="portfolio.axian.btn3">Refondre le site web</h6><span data-i18n="portfolio.axian.btn3.desc">Architecture + UI + storytelling</span></button>
-                    <button class="insight-btn" onclick="switchImage(this,'axian-4')"><h6 data-i18n="portfolio.axian.btn4">4 prix Creatives 974 Awards</h6><span data-i18n="portfolio.axian.btn4.desc">Direction artistique reconnue</span></button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Card 4 · Silva Paris -->
-        <div class="portfolio-card" data-index="4">
-            <div class="portfolio-right">
-                <div class="portfolio-image" id="silva-1" style="background:#EAECF2;"><img src="Captures/Silva-identite-web-fr.webp" data-lang-en="Captures/Silva-identite-web-en.webp" data-lang-fr="Captures/Silva-identite-web-fr.webp" alt="Silva identité web" loading="lazy"/></div>
-                <div class="portfolio-image hidden" id="silva-2" style="background:#E4EAEF;"><img src="Captures/Silva-refonte-site-web-fr.webp" data-lang-en="Captures/Silva-refonte-site-web-en.webp" data-lang-fr="Captures/Silva-refonte-site-web-fr.webp" alt="Silva refonte"/></div>
-                <div class="portfolio-image hidden" id="silva-3" style="background:#F4F4EE;"><img src="Captures/Silva-design-system-fr.webp" data-lang-en="Captures/Silva-design-system-en.webp" data-lang-fr="Captures/Silva-design-system-fr.webp" alt="Silva design system"/></div>
-            </div>
-            <div class="portfolio-left">
-                <div>
-                    <h3 data-i18n="portfolio.silva.title">Silva Paris</h3>
-                    <p class="role" data-i18n="portfolio.silva.role">Direction Artistique Web / UX Design · Artisanat de luxe</p>
-                    <p data-i18n-html="portfolio.silva.desc">Silva Paris est une maison d'artisanat tapissier de luxe.<span class="mobile-hidden"><br/>Mon rôle : déclinaison digitale de l'identité de marque.</span></p>
-                </div>
-                <div class="portfolio-insights">
-                    <h4 data-i18n="portfolio.tango_app.insights">Réalisations clés :</h4>
-                    <button class="insight-btn active" onclick="switchImage(this,'silva-1')"><h6 data-i18n="portfolio.silva.btn1">Décliner l'identité web</h6><span data-i18n="portfolio.silva.btn1.desc">Adaptation des codes visuels</span></button>
-                    <button class="insight-btn" onclick="switchImage(this,'silva-2')"><h6 data-i18n="portfolio.silva.btn2">Optimiser l'architecture</h6><span data-i18n="portfolio.silva.btn2.desc">Parcours condensé, savoir-faire valorisé</span></button>
-                    <button class="insight-btn" onclick="switchImage(this,'silva-3')"><h6 data-i18n="portfolio.silva.btn3">Design system cohérent</h6><span data-i18n="portfolio.silva.btn3.desc">Composants UI réutilisables</span></button>
-                </div>
-            </div>
-        </div>
-
-        <div class="portfolio-pagination">
-            <div class="pagination-dot active" onclick="goToSlide(0)"></div>
-            <div class="pagination-dot" onclick="goToSlide(1)"></div>
-            <div class="pagination-dot" onclick="goToSlide(2)"></div>
-            <div class="pagination-dot" onclick="goToSlide(3)"></div>
-            <div class="pagination-dot" onclick="goToSlide(4)"></div>
-        </div>
-        <button class="portfolio-nav prev" onclick="goToSlide(currentSlide - 1)">‹</button>
-        <button class="portfolio-nav next" onclick="goToSlide(currentSlide + 1)">›</button>
-    </div>
-</div>
 
 <!-- ── MODAL OFFRES ──────────────────────────────────────── -->
 <div id="offresModal" class="modal">
@@ -1168,90 +504,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </div>
 
-<!-- D7 Flow Modal -->
-<div id="d7-modal" class="d7-modal" onclick="if(event.target===this)closeD7Modal()">
-    <div class="d7-modal-inner">
-        <button class="d7-modal-close" onclick="closeD7Modal()">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L14 14M14 2L2 14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-        </button>
-        <div class="d7-modal-label">The D7 Discovery Flow · 7 Steps</div>
-        <div class="d7-modal-viewport">
-            <div class="d7-modal-scale-wrap cs-venue-content">
-                <!-- grid cloned by JS -->
-            </div>
-        </div>
-    </div>
-</div>
-
 <script>
     document.getElementById("year").innerHTML = new Date().getFullYear();
-
-    // ── D7 Flow Modal ───────────────────────────────────────
-    function openD7Modal() {
-        const modal = document.getElementById('d7-modal');
-        const wrap = modal.querySelector('.d7-modal-scale-wrap');
-        if (!wrap.querySelector('.d7-grid')) {
-            const src = document.querySelector('.d7-flow-wrapper .d7-grid');
-            wrap.appendChild(src.cloneNode(true));
-        }
-        modal.classList.add('is-open');
-        document.body.style.overflow = 'hidden';
-        requestAnimationFrame(scaleD7Grid);
-    }
-
-    function scaleD7Grid() {
-        const wrap = document.querySelector('.d7-modal-scale-wrap');
-        const grid = wrap.querySelector('.d7-grid');
-        if (!grid) return;
-        grid.style.transform = '';
-        const vw = window.innerWidth * 0.88;
-        const vh = window.innerHeight * 0.75;
-        const gw = grid.scrollWidth;
-        const gh = grid.scrollHeight;
-        const scale = Math.min(vw / gw, vh / gh, 1);
-        grid.style.transform = 'scale(' + scale + ')';
-        grid.style.transformOrigin = 'top left';
-        wrap.style.width  = (gw * scale) + 'px';
-        wrap.style.height = (gh * scale) + 'px';
-    }
-
-    function closeD7Modal() {
-        document.getElementById('d7-modal').classList.remove('is-open');
-        document.body.style.overflow = '';
-    }
-
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') closeD7Modal();
-    });
-    window.addEventListener('resize', function() {
-        if (document.getElementById('d7-modal').classList.contains('is-open')) scaleD7Grid();
-    });
-
-    // ── D7 Grid drag-to-scroll ──────────────────────────────
-    (function() {
-        const wrapper = document.querySelector('.d7-flow-wrapper');
-        if (!wrapper) return;
-        let isDown = false, startX, scrollLeft;
-        wrapper.addEventListener('mousedown', function(e) {
-            isDown = true;
-            startX = e.pageX - wrapper.offsetLeft;
-            scrollLeft = wrapper.scrollLeft;
-            wrapper.style.cursor = 'grabbing';
-        });
-        window.addEventListener('mouseup', function() {
-            isDown = false;
-            wrapper.style.cursor = '';
-        });
-        wrapper.addEventListener('mousemove', function(e) {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - wrapper.offsetLeft;
-            wrapper.scrollLeft = scrollLeft - (x - startX);
-        });
-    })();
-
-    // EmailJS
-    emailjs.init("69fgSb-btkXkWSBtI");
 
     // ── Cookie Consent ──────────────────────────────────────
     function checkCookieConsent() {
@@ -1379,6 +633,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     let currentSlide = 0;
 
     function showPortfolio() {
+            if (!document.getElementById('portfolioSection')) { window.location.href = 'index.html#travaux'; return; }
         portfolioTrigger = document.activeElement;
         const portfolioSection = document.getElementById('portfolioSection');
         portfolioSection.classList.add('active');
@@ -1397,6 +652,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     function hidePortfolio() {
         const portfolioSection = document.getElementById('portfolioSection');
+            if (!portfolioSection) return;
         portfolioSection.classList.remove('active');
         document.body.classList.remove('portfolio-open');
         document.body.style.overflow = 'auto';
@@ -1495,7 +751,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         if (e.key === 'Escape') {
             const mobileNav = document.getElementById('mobileNav');
             if (mobileNav && mobileNav.classList.contains('active')) { closeMobileMenu(); return; }
-            if (document.getElementById('portfolioSection').classList.contains('active')) { hidePortfolio(); return; }
+            if (document.getElementById('portfolioSection')?.classList.contains('active')) { hidePortfolio(); return; }
             const activeModals = document.querySelectorAll('.modal.active');
             if (activeModals.length > 0) closeModal(activeModals[0].id.replace('Modal',''));
         }
@@ -1644,6 +900,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         var dx = e.changedTouches[0].clientX - touchStartX;
         if (Math.abs(dx) > 40) goTo(current + (dx < 0 ? 1 : -1));
     });
+})();
+</script>
+<script>
+/* Venue case study : apparition au scroll, planches à l'échelle, vidéos lues quand visibles */
+(function () {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var root = document.querySelector('.vcs');
+    if (!root) return;
+    if (!reduce && 'IntersectionObserver' in window) {
+        root.classList.add('vcs-anim');
+        var io = new IntersectionObserver(function (es) {
+            es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { rootMargin: '0px 0px -8% 0px' });
+        root.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+        var vio = new IntersectionObserver(function (es) {
+            es.forEach(function (e) { var v = e.target; if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else v.pause(); });
+        }, { threshold: 0.4 });
+        root.querySelectorAll('.c-reel video').forEach(function (v) { vio.observe(v); });
+    }
+    var fits = root.querySelectorAll('.fit');
+    function fit() {
+        fits.forEach(function (w) {
+            var c = w.firstElementChild, W = +w.dataset.w, sc = Math.min(1, w.clientWidth / W);
+            c.style.width = W + 'px'; c.style.transform = 'scale(' + sc + ')'; w.style.height = (c.offsetHeight * sc) + 'px';
+        });
+    }
+    window.addEventListener('resize', fit); window.addEventListener('load', fit); fit();
 })();
 </script>
 </body>

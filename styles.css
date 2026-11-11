@@ -3364,3 +3364,272 @@ a.cs-card:hover {
 @media (max-width: 640px) {
     .cs-card-header h2{font-size: 19px;}
 }
+
+/* ══════════════════════════════════════════════════════════════
+   HERO · Disponibilité, faits clés, CTA + LinkedIn (nov. 2026)
+   ══════════════════════════════════════════════════════════════ */
+.hero-availability {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-bottom: var(--space-md);
+    padding: 0.4rem 0.95rem 0.4rem 0.75rem;
+    border-radius: 100px;
+    background: rgba(34, 197, 94, 0.12);
+    border: 1px solid rgba(34, 197, 94, 0.35);
+    color: #bbf7d0;
+    font-size: var(--font-xs);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+.hero-availability__dot {
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6);
+    animation: availability-pulse 2.2s ease-out infinite;
+}
+@keyframes availability-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.55); }
+    70%  { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero-availability__dot { animation: none; }
+}
+
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: var(--space-lg);
+}
+.hero-actions .hero-cta { margin-bottom: 0; }
+.hero-cta--linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: var(--white, #fff);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+.hero-cta--linkedin:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: none;
+}
+
+/* Rôle sous le titre des cartes Travaux */
+.case-card-role,
+.cs-card-role {
+    display: inline-block;
+    margin: 0 0 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.75;
+}
+
+/* Bloc contact : CTA + LinkedIn */
+.contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1rem 0 1.5rem;
+}
+.contact-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.4rem;
+    border-radius: 50px;
+    border: 1px solid currentColor;
+    color: var(--primary, #0066FF);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+.contact-linkedin:hover { background: var(--primary, #0066FF); color: #fff; }
+.case-card .case-card-role,
+.case-card .cs-card-role,
+.cs-card .cs-card-role { color: inherit; background: none; padding: 0; }
+.case-card--venue .case-card-role, .cs-card--venue .cs-card-role { color: #1A1714; }
+.case-card--tango .case-card-role, .cs-card--tango .cs-card-role,
+.cs-card--axian .cs-card-role { color: #fff; }
+
+/* ══════════════════════════════════════════════════════════════
+   ONE PAGER · nav LinkedIn, ancres, sections À propos / Témoignages
+   ══════════════════════════════════════════════════════════════ */
+.nav-linkedin {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: inherit;
+    transition: background 0.2s, color 0.2s;
+}
+.nav-linkedin:hover { background: rgba(0, 102, 255, 0.1); color: var(--primary, #0066FF); }
+.nav-linkedin--mobile {
+    width: auto;
+    height: auto;
+    gap: 0.5rem;
+    border-radius: 50px;
+    padding: 0.6rem 1rem;
+    font-weight: 600;
+}
+#travaux, #a-propos, #temoignages { scroll-margin-top: 90px; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+/* Sections du one pager alignées sur la grille Travaux */
+.op-section { max-width: 1400px; margin: 0 auto; background: #f5f7fa; }
+.op-section .about-wrapper { max-width: none; padding: 0 var(--space-2xl); }
+.op-section.about-hero { padding-top: var(--space-2xl); padding-bottom: var(--space-3xl); border-bottom: 0; }
+.op-section.about-testimonials { padding: var(--space-2xl) 0 var(--space-3xl); }
+.op-section .about-hero-h1,
+.op-section .about-section-h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: var(--font-2xl);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: var(--space-xl);
+}
+@media (max-width: 640px) {
+    .op-section .about-wrapper { padding: 0 var(--space-md); }
+}
+.mobile-nav .nav-linkedin--mobile { display: inline-flex; align-items: center; gap: 0.5rem; }
+
+/* ── About · parcours en boarding pass ─────────────────── */
+.about-journey {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
+.about-journey-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 var(--space-lg);
+    padding: 0.45rem 0.9rem 0.45rem 0.6rem;
+    border-radius: 999px;
+    background: #EAF2FF;
+    color: #0A3D91;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.about-journey-badge svg {
+    width: 20px; height: 20px; flex: none;
+    fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round;
+}
+.about-passes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+.bpass {
+    --notch: 9px;
+    --cut: 88px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 1.1rem 1.1rem 1rem;
+    border-radius: 16px;
+    color: #0A0E27;
+    background: #FFF8EC;
+    box-shadow: inset 0 0 0 1px rgba(10, 14, 39, 0.08);
+    -webkit-mask:
+        radial-gradient(circle var(--notch) at 0 var(--cut), transparent 98%, #000) left / 51% 100% no-repeat,
+        radial-gradient(circle var(--notch) at 100% var(--cut), transparent 98%, #000) right / 51% 100% no-repeat;
+            mask:
+        radial-gradient(circle var(--notch) at 0 var(--cut), transparent 98%, #000) left / 51% 100% no-repeat,
+        radial-gradient(circle var(--notch) at 100% var(--cut), transparent 98%, #000) right / 51% 100% no-repeat;
+}
+.bpass-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.5rem; }
+.bpass-code { font-size: 2rem; font-weight: 800; letter-spacing: 0.02em; line-height: 1; color: #0057D9; }
+.bpass-step {
+    margin-top: 0.2rem;
+    font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: #6B7280; white-space: nowrap;
+}
+.bpass-city {
+    margin-top: 0.4rem;
+    font-size: 0.75rem; line-height: 1.2; color: #4B5563;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.bpass-cut {
+    position: absolute;
+    left: calc(var(--notch) + 4px); right: calc(var(--notch) + 4px);
+    top: var(--cut);
+    border-top: 1.5px dashed rgba(10, 14, 39, 0.22);
+}
+.bpass-fields {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.6rem 0.75rem;
+    margin: 0;
+    padding-top: calc(var(--cut) - 3.6rem);
+}
+.bpass-fields > div { min-width: 0; }
+.bpass-fields > div:nth-child(2) { text-align: right; }
+.bpass-fields .bpass-wide { grid-column: 1 / -1; }
+.bpass-fields dt {
+    font-size: 0.625rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #6B7280;
+}
+.bpass-fields dd { margin: 0.1rem 0 0; font-size: 0.875rem; font-weight: 700; line-height: 1.25; color: #0A0E27; }
+.bpass-barcode {
+    margin-top: auto;
+    padding-top: 1.1rem;
+    height: 24px;
+    box-sizing: content-box;
+    background:
+        repeating-linear-gradient(90deg,
+            #1B2550 0 2px, transparent 2px 4px, #1B2550 4px 5px, transparent 5px 8px,
+            #1B2550 8px 11px, transparent 11px 12px, #1B2550 12px 13px, transparent 13px 16px)
+        bottom / 100% 24px no-repeat;
+    opacity: 0.85;
+}
+@media (max-width: 1150px) and (min-width: 901px), (max-width: 600px) {
+    .about-passes { grid-template-columns: 1fr; }
+    .bpass { --cut: 50%; flex-direction: row; align-items: stretch; gap: 1rem; padding: 1rem;
+        -webkit-mask:
+            radial-gradient(circle var(--notch) at 34% 0, transparent 98%, #000) top / 100% 51% no-repeat,
+            radial-gradient(circle var(--notch) at 34% 100%, transparent 98%, #000) bottom / 100% 51% no-repeat;
+                mask:
+            radial-gradient(circle var(--notch) at 34% 0, transparent 98%, #000) top / 100% 51% no-repeat,
+            radial-gradient(circle var(--notch) at 34% 100%, transparent 98%, #000) bottom / 100% 51% no-repeat; }
+    .bpass-headwrap { flex: 0 0 calc(34% - 1.5rem); min-width: 0; display: flex; flex-direction: column; }
+    .bpass-head { flex-direction: column; gap: 0.3rem; }
+    .bpass-step { margin-top: 0; order: -1; }
+    .bpass-cut { left: 34%; right: auto; top: calc(var(--notch) + 4px); bottom: calc(var(--notch) + 4px); border-top: 0; border-left: 1.5px dashed rgba(10,14,39,0.22); }
+    .bpass-fields { flex: 1; padding: 0 0 0 0.75rem; align-content: center; }
+    .bpass-barcode { display: none; }
+    .bpass-city { white-space: normal; }
+}
+/* Boarding pass: blue band + country map background */
+.bpass { padding-top: calc(1.1rem + 8px); isolation: isolate; }
+.bpass::before {
+    content: ""; position: absolute; left: 0; right: 0; top: 0; height: 8px;
+    background: #0057D9; z-index: 1;
+}
+.bpass::after {
+    content: ""; position: absolute; z-index: -1;
+    right: -8%; top: 10%; width: 62%; height: 80%;
+    background: var(--map) center / contain no-repeat;
+    opacity: 0.11;
+    pointer-events: none;
+}
+@media (max-width: 1150px) and (min-width: 901px), (max-width: 600px) {
+    .bpass { padding-top: 1rem; padding-left: calc(1rem + 6px); }
+    .bpass::before { right: auto; bottom: 0; width: 6px; height: auto; }
+    .bpass::after { right: 2%; top: 8%; width: 40%; height: 84%; }
+}
