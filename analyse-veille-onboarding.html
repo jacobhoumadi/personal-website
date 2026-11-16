@@ -57,14 +57,10 @@
     <link rel="stylesheet" href="cookie-consent.css">
     <link rel="stylesheet" href="nav-mobile.css">
     <link rel="stylesheet" href="case-study.css">
-
-    <!-- EmailJS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <!-- Calendly -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <link rel="stylesheet" href="venue-case-study.css">
 
     <script src="translations.js" defer></script>
+    <script src="contact.js" defer></script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -101,7 +97,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </select>
             </li>
             <li><a href="https://www.linkedin.com/in/jacob-houmadi" target="_blank" rel="noopener" class="nav-linkedin" aria-label="LinkedIn (nouvel onglet)"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a></li>
-                <li><a href="#" class="nav-cta-btn" onclick="openCalendlyPopup(); return false;" data-i18n="nav.discovery">Contactez-moi</a></li>
+                <li><a href="mailto:jacob.radonirina@gmail.com" class="nav-cta-btn" onclick="copyEmail(); return false;" data-i18n="nav.discovery">Contactez-moi</a></li>
         </ul>
     </nav>
     <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
@@ -137,7 +133,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </ul>
     <div class="mobile-nav-footer">
         <p data-i18n="mobilenav.p">Disponible pour discuter des opportunités</p>
-        <button onclick="openCalendlyPopup(); closeMobileMenu();" class="mobile-cta" data-i18n="mobilenav.cta">Contactez-moi</button>
+        <button type="button" onclick="copyEmail(); closeMobileMenu();" class="mobile-cta" data-i18n="mobilenav.cta">Contactez-moi</button>
     </div>
     <div>
         <ul class="footer-nav-legals">
@@ -150,26 +146,64 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ── PAGE CONTENT ──────────────────────────────────────── -->
 <div class="cs-ob-content">
 
-    <div class="cs-back-link">
-        <a href="index.html#travaux" data-i18n="cs.ob.back">← Cases studies</a>
-    </div>
-
-    <!-- Hero -->
-    <div class="ob-hero">
-        <div class="ob-tag" data-i18n="cs.ob.tag">Analyse &amp; veille · UX Mobile</div>
+    <div class="vcs vcs--embed vcs--ob">
+    <section class="c-hero" id="top">
+        <a class="back" href="index.html#travaux" data-i18n="cs.ob.back">← Travaux</a>
+        <span class="eyebrow" data-i18n="cs.ob.tag">Analyse &amp; veille · UX Mobile</span>
         <h1 data-i18n-html="cs.ob.h1">Onboarding mobile —<br>ce que <span>66 apps</span> font (bien ou mal)</h1>
-        <p class="ob-subtitle" data-i18n="cs.ob.subtitle">
-            Les patterns qui reviennent chez les apps les mieux notées, et ceux qui manquent chez les autres. Un benchmark vu à travers un regard UX.
-        </p>
-        <div class="ob-meta-bar">
-            <span data-i18n="cs.ob.meta.1">66 apps analysées</span>
-            <span class="ob-meta-dot"></span>
-            <span data-i18n="cs.ob.meta.2">16 apps ⭐⭐⭐ annotées</span>
-            <span class="ob-meta-dot"></span>
-            <span>B2C &amp; B2B</span>
-            <span class="ob-meta-dot"></span>
-            <span data-i18n="cs.ob.meta.4">Social · Finance · Health · AI · Travel &amp; +</span>
-        </div>
+        <p class="lead" data-i18n="cs.ob.subtitle">Les patterns qui reviennent chez les apps les mieux notées, et ceux qui manquent chez les autres. Un benchmark vu à travers un regard UX.</p>
+        <dl class="meta">
+            <div><dt data-i18n="cs.ob.meta.dt1">Corpus</dt><dd data-i18n="cs.ob.meta.1">66 apps analysées</dd></div>
+            <div><dt data-i18n="cs.ob.meta.dt2">Annotées</dt><dd data-i18n="cs.ob.meta.2">16 apps ⭐⭐⭐ annotées</dd></div>
+            <div><dt data-i18n="cs.ob.meta.dt3">Cible</dt><dd>B2C &amp; B2B</dd></div>
+            <div><dt data-i18n="cs.ob.meta.dt4">Secteurs</dt><dd data-i18n="cs.ob.meta.4">Social · Finance · Santé · IA · Travel &amp; +</dd></div>
+        </dl>
+        <figure class="c-visual c-visual--ob">
+            <div class="obf-steps" role="img" aria-label="Séquence d'onboarding des apps les mieux notées : montrer la valeur, personnaliser, puis demander une permission">
+                <div class="obf-step">
+                    <div class="obf-phone" aria-hidden="true"><div class="obf-notch"></div>
+                        <div class="obf-screen">
+                            <div class="obf-illu"><span></span><span></span><span></span></div>
+                            <div class="obf-line obf-line--h"></div><div class="obf-line"></div><div class="obf-line obf-line--s"></div>
+                            <div class="obf-btn" data-i18n="cs.ob.vis.btn">Continuer</div>
+                        </div>
+                    </div>
+                    <div class="obf-label"><b>01</b><span data-i18n="cs.ob.vis.l1">Montrer la valeur</span></div>
+                </div>
+                <div class="obf-arrow" aria-hidden="true">→</div>
+                <div class="obf-step">
+                    <div class="obf-phone" aria-hidden="true"><div class="obf-notch"></div>
+                        <div class="obf-screen">
+                            <div class="obf-title" data-i18n="cs.ob.vis.goals">Vos objectifs</div>
+                            <div class="obf-chips">
+                                <div class="obf-chip on" data-i18n="cs.ob.vis.c1">Mieux dormir</div>
+                                <div class="obf-chip" data-i18n="cs.ob.vis.c2">Moins stresser</div>
+                                <div class="obf-chip on" data-i18n="cs.ob.vis.c3">Se concentrer</div>
+                            </div>
+                            <div class="obf-btn" data-i18n="cs.ob.vis.btn">Continuer</div>
+                        </div>
+                    </div>
+                    <div class="obf-label"><b>02</b><span data-i18n="cs.ob.vis.l2">Personnaliser</span></div>
+                </div>
+                <div class="obf-arrow" aria-hidden="true">→</div>
+                <div class="obf-step">
+                    <div class="obf-phone" aria-hidden="true"><div class="obf-notch"></div>
+                        <div class="obf-screen obf-screen--ask">
+                            <div class="obf-line obf-line--h"></div><div class="obf-line"></div><div class="obf-line obf-line--s"></div><div class="obf-line"></div>
+                            <div class="obf-scrim"></div>
+                            <div class="obf-dialog">
+                                <div class="obf-bell">🔔</div>
+                                <div class="obf-title" data-i18n="cs.ob.vis.ask">Activer les rappels ?</div>
+                                <div class="obf-dialog-actions"><span data-i18n="cs.ob.vis.later">Plus tard</span><span data-i18n="cs.ob.vis.allow">Autoriser</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="obf-label"><b>03</b><span data-i18n="cs.ob.vis.l3">Demander ensuite</span></div>
+                </div>
+            </div>
+            <figcaption data-i18n="cs.ob.vis.cap">L’ordre qui revient chez les apps ⭐⭐⭐ : la valeur d’abord, la demande ensuite.</figcaption>
+        </figure>
+    </section>
     </div>
 
     <!-- Prose content -->
@@ -495,19 +529,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <!-- CTA -->
         <div class="cta-block reveal reveal--delay-1">
-            <h2 data-i18n="cs.ob.cta.h2">Vous travaillez sur un onboarding ?</h2>
-            <p data-i18n="cs.ob.cta.p">J'aide les équipes B2B à concevoir des premiers parcours clairs, cohérents avec la promesse produit — et qui convertissent.</p>
-            <a href="index.html#landing" class="cta-btn" data-i18n="cs.ob.cta.btn">Parler de votre projet →</a>
+            <h2 data-i18n="cs.ob.cta.h2">Vous recrutez un Product Designer ?</h2>
+            <p data-i18n="cs.ob.cta.p">Je conçois des parcours clairs, de l’onboarding à la conversion, avec le produit et la tech. Disponible en CDI ou en mission longue.</p>
+            <a href="mailto:jacob.radonirina@gmail.com" class="cta-btn" onclick="copyEmail(); return false;" data-i18n="cs.ob.cta.btn">Contactez-moi →</a>
         </div>
 
     </main>
 </div>
 <!-- ── END PAGE CONTENT ──────────────────────────────────── -->
-
-<!-- ── MAIN CONTENT (contact) ──────────────────────────── -->
-<div class="main-content" id="landing">
-    
-</div>
 
 <!-- ── FOOTER ──────────────────────────────────────────── -->
 <footer>
@@ -533,7 +562,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
     document.getElementById("year").innerHTML = new Date().getFullYear();
 
-    emailjs.init("69fgSb-btkXkWSBtI");
 
     // ── Cookie Consent ──────────────────────────────────────
     function checkCookieConsent() {
@@ -551,9 +579,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         window.dataLayer.push({ 'event': eventName, ...eventParams });
     }
 
-    function openCalendlyPopup() {
-        Calendly.initPopupWidget({ url: 'https://calendly.com/jacob-radonirina/30min?hide_gdpr_banner=1&primary_color=0066ff' });
-    }
 
     // ── Modal Management ────────────────────────────────────
     let modalTrigger = null;
@@ -611,62 +636,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         });
     }
 
-    function scrollToLanding() {
-        document.getElementById('landing').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function goToContact(projectValue) {
-        closeModal('offres');
-        if (projectValue) { const s = document.getElementById('project'); if (s) s.value = projectValue; }
-        const form = document.getElementById('contactForm');
-        if (!form) return;
-        requestAnimationFrame(() => {
-            document.documentElement.style.scrollSnapType = 'none';
-            requestAnimationFrame(() => {
-                const top = form.getBoundingClientRect().top + window.scrollY - 80;
-                window.scrollTo({ top, behavior: 'smooth' });
-                const restore = () => { document.documentElement.style.scrollSnapType = ''; };
-                if ('onscrollend' in window) {
-                    window.addEventListener('scrollend', restore, { once: true });
-                } else {
-                    setTimeout(restore, 1500);
-                }
-            });
-        });
-    }
-
-    // ── Portfolio stub (nav button) ─────────────────────────
-    function showPortfolio() {
-            if (!document.getElementById('portfolioSection')) { window.location.href = 'index.html#travaux'; return; } window.location.href = 'index.html#portfolioSection'; }
-    function hidePortfolio() {}
-
-    // ── Form Submission ─────────────────────────────────────
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const templateParams = {
-            name:    document.getElementById('name').value,
-            email:   document.getElementById('email').value,
-            company: document.getElementById('company').value || 'Non renseigné',
-            website: document.getElementById('website').value || 'Non renseigné',
-            project: document.getElementById('project').value,
-            message: document.getElementById('message').value || 'Pas de message'
-        };
-        const btn = document.getElementById('submitBtn');
-        btn.classList.add('loading');
-        btn.textContent = 'Envoi en cours';
-        emailjs.send("service_xl8mfv4", "template_4gwxouq", templateParams)
-            .then(() => {
-                document.getElementById('leftcontent').style.display = 'none';
-                const calendlyBlock = document.getElementById('calendlyBlock');
-                calendlyBlock.style.display = 'block';
-                if (window.Calendly) Calendly.initInlineWidgets();
-                calendlyBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, () => {
-                btn.classList.remove('loading');
-                btn.textContent = 'Démarrer la conversation →';
-                alert('❌ Erreur d\'envoi. Écrivez-moi directement : jacob.radonirina@gmail.com');
-            });
-    });
 
         // (Header auto-hide retiré : la nav reste visible au scroll)
 
@@ -681,6 +650,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             });
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
+        // Filet de sécurité : tout afficher si l'observer ne s'est pas déclenché
+        setTimeout(function() { document.querySelectorAll('.reveal:not(.is-visible)').forEach(function(el) { if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('is-visible'); }); }, 1500);
     })();
 
     // ── App filter ──────────────────────────────────────────

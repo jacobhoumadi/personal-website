@@ -246,7 +246,7 @@
  "tfu.241": "Les offres se comparent quand elles sont côte à côte.",
  "tfu.242": "L’accessibilité se joue dans la structure",
  "tfu.243": "Un vrai sélecteur et de vrais liens servent tout le monde.",
- "tfu.244": "Ce case study est partagé sous NDA. Contactez-moi pour un walkthrough complet en appel. Le travail sur le design system de Tango fait l’objet d’une étude de cas séparée.",
+ "tfu.244": "Ce case study est partagé sous NDA. Je peux vous présenter le projet en détail lors d’un entretien. Le travail sur le design system de Tango fait l’objet d’une étude de cas séparée.",
  "tfu.245": "Étude de cas design system →"
 });
   Object.assign(translations.en, {
@@ -494,7 +494,7 @@
  "tfu.241": "Offers get compared when they sit side by side.",
  "tfu.242": "Accessibility is built into the structure",
  "tfu.243": "A real selector and real links serve everyone.",
- "tfu.244": "This case study is shared under NDA. Get in touch for a full walkthrough on a call. My design system work at Tango is covered in a separate case study.",
+ "tfu.244": "This case study is shared under NDA. I can walk you through the project in detail during an interview. My design system work at Tango is covered in a separate case study.",
  "tfu.245": "Design system case study →"
 });
   var META = {

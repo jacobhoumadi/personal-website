@@ -124,7 +124,7 @@ const T = {
     'cta.h2': 'I might doubt myself.<br>I don\'t <span class="blue">let go.</span>',
     'cta.sub1': 'I learned to remember the most important things<br>about who I am, about what a job should feel like.<br><br>This is why I left Tango. The only thing left to bet on was <strong>myself.</strong>',
     'cta.sub2': '10 years building. 3 years away from home.. <br> <strong>I know what I\'m made of.</strong>',
-    'cta.btn1': 'Book a call →',
+    'cta.btn1': 'Contact me →',
     'cta.btn3': 'Email',
     'cta.footer': 'jacob-houmadi.com · Hayange, France · <span style="color:#16A34A">●</span> Available now',
     /* ── NAVIGATION ── */
@@ -312,7 +312,7 @@ const T = {
     'cta.h2': 'Je peux douter de moi.<br>Je ne <span class="blue">lâche pas.</span>',
     'cta.sub1': 'J\'ai appris à me souvenir des choses les plus importantes<br>sur qui je suis, sur ce que devrait être un emploi.<br><br>C\'est pourquoi j\'ai quitté Tango. Le seul défi qui restait, c\'était de me <strong> faire plus confiance.</strong>',
     'cta.sub2': '10 ans à construire. 3 ans loin de chez moi. <br> <strong>Je sais ce que je vaux.</strong>',
-    'cta.btn1': 'Prendre rendez-vous →',
+    'cta.btn1': 'Contactez-moi →',
     'cta.btn3': 'E-mail',
     'cta.footer': 'jacob-houmadi.com · Hayange, France · <span style="color:#16A34A">●</span> Disponible maintenant',
     /* ── NAVIGATION ── */
@@ -500,7 +500,7 @@ const T = {
     'cta.h2': 'Mety tsy hahatoky tena aho indraindray .<br>Nefa tsy ho <span class="blue">isan\'izay mihemotra.</span>',
     'cta.sub1': 'Ny lesona tsoahiko dia ny atsiaro foana ny zavatra manan-danja indrindra<br>momba ny maha-izaho ahy sy ny momba izay tokony asa izorana.<br><br>Izany no antony nialako tamin\'ny Tango. Efa hitako ny fameperana manaraka:  <strong>Ny tenako.</strong>',
     'cta.sub2': 'Folo taona nananganana. Telo taona lavitry ny tany nahabe ahy. <strong>Fantatro ny lanjako.</strong>',
-    'cta.btn1': 'Mamandria antso →',
+    'cta.btn1': 'Mifandraisa amiko →',
     'cta.btn3': 'mailaka',
     'cta.footer': 'jacob-houmadi.com · Hayange, Frantsa · <span style="color:#16A34A">●</span> Malalaka amin\'izao',
     /* ── NAVIGATION ── */

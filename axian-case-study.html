@@ -61,16 +61,11 @@
     <link rel="stylesheet" href="nav-mobile.css">
     <link rel="stylesheet" href="case-study.css">
     <link rel="stylesheet" href="axian-case-study.css">
-
-    <!-- EmailJS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-    <!-- Calendly -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <link rel="stylesheet" href="venue-case-study.css">
 
     <script src="translations.js" defer></script>
 
+    <script src="contact.js" defer></script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -107,7 +102,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </select>
             </li>
             <li><a href="https://www.linkedin.com/in/jacob-houmadi" target="_blank" rel="noopener" class="nav-linkedin" aria-label="LinkedIn (nouvel onglet)"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a></li>
-                <li><a href="#" class="nav-cta-btn" onclick="openCalendlyPopup(); return false;" data-i18n="nav.discovery">Contactez-moi</a></li>
+                <li><a href="mailto:jacob.radonirina@gmail.com" class="nav-cta-btn" onclick="copyEmail(); return false;" data-i18n="nav.discovery">Contactez-moi</a></li>
         </ul>
     </nav>
     <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
@@ -145,7 +140,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </ul>
     <div class="mobile-nav-footer">
         <p data-i18n="mobilenav.p">Transformons votre projet ensemble</p>
-        <a href="#" class="mobile-cta" onclick="openCalendlyPopup(); closeMobileMenu(); return false;" data-i18n="nav.discovery">Prendre RDV</a>
+        <a href="mailto:jacob.radonirina@gmail.com" class="mobile-cta" onclick="copyEmail(); closeMobileMenu(); return false;" data-i18n="nav.discovery">Contactez-moi</a>
     </div>
     <div>
         <ul class="footer-nav-legals">
@@ -158,40 +153,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ── CASE STUDY CONTENT ──────────────────────────────── -->
 <div class="cs-venue-content cs-axian">
 
-    <div class="cs-back-link">
-        <a href="index.html#travaux" data-i18n="cs.axian.back">← Travaux</a>
-    </div>
-
-    
-
-    <!-- ── HEADLINE ────────────────────────────────────────── -->
-
-     <section class="hero">
-        <div class="hero-tag" style="width: auto; margin-bottom: 28px;">
-            <img src="logos/axian_logo.png" alt="Axian" style="height: 30px; width: auto;">
-        </div>
-        
-        <div class="ax-headline reveal reveal--delay-1">
-            <h1 data-i18n="cs.axian.h1">Designing the digital authority of a pan-African group operating across 5 clusters.</h1>
-        </div>
-        <div class="ax-header-strip reveal">
-        <div class="ax-tags">
-            <span class="ax-tag">Brand Identity</span>
-            <span class="ax-tag">Art Direction</span>
-            <span class="ax-tag">Design System</span>
-            <span class="ax-tag">Web Design</span>
-            <span class="ax-tag">Nov 2018 - March 2023</span>
-        </div>
-    </div>
-        <div class="ax-atmospheric reveal">
-        <img
-            src="Captures/Axian-website-mockup.webp"
-            alt="Vision pan-africaine Axian Group"
-            loading="lazy">
-        </div>
+    <div class="vcs vcs--embed vcs--axian">
+    <section class="c-hero" id="top">
+        <a class="back" href="index.html#travaux" data-i18n="cs.axian.back">← Travaux</a>
+        <img class="c-logo c-logo--axian" src="logos/axian_logo.png" alt="Axian" width="93" height="36">
+        <span class="eyebrow" data-i18n="cs.axian.eyebrow">Étude de cas · Identité de marque · Design system · Web</span>
+        <h1 data-i18n="cs.axian.h1">Concevoir l'autorité digitale d'un groupe panafricain opérant sur 5 clusters.</h1>
+        <p class="lead" data-i18n="cs.axian.lead">Groupe panafricain présent dans cinq secteurs, des télécoms à l’énergie. J’ai conçu son identité unifiée, sa charte et son design system, puis son site corporate.</p>
+        <dl class="meta">
+            <div><dt data-i18n="cs.axian.meta.dt1">Mon rôle</dt><dd data-i18n="cs.axian.meta.dd1">Web &amp; Digital Designer · Direction artistique</dd></div>
+            <div><dt data-i18n="cs.axian.meta.dt2">Livrables</dt><dd data-i18n="cs.axian.meta.dd2">Identité, charte, design system, site corporate</dd></div>
+            <div><dt data-i18n="cs.axian.meta.dt3">Reconnaissance</dt><dd data-i18n="cs.axian.meta.dd3">4 prix aux Creatives 974 Awards</dd></div>
+            <div><dt data-i18n="cs.axian.meta.dt4">Période</dt><dd data-i18n="cs.axian.meta.dd4">Nov. 2018 – mars 2023</dd></div>
+        </dl>
+        <figure class="c-visual c-visual--axian">
+            <img src="Captures/Axian-website-mockup.webp" width="1200" height="1022" alt="Site corporate Axian Group sur un ordinateur portable">
+        </figure>
     </section>
-
-    
+    </div>
 
     <!-- ── ATMOSPHERIC ─────────────────────────────────────── -->
     
@@ -509,9 +488,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- ── CTA ─────────────────────────────────────────────── -->
     <div class="ax-cta reveal">
-        <p data-i18n-html="cs.axian.cta.p">Un projet d'identité ou de présence digitale à construire ?<br>Je suis disponible pour en parler.</p>
-        <a href="#" class="ax-cta-btn" onclick="openCalendlyPopup(); return false;">
-            <span data-i18n="cs.axian.cta.btn">Prendre un appel</span>
+        <p data-i18n-html="cs.axian.cta.p">Vous recrutez un Product Designer pour structurer une marque ou un design system ?<br>Je suis disponible en CDI ou en mission longue.</p>
+        <a href="mailto:jacob.radonirina@gmail.com" class="ax-cta-btn" onclick="copyEmail(); return false;">
+            <span data-i18n="cs.axian.cta.btn">Contactez-moi</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
     </div>
@@ -580,11 +559,6 @@ function closeMobileMenu() {
 /* ── Nav stubs ──────────────────────────────────────────── */
 function showPortfolio() {
             if (!document.getElementById('portfolioSection')) { window.location.href = 'index.html#travaux'; return; } window.location.href = 'index.html#portfolio'; }
-function openCalendlyPopup() {
-    if (window.Calendly) {
-        Calendly.initPopupWidget({ url: 'https://calendly.com/jacob-houmadi' });
-    }
-}
 
 /* ── Language ────────────────────────────────────────────── */
 function setLang(lang) {

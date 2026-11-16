@@ -720,3 +720,65 @@
 .vcs .pm-hero .beth-ph img:first-child{width:140px;height:170px;object-fit:cover;border-radius:14px}
 .vcs .beth-ph .beth-av{position:absolute;right:-10px;bottom:-10px;width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:50% 20%;background:#fbd9cb;box-shadow:0 0 0 3px #fff,0 4px 12px rgba(26,23,20,.18)}
 .vcs .beth-mini .beth-ph .beth-av{width:34px;height:34px;right:-8px;bottom:-8px;border-radius:50%;box-shadow:0 0 0 2px #fff,0 2px 8px rgba(26,23,20,.18)}
+
+/* ══════════════════════════════════════════════════════════════
+   Hero harmonisé embarqué : analyse onboarding & Axian
+   (même structure que Venue / Tango : eyebrow, h1, lead, meta, visuel)
+   ══════════════════════════════════════════════════════════════ */
+.vcs.vcs--embed { padding-top: 0; background: transparent; overflow-x: visible; }
+.vcs--embed .c-hero { padding-bottom: clamp(40px, 5vw, 64px); }
+.vcs--embed .meta { max-width: 1080px; }
+.vcs.vcs--ob {
+    --v-accent: #0066FF; --v-strong: #0052CC; --v-panel: #CFE0FF; --v-tint: #EEF4FF;
+    --v-soft: #F5F7FA; --v-line: #E4E8EF; --v-line-strong: #D3DAE5; --v-ink: #1A1D23; --v-muted: #5B6474;
+}
+.vcs--ob .c-hero h1 span { color: var(--v-accent); }
+.vcs.vcs--axian {
+    --v-accent: #D30F3F; --v-strong: #B00D35; --v-panel: #F4B8C5; --v-tint: #FBF0F3;
+    --v-soft: #F2F1F9; --v-line: #E2E1EF; --v-line-strong: #D3D1E6; --v-ink: #151c43; --v-muted: #514D82;
+}
+.vcs .c-logo--axian { width: auto; height: 36px; }
+.vcs .c-visual--axian { background: #D62651; }
+.vcs .c-visual--axian img { width: 100%; height: clamp(280px, 52vw, 760px); max-height: none; object-fit: cover; object-position: 50% 72%; }
+
+/* Visuel onboarding : séquence valeur → personnalisation → demande */
+.vcs .c-visual--ob { background: var(--v-tint); padding: clamp(28px, 4vw, 56px) clamp(12px, 3vw, 40px) clamp(20px, 3vw, 36px); }
+.obf-steps { display: flex; align-items: flex-start; justify-content: center; gap: clamp(8px, 2.4vw, 32px); }
+.obf-step { display: flex; flex-direction: column; align-items: center; gap: 16px; width: clamp(92px, 24vw, 176px); }
+.obf-arrow { align-self: center; margin-top: -40px; color: var(--v-accent); font-size: clamp(18px, 2.4vw, 28px); font-weight: 700; }
+.obf-phone { position: relative; width: 100%; aspect-ratio: 9 / 18.5; background: #fff; border-radius: clamp(16px, 2.6vw, 30px);
+    box-shadow: 0 0 0 clamp(4px, .7vw, 7px) #1A1D23, 0 18px 40px rgba(16, 40, 90, .16); overflow: hidden; }
+.obf-notch { position: absolute; top: 7px; left: 50%; transform: translateX(-50%); width: 34%; height: 5.5%; max-height: 18px; background: #1A1D23; border-radius: 99px; z-index: 2; }
+.obf-screen { position: absolute; inset: 0; padding: 22% 9% 9%; display: flex; flex-direction: column; gap: 6%; font-size: clamp(7px, 1.05vw, 12px); line-height: 1.3; color: #1A1D23; }
+.obf-illu { flex: 0 0 38%; border-radius: 12px; background: linear-gradient(160deg, #0066FF, #5A9BFF); display: flex; align-items: flex-end; justify-content: center; gap: 10%; padding: 0 16% 12%; }
+.obf-illu span { width: 18%; border-radius: 4px 4px 0 0; background: rgba(255, 255, 255, .9); }
+.obf-illu span:nth-child(1) { height: 30%; } .obf-illu span:nth-child(2) { height: 55%; } .obf-illu span:nth-child(3) { height: 82%; }
+.obf-line { height: 5px; border-radius: 99px; background: #E4E8EF; width: 100%; }
+.obf-line--h { height: 8px; width: 72%; background: #1A1D23; }
+.obf-line--s { width: 60%; }
+.obf-btn { margin-top: auto; text-align: center; font-weight: 600; color: #fff; background: #0066FF; border-radius: 99px; padding: 7% 0; }
+.obf-title { font-weight: 700; font-size: 1.25em; }
+.obf-chips { display: flex; flex-direction: column; gap: 7px; }
+.obf-chip { border: 1px solid #D3DAE5; border-radius: 99px; padding: 6% 10%; font-weight: 500; }
+.obf-chip.on { border-color: #0066FF; background: #EEF4FF; color: #0052CC; font-weight: 600; }
+.obf-chip.on::before { content: "✓ "; }
+.obf-screen--ask { background: #F5F7FA; }
+.obf-screen--ask .obf-line { background: #DDE3EC; }
+.obf-scrim { position: absolute; inset: 0; background: rgba(16, 24, 40, .38); }
+.obf-dialog { position: absolute; left: 8%; right: 8%; top: 36%; background: #fff; border-radius: 14px; padding: 10% 8% 8%; text-align: center; box-shadow: 0 10px 30px rgba(0, 0, 0, .2); display: flex; flex-direction: column; gap: 10px; }
+.obf-bell { width: 30%; aspect-ratio: 1; margin: 0 auto; border-radius: 50%; background: #EEF4FF; display: grid; place-items: center; font-size: 1.6em; }
+.obf-dialog-actions { display: flex; gap: 6px; }
+.obf-dialog-actions span { flex: 1; padding: 6% 0; border-radius: 99px; font-weight: 600; background: #EEF1F5; }
+.obf-dialog-actions span + span { background: #0066FF; color: #fff; }
+.obf-label { display: flex; flex-direction: column; align-items: center; gap: 2px; text-align: center; }
+.obf-label b { font-size: 12px; letter-spacing: .1em; color: var(--v-strong); }
+.obf-label span { font-weight: 600; font-size: clamp(12px, 1.3vw, 16px); color: var(--v-ink); line-height: 1.3; }
+.vcs .c-visual--ob figcaption { margin-top: clamp(20px, 3vw, 32px); text-align: center; font-size: clamp(13px, 1.1vw, 15px); color: var(--v-muted); }
+@media (max-width: 520px) {
+    .obf-arrow { display: none; }
+    .obf-dialog { gap: 5px; border-radius: 10px; }
+    .obf-chips { gap: 4px; }
+    .obf-line { height: 3px; } .obf-line--h { height: 5px; }
+}
+.vcs--embed .c-hero .lead { font-weight: 400 !important; font-size: clamp(16px, 1.3vw, 19px) !important; line-height: 1.55 !important; color: var(--v-muted) !important; max-width: 760px; margin: 0; }
+.vcs--embed .c-hero .back { text-decoration: none; }
