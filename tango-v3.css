@@ -411,3 +411,94 @@ html.v3-zoom-lock { overflow: hidden; }
 .vcs.v3 .c-sec.v3-results > .v3-p { color: rgba(255,255,255,.85); }
 .vcs.v3 .v3-results .v3-diff-grid article { box-shadow: none; }
 .vcs.v3 .v3-results .v3-res-lead { background: #EAF2FF; }
+
+/* MyTango · audit, encadré déclencheur, système en action */
+.v3 .tcn-audit { display: grid; grid-template-columns: 1.2fr 1fr; gap: clamp(12px, 2vw, 24px); align-items: start; margin-top: 8px; }
+.v3 .tcn-audit figure, .v3 .tcn-duo figure { margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.v3 .tcn-audit img { width: 100%; height: auto; display: block; border-radius: 16px; }
+.v3 .tcn-audit figcaption, .v3 .tcn-duo figcaption { font-size: 14px; line-height: 1.5; color: var(--v-muted); }
+.v3 .tcn-callout { margin: 40px 0 0; padding: 20px 24px; max-width: 880px; border-radius: 16px; border-left: 4px solid var(--v-accent); background: #fff; font-size: 17px; line-height: 1.6; color: var(--v-ink); }
+.v3 .tcn-callout b { color: var(--v-strong); }
+.v3 .tcn-duo { display: grid; grid-template-columns: repeat(2, minmax(0, 340px)); justify-content: center; gap: clamp(12px, 3vw, 32px); margin-top: 8px; }
+.v3 .tcn-duo figure { align-items: center; padding: 28px 24px 20px; border-radius: 24px; background: #fff; }
+.v3 .tcn-duo img { width: 100%; max-width: 260px; height: auto; display: block; }
+.v3 #systeme .v3-small a { color: var(--v-accent); }
+@media (max-width: 720px) {
+  .v3 .tcn-audit { grid-template-columns: 1fr; }
+  .v3 .tcn-duo figure { padding: 16px 10px 12px; }
+}
+
+/* MyTango · audit, construction, nomenclature */
+.v3 .v3-h4 { font-family: Poppins, sans-serif; font-size: 20px; font-weight: 600; color: var(--v-strong); margin: 40px 0 8px; }
+.v3 .tcn-wide { margin: 16px 0 0; display: flex; flex-direction: column; gap: 10px; }
+.v3 .tcn-wide img { width: 100%; height: auto; display: block; border-radius: 16px; }
+.v3 .tcn-wide figcaption { font-size: 14px; color: var(--v-muted); }
+.v3 .tcn-build { display: grid; grid-template-columns: minmax(0, 290px) 1fr; gap: 24px; align-items: start; margin-top: 16px; }
+.v3 .tcn-build img { width: 100%; height: auto; border-radius: 16px; display: block; }
+.v3 .tcn-props { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden; background: #fff; font-size: 14px; }
+.v3 .tcn-props th, .v3 .tcn-props td { text-align: left; padding: 10px 16px; border-top: 1px solid #EEF2F6; vertical-align: top; }
+.v3 .tcn-props thead th { background: #F1F5F9; border-top: 0; font-weight: 700; color: var(--v-ink); }
+.v3 .tcn-props tbody th { font-weight: 600; color: var(--v-ink); width: 30%; }
+.v3 .tcn-props td { color: var(--v-muted); }
+.v3 .tcn-nomen { margin-top: 32px; padding: clamp(20px, 3vw, 32px); border-radius: 24px; background: #174075; color: #E2EBF7; }
+.v3 .tcn-nomen-k { display: block; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #BCFC32; margin-bottom: 12px; }
+.v3 .tcn-nomen > p { font-size: 16px; line-height: 1.6; max-width: 900px; margin: 0; color: #E2EBF7; }
+.v3 .tcn-nomen .tcn-nomen-foot { font-size: 14px; color: #C9DAF0; margin-top: 20px; }
+.v3 .tcn-levels { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 12px; align-items: start; margin-top: 20px; }
+.v3 .tcn-arrow { color: #BCFC32; font-weight: 700; font-size: 20px; align-self: center; }
+.v3 .tcn-level { background: #fff; border-radius: 16px; padding: 18px; color: var(--v-ink); }
+.v3 .tcn-level h5 { font-family: Poppins, sans-serif; font-size: 16px; font-weight: 600; margin: 0; }
+.v3 .tcn-level > p { font-size: 13px; color: var(--v-muted); margin: 4px 0 12px; }
+.v3 .tcn-level ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.v3 .tcn-level li { display: flex; gap: 10px; align-items: flex-start; background: #EEF4FF; border-radius: 8px; padding: 8px 10px; }
+.v3 .tcn-level li i { flex: 0 0 12px; height: 12px; border-radius: 50%; margin-top: 4px; border: 1px solid rgba(0,0,0,.12); }
+.v3 .tcn-level li i.is-empty { visibility: hidden; }
+.v3 .tcn-level li span { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.v3 .tcn-level li b { font-size: 14px; font-weight: 600; color: var(--v-ink); }
+.v3 .tcn-level li code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; color: var(--v-muted); overflow-wrap: anywhere; }
+@media (max-width: 900px) {
+  .v3 .tcn-levels { grid-template-columns: 1fr; }
+  .v3 .tcn-arrow { transform: rotate(90deg); justify-self: center; }
+  .v3 .tcn-build { grid-template-columns: 1fr; }
+}
+
+/* MyTango · la rupture */
+.v3 .tcn-rupture { margin-top: 40px; padding: clamp(20px, 3vw, 40px); border-radius: 24px; background: #FFF4F2; display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: clamp(12px, 3vw, 32px); align-items: center; }
+.v3 .tcn-rupture-txt span { display: block; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #B4513F; margin-bottom: 12px; }
+.v3 .tcn-rupture-txt h4 { font-family: Poppins, sans-serif; font-size: clamp(18px, 2vw, 22px); font-weight: 600; line-height: 1.3; color: var(--v-ink); margin: 0 0 12px; }
+.v3 .tcn-rupture-txt p { font-size: 16px; color: var(--v-muted); margin: 0; }
+.v3 .tcn-rupture figure { margin: 0; }
+.v3 .tcn-rupture img { width: 100%; max-width: 240px; height: auto; display: block; margin: 0 auto; }
+@media (max-width: 760px) { .v3 .tcn-rupture { grid-template-columns: 1fr 1fr; } .v3 .tcn-rupture-txt { grid-column: 1 / -1; } }
+
+/* MyTango · grilles d'images responsive, architecture, icônes */
+.v3 .tcn-grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(10px, 1.6vw, 16px); margin-top: 16px; align-items: start; }
+.v3 .tcn-grid3 figure, .v3 .tcn-arch figure { margin: 0; }
+.v3 .tcn-grid3 img { width: 100%; height: auto; display: block; border-radius: 16px; }
+.v3 .tcn-cap { font-size: 14px; color: var(--v-muted); margin: 10px 0 0; }
+.v3 .tcn-arch { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 2.4fr) auto minmax(0, .7fr); gap: clamp(8px, 1.5vw, 16px); align-items: center; margin-top: 16px; }
+.v3 .tcn-arch img { width: 100%; height: auto; display: block; border-radius: 16px; }
+.v3 .tcn-arch figcaption { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--v-muted); text-align: center; margin-top: 8px; }
+.v3 .tcn-arch .tcn-arrow { color: var(--v-accent, #1D6FFF); font-size: 24px; font-weight: 700; }
+.v3 .v3-changes > div { border-top: 0; padding-top: 0; }
+.v3 .tcn-ico { display: inline-flex; width: 44px; height: 44px; border-radius: 12px; background: #EEF4FF; align-items: center; justify-content: center; margin-bottom: 14px; }
+.v3 .tcn-ico svg { width: 22px; height: 22px; fill: none; stroke: var(--v-strong); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+/* barres de répartition : jamais de débordement */
+.v3 .v3-split-bar { min-width: 0; }
+.v3 .v3-split-bar .v3-seg { flex-shrink: 1; min-width: 0; }
+.v3 .v3-split-bar .v3-seg--ds { min-width: min(150px, 42%); }
+@media (max-width: 760px) {
+  .v3 .tcn-grid3 { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
+  .v3 .tcn-arch { grid-template-columns: 1fr; justify-items: center; }
+  .v3 .tcn-arch .tcn-arrow { transform: rotate(90deg); }
+  .v3 .tcn-arch figure:last-child { max-width: 220px; }
+  .v3 .v3-seg { padding: 14px; min-height: 150px; }
+  .v3 .v3-seg span { font-size: 13px; }
+}
+.v3 .tcn-ico { width: 56px; height: 56px; border-radius: 14px; margin-bottom: 16px; }
+.v3 .tcn-ico svg { width: 34px; height: 34px; stroke-width: 1.6; }
+.v3 h3 + .v3-changes { margin-top: 32px; }
+/* pills des cartes Impact et Avec du recul en bleu */
+.vcs.v3 #resultats .v3-diff-grid .pill--tag, .vcs.v3 #differemment .v3-diff-grid .pill--tag, .v3 #resultats .pill--tag, .v3 #differemment .pill--tag { background: var(--v-strong, #174075); color: #fff; border-color: transparent; }
+.v3 .v3-req-block { margin-top: 14px; }
+.v3 .v3-req-block > span { color: var(--v-accent, #1D6FFF) !important; }

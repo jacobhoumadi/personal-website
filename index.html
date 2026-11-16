@@ -414,6 +414,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </a>
 
+            <!-- Card 2b · Tango — E-commerce mobile et fibre -->
+            <a href="tango-ecommerce-case-study.html" class="cs-card cs-card--tango" id="tango-ecommerce">
+                <div class="cs-card-header">
+                    <img src="logos/Logo_tango.svg" alt="Tango" class="cs-card-logo" loading="lazy">
+                    <span class="cs-card-role" data-i18n="casestudies.tangoecom.role">Product Designer · 18 mois</span>
+                    <h2 data-i18n="casestudies.tangoecom.title">E-commerce mobile et fibre</h2>
+                    <p data-i18n="casestudies.tangoecom.desc">Rendre les offres comparables d’un coup d’œil, du forfait mobile à la fibre.</p>
+                </div>
+                <div class="cs-card-visual">
+                    <img src="Tango/Laptop-only.webp" alt="Tango — page GO)) mobile après refonte" width="984" height="880" loading="lazy">
+                </div>
+            </a>
+
              <!-- Card 3 · Analyse & veille -->
             <a href="analyse-veille-onboarding.html" class="cs-card cs-card--white" id="veille">
                 <div class="cs-card-header">
@@ -1583,38 +1596,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             });
         }
 
-        // ── Header Auto-hide ────────────────────────────────────
-        (function() {
-            const header = document.querySelector('header');
-            let lastScrollY = window.scrollY;
-            let ticking = false;
-
-            function updateHeader() {
-                const currentScrollY = window.scrollY;
-                if (currentScrollY < 80) {
-                    header.classList.remove('header--hidden');
-                } else if (currentScrollY > lastScrollY) {
-                    header.classList.add('header--hidden');
-                } else {
-                    header.classList.remove('header--hidden');
-                }
-                lastScrollY = currentScrollY;
-                ticking = false;
-            }
-
-            window.addEventListener('scroll', function() {
-                if (!ticking) {
-                    requestAnimationFrame(updateHeader);
-                    ticking = true;
-                }
-            }, { passive: true });
-
-            document.addEventListener('mousemove', function(e) {
-                if (e.clientY < 60) {
-                    header.classList.remove('header--hidden');
-                }
-            });
-        })();
+        // (Header auto-hide retiré : la nav reste visible au scroll)
 
     </script>
 </body>

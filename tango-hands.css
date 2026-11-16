@@ -1,0 +1,20 @@
+/* ══════════════════════════════════════════════════════════════
+   Mains des heros (Tango e-commerce, Tango design system, Venue)
+   ══════════════════════════════════════════════════════════════ */
+
+/* Animation des mains : pilotée par GSAP au scroll (tango-hands.js). */
+
+/* Téléphone tenu en main : grand, sur fond dégradé (comme le hero e-commerce) */
+.vcs .hp-hero { width: 100%; max-width: 1200px; margin: 24px auto 0; padding: clamp(28px, 4vw, 56px) 0 0; display: flex; justify-content: center; border-radius: 24px; overflow: hidden; background: linear-gradient(180deg, #EAF0F8 0%, #F4F7FB 55%, #FFFFFF 100%); }
+.vcs.v3 .v3-hero-phone.hp-hero { max-width: 1200px; }
+.vcs .hp-hero .hp-svg { display: block; width: auto; height: clamp(420px, 58vw, 760px); max-width: 100%; overflow: visible; }
+.vcs .c-visual.hp-hero { background: linear-gradient(180deg, #FDF0ED 0%, #FDF6F4 55%, #FFFFFF 100%); }
+
+@media (prefers-reduced-motion: reduce) {
+  .vcs .tango-hands *, .vcs .tango-hands > img { animation: none !important; }
+}
+
+/* Le contenu qui suit le hero (insights, « En bref ») remonte et chevauche le bas de la main */
+.vcs .hp-hero { margin-bottom: calc(-1 * clamp(80px, 11vw, 170px)); position: relative; z-index: 0; }
+.vcs .hp-hero + *, .vcs .c-hero:has(.hp-hero) + .c-sec { position: relative; z-index: 1; }
+.vcs .c-visual.hp-hero { margin-bottom: calc(-1 * clamp(140px, 17vw, 260px)); }

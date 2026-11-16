@@ -699,3 +699,24 @@
     .vcs .c-schema { margin-right: calc(-1 * var(--v-pad)); overflow-x: auto; }
     .vcs .c-schema img { width: 820px; max-width: none; border-radius: 18px; }
 }
+
+/* Titre du schéma de la boucle de jeu */
+.vcs .sv-title{font-size:clamp(20px,2.1vw,26px);font-weight:700;line-height:1.25;color:var(--v-ink);margin-top:clamp(16px,2vw,28px)}
+/* Journey map remontée après le problème produit */
+.vcs .c-jm{padding-top:clamp(40px,5vw,72px);padding-bottom:clamp(40px,5vw,72px)}
+
+/* Noms des émotions sous les avatars de la journey map */
+.vcs .jm-emo-l{position:absolute;transform:translateX(-50%);font-size:11px;font-weight:700;letter-spacing:.02em;color:var(--v-strong);background:#fff;padding:2px 8px;border-radius:999px;white-space:nowrap;box-shadow:0 1px 3px rgba(26,23,20,.08)}
+/* Persona Beth en bref, sous le brief */
+.vcs .c-brief-col{display:flex;flex-direction:column;gap:20px}
+.vcs .beth-mini{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid var(--v-line);border-radius:18px;padding:14px 18px}
+.vcs .beth-mini img{width:72px;height:78px;object-fit:cover;border-radius:14px;flex:none;background:#fbd9cb}
+.vcs .beth-mini span{display:block;font-weight:800;font-size:11px;letter-spacing:.1em;color:var(--v-strong)}
+.vcs .beth-mini b{font-weight:600;font-size:20px;color:var(--v-ink);margin-right:8px}
+.vcs .beth-mini i{font-style:normal;font-size:13px;color:var(--v-muted)}
+.vcs .beth-mini p{margin-top:4px;font-size:14px;color:var(--v-ink)}
+/* Vraie photo de Beth + son avatar en pastille */
+.vcs .beth-ph{position:relative;flex:none;line-height:0}
+.vcs .pm-hero .beth-ph img:first-child{width:140px;height:170px;object-fit:cover;border-radius:14px}
+.vcs .beth-ph .beth-av{position:absolute;right:-10px;bottom:-10px;width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:50% 20%;background:#fbd9cb;box-shadow:0 0 0 3px #fff,0 4px 12px rgba(26,23,20,.18)}
+.vcs .beth-mini .beth-ph .beth-av{width:34px;height:34px;right:-8px;bottom:-8px;border-radius:50%;box-shadow:0 0 0 2px #fff,0 2px 8px rgba(26,23,20,.18)}

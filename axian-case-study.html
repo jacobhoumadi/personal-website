@@ -603,7 +603,7 @@ function setLang(lang) {
 }
 function switchLanguage(lang) { setLang(lang); }
 (function () {
-    var saved = localStorage.getItem('lang') || 'fr';
+    var saved = localStorage.getItem('lang') || (((navigator.language || 'fr').split('-')[0] === 'en') ? 'en' : 'fr');
     var select = document.querySelector('.lang-select');
     if (select) select.value = saved;
     document.addEventListener('DOMContentLoaded', function () {

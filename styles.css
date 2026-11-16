@@ -175,9 +175,7 @@
             transition: top 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        header.header--hidden {
-            top: -120px;
-        }
+        /* header--hidden : plus de masquage de la nav au scroll */
 
         button.logo {
             font-size: calc(var(--font-sm) * 1.25);
@@ -189,7 +187,7 @@
             color: var(--dark);
             cursor: pointer;
             transition: color 0.3s;
-            margin-left: var(--space-lg);
+            margin-left: var(--space-md);
         }
 
         button.logo-mobile{
@@ -253,7 +251,7 @@
             display: inline-flex;
             align-items: center;
             padding: 0.45rem 1rem;
-            margin:-9px -5px;
+            margin-right: var(--space-xs);
             background: var(--primary);
             color: var(--white) !important;
             border-radius: var(--radius-full);
@@ -3633,3 +3631,7 @@ html { scroll-behavior: smooth; }
     .bpass::before { right: auto; bottom: 0; width: 6px; height: auto; }
     .bpass::after { right: 2%; top: 8%; width: 40%; height: 84%; }
 }
+
+/* Home · carte Tango e-commerce : laptop détouré sur fond Tango */
+#tango-ecommerce { background: #003C70; }
+#tango-ecommerce .cs-card-visual img { width: 100%; object-fit: contain; object-position: center bottom; }
