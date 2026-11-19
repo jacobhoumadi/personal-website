@@ -425,7 +425,7 @@ const translations = {
     'h1.1': "Product Designer senior",
     'hero.quote':   '10 ans en design. Madagascar → Luxembourg → France',
     'hero.subtitle': "10 ans en entreprise, dont 18 mois comme seul Product Designer d’un opérateur télécom luxembourgeois. Je simplifie les parcours complexes, structure les design systems et travaille au quotidien avec le produit et la tech, jusqu’à la mise en production.",
-    'hero.cta': "Contactez-moi",
+    'hero.cta': "Voir les études de cas",
     'hero.hint' : ' <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M12 4a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm0 4a1 1 0 0 0-1 1v6a1 1 0 0 0 2 0v-6a1 1 0 0 0-1-1zm0-6C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>' +
                                 'Cliquer pour en découvrir mes autres facettes',
     'hero.role.pro'         : '10 ans en design. Madagascar → Luxembourg → France',
@@ -2049,7 +2049,7 @@ const translations = {
     'h1.1': "Senior Product Designer",
     'hero.quote':   '10 years in design. Madagascar → Luxembourg → France',
     'hero.subtitle': "10 years in-house, including 18 months as the sole Product Designer at a Luxembourg telecom operator. I simplify complex journeys, structure design systems and work day to day with product and engineering, all the way to release.",
-    'hero.cta': "Contact me",
+    'hero.cta': "See the case studies",
     'hero.hint' : ' <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M12 4a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm0 4a1 1 0 0 0-1 1v6a1 1 0 0 0 2 0v-6a1 1 0 0 0-1-1zm0-6C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>' +
                                 'Click to discover my other sides',
 
